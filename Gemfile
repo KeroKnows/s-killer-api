@@ -12,6 +12,10 @@ gem 'puma', '~> 5.5'
 gem 'roda', '~> 3.49'
 gem 'slim', '~> 4.1'
 
+# Presentation layer
+gem 'multi_json'
+gem 'roar'
+
 # Database
 gem 'hirb', '~> 0'
 gem 'hirb-unicode', '~> 0'
