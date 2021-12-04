@@ -24,15 +24,11 @@ module Skiller
 
       # check if the previous form validation passes
       def parse_request(input)
-        # puts input.value!["query"]
         query = input.value!["query"]
         if input.success?
-          # Success(query: query)
-          # Success(input)
-          input
+          Success(query: query)
         else
-          # Failure("Invalid query: '#{query}'")
-          Failure("Invalid query: '#{input}'")
+          Failure("Invalid query: '#{query}'")
         end
       end
 
@@ -40,10 +36,8 @@ module Skiller
       # otherwise, the entites will be created by mappers stored into the database
       # :reek:UncommunicativeVariableName for rescued error
       def collect_jobs(input)
-        puts input["query"]
-        # query = input.value!["query"]
-        # input[:jobs] = search_jobs(query)
-        input[:jobs] = search_jobs(input["query"])
+        puts input[:query]
+        input[:jobs] = search_jobs(input)
 
         if input[:jobs].length.zero?
           Failure("No job is found with query #{input[:query]}")
@@ -108,9 +102,9 @@ module Skiller
         puts input[:jobs][0].title
         puts input[:jobs][1].title
         puts input[:jobs][2].title
-        # puts input[:jobs][3].title
-        # puts input[:jobs][4].title
-        # puts input[:jobs][5].title
+        puts input[:jobs][3].title
+        puts input[:jobs][4].title
+        puts input[:jobs][5].title
         result_response = Response::Result.new(input[:query], input[:jobs], input[:salary_dist])
         # Success(input)
         Success(Response::ApiResult.new(status: :ok, message: result_response))
@@ -121,8 +115,8 @@ module Skiller
       # search corresponding jobs in database first,
       # or request it through JobMapper
       def search_jobs(input)
-        # query = input[:query]
-        query = input
+        query = input[:query]
+        # query = input
         if Repository::QueriesJobs.query_exist?(query)
           Repository::QueriesJobs.find_jobs_by_query(query)
         else
