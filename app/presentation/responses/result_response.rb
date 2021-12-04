@@ -3,6 +3,6 @@
 module Skiller
   module Response
     # Result of a query
-    Result = Struct.new(:result)
+    Result = Struct.new(:query, :jobs, :salary_dist)
   end
 end

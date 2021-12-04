@@ -30,7 +30,6 @@ module Skiller
             # result = Service::AnalyzeSkills.new.call(query_request: query_request)
             result = Service::AnalyzeSkills.new.call(query_request)
 
-
             Representer::For.new(result).status_and_body(response)
           end
         end

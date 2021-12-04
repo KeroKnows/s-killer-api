@@ -15,7 +15,9 @@ module Skiller
     #   property :job, extend: Representer::Job, class: OpenStruct
     #   property :skill, extend: Representer::Skill, class: OpenStruct
       # property :test_title
-      property :result
+      property :jobs
+      property :query
+      property :salary_dist
 
     end
   end
