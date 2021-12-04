@@ -6,7 +6,6 @@ module Skiller
   # Web Application for S-killer
   class App < Roda
     plugin :halt
-    plugin :flash
 
     route do |router|
       response['Content-Type'] = 'application/json'
@@ -24,11 +23,15 @@ module Skiller
       end
 
       router.on 'api/v1' do
-        router.is do
-          # GET /api/v1?query={}
+        router.on 'jobs' do
+          # GET /api/v1/jobs?query={JOB_TITLE}
           router.get do
-            skill_analysis = Service::AnalyzeSkills.new.call(router.params)
-            jobskill = skill_analysis.value!
+            query_request = Request::Query.new(router.params).call()
+            # result = Service::AnalyzeSkills.new.call(query_request: query_request)
+            result = Service::AnalyzeSkills.new.call(query_request)
+
+
+            Representer::For.new(result).status_and_body(response)
           end
         end
       end

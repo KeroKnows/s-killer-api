@@ -18,16 +18,20 @@ module Skiller
       step :collect_skills
       step :calculate_salary_distribution
       step :store_query_to_db
+      step :to_response_object
 
       private
 
       # check if the previous form validation passes
       def parse_request(input)
-        query = input[:query]
+        # query = input[:query_request]
         if input.success?
-          Success(query: query)
+          # Success(query: query)
+          # Success(input)
+          input
         else
-          Failure("Invalid query: '#{query}'")
+          # Failure("Invalid query: '#{query}'")
+          Failure("Invalid query: '#{input}'")
         end
       end
 
@@ -94,6 +98,12 @@ module Skiller
         Success(input)
       rescue StandardError => e
         Failure("Fail to store query result: #{e}")
+      end
+
+      def to_response_object(input)
+        result_response = Response::Result.new(input)
+        # Success(input)
+        Success(Response::ApiResult.new(status: :ok, message: result_response))
       end
 
       # ------ UTILITIES ------ #
