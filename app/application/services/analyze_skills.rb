@@ -99,14 +99,29 @@ module Skiller
       end
 
       def to_response_object(input)
-        puts input[:jobs][0].title
-        puts input[:jobs][1].title
-        puts input[:jobs][2].title
-        puts input[:jobs][3].title
-        puts input[:jobs][4].title
-        puts input[:jobs][5].title
-        result_response = Response::Result.new(input[:query], input[:jobs], input[:salary_dist])
-        # Success(input)
+        jobs_list = []
+        for job in input[:jobs]
+          jobs_list.append({
+            job_id: job.job_id,
+            title: job.title,
+            description: job.description,
+            location: job.location,
+            salary: {
+              year_min: job.salary.year_min,
+              year_max: job.salary.year_max,
+              currency: job.salary.currency
+            },
+            url: job.url,
+            is_full: job.is_full
+          })
+        end
+        salary_distribution = {
+          maximum: input[:salary_dist].maximum,
+          minimum: input[:salary_dist].minimum,
+          currency: input[:salary_dist].currency
+        }
+
+        result_response = Response::Result.new(input[:query], jobs_list, salary_distribution)
         Success(Response::ApiResult.new(status: :ok, message: result_response))
       end
 
@@ -116,7 +131,6 @@ module Skiller
       # or request it through JobMapper
       def search_jobs(input)
         query = input[:query]
-        # query = input
         if Repository::QueriesJobs.query_exist?(query)
           Repository::QueriesJobs.find_jobs_by_query(query)
         else
