@@ -22,13 +22,14 @@ module Skiller
 
       private
 
-      # check if the previous form validation passes
+      # Check if the previous validation passes
       def parse_request(input)
-        query = input.value!["query"]
         if input.success?
+          query = input.value!["query"]
           Success(query: query)
         else
-          Failure("Invalid query: '#{query}'")
+          # Failure("Invalid query")
+          Failure(Response::ApiResult.new(status: :cannot_process, message: "Invalid query"))
         end
       end
 
@@ -36,16 +37,16 @@ module Skiller
       # otherwise, the entites will be created by mappers stored into the database
       # :reek:UncommunicativeVariableName for rescued error
       def collect_jobs(input)
-        puts input[:query]
+        # puts input[:query]
         input[:jobs] = search_jobs(input)
 
         if input[:jobs].length.zero?
-          Failure("No job is found with query #{input[:query]}")
+          Failure(Response::ApiResult.new(status: :cannot_process, message: "No job found with query #{input[:query]}"))
         else
           Success(input)
         end
       rescue StandardError => e
-        Failure("Fail to collect jobs: #{e}")
+        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to collect jobs: #{e}"))
       end
 
       # Request full job description for future analysis
@@ -57,7 +58,8 @@ module Skiller
         end
         Success(input)
       rescue StandardError => e
-        Failure("Fail to process jobs: #{e}")
+        # Failure("Fail to process jobs: #{e}")
+        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to process jobs: #{e}"))
       end
 
       # Collect skills from database if the query has been searched;
@@ -67,12 +69,12 @@ module Skiller
         input[:skills] = search_skills(input)
 
         if input[:skills].length.zero?
-          Failure("No skills are extracted from #{input[:query]}")
+          Failure(Response::ApiResult.new(status: :internal_error, message: "No skills are extracted from #{input[:query]}"))
         else
           Success(input)
         end
       rescue StandardError => e
-        Failure("Fail to extract skills: #{e}")
+        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to extract skills: #{e}"))
       end
 
       # Analyze the salary distribution from all related jobs
@@ -82,7 +84,7 @@ module Skiller
         input[:salary_dist] = Entity::SalaryDistribution.new(all_salary)
         Success(input)
       rescue StandardError => e
-        Failure("Fail to analyze salary distribution: #{e}")
+        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to analyze salary distribution: #{e}"))
       end
 
       # Store the query-job
@@ -95,9 +97,10 @@ module Skiller
                                                input[:jobs].map(&:db_id))
         Success(input)
       rescue StandardError => e
-        Failure("Fail to store query result: #{e}")
+        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to store query result: #{e}"))
       end
 
+      # Pass to response object
       def to_response_object(input)
         jobs_list = []
         for job in input[:jobs]
@@ -123,6 +126,8 @@ module Skiller
 
         result_response = Response::Result.new(input[:query], jobs_list, salary_distribution)
         Success(Response::ApiResult.new(status: :ok, message: result_response))
+      rescue StandardError => e
+        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to map to response object: #{e}"))
       end
 
       # ------ UTILITIES ------ #

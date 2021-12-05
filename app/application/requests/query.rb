@@ -25,20 +25,18 @@ module Skiller
       rescue StandardError => e
         Failure(
           Response::ApiResult.new(
-            status: :bad_request,
-            message: "in Request::Query #{e}"
+            status: :cannot_process,
+            message: "#{e}"
           )
         )
       end
 
       # Validate input query
       def validate(query)
-        puts "validating"
         if QUERY_REGEX.match?(query)
-          puts "correct"
           return @params
         end
-        puts "wrong"
+        raise("Validation Error")
       end
       
     end
