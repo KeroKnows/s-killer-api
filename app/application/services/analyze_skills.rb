@@ -66,7 +66,9 @@ module Skiller
         input[:skills] = search_skills(input)
 
         if input[:skills].length.zero?
-          Failure(Response::ApiResult.new(status: :internal_error, message: "No skills are extracted from #{input[:query]}"))
+          Failure(
+            Response::ApiResult.new(status: :internal_error, message: "No skills are extracted from #{input[:query]}")
+          )
         else
           Success(input)
         end

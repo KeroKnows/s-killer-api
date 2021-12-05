@@ -28,13 +28,10 @@ module Skiller
 
       # Validate input query
       def validate(query)
-        if QUERY_REGEX.match?(query)
-          return @params
-        end
+        return @params if QUERY_REGEX.match?(query)
 
         raise('Validation Error')
       end
-      
     end
   end
 end

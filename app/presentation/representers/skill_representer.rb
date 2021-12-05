@@ -10,7 +10,7 @@ module Skiller
       include Roar::JSON
 
       property :name
-      property :salary, extend: Representer::Salary, class: OpenStruct
+      property :salary, extend: Representer::Salary, class: Struct
     end
   end
 end

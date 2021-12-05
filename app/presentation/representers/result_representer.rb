@@ -16,9 +16,9 @@ module Skiller
       include Roar::Decorator::HypermediaConsumer
 
       property :query
-      collection :jobs, extend: Representer::Job, class: OpenStruct
-      collection :skills, extend: Representer::Skill, class: OpenStruct
-      property :salary_dist, extend: Representer::SalaryDistribution, class: OpenStruct
+      collection :jobs, extend: Representer::Job, class: Struct
+      collection :skills, extend: Representer::Skill, class: Struct
+      property :salary_dist, extend: Representer::SalaryDistribution, class: Struct
 
       link :self do
         "#{App.config.API_HOST}/some_path/#{project_name}/#{owner_name}"
