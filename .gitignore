@@ -9,6 +9,8 @@
 .bundle/
 coverage/
 !coverage/.resultset.json
+.env/
+activate
 
 # secrets
 config/secrets.yml
