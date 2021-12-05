@@ -25,8 +25,15 @@ Figaro.application = Figaro::Application.new(
   path: File.expand_path('config/secrets.yml')
 )
 Figaro.load
+# CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
 CONFIG = Figaro.env
 REED_TOKEN = CONFIG.REED_TOKEN
 CREDENTIALS = Base64.strict_encode64("#{REED_TOKEN}:")
 
 FREECURRENCY_API_KEY = CONFIG.FREECURRENCY_API_KEY
+
+CASSETTES_FOLDER = 'spec/fixtures/cassettes'
+REED_CASSETTE_FILE = 'reed_api'
+GATEWAY_DATABASE_CASSETTE_FILE = 'gateway_database'
+SERVICE_CASSETTE_FILE = 'service_test'
+FREECURRENCY_CASSETTE_FILE = 'freecurrency_api'

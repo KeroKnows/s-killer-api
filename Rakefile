@@ -28,17 +28,9 @@ Rake::TestTask.new(:spec) do |t|
 end
 
 desc 'Run all acceptance tests at once'
-task :spec_accept do
-  sh 'RACK_ENV=test rackup -o 127.0.0.1 -p 4001 &'
-  sh 'rake test_acceptance'
-  begin
-    sh 'pkill -f "127\.0\.0\.1:4001"'
-  rescue _e
-    printf "\n\033[31m"
-    puts 'Failed'
-    puts 'Server not killed. please close it by yourself. (127.0.0.1:4001)'
-    printf "\n\033[0m"
-  end
+Rake::TestTask.new(:spec_acceptance) do |t|
+  t.pattern = 'spec/tests/acceptance/*_spec.rb'
+  t.warning = false
 end
 
 Rake::TestTask.new(:test_acceptance) do |t|
