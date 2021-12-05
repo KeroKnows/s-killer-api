@@ -49,6 +49,7 @@ group :test do
   gem 'watir', '~> 7.0'
   gem 'webdrivers', '~> 5.0'
   gem 'webmock', '~> 3.0'
+  gem 'rack-test'
 end
 
 # Utilities

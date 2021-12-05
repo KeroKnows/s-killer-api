@@ -125,6 +125,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     rainbow (3.0.0)
     rake (13.0.6)
     rb-fsevent (0.11.0)
@@ -213,6 +215,7 @@ DEPENDENCIES
   pg
   pry (~> 0.13.1)
   puma (~> 5.5)
+  rack-test
   rake
   rb-fsevent
   rb-kqueue
