@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'roar/decorator'
 require 'roar/json'
 
@@ -26,12 +28,12 @@ module Skiller
 
       def project_name
         # represented.name
-        "SOME"
+        'SOME'
       end
 
       def owner_name
         # represented.name
-        "PATH"
+        'PATH'
       end
     end
   end

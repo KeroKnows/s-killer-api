@@ -6,6 +6,7 @@ require 'json'
 
 module Skiller
   module Request
+    # Request object for query
     class Query
       include Dry::Monads::Result::Mixin
 
@@ -30,7 +31,8 @@ module Skiller
         if QUERY_REGEX.match?(query)
           return @params
         end
-        raise("Validation Error")
+
+        raise('Validation Error')
       end
       
     end

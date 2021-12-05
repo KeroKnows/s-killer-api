@@ -25,10 +25,10 @@ module Skiller
       # Check if the previous validation passes
       def parse_request(input)
         if input.success?
-          query = input.value!["query"]
+          query = input.value!['query']
           Success(query: query)
         else
-          Failure(Response::ApiResult.new(status: :cannot_process, message: "Invalid query"))
+          Failure(Response::ApiResult.new(status: :cannot_process, message: 'Invalid query'))
         end
       end
 

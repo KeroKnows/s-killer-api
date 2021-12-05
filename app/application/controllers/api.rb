@@ -26,7 +26,7 @@ module Skiller
         router.on 'jobs' do
           # GET /api/v1/jobs?query={JOB_TITLE}
           router.get do
-            query_request = Request::Query.new(router.params).call()
+            query_request = Request::Query.new(router.params).call
             result = Service::AnalyzeSkills.new.call(query_request)
 
             Representer::For.new(result).status_and_body(response)

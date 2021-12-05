@@ -3,7 +3,6 @@
 require_relative '../responses/init'
 
 require_relative 'http_response_representer'
-# require_relative 'job_representer'
 require_relative 'result_representer'
 
 module Skiller
