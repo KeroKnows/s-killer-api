@@ -21,19 +21,7 @@ module Skiller
       property :salary_dist, extend: Representer::SalaryDistribution, class: Struct
 
       link :self do
-        "#{App.config.API_HOST}/some_path/#{project_name}/#{owner_name}"
-      end
-
-      private
-
-      def project_name
-        # represented.name
-        'SOME'
-      end
-
-      def owner_name
-        # represented.name
-        'PATH'
+        "#{App.config.API_HOST}/"
       end
     end
   end
