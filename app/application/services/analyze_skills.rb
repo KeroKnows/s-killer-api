@@ -99,7 +99,7 @@ module Skiller
 
       # Pass to response object
       def to_response_object(input)
-        result_response = Response::Result.new(input[:query], input[:jobs], input[:salary_dist])
+        result_response = Response::Result.new(input[:query], input[:jobs], input[:skills], input[:salary_dist])
         Success(Response::ApiResult.new(status: :ok, message: result_response))
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to map to response object: #{e}"))

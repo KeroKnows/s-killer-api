@@ -2,6 +2,7 @@ require 'roar/decorator'
 require 'roar/json'
 
 require_relative 'job_representer'
+require_relative 'skill_representer'
 require_relative 'salary_distribution_representer'
 
 module Skiller
@@ -14,6 +15,7 @@ module Skiller
 
       property :query
       collection :jobs, extend: Representer::Job, class: OpenStruct
+      collection :skills, extend: Representer::Skill, class: OpenStruct
       property :salary_dist, extend: Representer::SalaryDistribution, class: OpenStruct
 
       link :self do
