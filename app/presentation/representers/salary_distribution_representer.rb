@@ -3,12 +3,12 @@ require 'roar/json'
 
 module Skiller
   module Representer
-    # Salary representer
-    class Salary < Roar::Decorator
+    # Salary Distribution representer
+    class SalaryDistribution < Roar::Decorator
       include Roar::JSON
 
-      property :year_max
-      property :year_min
+      property :maximum
+      property :minimum
       property :currency
     end
   end

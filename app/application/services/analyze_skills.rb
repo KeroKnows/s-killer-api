@@ -28,7 +28,6 @@ module Skiller
           query = input.value!["query"]
           Success(query: query)
         else
-          # Failure("Invalid query")
           Failure(Response::ApiResult.new(status: :cannot_process, message: "Invalid query"))
         end
       end
@@ -37,7 +36,6 @@ module Skiller
       # otherwise, the entites will be created by mappers stored into the database
       # :reek:UncommunicativeVariableName for rescued error
       def collect_jobs(input)
-        # puts input[:query]
         input[:jobs] = search_jobs(input)
 
         if input[:jobs].length.zero?
@@ -58,7 +56,6 @@ module Skiller
         end
         Success(input)
       rescue StandardError => e
-        # Failure("Fail to process jobs: #{e}")
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to process jobs: #{e}"))
       end
 
@@ -102,29 +99,7 @@ module Skiller
 
       # Pass to response object
       def to_response_object(input)
-        jobs_list = []
-        for job in input[:jobs]
-          jobs_list.append({
-            job_id: job.job_id,
-            title: job.title,
-            description: job.description,
-            location: job.location,
-            salary: {
-              year_min: job.salary.year_min,
-              year_max: job.salary.year_max,
-              currency: job.salary.currency
-            },
-            url: job.url,
-            is_full: job.is_full
-          })
-        end
-        salary_distribution = {
-          maximum: input[:salary_dist].maximum,
-          minimum: input[:salary_dist].minimum,
-          currency: input[:salary_dist].currency
-        }
-
-        result_response = Response::Result.new(input[:query], jobs_list, salary_distribution)
+        result_response = Response::Result.new(input[:query], input[:jobs], input[:salary_dist])
         Success(Response::ApiResult.new(status: :ok, message: result_response))
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to map to response object: #{e}"))

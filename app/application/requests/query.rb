@@ -19,16 +19,10 @@ module Skiller
 
       def call
         Success(
-          # JSON.parse(decode(@params['query']))
           validate(@params['query'])
         )
       rescue StandardError => e
-        Failure(
-          Response::ApiResult.new(
-            status: :cannot_process,
-            message: "#{e}"
-          )
-        )
+        Failure(Response::ApiResult.new(status: :cannot_process, message: "Validation fails: #{e}"))
       end
 
       # Validate input query
