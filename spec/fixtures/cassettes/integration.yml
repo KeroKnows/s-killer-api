@@ -1,0 +1,2113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/search?keywords=asdf
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '55'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=-hoX-NhMYoLASdCqk4vuujC_mkHajUQh5a6iwnYwsf4pWmGGNyTXEeewXH2p4OyaIa9TTmlapGx9-WXUw6f8DfGaPZjzSBbV66u1f-rOIEOEaVJaqIv9lWOvLjfqz_YEsc1nMA2;
+        expires=Sun, 05-Dec-2021 20:15:02 GMT; path=/; HttpOnly"
+      - __cf_bm=ELAJB8tpO0i__nXunPIakJ4RT_f7JcQhIJmvFpdAiDA-1638729902-0-AUixLU5awKSgwe2N+xT+XTbKfFEISawRZ1Yju/09ag/U96l24XLHf2em3ambGn8bDgk8MO5FsoMr5VvsB4cwjpw=;
+        path=/; expires=Sun, 05-Dec-21 19:15:02 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=5a5d890f178cc5e6b01630e609b1b75ae5b2b54a-1638729902; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6dd7cec06a80-TPE
+    body:
+      encoding: UTF-8
+      string: '{"results":[],"ambiguousLocations":[],"totalResults":0}'
+  recorded_at: Sun, 05 Dec 2021 18:45:02 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/search?keywords=frontend
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:03 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '83604'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=S8OgFvglRMGutjspuj-Rr7JnCWmosUoFOo12Oni0E_qiDK6rTKWJ8ShfuUcvy25d8mb5Q_4gJHL5eLCCcCiYRpPYe9VIQH_gbnppDqeJbYCTZ7ggbCTde4kVlbjR3bJHYqoCrg2;
+        expires=Sun, 05-Dec-2021 20:15:03 GMT; path=/; HttpOnly"
+      - __cf_bm=.1KCgbBdVhAdPcPzGaERa3MZoWdCNHGTOc9H7NFzw6E-1638729903-0-ASrJFhDP+20WwmwgXK2tIHhzaq15KqMYI+3pDDtSRB4HQvLtLSFg0BQFZ6N3KIumW1+uz0/u1yH2z9gtT9V/MDE=;
+        path=/; expires=Sun, 05-Dec-21 19:15:03 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=116da7e02bb6c908f85e3214bf9e577ff92e492d-1638729903; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6de1f9240740-TPE
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"jobId":44862748,"employerId":302092,"employerName":"Adria
+        Solutions Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Lead
+        Frontend  Developer  Angular - Fully Remote","locationName":"Manchester","minimumSalary":60000.00,"maximumSalary":75000.00,"currency":"GBP","expirationDate":"12/01/2022","date":"01/12/2021","jobDescription":"Lead
+        Frontend Developer – Fully Remote – Up to &#163;80k &#43; Bonus On behalf
+        of our global client, we are currently looking for an exceptional Lead Frontend
+        Developer with strong Angular experience. As Lead Frontend&nbsp;Developer
+        you will be playing a vital part in our client’s transformation, as they are
+        about to embark on  a major program to design and deliver major enhancements
+        to part of the core product suite. <b... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/lead-frontend-developer-angular-fully-remote/44862748"},{"jobId":44926856,"employerId":346427,"employerName":"Understanding
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer - DeFi/Crypto","locationName":"London","minimumSalary":60000.00,"maximumSalary":100000.00,"currency":"GBP","expirationDate":"16/01/2022","date":"05/12/2021","jobDescription":"
+        Would you like to re-invent payments and develop breakthrough technology?
+        I am looking for Frontend developers to help develop breakthrough technology
+        and re-invent payments at one of the most well-backed DeFi start-ups in the
+        world. With over $24 million in funding from some of the top crypto investors
+        such as Coinbase, this company is scaling blockchains such as Ethereum to
+        100''s of millions of users whilst f... ","applications":0,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-defi-crypto/44926856"},{"jobId":44861556,"employerId":346427,"employerName":"Understanding
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"Front
+        End Developer","locationName":"London","minimumSalary":75000.00,"maximumSalary":85000.00,"currency":"GBP","expirationDate":"22/12/2021","date":"01/12/2021","jobDescription":"
+        Company info We are looking for Senior Level Frontend Developers to join a
+        blue-chip backed, high-tech encryption start-up company which is spearheading
+        the move for secure, distributed and decentralised communication.  As Frontend
+        Developer you will be part of a company that works on a massive scale with
+        over 30 million users worldwide, with up to 8 million users on a single public
+        deployment and half a million on the largest ... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/front-end-developer/44861556"},{"jobId":44861496,"employerId":346427,"employerName":"Understanding
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer - WhatsApp Rival","locationName":"London","minimumSalary":60000.00,"maximumSalary":70000.00,"currency":"GBP","expirationDate":"22/12/2021","date":"01/12/2021","jobDescription":"
+        Company info We are looking for Mid Level Frontend Developers to join a blue-chip
+        backed, high-tech encryption start-up company which is spearheading the move
+        for secure, distributed and decentralised communication.  As Frontend Developer
+        you will be working for a company that works on a massive scale with over
+        30 million users worldwide, with up to 8 million users on a single public
+        deployment and half a million on the largest... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-whatsapp-rival/44861496"},{"jobId":44789086,"employerId":569638,"employerName":"SR2","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Engineer  React & TypeScript  Up to £120,000","locationName":"Bristol","minimumSalary":90000.00,"maximumSalary":120000.00,"currency":"GBP","expirationDate":"04/01/2022","date":"23/11/2021","jobDescription":"
+        Quiz time!  What are Cristiano Ronaldo''s legs worth?What are the chances
+        that SpaceX''s next launch will fail?What would happen to the property in
+        Silicon Valley if there was an earthquake? Well, I can tell you that Cristiano
+        Ronaldo''s legs are insured for €100 million but I would struggle to answer
+        the other two, but I know who could help… We''ve just teamed up with th...
+        ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-engineer-react-typescript-up-to-120000/44789086"},{"jobId":44788844,"employerId":569638,"employerName":"SR2","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Engineer  React & TypeScript  Up to £120,000","locationName":"London","minimumSalary":90000.00,"maximumSalary":120000.00,"currency":"GBP","expirationDate":"21/12/2021","date":"23/11/2021","jobDescription":"
+        Quiz time!  What are Cristiano Ronaldo''s legs worth?What are the chances
+        that SpaceX''s next launch will fail?What would happen to the property in
+        Silicon Valley if there was an earthquake? Well, I can tell you that Cristiano
+        Ronaldo''s legs are insured for €100 million but I would struggle to answer
+        the other two, but I know who could help… We''ve just teamed up with th...
+        ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-engineer-react-typescript-up-to-120000/44788844"},{"jobId":44860987,"employerId":268109,"employerName":"Brand
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"Mid-Weight
+        Frontend Developer","locationName":"Chelmsford","minimumSalary":25000.00,"maximumSalary":35000.00,"currency":"GBP","expirationDate":"12/01/2022","date":"01/12/2021","jobDescription":"
+        Mid-Weight Frontend Developer, Chelmsford – Are you a junior web developer?
+        Would you like to work in a fast-paced supportive environment? Do you want
+        to work for a growing company that encourages personal development? Then look
+        no further as this may be the perfect role for you!! The Company Our client
+        is a holding company responsible for ... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/mid-weight-frontend-developer/44860987"},{"jobId":44860249,"employerId":451880,"employerName":"Corriculo
+        Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer / Angular Engineer - Remote","locationName":"Oxford","minimumSalary":50000.00,"maximumSalary":75000.00,"currency":"GBP","expirationDate":"12/01/2022","date":"01/12/2021","jobDescription":"
+        Frontend Developer / Angular Engineer - Remote A Frontend Developer / Angular
+        Engineer is required to join an exciting software house based in central Oxford.
+        The role is offered with as much working from home as you want, all the way
+        up to fully remote!&nbsp;&nbsp; The Role The Frontend Developer / Angular
+        Engineer will be working on the frontend of my client’s SaaS product, which
+        is bu... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-angular-engineer-remote/44860249"},{"jobId":44787915,"employerId":569638,"employerName":"SR2","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Developer - £120K  equity - Remote","locationName":"Leeds","minimumSalary":80000.00,"maximumSalary":120000.00,"currency":"GBP","expirationDate":"04/01/2022","date":"23/11/2021","jobDescription":"
+        Senior Frontend Developer (React and TypeScript) - Up to &#163;120K &#43;
+        share options A SaaS start-up that has recently secured a healthy wedge of
+        Series A funding is growing out their tech team across the UK.  They''re a
+        unique business that has been born out of actual experience. They''ve built
+        a fantastic, inclusive, and collaborative culture and are looking for like-minded
+        people to join them on their journey.  Summa... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer-120k-equity-remote/44787915"},{"jobId":44787883,"employerId":569638,"employerName":"SR2","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Developer - £120K  equity - Remote","locationName":"Manchester","minimumSalary":80000.00,"maximumSalary":120000.00,"currency":"GBP","expirationDate":"04/01/2022","date":"23/11/2021","jobDescription":"
+        Senior Frontend Developer (React and TypeScript) - Up to &#163;120K &#43;
+        share options A SaaS start-up that has recently secured a healthy wedge of
+        Series A funding is growing out their tech team across the UK.  They''re a
+        unique business that has been born out of actual experience. They''ve built
+        a fantastic, inclusive, and collaborative culture and are looking for like-minded
+        people to join them on their journey.  Summa... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer-120k-equity-remote/44787883"},{"jobId":44543201,"employerId":7337,"employerName":"Ashdown
+        Group","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Software Developer","locationName":"Wandsworth","minimumSalary":50000.00,"maximumSalary":75000.00,"currency":"GBP","expirationDate":"07/12/2021","date":"02/11/2021","jobDescription":"
+        A market leading software company is seeking a Frontend Software Engineer
+        (HTML/Typescript) to be a part of a team responsible for the development of
+        their software products. You’ll coordinate development on individual Features,
+        working closely with Product  Management, other developers and QA to refine
+        requirements and deliver regular releases of high quality, innovative software
+        to meet customer requirements and strategic objectives.  ... ","applications":7,"jobUrl":"https://www.reed.co.uk/jobs/frontend-software-developer/44543201"},{"jobId":44783336,"employerId":569638,"employerName":"SR2","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Developer Angular/RxJS - Remote - Inside IR35","locationName":"London","minimumSalary":500.00,"maximumSalary":600.00,"currency":"GBP","expirationDate":"04/01/2022","date":"23/11/2021","jobDescription":"
+        Angular Developer / Frontend / Web Developer Senior Frontend Developer (Angular/RxJS)
+        - Remote - Inside IR35 SR2 is currently looking for Senior Frontend Developers
+        to join their leading fintech client on one of their product teams. The roles
+        will be for at least six months and fully remote. Skills:  Angular and TypescriptRxJS
+        and solid understanding of design patternsNode a... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer-angular-rxjs-remote-inside-ir35/44783336"},{"jobId":44783162,"employerId":451880,"employerName":"Corriculo
+        Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer, UI, JavaScript, React, Remote","locationName":"Oxford","minimumSalary":60000.00,"maximumSalary":62000.00,"currency":"GBP","expirationDate":"04/01/2022","date":"23/11/2021","jobDescription":"
+        Frontend Developer, UI, JavaScript, React, Remote  A Senior Frontend Developer
+        / UI Developer is required to join an exciting and well established organisation,
+        with a global presence on a full-time basis. The successful Senior Frontend
+        Developer / UI Developer will have the opportunity to work on either  a remote
+        or Hybrid basis, with visits to either their Oxford or London office. <...
+        ","applications":7,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-ui-javascript-react-remote/44783162"},{"jobId":44854075,"employerId":585352,"employerName":"FRG
+        Technology Consulting ","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Poland","minimumSalary":44997.48,"maximumSalary":47497.32,"currency":"GBP","expirationDate":"12/01/2022","date":"01/12/2021","jobDescription":"
+        Job Description New role looking for enthusiastic, front end developers who
+        want the opportunity to work with high-profile clients, such as, The NHS,
+        Commission Border, Audi and many more big clients. My client is looking for
+        a person to join our Web Technologies, competence  group.  Your main responsibility
+        will be suggesting measurable, customer-focused improvements to our products,
+        improving the work-flow with the best archi... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44854075"},{"jobId":44780350,"employerId":346427,"employerName":"Understanding
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Covent Garden","minimumSalary":75000.00,"maximumSalary":85000.00,"currency":"GBP","expirationDate":"14/12/2021","date":"23/11/2021","jobDescription":"
+        Company info We are looking for Senior Level Frontend Developers to join a
+        blue-chip backed, high-tech encryption start-up company which is spearheading
+        the move for secure, distributed and decentralised communication.  As Frontend
+        Developer you will be part of a company that works on a massive scale with
+        over 30 million users worldwide, with up to 8 million users on a single public
+        deployment and half a million on the largest ... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44780350"},{"jobId":44780349,"employerId":346427,"employerName":"Understanding
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Covent Garden","minimumSalary":60000.00,"maximumSalary":70000.00,"currency":"GBP","expirationDate":"14/12/2021","date":"23/11/2021","jobDescription":"
+        Company info We are looking for Mid Level Frontend Developers to join a blue-chip
+        backed, high-tech encryption start-up company which is spearheading the move
+        for secure, distributed and decentralised communication.  As Frontend Developer
+        you will be working for a company that works on a massive scale with over
+        30 million users worldwide, with up to 8 million users on a single public
+        deployment and half a million on the largest... ","applications":4,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44780349"},{"jobId":44779896,"employerId":485887,"employerName":"FreshtechIT","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer with React - London","locationName":"London","minimumSalary":40000.00,"maximumSalary":50000.00,"currency":"GBP","expirationDate":"03/01/2022","date":"22/11/2021","jobDescription":"
+        Frontend Developer - React / JavaScript (Mid-Level) - London - &#163;40-45k
+        A world leading organisation in London are seeking a talented developer who
+        wants tostretch their abilities to the limits!You will be creating and maintaining
+        central features across their global website andcontributing to the team dynamic
+        working alongside an established development team. As a Frontend Developer...
+        ","applications":8,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-with-react-london/44779896"},{"jobId":44779892,"employerId":485887,"employerName":"FreshtechIT","employerProfileId":null,"employerProfileName":null,"jobTitle":"Lead
+        Frontend Engineer","locationName":"London","minimumSalary":75000.00,"maximumSalary":90000.00,"currency":"GBP","expirationDate":"03/01/2022","date":"22/11/2021","jobDescription":"
+        Lead Frontend Engineer- Retail- London ( ReactJS)  A well-known, high profile
+        retail company based in London are seeking a Lead Frontend Engineer to join
+        their Engineering department. You will be responsible for building/ running
+        and managing the frontend team (9 developers) As the Lead Frontend Engineer
+        you will be responsible for:  Managing the existing team of EngineersTake
+        the lead in developing a bespo... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/lead-frontend-engineer/44779892"},{"jobId":44852452,"employerId":432282,"employerName":"Oscar
+        Technology","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        VueJS Developer  £45,000  Doncaster / Remote","locationName":"Doncaster","minimumSalary":35000.00,"maximumSalary":45000.00,"currency":"GBP","expirationDate":"11/01/2022","date":"30/11/2021","jobDescription":"
+        Vacancy: Frontend VueJS Developer Skills: JavaScript, VueJS, Nuxt, Tailwind
+        Location: Doncaster / 2 days in the office Industry: Automobile / IT &amp;
+        Internet Package: up to &#163;45,000, remote work, flexible hours, career
+        progression, pension scheme</st... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-vuejs-developer-45000-doncaster-remote/44852452"},{"jobId":44821992,"employerId":432282,"employerName":"Oscar
+        Technology","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer - Remote Welcome - React, GO, Microservices","locationName":"Bristol","minimumSalary":40000.00,"maximumSalary":85000.00,"currency":"GBP","expirationDate":"07/01/2022","date":"26/11/2021","jobDescription":"
+        Frontend Developer (Mid to Lead) &#163;40,000 upwards! React, GO, Groovy,
+        AWS, AuroraDB, Kubernetes, Docker... Bristol or Remote (upto 100%!) - UK Based
+        Flexible working, Remote first company, Bonus, Life &amp; Family Health Insurance,
+        Gym Vouchers, 50% off AWS/GCP cerifications, Birthday off... About Them In
+        less than 5 years,... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-remote-welcome-react-go-microservices/44821992"},{"jobId":44779338,"employerId":609834,"employerName":"Parker
+        B Associates","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Developer","locationName":"Bromley","minimumSalary":80000.00,"maximumSalary":135000.00,"currency":"GBP","expirationDate":"03/01/2022","date":"22/11/2021","jobDescription":"
+        Senior Frontend Developer London (Hybrid) Permanent &#163;80k - &#163;135k
+        &#43; Bonus  Our client is a global Insurance business and is looking for
+        a Senior Frontend Developer to join the team on a permanent basis.  - Interested
+        to work for one of the leading Insurance companies? - Want to work for a business
+        moving towards an engineering organisation?  Responsibilities:  Building...
+        ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer/44779338"},{"jobId":44852406,"employerId":432282,"employerName":"Oscar
+        Technology","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer  £35,000  Leeds","locationName":"Leeds","minimumSalary":27000.00,"maximumSalary":35000.00,"currency":"GBP","expirationDate":"11/01/2022","date":"30/11/2021","jobDescription":"
+        Vacancy: Frontend Developer Skills: JavaScript (ES6), HTML5, CSS3, SCSS Location:
+        Leeds / 2 days in the office Industry: Aviation / IT &amp; Internet Package:
+        up to &#163;35,000, remote work, flexible hours, progression, training Th...
+        ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-35000-leeds/44852406"},{"jobId":44821518,"employerId":432282,"employerName":"Oscar
+        Technology","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer - Remote Welcome - Vue/React,Sitecore","locationName":"Bristol","minimumSalary":25000.00,"maximumSalary":55000.00,"currency":"GBP","expirationDate":"07/01/2022","date":"26/11/2021","jobDescription":"
+        Frontend Developer (Mid, Senior or Team Lead) - Digital Agency - Anywhere
+        in the UK - React/Vue, Sitecore Remote OR Commutable to London, Cardiff, Leeds
+        or Manchester - Up to 45k  Bonus, FlexiTime, Early Finish Fridays, Healthcare,
+        Buy &amp; Sell Holidays, Discounts, Funded Certifications... About Them: An
+        award-winning, renowned digital agency are well on their way to world domin...
+        ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-remote-welcome-vue-reactsitecore/44821518"},{"jobId":44777316,"employerId":524441,"employerName":"INTEC
+        SELECT LIMITED","employerProfileId":null,"employerProfileName":null,"jobTitle":"React
+        Developer","locationName":"London","minimumSalary":800.00,"maximumSalary":850.00,"currency":"GBP","expirationDate":"03/01/2022","date":"22/11/2021","jobDescription":"FrontEnd
+        Developer - &#163;850per day - Remote Working - InsuranceLocation: Remote
+        / London Overview:An exciting opportunity has come around for a Frontend Developer
+        to join one of the leading players in the insurance market as part of their
+        Investments AI team.Role &amp; Responsibilities:·Take ownership of a significant
+        part of the team''s solution development.·Demonstrate end-to-en... ","applications":8,"jobUrl":"https://www.reed.co.uk/jobs/react-developer/44777316"},{"jobId":44850550,"employerId":456333,"employerName":"Xigen
+        Limited","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Bedford","minimumSalary":30000.00,"maximumSalary":35000.00,"currency":"GBP","expirationDate":"11/01/2022","date":"30/11/2021","jobDescription":"
+        About Xigen Xigen is an award-winning UK eCommerce agency with two decades
+        of experience under its belt in creating high performance websites for a diverse
+        client base of well-known global brands, multinational blue-chips, enterprise
+        and SMB clients across multiple  sectors.   Who we are When it comes to us
+        as individuals our moto, ''normal gets you nowhere'', is particularly resonant.
+        Our... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44850550"},{"jobId":44819988,"employerId":306165,"employerName":"Propel
+        London","employerProfileId":null,"employerProfileName":null,"jobTitle":" Lead
+        Vue.JS Frontend Developer - 6 month contract - OUTSIDE IR35 - Start ASAP ","locationName":"London","minimumSalary":400.00,"maximumSalary":500.00,"currency":"GBP","expirationDate":"07/01/2022","date":"26/11/2021","jobDescription":"
+        My client is a private social media subscription service and it has been privately
+        funded and about to enter beta phase before launch in 2022 The client urgently
+        needs a Frontend software engineer needed to join their growing team as they
+        develop a new version of their product with exciting new features. They have
+        an agile workflow with a focus on efficient development and short cycle times.
+        Targeting  pilot launch in just a few month... ","applications":0,"jobUrl":"https://www.reed.co.uk/jobs/lead-vuejs-frontend-developer-6-month-contract-outside-ir35-start-asap/44819988"},{"jobId":44418587,"employerId":485887,"employerName":"FreshtechIT","employerProfileId":null,"employerProfileName":null,"jobTitle":"Lead
+        Frontend Engineer","locationName":"London","minimumSalary":75000.00,"maximumSalary":90000.00,"currency":"GBP","expirationDate":"11/01/2022","date":"19/10/2021","jobDescription":"
+        Lead Frontend Engineer- Retail- London ( ReactJS)  A well-known, high profile
+        retail company based in London are seeking a Lead Frontend Engineer to join
+        their Engineering department. You will be responsible for building/ running
+        and managing the frontend team (9 developers) As the Lead Frontend Engineer
+        you will be responsible for:  Managing the existing team of EngineersTake
+        the lead in developing a bespo... ","applications":0,"jobUrl":"https://www.reed.co.uk/jobs/lead-frontend-engineer/44418587"},{"jobId":44775793,"employerId":406423,"employerName":"REED
+        Technology","employerProfileId":null,"employerProfileName":null,"jobTitle":"Lead
+        Frontend Developer - 100 remote - up to £80K DOE","locationName":"Newcastle
+        Upon Tyne","minimumSalary":60000.00,"maximumSalary":80000.00,"currency":"GBP","expirationDate":"03/01/2022","date":"22/11/2021","jobDescription":"
+        Lead Frontend Developer - 100% remote - up to &#163;80K DOE I am currently
+        recruiting on behalf of an award-winning start-up and we are looking for a
+        Lead Frontend Developer to join them. This company have two established products
+        in the marketplace and new projects in the pipeline. It''s a fantastic opportunity
+        to  come into a business and have a real impact, helping scale up the business
+        and drive new revenues. Skills ... ","applications":4,"jobUrl":"https://www.reed.co.uk/jobs/lead-frontend-developer-100-remote-up-to-80k-doe/44775793"},{"jobId":44818380,"employerId":274539,"employerName":"Heat
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"React
+        Native Frontend Developer (Web/Mobile)","locationName":"Bracknell","minimumSalary":400.00,"maximumSalary":600.00,"currency":"GBP","expirationDate":"07/01/2022","date":"26/11/2021","jobDescription":"
+        I''m working alongside a growing start-up that are looking for a front-end
+        developer to help with their web applications, having React Native experience
+        is a &#43;, not essential. If working with React Native does interest you,
+        then this could be a great place  to start!  Role: Frontend Developer (Web/Mobile)
+        Client: Hospitality Contract Length: 6 months rolling Location: Remote IR35:
+        Outside Day Rate... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/react-native-frontend-developer-web-mobile/44818380"},{"jobId":44756245,"employerId":640336,"employerName":"Ovyo","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Dev. Lead (Frontend  Web  JavaScript  React)","locationName":"London","minimumSalary":null,"maximumSalary":null,"currency":null,"expirationDate":"24/12/2021","date":"19/11/2021","jobDescription":"
+        Based: Remote (locations across Europe will be considered) Employment: Contract
+        and Perm. options available Start: ASAP This role will suit an experienced
+        Senior Software Engineer/Lead with significant expertise in Frontend Development,
+        centred in the React Framework, interested in learning about, or with prior
+        experience in, the world o... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/frontend-dev-lead-frontend-web-javascript-react/44756245"},{"jobId":44818165,"employerId":274539,"employerName":"Heat
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"React
+        JS (Frontend Developer)","locationName":"Slough","minimumSalary":400.00,"maximumSalary":600.00,"currency":"GBP","expirationDate":"07/01/2022","date":"26/11/2021","jobDescription":"  JavaScript/
+        Enzyme/ Jest/ React js/ Frontend Developer/   I''m working alongside an E-commerce
+        exclusive sneaker/retail platform, which sell to around 3 million users across
+        Europe, each month. Scaling up, they are looking for a front-end developer
+        to help grow and maintain the sheer demand. With plans for expansion  by supplying
+        more and more users each month, they need a developer to come in and help
+        make this happe... ","applications":5,"jobUrl":"https://www.reed.co.uk/jobs/react-js-frontend-developer/44818165"},{"jobId":44814521,"employerId":590841,"employerName":"Digitalent","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Developer - Remote","locationName":"Manchester","minimumSalary":null,"maximumSalary":null,"currency":null,"expirationDate":"07/01/2022","date":"26/11/2021","jobDescription":"
+        Would you like to be part of an award-winning streaming company, working in
+        the fast-paced worlds of sports, media and betting? Widely recognised as an
+        industry leader in live video and OTT, Digitalent is working with a client
+        who is trusted by the likes of Liverpool FC, the BBC, William Hill and the
+        English FA to deliver live and on demand video to audiences worldwide.  They
+        aim to be the most innovative and creative company i... ","applications":0,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer-remote/44814521"},{"jobId":44842946,"employerId":385714,"employerName":"E.ON","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Front-end Developer","locationName":"London","minimumSalary":null,"maximumSalary":null,"currency":null,"expirationDate":"14/12/2021","date":"30/11/2021","jobDescription":"
+        At E.ON Next we''re looking for the most ambitious, talented and creative
+        people out there to join our brand new, fresh, start-up business. This isn''t
+        energy as you know it. This is new, exciting and waiting for stars like you
+        to shape it. Do you love delivering  for customers? Are you full of energy,
+        ideas and passion? Want to be part of the next generation of Digital experts
+        and bring a new Digital channel to life? We''re looking for ... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/senior-front-end-developer/44842946"},{"jobId":44842467,"employerId":566198,"employerName":"AJ
+        Bell","employerProfileId":null,"employerProfileName":null,"jobTitle":"React
+        Frontend Developer","locationName":"Manchester","minimumSalary":null,"maximumSalary":null,"currency":null,"expirationDate":"11/01/2022","date":"30/11/2021","jobDescription":"
+        This is an exciting opportunity for a React Frontend Developer to lead UI
+        development on our Investcentre platform. What does the job involve?  Agile
+        methodologies and a passion for continuous improvement and building a high-performance
+        engineering teamWork with the team to design and deliver high quality productsAt
+        AJ Bell we pair, and you, in most cases will pair with other people Competenc...
+        ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/react-frontend-developer/44842467"},{"jobId":44812854,"employerId":632911,"employerName":"Reviva
+        Resourcing","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Developer Remote/Hybrid","locationName":"Bristol","minimumSalary":55000.00,"maximumSalary":70000.00,"currency":"GBP","expirationDate":"07/01/2022","date":"26/11/2021","jobDescription":"The
+        Role We''re looking for an outstanding Senior Front-End Developer to join
+        our team and help us continue innovating our market leading training delivery
+        platform. You will work with a design team of UX/Design and UI developers
+        alongside a number of agile full stack development teams, taking ownership
+        over the front end, defining and driving the standards and technologies used
+        by Bud. You will need to have significant... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer-remote-hybrid/44812854"},{"jobId":44916960,"employerId":609834,"employerName":"Parker
+        B Associates","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Bromley","minimumSalary":50000.00,"maximumSalary":130000.00,"currency":"GBP","expirationDate":"15/01/2022","date":"04/12/2021","jobDescription":"
+        Frontend Developer London (Hybrid) Permanent &#163;80k - &#163;130k &#43;
+        Bonus  Our client is a global Insurance business and is looking for a Senior
+        Frontend Developer to join the team on a permanent basis.  - Interested to
+        work for one of the leading Insurance companies? - Want to work for a business
+        moving towards an engineering organisation?  Responsibilities:   Building
+        respo... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44916960"},{"jobId":44840073,"employerId":346427,"employerName":"Understanding
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Engineer","locationName":"London","minimumSalary":50000.00,"maximumSalary":80000.00,"currency":"GBP","expirationDate":"11/01/2022","date":"30/11/2021","jobDescription":"
+        An incredible opportunity for a mid-level Frontend Engineer to join a rapidly
+        growing, market disrupting Artificial Intelligence company. By mimicking the
+        revolutionary success of products such as Spotify and the Apple Store, you
+        will help build out the company''s entire frontend experience, allowing businesses
+        to purchase bespoke AI software products. You will help build the no-code
+        ReactJS front end for deploying artificial in... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/frontend-engineer/44840073"},{"jobId":44839170,"employerId":589026,"employerName":"Jefferson
+        Frank ","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer - Part Remote - Active SC Needed!","locationName":"London","minimumSalary":500.00,"maximumSalary":550.00,"currency":"GBP","expirationDate":"10/01/2022","date":"29/11/2021","jobDescription":"
+        Front End Developer - Contract - Part Remote - Market Rate - Outside IR35.
+        Responsibilities include:  Lead and develop the design and implementation
+        of software applicationsEnsure that all software applications focus on web
+        application security at the forefront of the code bases.Support our quality
+        assurance team by developing detailed test strategies and unit tests for a...
+        ","applications":4,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-part-remote-active-sc-needed/44839170"},{"jobId":44839063,"employerId":434596,"employerName":"Inspire
+        People","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Developer - Remote Working","locationName":"London","minimumSalary":60000.00,"maximumSalary":70000.00,"currency":"GBP","expirationDate":"10/01/2022","date":"29/11/2021","jobDescription":"
+        To cure diseases, you need data. Inspire People are partnering with Lifebit,
+        who are on a mission to harness the power of connected data and bring precision
+        medicine to life globally. Trusted by Governments and world-leading pharma
+        institutions, Lifebit  are rapidly expanding and have opportunities for Frontend
+        Developers with React and JavaScript, HTML and CSS, who are passionate about
+        code quality, to meet client demand. Fully remote worki... ","applications":5,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer-remote-working/44839063"},{"jobId":44810975,"employerId":527488,"employerName":"\t
+        Honor Search Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"FrontEnd
+        Developer (ReactJS)- Enterprise Simulation Co- Remote/ London - £60k","locationName":"London","minimumSalary":45000.00,"maximumSalary":65000.00,"currency":"GBP","expirationDate":"06/01/2022","date":"25/11/2021","jobDescription":"
+        Software Developer (React front-end) Intermediate-Senior level (3&#43; years
+        of experience)  A leading Enterprise SAAS co is looking for a software developer
+        to extend the features of an existing web application built using React. This
+        web front-end communicates to an existing API back-end component, and authentication
+        is performed using Auth0.  They provide front-end web applications and API
+        services which enable the se... ","applications":0,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-reactjs-enterprise-simulation-co-remote-london-60k/44810975"},{"jobId":44691223,"employerId":390546,"employerName":"Profectus
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"Remote
+        Frontend Developer","locationName":"London","minimumSalary":33000.00,"maximumSalary":45000.00,"currency":"GBP","expirationDate":"24/12/2021","date":"12/11/2021","jobDescription":"
+        At Profectus we have an exciting role with a dazzling digital agency for a
+        Front-end Developer. Ideally looking for Three-plus years of commercial experience.
+        You must have a strong development background in Front-end technology such
+        as Javascript, HTML,  CSS. You will be working for an impressive Digital Agency
+        that really promotes a positive work culture. Being a dynamic organisation
+        you will have the opportunity to work on a variet... ","applications":10,"jobUrl":"https://www.reed.co.uk/jobs/remote-frontend-developer/44691223"},{"jobId":44809923,"employerId":569638,"employerName":"SR2","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Engineer  React & TypeScript  Up to £120,000","locationName":"Manchester","minimumSalary":80000.00,"maximumSalary":120000.00,"currency":"GBP","expirationDate":"23/12/2021","date":"25/11/2021","jobDescription":"
+        Quiz time!  What are Cristiano Ronaldo''s legs worth?What are the chances
+        that SpaceX''s next launch will fail?What would happen to the property in
+        Silicon Valley if there was an earthquake? Well, I can tell you that Cristiano
+        Ronaldo''s legs are insured for €100 million but I would struggle to answer
+        the other two, but I know who could help… We''ve just teamed up with th...
+        ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-engineer-react-typescript-up-to-120000/44809923"},{"jobId":44304231,"employerId":392242,"employerName":"Edward
+        Mann Group","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer (JavaScript) (FULLY REMOTE ROLE)","locationName":"Aylesbury","minimumSalary":45000.00,"maximumSalary":50000.00,"currency":"GBP","expirationDate":"10/01/2022","date":"07/10/2021","jobDescription":"
+        We are currently recruiting for a client of ours in the Aylesbury area for
+        a Frontend / Web Developer for a growing team. The role is a mixture of supporting
+        and expanding the existing products, as well as greenfield research and development.
+        This client deal with significant datasets, so you’ll be using the latest
+        technologies to provide services to our clients growing global customer base.
+        Key ... ","applications":4,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-javascript-fully-remote-role/44304231"},{"jobId":44897781,"employerId":432282,"employerName":"Oscar
+        Technology","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer - Remote/Bristol - React, GO, Microservices","locationName":"Bristol","minimumSalary":45000.00,"maximumSalary":100000.00,"currency":"GBP","expirationDate":"14/01/2022","date":"03/12/2021","jobDescription":"
+        Frontend Developer (Mid to Lead level) &#163;40,000 upwards! React, Node,
+        GO, Groovy, AWS, Microservies, Kubernetes, Docker... Bristol or Remote (upto
+        100%!) - UK Based Flexible working, Remote upto 100%, Life Insurance, Private
+        Healthcare &amp; Dental, 5% matched pension rising annually, 25 days hol &#43;
+        christmas shut down &#43; bank hols, Buy &amp; Sell holidays, Carry o... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-remote-bristol-react-go-microservices/44897781"},{"jobId":44806321,"employerId":396356,"employerName":"Studee","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Engineer - Remote working","locationName":"Cirencester","minimumSalary":40000.00,"maximumSalary":55000.00,"currency":"GBP","expirationDate":"06/01/2022","date":"25/11/2021","jobDescription":"
+        An international start-up led by one of the UK’s most successful tech entrepreneurs
+        is looking for an enthusiastic frontend engineer. We help international students
+        find and enrol at their ideal university abroad, and we’re already working
+        with more than  300 universities across 30 countries. We believe incredible
+        results can be achieved by a small team of super-smart, engaged individuals.
+        We like to cut the waffle, make decisions fas... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-engineer-remote-working/44806321"},{"jobId":44834123,"employerId":398187,"employerName":"Oliver
+        James ","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Developer - VueJS/AWS £700 p/d","locationName":"Manchester","minimumSalary":500.00,"maximumSalary":700.00,"currency":"GBP","expirationDate":"10/01/2022","date":"29/11/2021","jobDescription":"
+        Senior Front End Developer - &#163;700 Outside IR35 3 months initial contract
+        Oliver James are currently recruiting for a Senior Front End Developer on
+        behalf of one of our closest clients based in the North West. This is a remote
+        role with occasional travel to either the North West or London, and our client
+        are ideally looking for somebody with the following knowledge:  VueJ... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer-vuejs-aws-700-p-d/44834123"},{"jobId":44806211,"employerId":396356,"employerName":"Studee","employerProfileId":null,"employerProfileName":null,"jobTitle":"Lead
+        Frontend Engineer  - Remote working","locationName":"Cirencester","minimumSalary":45000.00,"maximumSalary":55000.00,"currency":"GBP","expirationDate":"06/01/2022","date":"25/11/2021","jobDescription":"
+        An international start-up led by one of the UK’s most successful tech entrepreneurs
+        is looking for an enthusiastic frontend engineer. We help international students
+        find and enrol at their ideal university abroad, and we’re already working
+        with more than  300 universities across 30 countries. We believe incredible
+        results can be achieved by a small team of super-smart, engaged individuals.
+        We like to cut the waffle, make decisions fas... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/lead-frontend-engineer-remote-working/44806211"},{"jobId":44402928,"employerId":302092,"employerName":"Adria
+        Solutions Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Front
+        End Team Lead  - Fully Remote","locationName":"Manchester","minimumSalary":60000.00,"maximumSalary":85000.00,"currency":"GBP","expirationDate":"10/01/2022","date":"18/10/2021","jobDescription":"Front
+        End Team Lead &nbsp;- Fully Remote&nbsp; On behalf of our global client, we
+        are currently looking for an exceptional Lead Frontend Developer with strong
+        Angular experience. As Lead Frontend&nbsp;Developer you will be playing a
+        vital part in our client’s transformation, as they are about to embark on  a
+        major program to design and deliver major enhancements to part of the core
+        product suite. Front End Team Lea... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/front-end-team-lead-fully-remote/44402928"},{"jobId":44833618,"employerId":442610,"employerName":"Talent
+        Cluster ","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Exeter","minimumSalary":35000.00,"maximumSalary":40000.00,"currency":"GBP","expirationDate":"10/01/2022","date":"29/11/2021","jobDescription":"
+        Frontend Developer Wanted In Exeter 35/40K Hybrid Only 1 Day Per Week In Office   The
+        Company  They are a rapidly expanding web and mobile application development
+        company who are growing organically after delivering fantastic results for
+        their customers and partners. They mainly focus on Frontend focused projects
+        which require pixel perfect design  and development so their work is always
+        to a very high standard. The techn... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44833618"},{"jobId":44894954,"employerId":443281,"employerName":"Be-IT
+        Resourcing","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Web Developer - Glasgow","locationName":"Glasgow","minimumSalary":0.00,"maximumSalary":0.00,"currency":"GBP","expirationDate":"10/12/2021","date":"03/12/2021","jobDescription":"
+        Looking for a frontend developer to join a key player in analytics. The aim
+        is to help customers transform their data into intelligence. As a Software
+        Developer,&nbsp;you will join the intelligence and investigation management
+        team and will have the opportunity to experience the full development cycle,
+        from design to implementation. The team are currently working on exciting
+        global applications including IOT, Streaming A... ","applications":0,"jobUrl":"https://www.reed.co.uk/jobs/frontend-web-developer-glasgow/44894954"},{"jobId":44143621,"employerId":557802,"employerName":"Atkinson
+        Moss","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Norwich","minimumSalary":30000.00,"maximumSalary":45000.00,"currency":"GBP","expirationDate":"26/01/2022","date":"22/09/2021","jobDescription":"
+        Are you a Frontend Developer looking to take your career to the next level?
+        If so, this is the role for you.  One of Norwich’s most well-known entities
+        is looking to add two Frontend Developers to their development team due to
+        a period of growth moving into 2021. Working for this UK leading business,
+        opportunities will be in abundance to work on new features and  be a part
+        of exciting projects.  As a Frontend Developer within t... ","applications":24,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44143621"},{"jobId":44892608,"employerId":545407,"employerName":"ITECCO","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Northampton","minimumSalary":28000.00,"maximumSalary":35000.00,"currency":"GBP","expirationDate":"14/01/2022","date":"03/12/2021","jobDescription":"
+        Front-End Developer NorthamptonUp to &#163;35,000  Are you looking for a new
+        Frontend Developer role with a leading creative agency? My client is specialist
+        creative agency specialising in the whole creation of unique and bespoke web
+        platforms and creative projects. They are looking for a talented and proactive
+        developer that has experience with modern JavaScript frameworks such as ReactJS.
+        T... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44892608"},{"jobId":44831346,"employerId":575264,"employerName":"REED","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Wimbledon","minimumSalary":45000.00,"maximumSalary":70000.00,"currency":"GBP","expirationDate":"06/12/2021","date":"29/11/2021","jobDescription":"
+        Frontend Developer | JavaScript | React | GRAPHQL | | TypeScript | GIT | API
+        | RESTAPI | Node.JS | Vanilla JS Frontend developer role - JavaScript (vanilla
+        JS, React, Node.JS) - required to work for one of our clients. They are a
+        global financial software powerhouse based in South West London.They are currently
+        in the process of building a new product that is intended to go live by the
+        end... ","applications":8,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44831346"},{"jobId":44831228,"employerId":617997,"employerName":"In
+        Technology Group Limited","employerProfileId":null,"employerProfileName":null,"jobTitle":"Front
+        End Web Developer","locationName":"Stoke-on-Trent","minimumSalary":28000.00,"maximumSalary":280000.00,"currency":"GBP","expirationDate":"06/12/2021","date":"29/11/2021","jobDescription":"
+        Frontend Web Developer - Stoke-on-Trent - GBP 28,000 DOE I am currently working
+        with a great company that is looking to add a Frontend Web Developer to their
+        growing IT team. This role will be full-time and onsite in Fenton.  The successful
+        candidate will have at least two years of experience of the following:  Vue.jsREST
+        APIsVersion Control eg GITH... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/front-end-web-developer/44831228"},{"jobId":44831218,"employerId":617997,"employerName":"In
+        Technology Group Limited","employerProfileId":null,"employerProfileName":null,"jobTitle":"Remote
+        Frontend Developer","locationName":"Birmingham","minimumSalary":30000.00,"maximumSalary":55000.00,"currency":"GBP","expirationDate":"06/12/2021","date":"29/11/2021","jobDescription":"
+        Frontend Developer - Remote - GBP 30,000-55,000 DOE I am currently working
+        with a fast-growing and exciting company with offices in Birmingham that is
+        looking to add a Frontend Developer to their growing IT team. This role will
+        be fully remote but would require you to live in the UK. The successful candidate
+        will have at least 3 years of commercial experiencein the foll... ","applications":4,"jobUrl":"https://www.reed.co.uk/jobs/remote-frontend-developer/44831218"},{"jobId":44831204,"employerId":617997,"employerName":"In
+        Technology Group Limited","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Software Developer","locationName":"Staffordshire","minimumSalary":35000.00,"maximumSalary":45000.00,"currency":"GBP","expirationDate":"06/12/2021","date":"29/11/2021","jobDescription":"
+        Frontend Software Developer - Staffordshire/Remote - GBP 35,000-42,000 DOE
+        I am currently working with a well-established client based in Staffordshire.
+        My client is looking for a Frontend Software Developer to join their dynamic
+        IT Team. This role would be fully remote, but require you to live in the UK.
+        The successful applicant must have 3&#43; years of experience</st... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-software-developer/44831204"},{"jobId":44831140,"employerId":617997,"employerName":"In
+        Technology Group Limited","employerProfileId":null,"employerProfileName":null,"jobTitle":"Front
+        End Software Developer","locationName":"Staffordshire","minimumSalary":35000.00,"maximumSalary":42000.00,"currency":"GBP","expirationDate":"06/12/2021","date":"29/11/2021","jobDescription":"
+        Frontend Software Developer - Staffordshire/Remote - GBP 35,000-42,000 DOE
+        I am currently working with a well-established client based in Staffordshire.
+        My client is looking for a Frontend Software Developer to join their dynamic
+        IT Team. This role would be mainly remote, but require you to come into their
+        Staffordshire office a few times a month. The successful applicant must ...
+        ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/front-end-software-developer/44831140"},{"jobId":44801787,"employerId":276725,"employerName":"Opus
+        Resourcing Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer React - Contract","locationName":"London","minimumSalary":500.00,"maximumSalary":575.00,"currency":"GBP","expirationDate":"22/12/2021","date":"24/11/2021","jobDescription":"Frontend
+        Developer React (Outside IR35 / 6 months) with strong React JavaScript Frontend
+        development skills combined with Node.js and the majority of Typescript, Next.js,
+        React / React Hooks, Redux, OO JavaScript, HTML 5 / CSS, RESTful / API’s,
+        and JavaScript  Unit Tests (TDD / BDD) and ideally Fela is required by Ecommerce
+        Giant in West London to work on a key project to rebuild of one of their core
+        B2C websites search / discovery.T... ","applications":11,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-react-contract/44801787"},{"jobId":44397937,"employerId":346427,"employerName":"Understanding
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"London","minimumSalary":60000.00,"maximumSalary":100000.00,"currency":"GBP","expirationDate":"09/01/2022","date":"17/10/2021","jobDescription":"
+        Would you like to re-invent payments and develop breakthrough technology?
+        I am looking for Frontend developers to help develop breakthrough technology
+        and re-invent payments at one of the most well-backed DeFi start-ups in the
+        world. With over $24 million in funding from some of the top crypto investors
+        such as Coinbase, this company is scaling blockchains such as Ethereum to
+        100''s of millions of users whilst f... ","applications":13,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44397937"},{"jobId":44397936,"employerId":346427,"employerName":"Understanding
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"London","minimumSalary":50000.00,"maximumSalary":60000.00,"currency":"GBP","expirationDate":"09/01/2022","date":"17/10/2021","jobDescription":"
+        Frontend Developer - Machine Learning FinTech! We''re looking for a Frontend
+        developer to join a top-tier UK Fintech who are leading the way in innovation
+        in the motor finance industry. They use big data infrastructure to create
+        a customer centric product which is scoping the future of the used-car market
+        and are currently looking for Frontend developers with React experience. The
+        client was a high flyer ... ","applications":13,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44397936"},{"jobId":44397935,"employerId":346427,"employerName":"Understanding
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"London","minimumSalary":50000.00,"maximumSalary":100000.00,"currency":"GBP","expirationDate":"09/01/2022","date":"17/10/2021","jobDescription":"
+        Would you like to build complex UIs whilst working fully remotely? We are
+        currently looking for 100% remote (anywhere in Europe) React developers to
+        help to build a revolutionary greenfield platform. The company are a hot new
+        start-up focused on building complex, highly functional, data-rich UIs and
+        with over $5 million in funding from investors such as Accel (who funded Facebook''s
+        initial rounds), they are loo... ","applications":10,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44397935"},{"jobId":44800467,"employerId":449259,"employerName":"Rise
+        Technical Recruitment Limited","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Leamington Spa","minimumSalary":40000.00,"maximumSalary":50000.00,"currency":"GBP","expirationDate":"05/01/2022","date":"24/11/2021","jobDescription":"
+        Frontend Developer  &#163;40,000 - &#163;50,000K &#43; Hybrid Working &#43;
+        Share Scheme &#43; Training &#43; Flexible Hours &#43; Progression &#43; Travel
+        for Exciting New Projects &#43; Zero Micro Management &#43; Holiday  Leamington
+        Spa (Hybrid WFH)  Are you technically driven to join a hot UK start-up where
+        you will highly benefit and grow with your expertise?  This opportunity would
+        suit an individual who''s c... ","applications":4,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44800467"},{"jobId":44869122,"employerId":70191,"employerName":"Spinks","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        React Developer","locationName":"London","minimumSalary":450.00,"maximumSalary":460.00,"currency":"GBP","expirationDate":"13/01/2022","date":"02/12/2021","jobDescription":"
+        We are working with an exciting NFT market place company, who are looking
+        for a contract Frontend React Developer for a fully remote role.  Ideally
+        you will have experience in the Blockchain space or have a in depth interest
+        in this area. Contract Length - 6 months Day rate - &#163;450-460  Location
+        - Remote Start Date - ASAP  Key Skills; - React  - HTML  - Blockchain  ...
+        ","applications":6,"jobUrl":"https://www.reed.co.uk/jobs/frontend-react-developer/44869122"},{"jobId":44867052,"employerId":432282,"employerName":"Oscar
+        Technology","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer  £30,000 - £60,000  York","locationName":"York","minimumSalary":30000.00,"maximumSalary":60000.00,"currency":"GBP","expirationDate":"13/01/2022","date":"02/12/2021","jobDescription":"
+        Vacancy: Front End Developer Skills: JavaScript, React, Typescript Location:
+        Remote / York Industry: Healthcare / IT &amp; Internet Package: up to &#163;60,000,
+        remote work, flexible hours, private health care, training and progression  <st...
+        ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-30000-60000-york/44867052"},{"jobId":44794028,"employerId":391063,"employerName":"Opus
+        Recruitment Solutions Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer Contract","locationName":"Netherlands","minimumSalary":60.00,"maximumSalary":70.00,"currency":"EUR","expirationDate":"05/01/2022","date":"24/11/2021","jobDescription":"Frontend
+        Developer | 6 months |&nbsp;€60-70 per hour | Rotterdam/Remote&nbsp;I''m looking
+        for a Frontend Developer for my client&nbsp;who are an exciting start-up operating
+        within the SaaS Space in Rotterdam!The contract will be a minimum of 6 months
+        and the rate is&nbsp;€60-70 per hour.Essential:-React&nbsp;-Typescript-GraphQL&nbsp;<br
+        ... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-contract/44794028"},{"jobId":44866952,"employerId":436122,"employerName":"Salt
+        Search","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Developer","locationName":"London","minimumSalary":null,"maximumSalary":null,"currency":null,"expirationDate":"13/01/2022","date":"02/12/2021","jobDescription":"
+        We have partnered with a company that is building the technology and infrastructure
+        to improve the holidaying experience for iconic brands that make up the leisure
+        group. As a technologist, you will play a key role in this disruption of the
+        UK holidaymaker  experience. You will need to solve hard problems, be curious
+        about new technology and have the drive to see creation through to delivery.
+        You will join a newly created team that ha... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer/44866952"},{"jobId":44866890,"employerId":436122,"employerName":"Salt
+        Search","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Tech Lead","locationName":"Newcastle Upon Tyne","minimumSalary":70000.00,"maximumSalary":75000.00,"currency":"GBP","expirationDate":"13/01/2022","date":"02/12/2021","jobDescription":"
+        We have partnered with a creative visualisation company with a key aim to
+        disrupt the automotive sales sector. This start up is now in scale up period
+        and has already made 70 hires throughout the covid pandemic. After great success
+        over the past 18 months,  the team are now seeking to further grow their Frontend
+        Development Team with multiple levels of positions open. This company has
+        already built several world-class products that ha... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/frontend-tech-lead/44866890"},{"jobId":44866872,"employerId":436122,"employerName":"Salt
+        Search","employerProfileId":null,"employerProfileName":null,"jobTitle":"React
+        - Senior Frontend Developer","locationName":"Newcastle Upon Tyne","minimumSalary":null,"maximumSalary":null,"currency":null,"expirationDate":"13/01/2022","date":"02/12/2021","jobDescription":"
+        We have partnered with a creative visualisation company with a key aim to
+        disrupt the automotive sales sector. This start up is now in scale up period
+        and has already made 70 hires throughout the covid pandemic. After great success
+        over the past 18 months,  the team are now seeking to further grow their Frontend
+        Development Team with multiple levels of positions open. This company has
+        already built several world-class products that ha... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/react-senior-frontend-developer/44866872"},{"jobId":44866112,"employerId":598612,"employerName":"Michael
+        Page Technology","employerProfileId":null,"employerProfileName":null,"jobTitle":"FrontEnd
+        Developer JavaScript - 3 days a week remote","locationName":"Bristol","minimumSalary":35000.00,"maximumSalary":45000.00,"currency":"GBP","expirationDate":"30/12/2021","date":"02/12/2021","jobDescription":"
+        FrontEnd Developer sought for a highly unique technology business in Central
+        Bristol. Client Details The client is a hyper tech focused business working
+        in a groundbreaking industry. their technology focus, tech stack and the innovative
+        work they do is simply second to none. This opportunity is literally the chance
+        to work on next generation systems. Description the role is to wor... ","applications":4,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-javascript-3-days-a-week-remote/44866112"},{"jobId":44760015,"employerId":601591,"employerName":"REED
+        Talent Solutions","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Engineering Manager On-Demand","locationName":"London","minimumSalary":0.00,"maximumSalary":0.00,"currency":"GBP","expirationDate":"29/12/2021","date":"19/11/2021","jobDescription":"Why
+        you should join us...We connect with millions of people every day, make content
+        they can''t get enough of and reflect and shape the world we live in… and
+        we do all this through the power of creativity.Simply put, as a Media and
+        Entertainment brand at heart, we are people-focussed and place a huge emphasis
+        on innovation. Our culture is everything to us and our engineering team power
+        the plat... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/frontend-engineering-manager-on-demand/44760015"},{"jobId":44755733,"employerId":535504,"employerName":"TEC
+        PARTNERS LIMITED","employerProfileId":null,"employerProfileName":null,"jobTitle":"Creative
+        Frontend Developer","locationName":"Guildford","minimumSalary":45000.00,"maximumSalary":46000.00,"currency":"GBP","expirationDate":"31/12/2021","date":"19/11/2021","jobDescription":"
+        Creative Frontend Developer  1 day a month in Guildford TEC Partners are working
+        with a multi-award-winning Digital Product Studio who are searching for a
+        talented Creative Frontend Developer to join an established Creative Team.
+        As a Digital Product Studio, heavily embedded within the Tech community, they
+        have  a long list of enviable clients from star-ups to well-known companies.
+        This ... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/creative-frontend-developer/44755733"},{"jobId":44755611,"employerId":535504,"employerName":"TEC
+        PARTNERS LIMITED","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Software Developer","locationName":"London","minimumSalary":40000.00,"maximumSalary":50000.00,"currency":"GBP","expirationDate":"31/12/2021","date":"19/11/2021","jobDescription":"
+        Frontend Software Developer  Scotland TEC Partners are working with an award-winning,
+        multinational technology innovator in analytics and marketing. This dynamic
+        and fast-growing company is looking for an imaginative and experienced Frontend
+        Software Engineer to join their team. You will be working as part of a highly
+        collaborative engineering team to design and build new elements of a u...
+        ","applications":6,"jobUrl":"https://www.reed.co.uk/jobs/frontend-software-developer/44755611"},{"jobId":44386501,"employerId":626368,"employerName":"Amber
+        Resourcing","employerProfileId":null,"employerProfileName":null,"jobTitle":"Software
+        Developer","locationName":"Rochdale","minimumSalary":25000.00,"maximumSalary":55000.00,"currency":"GBP","expirationDate":"31/12/2021","date":"15/10/2021","jobDescription":"
+        Software Developer (Frontend) | &#163;25,000 - &#163;55,000 | Rochdale/Remote
+        Role | Junior to Senior  Software Developer | Systems Developer | Frontend
+        Developer | Full Stack Developer | JavaScript | React | C# | .Net | React.js|
+        Angular | Vue | HTML | CSS | Node | GraphQL | AWS My client are a multi-award
+        winning telecoms company who have gone from strength to strength over the
+        recent years and are now lookin... ","applications":62,"jobUrl":"https://www.reed.co.uk/jobs/software-developer/44386501"},{"jobId":44753277,"employerId":517090,"employerName":"Ad
+        Idem Consulting Limited ","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Software Engineer (Multiple Levels) ","locationName":"Scotland","minimumSalary":30000.00,"maximumSalary":75000.00,"currency":"GBP","expirationDate":"31/12/2021","date":"19/11/2021","jobDescription":"
+        The Opportunity: An opportunity to join a privacy-first, location-powered
+        programmatic advertising partner at their new Edinburgh based technology hub.
+        This company delivers accurate targeting to their clients at scale without
+        reliance on personal data, helping the world’s  largest brands and media agencies
+        drive key business outcomes through personalised and high-performing digital
+        advertising. This opportunity offer... ","applications":0,"jobUrl":"https://www.reed.co.uk/jobs/frontend-software-engineer-multiple-levels/44753277"},{"jobId":44752930,"employerId":391063,"employerName":"Opus
+        Recruitment Solutions Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer - React, .NET - EdTech - Bristol","locationName":"Bristol","minimumSalary":35000.00,"maximumSalary":45000.00,"currency":"GBP","expirationDate":"31/12/2021","date":"19/11/2021","jobDescription":"Role
+        - Frontend DeveloperTech - React, Blazor, .NET, Javascript, HTML, CSSLocation
+        - Bristol (Remote working available)Salary - &#163;35,000 to &#163;45,000I''m
+        recruiting for a Frontend Developer on behalf of an award winning education
+        provider in Bristol.They''re a small, tight knit business of 10 with 3 in
+        the development team - the software solutions you build here help schools
+        to reduce time spent on ... ","applications":5,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-react-net-edtech-bristol/44752930"},{"jobId":44751086,"employerId":379777,"employerName":"Yolk
+        Recruitment Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Cardiff","minimumSalary":40000.00,"maximumSalary":45000.00,"currency":"GBP","expirationDate":"31/12/2021","date":"19/11/2021","jobDescription":"Frontend
+        Developer (React) - Up to &#163;45,000 per annum - Cardiff - Hybrid Working&nbsp;We
+        are currently working with an exciting&nbsp;fintech start-up based in Cardiff
+        looking to expand their development team due to increased demand. The company
+        run an innovative payments platform for the hospitality industry. If successful
+        you will join  an experienced team looking to change the face of the payments
+        industry, the... ","applications":5,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44751086"},{"jobId":44750949,"employerId":626303,"employerName":"The
+        Portfolio Group","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Manchester","minimumSalary":48000.00,"maximumSalary":50000.00,"currency":"GBP","expirationDate":"17/12/2021","date":"19/11/2021","jobDescription":"  Job
+        PurposeTo collaborate with the PO, business analyst, and QA to plan, build
+        release and maintain software features that deliver business value.DimensionsIdentification
+        of valuable features and implementing in software for projects and initiatives
+        that may amount to hundreds of thousands of pounds of investmentDirect ReportsReports
+        To... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44750949"},{"jobId":44750650,"employerId":635183,"employerName":"
+        Livingstone Group","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Developer - IT Asset Management","locationName":"Reading","minimumSalary":null,"maximumSalary":null,"currency":null,"expirationDate":"31/12/2021","date":"19/11/2021","jobDescription":"
+        Are you an experienced Frontend Developer looking for a new opportunity? Who
+        are the Livingstone Group? Founded in 2011, the Livingstone Group is a private
+        equity backed, global powerhouse helping clients to optimise their IT software
+        solutions and cloud portfolios to minimise risk and maximise their spend.
+        The business employs around 150 great people and has offices in the UK, US
+        and The Netherlands providing the intell... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer-it-asset-management/44750650"},{"jobId":44748372,"employerId":547825,"employerName":"So
+        Code ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Mid-Level
+        Frontend Engineer","locationName":"London","minimumSalary":65000.00,"maximumSalary":85000.00,"currency":"GBP","expirationDate":"30/12/2021","date":"18/11/2021","jobDescription":"
+        SoCode has partnered with one of the fasted growing start ups in the world
+        right now, they are seven months on the making and already operating in 40
+        countries and are based out of the UK. Our is developing a wholesale platform
+        for B2B customers and are  already offering a huge range of products, API’s
+        and financial services. They plan to be the next Amazon. What makes them different?
+        Their platform saves distributors, wholesalers, an... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/mid-level-frontend-engineer/44748372"},{"jobId":44748243,"employerId":547825,"employerName":"So
+        Code ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Engineer ReactJS","locationName":"London","minimumSalary":85000.00,"maximumSalary":100000.00,"currency":"GBP","expirationDate":"30/12/2021","date":"18/11/2021","jobDescription":"
+        SoCode has partnered with one of the fasted growing start ups in the world
+        right now, they are seven months on the making and already operating in 40
+        countries and are based out of the UK. Our is developing a wholesale platform
+        for B2B customers and are  already offering a huge range of products, API’s
+        and financial services. They plan to be the next Amazon. What makes them different?
+        Their platform saves distributors, wholesalers, an... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-engineer-reactjs/44748243"},{"jobId":44745346,"employerId":646277,"employerName":"Dynamic
+        Resourcing Solutions","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Mobile App Developer - Ionic - Outside IR35","locationName":"Leicester","minimumSalary":300.00,"maximumSalary":400.00,"currency":"GBP","expirationDate":"30/12/2021","date":"18/11/2021","jobDescription":"
+        This is a contract role outside of IR35 which allows remote working Frontend
+        mobile app developer required to help design and build enterprise grade Ionic
+        software solutions. You will analyse complex software requirements and write
+        beautifully functioning Ionic code and plugins. You will then test and review
+        code for technical accuracy, standards and functional compliance to the design.
+        You will h... ","applications":1,"jobUrl":"https://www.reed.co.uk/jobs/frontend-mobile-app-developer-ionic-outside-ir35/44745346"},{"jobId":44733458,"employerId":391063,"employerName":"Opus
+        Recruitment Solutions Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"React
+        Developer","locationName":"London","minimumSalary":80000.00,"maximumSalary":85000.00,"currency":"GBP","expirationDate":"29/12/2021","date":"17/11/2021","jobDescription":"Frontend
+        Developer| React| Greenfield Project| 80k&#43;&nbsp;My Tech for Good client
+        is looking for a Mid level Frontend Developer to work on React projects during
+        a period of growth for the company. The ideal candidate will have an eye for
+        design and feel comfortable working autonomously on a greenfield application.&nbsp;Skills
+        required:&nbsp;  UI/UX Design Experience&nbsp;<... ","applications":12,"jobUrl":"https://www.reed.co.uk/jobs/react-developer/44733458"},{"jobId":44733311,"employerId":436122,"employerName":"Salt
+        Search","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer Javascript/HTML Remote","locationName":"London","minimumSalary":200.00,"maximumSalary":400.00,"currency":"GBP","expirationDate":"29/12/2021","date":"17/11/2021","jobDescription":"
+        Frontend Developer - (Javascript/HTML)  REMOTE  Day rate: &#163;200 - &#163;400
+        (OUTSIDE IR35)  Duration: 3 months  Start: 29th Novemeber  My new client is
+        looking for Frontend developer on a contract basis. Completely remote role.
+        Skills:  JavascriptHTMLE-learningLMS (Le... ","applications":18,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-javascript-html-remote/44733311"},{"jobId":44651039,"employerId":596519,"employerName":"Redimeer","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"London","minimumSalary":65000.00,"maximumSalary":70000.00,"currency":"GBP","expirationDate":"21/12/2021","date":"09/11/2021","jobDescription":"
+        We are looking for a talented Frontend Developer to join a well established
+        company based in London that is specialising in risk control and works with
+        all the leading financial firms. The business is growing rapidly, and they
+        are looking for a exceptional  talent to join their team. As a Front-End Developer,
+        you''ll spend most of your time building beautiful user interfaces that have
+        been carefully crafted by our UX and design teams.<... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44651039"},{"jobId":44728693,"employerId":569638,"employerName":"SR2","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer","locationName":"Cardiff","minimumSalary":34000.00,"maximumSalary":38000.00,"currency":"GBP","expirationDate":"08/12/2021","date":"17/11/2021","jobDescription":"
+        Tech for Good | Frontend Developer | Remote or Cardiff | up to 38kThis company
+        are a small Tech for Good company with a CTO that is passionate about people!
+        Personal development and wellbeing are an important part of their culture.You
+        will be joining a team deeply curious about the development world that looks
+        to change lives with tech. They work with their clients to... ","applications":7,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44728693"},{"jobId":44725709,"employerId":276725,"employerName":"Opus
+        Resourcing Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Reactjs
+        Front End Developers","locationName":"London","minimumSalary":60000.00,"maximumSalary":90000.00,"currency":"GBP","expirationDate":"15/12/2021","date":"17/11/2021","jobDescription":"Reactjs&nbsp;Frontend
+        developer (Remore roles) with strong React JavaScript Frontend development
+        skills combined with Typescript, CSS, and experience of clean coding / TDD
+        / pairing is required who has experience of working in an Agile team, to work
+        on major  greenfield ecommerce platform transformation project for world leading
+        digital agency. Mutiple roles as Senior React Developer / Front End Tech Lead
+        - Flexible on location withi... ","applications":5,"jobUrl":"https://www.reed.co.uk/jobs/reactjs-front-end-developers/44725709"},{"jobId":44226370,"employerId":629300,"employerName":"Ada
+        Meher","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer ReactJS","locationName":"Manchester","minimumSalary":null,"maximumSalary":null,"currency":null,"expirationDate":"29/12/2021","date":"29/09/2021","jobDescription":"SEEKING:
+        JavaScript Developer (ReactJS) for a growing Software company in ManchesterApproach:
+        Hybrid remote and officeSalary: &#163;35,000 DOE plus Training, Progression
+        and Benefits Do you want to join an ambitious start up making waves in the
+        temporary staffing marketplace?This growing business have built a staffing
+        platform which allows jobseeke... ","applications":23,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-reactjs/44226370"},{"jobId":44718992,"employerId":436122,"employerName":"Salt
+        Search","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Engineer","locationName":"London","minimumSalary":70000.00,"maximumSalary":70000.00,"currency":"EUR","expirationDate":"28/12/2021","date":"16/11/2021","jobDescription":"
+        Leisure - JavaScript / React - 100% remote - Looking for 2 developers!  We
+        are currently partnered with a brilliant B2C marketplace business helping
+        people on their travels across the world! After raising $50m, my client have
+        huge plans to grow and develop the team and product starting with their technology
+        team!  My client are revolutionising a dated industry and bringing up to speed
+        with brilliant ef... ","applications":8,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-engineer/44718992"},{"jobId":44280250,"employerId":302092,"employerName":"Adria
+        Solutions Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Lead
+        Frontend  Developer  Angular - Fully Remote","locationName":"Manchester","minimumSalary":60000.00,"maximumSalary":75000.00,"currency":"GBP","expirationDate":"28/12/2021","date":"05/10/2021","jobDescription":"Lead
+        Frontend Developer – Fully Remote – Up to &#163;70k &#43; Bonus On behalf
+        of our global client, we are currently looking for an exceptional Lead Frontend
+        Developer with strong Angular experience. As Lead Frontend&nbsp;Developer
+        you will be playing a vital part in our client’s transformation, as they are
+        about to embark on  a major program to design and deliver major enhancements
+        to part of the core product suite. <b... ","applications":5,"jobUrl":"https://www.reed.co.uk/jobs/lead-frontend-developer-angular-fully-remote/44280250"},{"jobId":44715358,"employerId":549408,"employerName":"Premier
+        IT","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer/ Designer","locationName":"Nottingham","minimumSalary":28000.00,"maximumSalary":35000.00,"currency":"GBP","expirationDate":"28/12/2021","date":"16/11/2021","jobDescription":"Role:
+        Frontend Developer/ DesignerSalary: &#163;28,000 - &#163;35,000Location: RemotePermanentAre
+        you interested in working for one of the East Midlands largest marketing agencies?
+        This role is for you!I am currently looking for an experienced Frontend Developer
+        / Designer to join a fantastic growing team with huge potential to develop
+        their career to the highest level.<stro... ","applications":9,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-designer/44715358"},{"jobId":44713026,"employerId":554473,"employerName":"Plexus","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer ","locationName":"London","minimumSalary":350.00,"maximumSalary":450.00,"currency":"GBP","expirationDate":"28/12/2021","date":"16/11/2021","jobDescription":"
+        React.js Developer | Flexible, Remote, London (3 days on site) | Contract
+        (outside IR35) | 6 months rolling | Up to &#163;450pd  React.js Developer
+        | Flexible, Remote, London (3 days on site) | Contract (outside IR35) | 6
+        months rolling | Up to &#163;450pd   The company:   Global technology company
+        that helps enterprises reimagine their businesses for the digital ageServes
+        ... ","applications":4,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44713026"},{"jobId":44708400,"employerId":451880,"employerName":"Corriculo
+        Ltd","employerProfileId":null,"employerProfileName":null,"jobTitle":"Software
+        Engineer, Frontend Developer, React","locationName":"Oxford","minimumSalary":45000.00,"maximumSalary":55000.00,"currency":"GBP","expirationDate":"27/12/2021","date":"15/11/2021","jobDescription":"
+        Software Engineer, Frontend Developer, React We’re looking for a Senior Software
+        Engineer / Frontend Developer to work on an exciting, data-driven, high-performance
+        SaaS product. With the head office in central Oxford and the opportunity to
+        work remotely a couple days a week, this is a great role for  a Software Engineer
+        / Frontend Developer who is keen to work with modern technology in a challenging
+        technical environ... ","applications":6,"jobUrl":"https://www.reed.co.uk/jobs/software-engineer-frontend-developer-react/44708400"},{"jobId":44705588,"employerId":398079,"employerName":"Travel
+        Trade Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"FrontEnd
+        Developer","locationName":"London","minimumSalary":40000.00,"maximumSalary":45000.00,"currency":"GBP","expirationDate":"27/12/2021","date":"15/11/2021","jobDescription":"
+        Are you a Frontend Developer looking for an exiting new role with a Luxury
+        Travel Company in Central London? You will be part of an amazing Digital Team
+        responsible for delivering some exciting Frontend and UX improvements The
+        Job:  Own the frontend of the eCommerce website, making continual improvementsCollaborating
+        with the back end developer and design resource to deliver improved UI &amp;
+        UXParticipat... ","applications":7,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer/44705588"},{"jobId":44704683,"employerId":416002,"employerName":"Brewster
+        Partners Recruitment Group","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Engineer","locationName":"London","minimumSalary":55000.00,"maximumSalary":65000.00,"currency":"GBP","expirationDate":"27/12/2021","date":"15/11/2021","jobDescription":"
+        THE COMPANY: Brewster Partners have an exciting new opportunity with one the
+        leading global household digital brands, they are looking for a frontend engineer
+        to join their team. THE JOB:  Experienced in developing features and changes
+        across ReactJS and NodeJS using JavaScript and TypeScript.Experience in developing
+        tests with Cypress is considered a big plus.Expe... ","applications":2,"jobUrl":"https://www.reed.co.uk/jobs/frontend-engineer/44704683"},{"jobId":44704586,"employerId":416002,"employerName":"Brewster
+        Partners Recruitment Group","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Engineer","locationName":"London","minimumSalary":85000.00,"maximumSalary":90000.00,"currency":"GBP","expirationDate":"27/12/2021","date":"15/11/2021","jobDescription":"
+        THE COMPANY: Brewster Partners are working with a global household digital
+        brand for their next Senior Frontend Engineer. THE JOB:  Very experienced
+        in developing features in ReactJS and NodeJS.Experience in TypeScript and
+        Cypress are considered a big plus.You have a DevOps mindset (fully own the
+        software development lifecycle covering a.o: development, unit testin... ","applications":0,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-engineer/44704586"},{"jobId":44703678,"employerId":624790,"employerName":"Propeller-tech","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Engineer /UI developer","locationName":"Belfast","minimumSalary":40000.00,"maximumSalary":45000.00,"currency":"GBP","expirationDate":"27/12/2021","date":"15/11/2021","jobDescription":"
+        Frontend /UI Engineer Belfast or Ireland Up to &#163;45k salary plus up to
+        20% bonus We are working with a fast growing Tech startup, founded by ex Google
+        Engineers. A cloud migration consultancy, we are assisting them now embarking
+        upon an exciting new venture in the form of an entire division focusing on
+        the Insuretech market.   The role: In order to support current and future
+        growth we are looking for an... ","applications":6,"jobUrl":"https://www.reed.co.uk/jobs/frontend-engineer-ui-developer/44703678"},{"jobId":44703585,"employerId":626604,"employerName":"My
+        Work Agency","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        React Developer - 100 remote","locationName":"London","minimumSalary":50000.00,"maximumSalary":75000.00,"currency":"GBP","expirationDate":"27/12/2021","date":"15/11/2021","jobDescription":"
+        React Developer - Front EndFully remote - Applicants must be based within
+        the UK  Fed up with working on dull BAU tasks? Or building slow, un-reliable
+        responsive websites? Do you have experience building Progressive Web Apps
+        (PWA''s) using React? Are you passionate about offering smooth experience
+        for users, especially on mobile devices? My client is building the future
+        of mo... ","applications":10,"jobUrl":"https://www.reed.co.uk/jobs/frontend-react-developer-100-remote/44703585"},{"jobId":44694412,"employerId":233534,"employerName":"Hunter
+        Selection Limited","employerProfileId":null,"employerProfileName":null,"jobTitle":"Frontend
+        Developer Angular","locationName":"Bradford-on-Avon","minimumSalary":20000.00,"maximumSalary":30000.00,"currency":"GBP","expirationDate":"25/12/2021","date":"13/11/2021","jobDescription":"Frontend
+        Developer (Angular)Bradford-on-Avon, Part RemoteUp to &#163;30,000 doeOur
+        client is a fast-growing software company focused on revolutionising their
+        industry working with existing clients mostly based abroad. Currently a small
+        team but looking to expand on this quickly with lots of exciting projects
+        coming up, they are on the  search for a Frontend Developer (Angular). If
+        you are a Frontend Developer (Angular) an... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-angular/44694412"},{"jobId":44691222,"employerId":390546,"employerName":"Profectus
+        Recruitment","employerProfileId":null,"employerProfileName":null,"jobTitle":"Remote
+        Frontend Developer","locationName":"London","minimumSalary":33000.00,"maximumSalary":45000.00,"currency":"GBP","expirationDate":"24/12/2021","date":"12/11/2021","jobDescription":"
+        At Profectus we have an exciting role with a dazzling digital agency for a
+        Front-end Developer. Ideally looking for Three-plus years of commercial experience.
+        You must have a strong development background in Front-end technology such
+        as Javascript, HTML,  CSS. You will be working for an impressive Digital Agency
+        that really promotes a positive work culture. Being a dynamic organisation
+        you will have the opportunity to work on a variet... ","applications":22,"jobUrl":"https://www.reed.co.uk/jobs/remote-frontend-developer/44691222"},{"jobId":44687291,"employerId":436122,"employerName":"Salt
+        Search","employerProfileId":null,"employerProfileName":null,"jobTitle":"Senior
+        Frontend Developer","locationName":"London","minimumSalary":70000.00,"maximumSalary":90000.00,"currency":"GBP","expirationDate":"24/12/2021","date":"12/11/2021","jobDescription":"
+        We have partnered with an established hedge fund solutions business that is
+        in the process of developing their global offering! This is an exciting time
+        to join their growing Development Team as they launch several greenfield projects
+        creating new and innovative  B2B/B2C financial products. They are seeking
+        skilled Frontend Developers to help launch these projects ASAP! In this role
+        you will have the opportunity to help shape t... ","applications":3,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer/44687291"}],"ambiguousLocations":[],"totalResults":580}'
+  recorded_at: Sun, 05 Dec 2021 18:45:04 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44862748
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2940'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=3xgqT8tRWumLxqSp3xtTqSPgpqkDo191ik0kvABeLQQwq4glGmqCN1Mi7gGCzyQLRtWD2n-CnlIP9fdcgtraUIV8xO58cpe8MCdsHgNDnsxyg70cJtH08JV-qCODepC4Bx81TA2;
+        expires=Sun, 05-Dec-2021 20:15:05 GMT; path=/; HttpOnly"
+      - __cf_bm=dGNw25y7grOLvuxuhIGsHOqJf0dXSaVP4coyJWgotNA-1638729905-0-AbBlTWYU/NAYrIYxLgsmqNbP9kKL1PIteWqTAYduXClqnOzWn/qcS1qZOAJKl8LD1daHs3DQxqHSJ3X9Tcgk1S8=;
+        path=/; expires=Sun, 05-Dec-21 19:15:05 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=8f6ddb5b7f0aa08867d6863ad97db356484898ec-1638729905; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6deefd2e0768-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":302092,"employerName":"Adria Solutions Ltd","jobId":44862748,"jobTitle":"Lead
+        Frontend  Developer  Angular - Fully Remote","locationName":"Manchester","minimumSalary":60000.0000,"maximumSalary":75000.0000,"yearlyMinimumSalary":60000.0000,"yearlyMaximumSalary":75000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£60,000 - £75,000 per annum","datePosted":"01/12/2021","expirationDate":"12/01/2022","externalUrl":"https://jobs.adriasolutions.co.uk/job/lead-frontend-developer-(angular)-fully-remote-2393/apply.aspx?atsimode=customdirectapply&provider=firefish","jobUrl":"https://www.reed.co.uk/jobs/lead-frontend-developer-angular-fully-remote/44862748","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"Lead
+        Frontend Developer – Fully Remote – Up to &#163;80k &#43; Bonus <br /><br
+        /><p>On behalf of our global client, we are currently looking for an exceptional
+        Lead Frontend Developer with strong Angular experience. As Lead Frontend&nbsp;Developer
+        you will be playing a vital part in our client’s transformation, as they are
+        about to embark on  a major program to design and deliver major enhancements
+        to part of the core product suite.</p> <br /><br />The Lead Frontend&nbsp;Developer
+        will be responsible for: <br /><br /><ul> <li>Redesign monolithic enterprise
+        applications to take advantage of modern design techniques</li><li>Develop
+        user interfaces using Angular and other modern frontend frameworks.</li><li>Leading
+        and working as a team to break apart complex challenges and come up with imaginative
+        solutions</li><li>Building and leading your own team.</li><li>Keep up to date
+        with the latest technologies and practices</li></ul> <br /><br />The Lead
+        Frontend&nbsp;Developer will have the following: <br /><br /><ul> <li>Strong
+        experience as a frontend web developer with some time spent developing within
+        the Angular ecosystem</li><li>Understanding the importance of good user experience
+        and will be at the forefront of your thinking when developing user interface
+        components</li><li>Great backend development experience working with Java,
+        .Net&nbsp;or C/C&#43;&#43;</li><li>In-depth experience with RESTful APIs</li><li>A
+        solid understanding of frontend security</li><li>A strong understanding of
+        the Agile (Scrum, Kanban) process</li><li>Experience with test-driven development
+        (TDD) is beneficial</li></ul> <br /><br />Benefits <br /><br /><ul> <li>Flexible
+        home working arrangements</li><li>Health, dental and vision benefits</li><li>Life
+        Insurance</li><li>Bonus</li></ul> <br /><br />How to Apply if you’re Interested
+        in this Job: <br /><br /><p>If this sounds like your perfect role, click Apply
+        without delay!</p> <br /><br />Lead Frontend Developer – Fully Remote – Up
+        to &#163;80k &#43;&nbsp;Bonus <br /><br /><p>Interviewing and onboarding for
+        this role will be going ahead remotely while Covid-19 restrictions are in
+        place.</p> ","applicationCount":1}'
+  recorded_at: Sun, 05 Dec 2021 18:45:05 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44926856
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:06 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1634'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=JzxdHq5H-CoT8zMgr7mMfEYdl6aSsK8A9JqRajDk0BRMjuEx2z30ovyAdOpwdW7UFdRqhYvv-zMsKMQjRNgsX41zJgPVmADbGYm-Qel9sg5VXGxmlfYQlJWYCCCimIxhVE_HKQ2;
+        expires=Sun, 05-Dec-2021 20:15:06 GMT; path=/; HttpOnly"
+      - __cf_bm=WAsHGH3N6BuKlxwpH7zcpqGDiVpbcRl9ZGhUiHbsqpI-1638729906-0-ATE0E7g95BhcUEIEjXNpTFfib/4feK5tJ0UeRdcu3ZisujlJQ8H9jwT3FE1tBofsN+CMPWrD7MNyPph9Lkk22m4=;
+        path=/; expires=Sun, 05-Dec-21 19:15:06 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=dbba98b5a57c9415034527f56964eaaa8076000f-1638729906; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6df699850730-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":346427,"employerName":"Understanding Recruitment","jobId":44926856,"jobTitle":"Frontend
+        Developer - DeFi/Crypto","locationName":"London","minimumSalary":60000.0000,"maximumSalary":100000.0000,"yearlyMinimumSalary":60000.0000,"yearlyMaximumSalary":100000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£60,000 - £100,000 per annum","datePosted":"05/12/2021","expirationDate":"16/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-defi-crypto/44926856","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p><strong>Would you like to re-invent payments and develop breakthrough technology?</strong></p>
+        <p>I am looking for Frontend developers to help develop breakthrough technology
+        and re-invent payments at one of the most well-backed DeFi start-ups in the
+        world.</p> <p>With over $24 million in funding from some of the top crypto
+        investors such as Coinbase, this company is scaling blockchains such as Ethereum
+        to 100''s of millions of users whilst focusing on privacy and security.</p>
+        <p>They are looking for Frontend developers to build out their latest security
+        platform along side world class engineers, cryptographers and PHD that have
+        worked at Zcash, Betfair, Triptease, TripNotice and Google.</p> <p>Tech Stack</p>
+        <p>Day-to-day you will be building complex UIs using React and TypeScript
+        with the chance to use C&#43;&#43; on the backend for any full stack work.</p>
+        <p>Salary and Package</p> <p>They are offering 60K-100K (dependant on experience)
+        &#43; equity, flexible remote working and 25 days holiday. </p> ","applicationCount":0}'
+  recorded_at: Sun, 05 Dec 2021 18:45:06 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44861556
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2417'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=mY0oFQe6iGb3keRkzcwsfjzB47bSspgouXzxdQKjUc2SjuZy9bUO3eQf_-Uwv-1wB4gHu1JO_NZ7MG5tPikiXycnfZ-DYK0jO78XSdkcKQnR_bNWEJNePksj83ulcrffyFxImg2;
+        expires=Sun, 05-Dec-2021 20:15:07 GMT; path=/; HttpOnly"
+      - __cf_bm=HdYOPYyuP1aY9jh7is8_BQ0bx7sTAh28PTry..RccsI-1638729908-0-AXQ8AWR1w9CaLHuSYouuOmgkFi6vgWO+fqsHiMgJ6wncMI2IMAThAzC3wG0aLHI2dOkiCSi50YFb68h6CTp3HL0=;
+        path=/; expires=Sun, 05-Dec-21 19:15:08 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=6f9a8b67ab4b9312a71a3e52171c8a291b05ec53-1638729908; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6dfe1a0c6b62-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":346427,"employerName":"Understanding Recruitment","jobId":44861556,"jobTitle":"Front
+        End Developer","locationName":"London","minimumSalary":75000.0000,"maximumSalary":85000.0000,"yearlyMinimumSalary":75000.0000,"yearlyMaximumSalary":85000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£75,000 - £85,000 per annum","datePosted":"01/12/2021","expirationDate":"22/12/2021","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/front-end-developer/44861556","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p>Company info</p> <p>We are looking for Senior Level Frontend Developers
+        to join a blue-chip backed, high-tech encryption start-up company which is
+        spearheading the move for secure, distributed and decentralised communication.
+        </p> <p>As Frontend Developer you will be part of a company that works on
+        a massive scale with over 30 million users worldwide, with up to 8 million
+        users on a single public deployment and half a million on the largest commercial
+        deployment.</p> <p>The project is free and open-source, where you will be
+        working closely with major governments throughout Europe and North America
+        on the Frontend Development to provide a secure messaging service.</p> <p>You
+        will be joining a company, which has recently secured tens of millions of
+        dollars in funding to revolutionise online communication, by implementing
+        major personal security changes to put user back in control of their data.</p>
+        <p>You will be hands on building the Frontend code base in React for this
+        cool SaaS platform and deploying it to its ever growing worldwide user base.</p>
+        <p>Location</p> <p>This opportunity is 100% remote.</p> <p>As a Front End
+        Developer you will </p> <ul> <li>Hands on building using modern frameworks
+        like React</li><li>Work with high-profile clients</li><li>Provide technical
+        leadership to the development team</li><li>Contribute to high performant encryption
+        </li></ul> <p>Why you would apply for this role.</p> <ul> <li>You feel strongly
+        about the decentralisation of data</li><li>You want to be a part of the next
+        communication revolution</li><li>Put the power back into the people</li></ul>
+        <p>Salary</p> <p>The successful Frontend Developer will be paid up to &#163;85,000.</p>
+        <p>If you are interested in this exciting opportunity please do not hesitate
+        to apply below as shortlisting has already begun!</p> ","applicationCount":1}'
+  recorded_at: Sun, 05 Dec 2021 18:45:08 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44861496
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2379'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=716MY3_XzYF21T0VRnD8PN8Hlx-PN80gIozmMTJp3zsssOsp6UW0sPOUxlphGIjMM4oTujzpNmw_qzYYHLOnT_1gNkEsuiQAmUARK1LbD3JR75GQ4SE3a_qn0yi-tn5p63HIHQ2;
+        expires=Sun, 05-Dec-2021 20:15:09 GMT; path=/; HttpOnly"
+      - __cf_bm=3vEisWBQcrpgCEaDSUJwLUPwdrkq.sSGfOHKtIAATtc-1638729909-0-AdEO4j6hNhdsx4tOg9o9h7i8msMzII7/VE+jJik82Lxzv+oQh7DkskwEqTXdb8ekvpdLWF/oPjyDAzXzodfEeUw=;
+        path=/; expires=Sun, 05-Dec-21 19:15:09 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=4d74fcd1e204fe2b64fc2e5b3fc0ec5f40d711fe-1638729909; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6e05a99c6b78-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":346427,"employerName":"Understanding Recruitment","jobId":44861496,"jobTitle":"Frontend
+        Developer - WhatsApp Rival","locationName":"London","minimumSalary":60000.0000,"maximumSalary":70000.0000,"yearlyMinimumSalary":60000.0000,"yearlyMaximumSalary":70000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£60,000 - £70,000 per annum","datePosted":"01/12/2021","expirationDate":"22/12/2021","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-whatsapp-rival/44861496","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p>Company info</p> <p>We are looking for Mid Level Frontend Developers to
+        join a blue-chip backed, high-tech encryption start-up company which is spearheading
+        the move for secure, distributed and decentralised communication. </p> <p>As
+        Frontend Developer you will be working for a company that works on a massive
+        scale with over 30 million users worldwide, with up to 8 million users on
+        a single public deployment and half a million on the largest commercial deployment.</p>
+        <p>The project is free and open source, where you will be working closely
+        with major governments throughout Europe and North America on the Frontend
+        Development, to provide a secure messaging service.</p> <p>You will be joining
+        a company, which has recently secured tens of millions of dollars in funding
+        to revolutionise online communication, by implementing major personal security
+        changes to put user back in control of their data.</p> <p>You will be hands
+        on building the Frontend code base in React for this cool SaaS platform and
+        deploying it to its ever growing worldwide user base.</p> <p>Location</p>
+        <p>This opportunity is 100% remote.</p> <p>As a Frontend Developer you will
+        </p> <ul> <li>Hands on building using modern frameworks like React</li><li>Work
+        with high-profile clients</li><li>Contribute to high performant encryption
+        </li></ul> <p>Why you would apply for this role.</p> <ul> <li>You feel strongly
+        about the decentralisation of data</li><li>You want to be a part of the next
+        communication revolution</li><li>Put the power back into the people</li></ul>
+        <p>Salary</p> <p>As Frontend Developer you will be paid up to &#163;70,000.</p>
+        <p>If you are interested in this exciting opportunity please do not hesitate
+        to apply below as shortlisting has already begun!</p> ","applicationCount":3}'
+  recorded_at: Sun, 05 Dec 2021 18:45:09 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44789086
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '4351'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=x5X_VCRK44CgvK0bbtNhyT7zFeps2e1PxcovjCZzFSfw559mv2C6TH9cVfrjZQeiDZlagKAjcimUzqUd5j4dLd5p_UkMsXYc3kq7aVx0xPOFE4oHM2QNx3U3G-4gcI4WWZrqbA2;
+        expires=Sun, 05-Dec-2021 20:15:10 GMT; path=/; HttpOnly"
+      - __cf_bm=I0d1D8Pt7ABZeq.G597yU4waLLZrAwNNlX0oNt4Ci1s-1638729910-0-AUqBGRKuWK++a4xnTVVeZXojM7khBPni1QdeufV4gxrZS/VlteLOVp9LnpgH43MLeZOnYzwG49MT+7MsfPdmE1U=;
+        path=/; expires=Sun, 05-Dec-21 19:15:10 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=b21d7d0e968299ebdb275409dd5729af6bea0e14-1638729910; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6e0e09066b6f-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":569638,"employerName":"SR2","jobId":44789086,"jobTitle":"Senior
+        Frontend Engineer  React & TypeScript  Up to £120,000","locationName":"Bristol","minimumSalary":90000.0000,"maximumSalary":120000.0000,"yearlyMinimumSalary":90000.0000,"yearlyMaximumSalary":120000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£90,000 - £120,000 per annum, negotiable","datePosted":"23/11/2021","expirationDate":"04/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-engineer-react-typescript-up-to-120000/44789086","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p><strong>Quiz time!</strong></p> <ul> <li>What are Cristiano Ronaldo''s
+        legs worth?</li><li>What are the chances that SpaceX''s next launch will fail?</li><li>What
+        would happen to the property in Silicon Valley if there was an earthquake?</li></ul>
+        <p>Well, I can tell you that Cristiano Ronaldo''s legs are insured for €100
+        million but I would struggle to answer the other two, but I know who could
+        help…</p> <p><strong>We''ve just teamed up with the most interesting scale-up
+        that you don''t know about yet!</strong></p> <p>They are rethinking the technology
+        to transform analytical decision making to in turn, help their customers make
+        more educated decisions much, much faster. Their SAAS product allows its users
+        to build and repeat complicated mathematical models with the small  and scattered
+        datasets used to for critical decision making in countless businesses.</p>
+        <p>After launching only a few years ago, in June this year they secured a
+        huge amount in their Series A funding round which has now given them the platform
+        to continue to scale-up significantly. This is in anticipation for what''s
+        to come after securing what  can only be described as a game-changing client
+        account.</p> <p><strong>Why do they need you?</strong></p> <p>They are hiring
+        across Product Engineering with plans to grow the frontend team by over 15
+        heads over the next 12-18 months. You''ll be one of the early members of the,
+        faced with hard engineering challenges and be making critical, load-bearing
+        decisions  to shape the future of the product(s) and company. You''ll do some
+        cool stuff you won''t see elsewhere!</p> <p><strong>Is the Tech modern?</strong></p>
+        <p>React &amp; TypeScript. They work with Kotlin on the backend but have plans
+        to introduce Rust, Python or Go in the near future. Yes, it''s modern tech.</p>
+        <p>You''ll need to be proficient working with React and TypeScript and have
+        a passion for clean and elegant code. You should have experience building
+        large and advanced user-centric web apps. It''s important for you to understand
+        the fundamentals of Computer  Science and Software Engineering principles
+        with a good general understanding of modern software development/deployment
+        principles.</p> <p><strong>Do they have an office?</strong></p> <p>They have
+        an office based in central London with a team that love spending time with
+        each other. However, they are flexible and will accommodate individual working
+        preferences. If you want to come in 5 days a week - fine. If you want to be
+        kitted out and  work from your own home office - also fine. It''s up to you.</p>
+        <p><strong>''What''s in it for me?'', I hear you ask…</strong></p> <ul> <li>Salary
+        between &#163;90,000 - &#163;120,000 &#43; very staff-friendly EMI share options</li><li>&#163;5,000
+        annual learning &amp; development allowance</li><li>25 days annual leave</li><li>&#163;250
+        gadget-for-the-office budget</li><li>High-spec tech equipment</li><li>Progression
+        opportunities on tap due to the scaling up</li><li>Weekly lunch &amp; learns
+        and regular socials, games nights, hackathons etc.</li><li>Team breakfasts
+        and lunches, snacks, drinks fridge, fun office</li><li>Annual team trip somewhere
+        hot - think beach, cocktails, fine-dining</li></ul> <p><strong>How do you
+        get this job? It''s easy...</strong></p> <p>The interview process isn''t going
+        to take a lifetime either. We can have the whole thing turned round in no
+        time at all.</p> <ul> <li>Intro call with your future manager (with your choice
+        of questions)</li><li>Practical skills assessment with your future colleagues</li><li>Meet
+        the CTO &#43; the CEO</li><li>Offer!</li></ul> <p>If you want this job, just
+        get in touch, hit apply, send me your CV. Let''s chat!</p> ","applicationCount":1}'
+  recorded_at: Sun, 05 Dec 2021 18:45:10 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44788844
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '4350'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=1eAzW30O0OXdasB5KOyFkH6pNgaj85dLyV_WS4GhKuBLhTQ3YGme-gLCtObMyY39LfC6z3GHXLpxkejusXyCr0XiY-OdW9e0dIYopOGOkwualQom5vz-hJTlVMVJPx_0UUwE5A2;
+        expires=Sun, 05-Dec-2021 20:15:11 GMT; path=/; HttpOnly"
+      - __cf_bm=.Ia2q.Nc.ZLMpkgObMHbq.4lYoT_waLN.ig1Q2SfKKo-1638729911-0-ATvzurwr9jRYBvoFA25HCRPSBn7/bnsMaegP6C+T8acRD9kW8ErM2XZWJBiabETrsEYAGl7YOi/49H8Yb373fbw=;
+        path=/; expires=Sun, 05-Dec-21 19:15:11 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=6815616d76797d28c5523ee98803b64dffb4d06a-1638729911; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6e15b87f4105-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":569638,"employerName":"SR2","jobId":44788844,"jobTitle":"Senior
+        Frontend Engineer  React & TypeScript  Up to £120,000","locationName":"London","minimumSalary":90000.0000,"maximumSalary":120000.0000,"yearlyMinimumSalary":90000.0000,"yearlyMaximumSalary":120000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£90,000 - £120,000 per annum, negotiable","datePosted":"23/11/2021","expirationDate":"21/12/2021","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-engineer-react-typescript-up-to-120000/44788844","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p><strong>Quiz time!</strong></p> <ul> <li>What are Cristiano Ronaldo''s
+        legs worth?</li><li>What are the chances that SpaceX''s next launch will fail?</li><li>What
+        would happen to the property in Silicon Valley if there was an earthquake?</li></ul>
+        <p>Well, I can tell you that Cristiano Ronaldo''s legs are insured for €100
+        million but I would struggle to answer the other two, but I know who could
+        help…</p> <p><strong>We''ve just teamed up with the most interesting scale-up
+        that you don''t know about yet!</strong></p> <p>They are rethinking the technology
+        to transform analytical decision making to in turn, help their customers make
+        more educated decisions much, much faster. Their SAAS product allows its users
+        to build and repeat complicated mathematical models with the small  and scattered
+        datasets used to for critical decision making in countless businesses.</p>
+        <p>After launching only a few years ago, in June this year they secured a
+        huge amount in their Series A funding round which has now given them the platform
+        to continue to scale-up significantly. This is in anticipation for what''s
+        to come after securing what  can only be described as a game-changing client
+        account.</p> <p><strong>Why do they need you?</strong></p> <p>They are hiring
+        across Product Engineering with plans to grow the frontend team by over 15
+        heads over the next 12-18 months. You''ll be one of the early members of the,
+        faced with hard engineering challenges and be making critical, load-bearing
+        decisions  to shape the future of the product(s) and company. You''ll do some
+        cool stuff you won''t see elsewhere!</p> <p><strong>Is the Tech modern?</strong></p>
+        <p>React &amp; TypeScript. They work with Kotlin on the backend but have plans
+        to introduce Rust, Python or Go in the near future. Yes, it''s modern tech.</p>
+        <p>You''ll need to be proficient working with React and TypeScript and have
+        a passion for clean and elegant code. You should have experience building
+        large and advanced user-centric web apps. It''s important for you to understand
+        the fundamentals of Computer  Science and Software Engineering principles
+        with a good general understanding of modern software development/deployment
+        principles.</p> <p><strong>Do they have an office?</strong></p> <p>They have
+        an office based in central London with a team that love spending time with
+        each other. However, they are flexible and will accommodate individual working
+        preferences. If you want to come in 5 days a week - fine. If you want to be
+        kitted out and  work from your own home office - also fine. It''s up to you.</p>
+        <p><strong>''What''s in it for me?'', I hear you ask…</strong></p> <ul> <li>Salary
+        between &#163;90,000 - &#163;120,000 &#43; very staff-friendly EMI share options</li><li>&#163;5,000
+        annual learning &amp; development allowance</li><li>25 days annual leave</li><li>&#163;250
+        gadget-for-the-office budget</li><li>High-spec tech equipment</li><li>Progression
+        opportunities on tap due to the scaling up</li><li>Weekly lunch &amp; learns
+        and regular socials, games nights, hackathons etc.</li><li>Team breakfasts
+        and lunches, snacks, drinks fridge, fun office</li><li>Annual team trip somewhere
+        hot - think beach, cocktails, fine-dining</li></ul> <p><strong>How do you
+        get this job? It''s easy...</strong></p> <p>The interview process isn''t going
+        to take a lifetime either. We can have the whole thing turned round in no
+        time at all.</p> <ul> <li>Intro call with your future manager (with your choice
+        of questions)</li><li>Practical skills assessment with your future colleagues</li><li>Meet
+        the CTO &#43; the CEO</li><li>Offer!</li></ul> <p>If you want this job, just
+        get in touch, hit apply, send me your CV. Let''s chat!</p> ","applicationCount":1}'
+  recorded_at: Sun, 05 Dec 2021 18:45:11 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44860987
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '3570'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=roY4aoVmM-SAR2FmBhzR-b7xFZ_XLs00RgZqGB2o3dx9u5u1aoyU15GMqmTDETrWGnQPfvj1mm6v8par118meeskO9qV6HarWCacbtualme-JrZr0I6YwBUWkjLe1hcYUqgD-Q2;
+        expires=Sun, 05-Dec-2021 20:15:12 GMT; path=/; HttpOnly"
+      - __cf_bm=9S9XnSlXwT26IT_WyLHNgyAHorxAgOan3eoab7rwQqk-1638729913-0-AWYCLokBZ2ma9mp8UhNNsEqaiM4mlMjVcJBQZZcC3bgC9qnHXraQqkmIsTzXONYcKL8/U6LOlo/6ggEGfR335Eg=;
+        path=/; expires=Sun, 05-Dec-21 19:15:13 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=80a6f7b247fc331f73c94db3396cbd462013307c-1638729913; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6e1d38126a92-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":268109,"employerName":"Brand Recruitment","jobId":44860987,"jobTitle":"Mid-Weight
+        Frontend Developer","locationName":"Chelmsford","minimumSalary":25000.0000,"maximumSalary":35000.0000,"yearlyMinimumSalary":25000.0000,"yearlyMaximumSalary":35000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£25,000 - £35,000 per annum","datePosted":"01/12/2021","expirationDate":"12/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/mid-weight-frontend-developer/44860987","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p><strong>Mid-Weight Frontend Developer, Chelmsford –</strong></p> <p><em>Are
+        you a junior web developer?</em></p> <p><em>Would you like to work in a fast-paced
+        supportive environment?</em></p> <p><em>Do you want to work for a growing
+        company that encourages personal development?</em></p> <p>Then look no further
+        as this may be the perfect role for you!!</p> <p><strong>The Company</strong></p>
+        <p>Our client is a holding company responsible for a variety of start-ups,
+        growing companies and established enterprises. They work across B2B and B2C
+        markets and maintains a strong, ambitious, and entrepreneurial work ethic.</p>
+        <p>This role would be working mainly in the financial space but with the opportunity
+        to work across a diverse range of businesses. Our client is looking for someone
+        to work with the development team to maintain and improve their current websites,
+        while also  working on a number of new exciting projects from finance to food.</p>
+        <p><strong>The Role - </strong>Mid-Weight Frontend Developer</p> <p>Working
+        within the Development Team and working closely with the Senior Frontend Develop,
+        you will be responsible for:</p> <ul> <li>Maintaining and improving current
+        websites (frontend)</li><li>Using CMS such as shopify and wordpress as frontend
+        Framework</li><li>Responsive email builds</li><li>Using HTML, SASS, Webpack</li></ul>
+        <p><strong>The Requirements - </strong>Mid-Weight Frontend Developer</p> <p>In
+        order to be considered you ideally will have:</p> <ul> <li>Minimum 1 year
+        commercial experience</li><li>Understanding of HTML and CSS</li><li>Agency
+        experience desirable (not essential)</li><li>Confident, Motivated and Attention
+        to detail</li></ul> <p>This role offers a hybrid working structure, being
+        in the office just Tuesday and Wednesday, they also have flexi hours one day
+        a week and an early finish on a Friday, as well as some amazing benefits including
+        your birthday off each year!!</p> <p>Due to the location of their Chelmsford
+        based office, this is commutable from those based in Braintree, Colchester,
+        Bishop Stortford, Harlow, Southend, Stansted, and Saffron Walden to name a
+        few.</p> <p>For registration purposes please could you let us know where you
+        are currently based or which locations you are considering as well as your
+        required salary and notice period.</p> <p>Please upload a Microsoft Word version
+        of your CV where possible, excluding textboxes or images, as this can affect
+        the consultant''s job matching process and therefore your details may not
+        be picked up for a role.</p> <p>Any data we collect from you will be stored
+        and processed in accordance with Brand Recruitment’s Privacy Policy.</p> <p>Search
+        Brand Recruitment on Facebook, Twitter and LinkedIn to hear about all of our
+        latest jobs.</p> <p>Brand Recruitment offers the services of an employment
+        agency for permanent work. Visit Brand Recruitment online http:// to apply
+        for other key marketing jobs in the Central and Eastern region.</p> ","applicationCount":1}'
+  recorded_at: Sun, 05 Dec 2021 18:45:13 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44860249
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2956'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=0_Huo65ngTOjLH_o_jkIVBRRQmra4O2foMgT_SNar291uud8Zr95e9lgPkoio2VS8DWbGbRp4I7ni1w9yh6IKWXPqR0LBXK7_rKNs4VxpyppQNuYam-6mj3piIXa9qQbUxV-ig2;
+        expires=Sun, 05-Dec-2021 20:15:14 GMT; path=/; HttpOnly"
+      - __cf_bm=J0gCVRINqLJvAVQT_x.O42_kFHgvOyXkFmVj4S9cYBA-1638729914-0-AUZmZYrjd7xzWWpu5UzOsWyLLIJ7PDOnZNW7W+DMziJC06uSzv1fGy57vA8eNJHVJ2srxdrnA6viFLsdXMp6bh0=;
+        path=/; expires=Sun, 05-Dec-21 19:15:14 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=b20bd48bba066fd218669f43377850dced3123e7-1638729914; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6e24eaed0750-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":451880,"employerName":"Corriculo Ltd","jobId":44860249,"jobTitle":"Frontend
+        Developer / Angular Engineer - Remote","locationName":"Oxford","minimumSalary":50000.0000,"maximumSalary":75000.0000,"yearlyMinimumSalary":50000.0000,"yearlyMaximumSalary":75000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£50,000 - £75,000 per annum","datePosted":"01/12/2021","expirationDate":"12/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/frontend-developer-angular-engineer-remote/44860249","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p><strong>Frontend Developer / Angular Engineer - Remote</strong></p> <p>A
+        Frontend Developer / Angular Engineer is required to join an exciting software
+        house based in central Oxford. The role is offered with as much working from
+        home as you want, all the way up to fully remote!&nbsp;&nbsp;</p> <p><strong>The
+        Role</strong></p> <p>The Frontend Developer / Angular Engineer will be working
+        on the frontend of my client’s SaaS product, which is built with Angular 9
+        and TypeScript. It’s a modern tech stack where the Frontend Developer / Angular
+        Engineer will get to work with DevOps technologies  such as Kubernetes, AWS,
+        and Prometheus.&nbsp;</p> <p><strong>The Company</strong></p> <p>The Frontend
+        Developer / Angular Engineer will be joining a successful and growing SaaS
+        company, who have their head offices in central Oxford. The company are currently
+        working remotely and have made the decision to allow remote working continue
+        long term.  The Frontend Developer / Angular Engineer will be compensated
+        with a generous salary, as well as a benefit package including:&nbsp;</p>
+        <ul> <li>24 days holiday &#43; bank holidays&nbsp;</li><li>Flexible hours</li><li>Remote
+        working&nbsp;</li><li>Great pension&nbsp;</li><li>&#163;2,000 gear budget
+        for every hire</li><li>&#163;1,000 a year towards training</li></ul> <p><strong>What’s
+        Required?</strong></p> <p>For this Frontend Developer / Angular Engineer position,
+        we’re looking for:&nbsp;</p> <ul> <li>Experience with modern frontend technologies
+        like Angular and TypeScript&nbsp;</li><li>A good knowledge of software engineering
+        principals and best practices</li><li>Experience with Agile and ability to
+        work in a DevOps culture&nbsp;</li><li>Strong communication skills and ability
+        to work with cross-functional teams</li></ul> <p>Ideally it would be beneficial
+        if you had any experience with:&nbsp;</p> <ul> <li>Backend development with
+        PHP&nbsp;</li><li>Kubernetes/Docker&nbsp;</li><li>AWS or similar cloud&nbsp;</li></ul>
+        <p><strong>What Next?</strong></p> <p>If you’re a Frontend Developer / Angular
+        Engineer looking for a new challenge with an exciting and growing company
+        then please apply today to learn more!&nbsp;</p> <p><strong>Frontend Developer
+        / Angular Engineer</strong></p> <p>Corriculo Ltd acts as an employment agency
+        and an employment business.</p> ","applicationCount":2}'
+  recorded_at: Sun, 05 Dec 2021 18:45:14 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44787915
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '4007'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=BT0kiF-Gf71amtlrxZqzuZ6DB2hbsWyXZaF5rNFLQUEOuVwiOLwDd3t9EoHvUnlWl1imbwoQf-AzqpXh8-PR1mdYTvaOh3lyNhVxr83CyPFQuhTgrVw13TtLMjIufg4ucwFSUA2;
+        expires=Sun, 05-Dec-2021 20:15:15 GMT; path=/; HttpOnly"
+      - __cf_bm=pp0IcYsvN3DToh63uX3c4tZSaCrtkJBBpZ0pu_6L_rc-1638729915-0-AQYrp58vWHsAdiGgsdXjvomiKZPbpHHxyNpjaqYG4KPmjpAs3aBoiBM34pJVNZN+qdYMd4FMzk/zbrTM3ywPfew=;
+        path=/; expires=Sun, 05-Dec-21 19:15:15 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=c653c3192c66e83c1aaa5e444c88d491f828302a-1638729915; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6e2ced896a86-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":569638,"employerName":"SR2","jobId":44787915,"jobTitle":"Senior
+        Frontend Developer - £120K  equity - Remote","locationName":"Leeds","minimumSalary":80000.0000,"maximumSalary":120000.0000,"yearlyMinimumSalary":80000.0000,"yearlyMaximumSalary":120000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£80,000 - £120,000 per annum","datePosted":"23/11/2021","expirationDate":"04/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer-120k-equity-remote/44787915","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p>Senior Frontend Developer (React and TypeScript) - Up to &#163;120K &#43;
+        share options</p> <p>A SaaS start-up that has recently secured a healthy wedge
+        of Series A funding is growing out their tech team across the UK. </p> <p>They''re
+        a unique business that has been born out of actual experience. They''ve built
+        a fantastic, inclusive, and collaborative culture and are looking for like-minded
+        people to join them on their journey. </p> <p>Summary</p> <ul> <li>Tech stack
+        is <strong>React</strong> and <strong>TypeScript</strong> and they use mainly
+        <strong>Kotlin</strong> on the backend but also some <strong>Python</strong>,
+        <strong> Go,</strong> and <strong>Rust</strong>.</li><li>Working arrangements
+        are totally flexible. London is their HQ and has a hub of people working there
+        in a co-working space. But remote is fine.</li><li>Working hours- Again, flexible.
+        As they''re a start-up there''s an &quot;all hands on deck&quot; ethos although
+        they encourage flexible working and if there''s something you need to do at
+        short notice then it''s never a problem.</li><li>A collaborative, honest culture
+        that is high on communication. </li><li>Mental Health Support, encouraged
+        to take ALL your holiday (you''ll receive 33 days all in.) equity options,
+        &#163;5000 annual personal training budget, and of course, an annual team
+        holiday somewhere hot.. with a pool.</li><li>A very active team of developers
+        within the local tech community, do loads of hackathons, lunch and learns
+        etc.</li></ul> <p>Your role and responsibilities </p> <ul> <li>You''ll be
+        working mainly across their web-based SaaS product, which has been used to
+        help answer business-critical decisions. These decisions which would normally
+        take up to 2 weeks take just 30 minutes. Impressive.</li><li>You''ll be joining
+        a team of 4 Frontend Developers with a Head of Front-end. There''s also a
+        team of 9 backend developers with a Head of Backend, a Head of Excellence,
+        and a CTO. All very passionate and experienced humans ??</li><li>React and
+        TypeScript will be your daily go-to, you''ll need to have experience with
+        building large user-centric web apps.</li><li>You''ll need strong knowledge
+        of Frontend tooling such as Babel, Create React App, Webpack, etc.</li><li>Experience
+        with Test-Driven Development.</li><li>As you''ll be joining quite early on
+        within the development team, you''ll need to be focused and enthusiastic.
+        You''ll need to be comfortable with speaking up and challenging others.</li></ul>
+        <p>Tech </p> <ul> <li>React and TypeScript</li><li>Babel, Webpack (or similar)</li><li>Version
+        Control (Git)</li><li>TDD/BDD</li></ul> <p>Package </p> <ul> <li>The annual
+        salary can be up to &#163;120K &#43; shares</li><li>&#163;5000 annual learning
+        budget</li><li>33 days annual leave</li><li>&#163;250 to spend on tech of
+        your choice.</li><li>A team social is never far away... They try and get together
+        as much as possible even if it''s for a coffee and a spot of breaky in the
+        morning.</li><li>They also are big on personal development within the business,
+        you''ll be able to get involved in lunch and learns (and even provide one
+        yourself), they do remote hackathons, and are active within the local tech
+        community.</li><li>Their offices in London are in a co-working space South
+        of the river.</li></ul> <p>If you like the sound of the company then you can
+        hit apply and I''ll give you a call to divulge all. </p> ","applicationCount":3}'
+  recorded_at: Sun, 05 Dec 2021 18:45:15 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44787883
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '4012'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=QR4srBBCQhqEQSRVx-uwLGE2xo4oyMWdL9bgGQ-yB7BXhl4m-O_3PwroHnC8Zt-rwJUsGVcq5jBvDQ3hFfNDPpEztKF2CDKigytupkS856BIMVLsvPIqtjXmKFGMZC41DxbC1g2;
+        expires=Sun, 05-Dec-2021 20:15:16 GMT; path=/; HttpOnly"
+      - __cf_bm=_nNU7i_3G8.8ZAtN928uZUWuCRwTJvlgWa1tN7ssc3c-1638729916-0-AXDZC5MV07T9jgDjjiXeA9q4r10IZ15PR+BP/KxgHyE7LzSXj6+80DfEMPmth1WjaqklILhRc0jxvKyVmMmvMNI=;
+        path=/; expires=Sun, 05-Dec-21 19:15:16 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=33f4baf09c35faa97fb669e113b6dbb69ac6918d-1638729916; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6e353b9a6b60-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":569638,"employerName":"SR2","jobId":44787883,"jobTitle":"Senior
+        Frontend Developer - £120K  equity - Remote","locationName":"Manchester","minimumSalary":80000.0000,"maximumSalary":120000.0000,"yearlyMinimumSalary":80000.0000,"yearlyMaximumSalary":120000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£80,000 - £120,000 per annum","datePosted":"23/11/2021","expirationDate":"04/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/senior-frontend-developer-120k-equity-remote/44787883","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p>Senior Frontend Developer (React and TypeScript) - Up to &#163;120K &#43;
+        share options</p> <p>A SaaS start-up that has recently secured a healthy wedge
+        of Series A funding is growing out their tech team across the UK. </p> <p>They''re
+        a unique business that has been born out of actual experience. They''ve built
+        a fantastic, inclusive, and collaborative culture and are looking for like-minded
+        people to join them on their journey. </p> <p>Summary</p> <ul> <li>Tech stack
+        is <strong>React</strong> and <strong>TypeScript</strong> and they use mainly
+        <strong>Kotlin</strong> on the backend but also some <strong>Python</strong>,
+        <strong> Go,</strong> and <strong>Rust</strong>.</li><li>Working arrangements
+        are totally flexible. London is their HQ and has a hub of people working there
+        in a co-working space. But remote is fine.</li><li>Working hours- Again, flexible.
+        As they''re a start-up there''s an &quot;all hands on deck&quot; ethos although
+        they encourage flexible working and if there''s something you need to do at
+        short notice then it''s never a problem.</li><li>A collaborative, honest culture
+        that is high on communication. </li><li>Mental Health Support, encouraged
+        to take ALL your holiday (you''ll receive 33 days all in.) equity options,
+        &#163;5000 annual personal training budget, and of course, an annual team
+        holiday somewhere hot.. with a pool.</li><li>A very active team of developers
+        within the local tech community, do loads of hackathons, lunch and learns
+        etc.</li></ul> <p>Your role and responsibilities </p> <ul> <li>You''ll be
+        working mainly across their web-based SaaS product, which has been used to
+        help answer business-critical decisions. These decisions which would normally
+        take up to 2 weeks take just 30 minutes. Impressive.</li><li>You''ll be joining
+        a team of 4 Frontend Developers with a Head of Front-end. There''s also a
+        team of 9 backend developers with a Head of Backend, a Head of Excellence,
+        and a CTO. All very passionate and experienced humans ??</li><li>React and
+        TypeScript will be your daily go-to, you''ll need to have experience with
+        building large user-centric web apps.</li><li>You''ll need strong knowledge
+        of Frontend tooling such as Babel, Create React App, Webpack, etc.</li><li>Experience
+        with Test-Driven Development.</li><li>As you''ll be joining quite early on
+        within the development team, you''ll need to be focused and enthusiastic.
+        You''ll need to be comfortable with speaking up and challenging others.</li></ul>
+        <p>Tech </p> <ul> <li>React and TypeScript</li><li>Babel, Webpack (or similar)</li><li>Version
+        Control (Git)</li><li>TDD/BDD</li></ul> <p>Package </p> <ul> <li>The annual
+        salary can be up to &#163;120K &#43; shares</li><li>&#163;5000 annual learning
+        budget</li><li>33 days annual leave</li><li>&#163;250 to spend on tech of
+        your choice.</li><li>A team social is never far away... They try and get together
+        as much as possible even if it''s for a coffee and a spot of breaky in the
+        morning.</li><li>They also are big on personal development within the business,
+        you''ll be able to get involved in lunch and learns (and even provide one
+        yourself), they do remote hackathons, and are active within the local tech
+        community.</li><li>Their offices in London are in a co-working space south
+        of the river.</li></ul> <p>If you like the sound of the company then you can
+        hit apply and I''ll give you a call to divulge all. </p> ","applicationCount":3}'
+  recorded_at: Sun, 05 Dec 2021 18:45:16 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44543201
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 05 Dec 2021 18:45:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '4477'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=U1DEQtRMfz5lh9gWD9F3TL5BdeTVlFMgzxt1xMp6H9ZX9allFm1M_iCqgj-kD7WU5DtgP-sOh0WmRKbYZzyxjsmXd94n3RLVaDsoc0QYjPNcTbeQ_oAJM4pxBlH05Qrvi4Cy0g2;
+        expires=Sun, 05-Dec-2021 20:15:17 GMT; path=/; HttpOnly"
+      - __cf_bm=fYH.jL9ShD2EpWO8ax0nvfKSxfVfp.4mtaMFmw_TnNU-1638729917-0-AUm389tfuAsuciLjnDm6EtsbhhNtx1lUb/Czmf4hZr76P2ypqS3PqpmcO0gAdKBAGWDYYRLjUMAVVT44GGLBsnE=;
+        path=/; expires=Sun, 05-Dec-21 19:15:17 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=2ff752eae614c8c0587b2775683a80f281436457-1638729917; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b8f6e3cda826b6e-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":7337,"employerName":"Ashdown Group","jobId":44543201,"jobTitle":"Frontend
+        Software Developer","locationName":"Wandsworth","minimumSalary":50000.0000,"maximumSalary":75000.0000,"yearlyMinimumSalary":50000.0000,"yearlyMaximumSalary":75000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£50,000 - £75,000 per annum","datePosted":"02/11/2021","expirationDate":"07/12/2021","externalUrl":"https://jobs.ashdowngroup.com/job/frontend-software-developer-19300/apply.aspx?atsimode=customdirectapply&provider=firefish","jobUrl":"https://www.reed.co.uk/jobs/frontend-software-developer/44543201","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p>A market leading software company is seeking a Frontend Software Engineer
+        (HTML/Typescript) to be a part of a team responsible for the development of
+        their software products. You’ll coordinate development on individual Features,
+        working closely with Product  Management, other developers and QA to refine
+        requirements and deliver regular releases of high quality, innovative software
+        to meet customer requirements and strategic objectives. </p> <p><b>Key Tasks:
+        </b></p> <p>? Reviewing requirements and providing feedback to Product Management
+        (ambiguities, inconsistencies). </p> <p>? Assistance in drawing up and validating
+        technical specifications. </p> <p>? Participating in technical planning sessions:
+        Conception, tasks identification and estimation. </p> <p>? Working with QA
+        team to ensure delivery of a high-quality product. </p> <p>? Driving the whole
+        development process of individual features within each release. </p> <p>?
+        Maintaining and refactoring existing codebase, expanding automated tests capability.
+        </p> <p>? Reporting on progress, issues and problems to the team; providing
+        lessons learned and giving suggestions to optimize the work processes. </p>
+        <p>? Helping more junior, and supporting other senior team members. </p> <p><b>Key
+        Skills: </b></p> <p>? Deep experience developing and maintaining enterprise-scale
+        Web 2.0 applications. </p> <p>? Good knowledge of how and when to use design
+        patterns to&nbsp; achieve strong Object-Oriented architectures in Typescript/Javascript.
+        </p> <p>? Enjoys learning new skills and working with a team, finding innovative
+        solutions to problems, and contributing to the constant evolution of a mature
+        set of products. </p> <p>? Strong diagnostic/debug skills and a methodical
+        approach to problem solving. </p> <p>? UI experience of TypeScript development
+        using Visual Studio Professional/Enterprise, using a range of modern Javascript
+        frameworks (we use Aurelia, but general skills from Angular/React/Vue… should
+        be transferable) and&nbsp;awareness of Web 2.0-related issues  like CORS,
+        performance, cross-browser compatibility, security, authentication… </p> <p>?
+        HTML/CSS skills for developing standards-compliant UX/UI designs on large,
+        ‘desktop-like’ web applications: accessibility, consistent look-and-feel,
+        best-practice in useability. </p> <p>? Experience with source control and
+        build processes: branching, merging, one-push-build processes, configuration
+        management. </p> <p>? Must be a strong verbal and written communicator, able
+        to articulate complex technical. detail to colleagues in a clear and unemotional
+        manner. Must be prepared to code to specifications/designs/use-cases, and
+        use dialogue to resolve inconsistencies, but  also contribute ideas and prototype
+        innovations towards ongoing improvements in the product. </p> <p>? Agile,
+        self-motivated attitude, keen to add value wherever possible. </p> <p>? Able
+        to work quickly, accurately, and flexibly towards defined deadlines. </p>
+        <p><b>Beneficial Skills: </b></p> <p>? Experience consuming REST and OData
+        APIs </p> <p>?&nbsp;Interest in&nbsp;HTML visualisation technologies, including
+        3D (3js), SVG and Canvas, or other JS-based data-visualisation frameworks.
+        </p> <p>? Experience of build and installer scripting both in JS-tools (node/r.js)
+        and/or nant. </p> <p>? Practical experience with SQL Server, and T-SQL. </p>
+        <p>? Experience of shipping shrink wrapped software. </p> <p>Experience: </p>
+        <p>? Educated to Degree level or equivalent; or possess highly relevant experience.
+        </p> <p>? Must have 5&#43; years’ experience in development in a professional
+        technical role. </p> <p>? Must have practical experience of working as a senior
+        part of a structured professional software development environment. </p> ","applicationCount":7}'
+  recorded_at: Sun, 05 Dec 2021 18:45:17 GMT
+recorded_with: VCR 6.0.0

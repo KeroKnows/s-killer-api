@@ -8,7 +8,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
   Skiller::VcrHelper.setup_vcr
 
   before do
-    Skiller::VcrHelper.configure_vcr_for_reed(SERVICE_CASSETTE_FILE)
+    Skiller::VcrHelper.configure_integration
   end
 
   after do
@@ -109,7 +109,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
       # ...and culculate the salary distribution
       ## get correct salary distribution
       job_mapper = Skiller::Reed::JobMapper.new(CONFIG)
-      jobs = jobskill[:jobs].map { |job| job_mapper.job(job.job_id) }
+      jobs = jobskill[:jobs][..Skiller::Service::AnalyzeSkills::ANALYZE_LEN].map { |job| job_mapper.job(job.job_id) }
       salaries = jobs.map(&:salary)
       ori_salary = Skiller::Entity::SalaryDistribution.new(salaries)
 
@@ -142,7 +142,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
       # ...with correct skills extracted
       ## get correct skills
       job_mapper = Skiller::Reed::JobMapper.new(CONFIG)
-      jobs = jobskill[:jobs].map { |job| job_mapper.job(job.job_id) }
+      jobs = jobskill[:jobs][..Skiller::Service::AnalyzeSkills::ANALYZE_LEN].map { |job| job_mapper.job(job.job_id) }
       skills_list = jobs.map { |job| Skiller::Skill::SkillMapper.new(job).skills }
       ori_skills = skills_list.reduce(:+).sort_by(&:name)
 

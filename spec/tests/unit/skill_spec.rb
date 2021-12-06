@@ -16,12 +16,6 @@ describe 'Test Skill Analyzer library' do
                                       is_full: true)
     end
 
-    it 'HAPPY: should be able to parse HTML' do
-      extractor = Skiller::Skill::Extractor.new(@job)
-      _(extractor.description).must_be_instance_of String
-      _(extractor.description).wont_match %r{</?\w+>}
-    end
-
     it 'HAPPY: should be able to run the python script' do
       extractor = Skiller::Skill::Extractor.new(@job)
       _(proc { extractor.analyze_skills }).must_be_silent

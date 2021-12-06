@@ -27,44 +27,15 @@ Rake::TestTask.new(:spec) do |t|
   t.warning = false
 end
 
-namespace :spec do
-  unit_test_path = 'spec/tests/unit'
-  integration_test_path = 'spec/tests/integration'
+desc 'Run all acceptance tests at once'
+Rake::TestTask.new(:spec_acceptance) do |t|
+  t.pattern = 'spec/tests/acceptance/*_spec.rb'
+  t.warning = false
+end
 
-  desc 'spec checks of Reed API'
-  task :reed_api do
-    sh "RACK_ENV=test bundle exec ruby #{unit_test_path}/reed_spec.rb"
-  end
-
-  desc 'spec checks of FreeCurrency API'
-  task :freecurrency_api do
-    sh "RACK_ENV=test bundle exec ruby #{unit_test_path}/freecurrency_spec.rb"
-  end
-
-  desc 'spec checks of Skill Analyzer'
-  task :skill_analyzer do
-    sh "RACK_ENV=test bundle exec ruby #{unit_test_path}/skill_spec.rb"
-  end
-
-  desc 'spec checks of View Objects'
-  task :view_objects do
-    sh "RACK_ENV=test bundle exec ruby #{unit_test_path}/view_objects_spec.rb"
-  end
-
-  desc 'spec checks of the integration of gateway and database'
-  task :gateway_database do
-    sh "RACK_ENV=test bundle exec ruby #{integration_test_path}/layers/gateway_database_spec.rb"
-  end
-
-  desc 'spec checks of the integration of service'
-  task :service_analyzeskill do
-    sh "RACK_ENV=test bundle exec ruby #{integration_test_path}/services/analyze_skills_spec.rb"
-  end
-
-  desc 'spec checks of acceptance'
-  task :acceptance do
-    sh 'RACK_ENV=test sh spec/acceptance_tests'
-  end
+Rake::TestTask.new(:test_acceptance) do |t|
+  t.pattern = 'spec/tests/acceptance/**/*_spec.rb'
+  t.warning = false
 end
 
 namespace :db do

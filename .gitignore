@@ -2,12 +2,15 @@
 **/__pycached__/
 .DS_Store
 **/*.tmp
+**/*.cache
 
 # development
 *.code-workspace
 .bundle/
 coverage/
 !coverage/.resultset.json
+.env/
+activate
 
 # secrets
 config/secrets.yml

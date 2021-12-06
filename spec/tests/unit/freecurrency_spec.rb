@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
+require 'date'
+
 require_relative '../../helpers/vcr_helper'
 
 describe 'Test FreeCurrency library' do
   Skiller::VcrHelper.setup_vcr
 
   before do
-    Skiller::VcrHelper.configure_vcr_for_reed(FREECURRENCY_CASSETTE_FILE)
+    Skiller::VcrHelper.configure_currency
   end
 
   after do
@@ -15,20 +17,51 @@ describe 'Test FreeCurrency library' do
 
   describe 'HTTP communication of freecurrency API' do
     it 'HAPPY: should fetch with correct currency' do
-      result = Skiller::FreeCurrency::Api.new(FREECURRENCY_API_KEY).exchange_rates(TEST_SRC_CURRENCY)
+      result = Skiller::FreeCurrency::Api.new(FREECURRENCY_API_KEY).request_rates(TEST_SRC_CURRENCY)
       _(result).wont_be_empty
     end
 
     it 'SAD: should raise exception on invalid api key' do
       _(proc do
-        Skiller::FreeCurrency::Api.new('INVALID API KEY').exchange_rates(TEST_SRC_CURRENCY)
+        Skiller::FreeCurrency::Api.new('INVALID API KEY').request_rates(TEST_SRC_CURRENCY)
       end).must_raise Skiller::FreeCurrency::Errors::InvalidApiKey
     end
 
     it 'SAD: should raise exception on invalid currency' do
       _(proc do
-        Skiller::FreeCurrency::Api.new(FREECURRENCY_API_KEY).exchange_rates('INVALID CURRENCY')
+        Skiller::FreeCurrency::Api.new(FREECURRENCY_API_KEY).request_rates('INVALID CURRENCY')
       end).must_raise Skiller::FreeCurrency::Errors::InvalidCurrency
+    end
+  end
+
+  describe 'Cache functionality of freecurrency API' do
+    it 'HAPPY: should generate cached result' do
+      Skiller::FreeCurrency::Api.new(FREECURRENCY_API_KEY).exchange_rates(TEST_SRC_CURRENCY)
+      _(File.exist?(Skiller::FreeCurrency::Api::CACHE_FILE)).must_equal true
+    end
+
+    it 'HAPPY: should be able to update expired cache' do
+      # generate expired cache
+      expired_cache = {
+        'date' => (Date.today - Skiller::FreeCurrency::Api::EXPIRE_TIME).to_s,
+        'data' => {}
+      }
+      File.write(Skiller::FreeCurrency::Api::CACHE_FILE, expired_cache.to_yaml, mode: 'w')
+
+      # request data
+      Skiller::FreeCurrency::Api.new(FREECURRENCY_API_KEY).exchange_rates(TEST_SRC_CURRENCY)
+
+      # check if updated
+      date = YAML.safe_load(File.read(Skiller::FreeCurrency::Api::CACHE_FILE))['date']
+      _(Date.parse(date).to_s).must_equal Date.today.to_s
+    end
+
+    it 'HAPPY: should request result from API if no cache presents' do
+      cached_file = Skiller::FreeCurrency::Api::CACHE_FILE
+      File.delete(cached_file) if File.exist? cached_file
+
+      Skiller::FreeCurrency::Api.new(FREECURRENCY_API_KEY).exchange_rates(TEST_SRC_CURRENCY)
+      _(File.exist?(Skiller::FreeCurrency::Api::CACHE_FILE)).must_equal true
     end
   end
 

@@ -8,7 +8,7 @@ describe 'Integration Tests of Reed API and Database' do
   Skiller::VcrHelper.setup_vcr
 
   before do
-    Skiller::VcrHelper.configure_vcr_for_reed(GATEWAY_DATABASE_CASSETTE_FILE)
+    Skiller::VcrHelper.configure_integration
     Skiller::DatabaseHelper.wipe_database
     job_mapper = Skiller::Reed::JobMapper.new(CONFIG)
     @partial_jobs = job_mapper.job_list(TEST_KEYWORD)

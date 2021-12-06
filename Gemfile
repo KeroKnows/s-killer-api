@@ -12,6 +12,10 @@ gem 'puma', '~> 5.5'
 gem 'roda', '~> 3.49'
 gem 'slim', '~> 4.1'
 
+# Presentation layer
+gem 'multi_json'
+gem 'roar'
+
 # Database
 gem 'hirb', '~> 0'
 gem 'hirb-unicode', '~> 0'
@@ -40,6 +44,7 @@ group :test do
   gem 'minitest', '~> 5.0'
   gem 'minitest-rg', '~> 5.0'
   gem 'page-object', '~> 2.3'
+  gem 'rack-test'
   gem 'simplecov', '~> 0'
   gem 'vcr', '~> 6.0'
   gem 'watir', '~> 7.0'
