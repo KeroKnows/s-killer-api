@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sunny/Desktop/s-killer-api/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/init.rb": {
         "lines": [
           null,
           null,
@@ -10,14 +10,14 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/config/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/config/init.rb": {
         "lines": [
           null,
           null,
           1
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/config/environment.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -44,7 +44,7 @@
           null,
           null,
           1,
-          3,
+          774,
           null,
           null,
           1,
@@ -64,7 +64,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/init.rb": {
         "lines": [
           null,
           null,
@@ -74,7 +74,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/init.rb": {
         "lines": [
           null,
           null,
@@ -84,7 +84,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/database/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/database/init.rb": {
         "lines": [
           null,
           null,
@@ -94,7 +94,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/database/orm/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/database/orm/init.rb": {
         "lines": [
           null,
           null,
@@ -103,7 +103,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/database/orm/job_orm.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/database/orm/job_orm.rb": {
         "lines": [
           null,
           null,
@@ -122,9 +122,9 @@
           1,
           null,
           1,
-          81,
-          81,
-          81,
+          581,
+          581,
+          581,
           null,
           null,
           null,
@@ -141,7 +141,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/database/orm/job_skill_orm.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/database/orm/job_skill_orm.rb": {
         "lines": [
           null,
           null,
@@ -160,14 +160,14 @@
           null,
           null,
           1,
-          10,
+          200,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/database/orm/query_job_orm.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/database/orm/query_job_orm.rb": {
         "lines": [
           null,
           null,
@@ -182,14 +182,14 @@
           null,
           null,
           1,
-          20,
+          720,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/database/orm/skill_orm.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/database/orm/skill_orm.rb": {
         "lines": [
           null,
           null,
@@ -204,14 +204,14 @@
           null,
           null,
           1,
-          12,
+          202,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/skill_extractor/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/skill_extractor/init.rb": {
         "lines": [
           null,
           null,
@@ -220,7 +220,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/skill_extractor/extractor.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/skill_extractor/extractor.rb": {
         "lines": [
           null,
           null,
@@ -237,117 +237,28 @@
           1,
           null,
           1,
-          3,
-          3,
-          3,
+          69,
+          69,
+          69,
           null,
           null,
           1,
-          2,
-          2,
+          68,
+          68,
           null,
           null,
           1,
-          3,
-          3,
-          3,
-          3,
+          69,
+          69,
+          69,
+          69,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/reed/init.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          2,
-          null
-        ]
-      },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/reed/reed_api.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          29,
-          null,
-          null,
-          null,
-          1,
-          27,
-          null,
-          27,
-          null,
-          null,
-          null,
-          1,
-          106,
-          null,
-          106,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/http_response.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          1,
-          1,
-          138,
-          138,
-          null,
-          null,
-          1,
-          138,
-          null,
-          135,
-          null,
-          null,
-          1,
-          138,
-          null,
-          null
-        ]
-      },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/freecurrency/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/reed/init.rb": {
         "lines": [
           null,
           null,
@@ -356,7 +267,96 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/freecurrency/freecurrency_api.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/reed/reed_api.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          92,
+          null,
+          null,
+          null,
+          1,
+          32,
+          null,
+          32,
+          null,
+          null,
+          null,
+          1,
+          283,
+          null,
+          283,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/http_response.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          1,
+          320,
+          320,
+          null,
+          null,
+          1,
+          320,
+          null,
+          316,
+          null,
+          null,
+          1,
+          320,
+          null,
+          null
+        ]
+      },
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/freecurrency/init.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          2,
+          null
+        ]
+      },
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/infrastructure/freecurrency/freecurrency_api.rb": {
         "lines": [
           null,
           null,
@@ -394,38 +394,38 @@
           null,
           null,
           1,
-          10,
-          10,
+          721,
+          721,
           null,
           null,
           null,
           1,
-          6,
-          6,
+          717,
+          717,
           null,
           null,
           null,
           1,
-          6,
+          717,
           null,
+          716,
+          716,
+          null,
+          null,
+          null,
+          1,
           5,
           5,
-          null,
-          null,
-          null,
-          1,
-          5,
-          5,
-          4,
-          4,
-          4,
+          3,
+          3,
+          3,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/init.rb": {
         "lines": [
           null,
           null,
@@ -435,7 +435,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/jobs/init.rb": {
         "lines": [
           null,
           null,
@@ -447,7 +447,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/entities/job.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/jobs/entities/job.rb": {
         "lines": [
           null,
           null,
@@ -472,7 +472,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/values/salary.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/jobs/values/salary.rb": {
         "lines": [
           null,
           null,
@@ -491,15 +491,15 @@
           1,
           1,
           null,
-          0,
-          null,
-          null,
-          1,
           1,
           null,
+          null,
           1,
-          1,
-          1,
+          712,
+          null,
+          712,
+          712,
+          712,
           null,
           null,
           null,
@@ -508,7 +508,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/entities/salary_distribution.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/jobs/entities/salary_distribution.rb": {
         "lines": [
           null,
           null,
@@ -519,33 +519,33 @@
           1,
           null,
           1,
-          0,
-          0,
-          0,
+          8,
+          8,
+          711,
           null,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
+          8,
+          8,
           null,
           null,
           1,
-          0,
-          0,
+          8,
+          8,
           null,
           null,
           1,
-          0,
+          8,
+          8,
+          null,
+          null,
+          1,
+          16,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/repositories/for.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/jobs/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -571,7 +571,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/repositories/jobs.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/jobs/repositories/jobs.rb": {
         "lines": [
           null,
           null,
@@ -584,11 +584,11 @@
           null,
           null,
           1,
-          1,
+          56,
           null,
           null,
           1,
-          1,
+          56,
           null,
           null,
           1,
@@ -597,13 +597,13 @@
           null,
           null,
           1,
-          81,
+          581,
           null,
           null,
           1,
-          1,
-          1,
-          1,
+          56,
+          56,
+          56,
           null,
           null,
           null,
@@ -618,9 +618,9 @@
           null,
           null,
           1,
-          106,
+          1127,
           null,
-          106,
+          1127,
           null,
           null,
           null,
@@ -640,7 +640,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/repositories/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/jobs/repositories/init.rb": {
         "lines": [
           null,
           null,
@@ -648,143 +648,143 @@
           1
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/repositories/queries_jobs.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/jobs/repositories/queries_jobs.rb": {
         "lines": [
           null,
           null,
           1,
           1,
-          null,
-          1,
-          1,
-          1,
-          10,
-          null,
-          null,
-          null,
-          1,
-          1,
-          10,
-          null,
-          1,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          2,
-          20,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/mappers/freecurrency_mappers/exchange_rate_mapper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          4,
-          4,
-          null,
-          null,
-          1,
-          4,
-          null,
-          3,
-          3,
-          null,
-          2,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/mappers/reed_mappers/job_mapper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          25,
-          25,
-          null,
-          null,
-          null,
-          1,
-          25,
-          2525,
-          null,
-          null,
-          null,
-          1,
-          104,
-          104,
-          null,
-          null,
-          null,
-          1,
-          1,
-          2604,
-          2604,
-          2604,
-          null,
-          null,
-          1,
-          2604,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/skills/init.rb": {
-        "lines": [
-          null,
           null,
           1,
           1,
           3,
+          210,
+          null,
+          null,
+          null,
+          1,
+          3,
+          210,
+          null,
+          3,
+          null,
+          null,
+          1,
+          14,
+          4,
+          null,
+          10,
+          null,
+          null,
+          null,
+          1,
+          9,
+          720,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/jobs/mappers/freecurrency_mappers/exchange_rate_mapper.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          715,
+          715,
+          null,
+          null,
+          1,
+          715,
+          null,
+          714,
+          714,
+          null,
+          713,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/jobs/mappers/reed_mappers/job_mapper.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          88,
+          88,
+          null,
+          null,
+          null,
+          1,
+          30,
+          3030,
+          null,
+          null,
+          null,
+          1,
+          281,
+          281,
+          null,
+          null,
+          null,
+          1,
+          1,
+          3281,
+          3281,
+          3281,
+          null,
+          null,
+          1,
+          3281,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/skills/init.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          3,
           4,
           null,
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/skills/entities/skill.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/skills/entities/skill.rb": {
         "lines": [
           null,
           null,
@@ -805,7 +805,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/skills/repositories/jobs_skills.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/skills/repositories/jobs_skills.rb": {
         "lines": [
           null,
           null,
@@ -814,31 +814,31 @@
           null,
           1,
           1,
-          11,
-          4,
+          211,
+          80,
           null,
           null,
           null,
           1,
-          14,
+          280,
           null,
-          14,
-          14,
-          null,
-          null,
+          280,
+          280,
           null,
           null,
           null,
           null,
-          1,
-          2,
           null,
           null,
           1,
-          5,
-          10,
-          10,
-          10,
+          57,
+          null,
+          null,
+          1,
+          60,
+          200,
+          200,
+          200,
           null,
           null,
           null,
@@ -846,7 +846,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/skills/repositories/skills.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/skills/repositories/skills.rb": {
         "lines": [
           null,
           null,
@@ -860,52 +860,9 @@
           null,
           null,
           1,
-          16,
+          282,
           null,
-          16,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/sunny/Desktop/s-killer-api/app/domain/skills/mappers/skill_mapper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          2,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
+          282,
           null,
           null,
           null,
@@ -917,7 +874,50 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/domain/skills/mappers/skill_mapper.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          68,
+          null,
+          67,
+          67,
+          null,
+          null,
+          null,
+          1,
+          67,
+          296,
+          null,
+          null,
+          null,
+          1,
+          1,
+          229,
+          229,
+          null,
+          null,
+          1,
+          null,
+          229,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/init.rb": {
         "lines": [
           null,
           null,
@@ -927,7 +927,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/representers/init.rb": {
         "lines": [
           null,
           null,
@@ -936,7 +936,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/for.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/representers/for.rb": {
         "lines": [
           null,
           null,
@@ -984,7 +984,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/responses/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/responses/init.rb": {
         "lines": [
           null,
           null,
@@ -993,7 +993,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/responses/api_result.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/responses/api_result.rb": {
         "lines": [
           null,
           null,
@@ -1012,16 +1012,16 @@
           null,
           1,
           1,
-          0,
+          11,
           null,
-          0,
+          11,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/responses/result_response.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/responses/result_response.rb": {
         "lines": [
           null,
           null,
@@ -1033,7 +1033,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/http_response_representer.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/representers/http_response_representer.rb": {
         "lines": [
           null,
           null,
@@ -1066,38 +1066,6 @@
           null,
           null,
           null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/result_representer.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
           null,
           1,
           0,
@@ -1107,7 +1075,39 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/job_representer.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/representers/result_representer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/representers/job_representer.rb": {
         "lines": [
           null,
           null,
@@ -1134,7 +1134,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/salary_representer.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/representers/salary_representer.rb": {
         "lines": [
           null,
           null,
@@ -1155,7 +1155,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/skill_representer.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/representers/skill_representer.rb": {
         "lines": [
           null,
           null,
@@ -1175,7 +1175,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/salary_distribution_representer.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/representers/salary_distribution_representer.rb": {
         "lines": [
           null,
           null,
@@ -1196,7 +1196,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/openstruct_with_links.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/representers/openstruct_with_links.rb": {
         "lines": [
           null,
           null,
@@ -1210,7 +1210,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/application/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/application/init.rb": {
         "lines": [
           null,
           null,
@@ -1220,7 +1220,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/application/controllers/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/application/controllers/init.rb": {
         "lines": [
           null,
           null,
@@ -1229,7 +1229,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/application/controllers/api.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/application/controllers/api.rb": {
         "lines": [
           null,
           null,
@@ -1259,8 +1259,20 @@
           0,
           null,
           0,
+          null,
           0,
           0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
           null,
           0,
           null,
@@ -1271,57 +1283,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/application/requests/init.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          2,
-          null
-        ]
-      },
-      "/Users/sunny/Desktop/s-killer-api/app/application/requests/query.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/sunny/Desktop/s-killer-api/app/application/services/init.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/application/requests/init.rb": {
         "lines": [
           null,
           null,
@@ -1330,7 +1292,47 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/app/application/services/analyze_skills.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/application/requests/query.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          7,
+          7,
+          5,
+          null,
+          2,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/application/services/init.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          2,
+          null
+        ]
+      },
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/application/services/analyze_skills.rb": {
         "lines": [
           null,
           null,
@@ -1358,9 +1360,85 @@
           null,
           null,
           1,
+          9,
+          7,
+          7,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          7,
+          null,
+          7,
           0,
+          null,
+          7,
+          null,
+          null,
           0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          7,
+          7,
+          77,
+          null,
+          7,
+          null,
           0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          7,
+          null,
+          7,
+          0,
+          null,
+          null,
+          null,
+          7,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          7,
+          7,
+          7,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          7,
+          null,
+          7,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          7,
+          7,
           null,
           0,
           null,
@@ -1370,137 +1448,61 @@
           null,
           null,
           1,
-          0,
+          7,
+          7,
+          2,
           null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
+          5,
           null,
           null,
           null,
           null,
           1,
-          0,
-          0,
-          0,
+          77,
           null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
+          55,
+          55,
+          55,
           null,
           null,
           null,
           null,
           1,
-          0,
-          0,
-          0,
+          7,
+          7,
+          2,
           null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
+          5,
           null,
           null,
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
-          0,
+          5,
+          5,
+          5,
+          500,
           null,
           null,
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          null,
+          5,
+          55,
           0,
           null,
+          55,
+          55,
           null,
           null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
+          5,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/spec/helpers/database_helper.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/spec/helpers/database_helper.rb": {
         "lines": [
           null,
           null,
@@ -1518,7 +1520,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/spec/tests/integration/services/analyze_skills_spec.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/spec/tests/integration/services/analyze_skills_spec.rb": {
         "lines": [
           null,
           null,
@@ -1544,11 +1546,11 @@
           1,
           null,
           null,
-          0,
+          1,
           null,
           null,
-          0,
-          0,
+          1,
+          1,
           null,
           null,
           1,
@@ -1557,11 +1559,11 @@
           1,
           null,
           null,
-          0,
+          1,
           null,
           null,
-          0,
-          0,
+          1,
+          1,
           null,
           null,
           null,
@@ -1575,20 +1577,20 @@
           1,
           null,
           null,
-          0,
+          1,
           null,
           null,
-          0,
+          1,
           null,
           null,
-          0,
-          0,
-          0,
+          1,
+          1,
+          101,
           null,
-          0,
-          0,
-          0,
-          0,
+          1,
+          100,
+          100,
+          100,
           null,
           null,
           null,
@@ -1597,22 +1599,22 @@
           1,
           null,
           1,
-          0,
+          1,
           null,
           null,
-          0,
+          1,
           null,
           null,
-          0,
+          1,
           null,
           null,
-          0,
+          1,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
+          1,
+          100,
+          100,
+          100,
+          100,
           null,
           null,
           null,
@@ -1622,26 +1624,26 @@
           1,
           null,
           null,
-          0,
+          1,
           null,
           null,
-          0,
-          0,
+          1,
+          1,
           null,
           null,
           null,
-          0,
-          0,
-          0,
-          0,
+          1,
+          12,
+          1,
+          1,
           null,
           null,
-          0,
+          1,
           null,
           null,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -1655,25 +1657,25 @@
           1,
           null,
           null,
-          0,
+          1,
           null,
           null,
-          0,
-          0,
+          1,
+          1,
           null,
           null,
           null,
-          0,
-          0,
-          0,
-          0,
+          1,
+          12,
+          12,
+          1,
           null,
           null,
-          0,
+          1,
           null,
           null,
-          0,
-          0,
+          1,
+          38,
           null,
           null,
           null,
@@ -1681,20 +1683,20 @@
           1,
           null,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
           null,
-          0,
+          1,
           null,
           null,
-          0,
-          0,
+          1,
+          1,
           null,
           null,
-          0,
-          0,
-          0,
+          1,
+          1,
+          38,
           null,
           null,
           null,
@@ -1702,7 +1704,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/spec/tests/unit/freecurrency_spec.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/spec/tests/unit/freecurrency_spec.rb": {
         "lines": [
           null,
           null,
@@ -1791,7 +1793,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/spec/tests/unit/reed_spec.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/spec/tests/unit/reed_spec.rb": {
         "lines": [
           null,
           null,
@@ -1879,9 +1881,9 @@
           null,
           1,
           1,
-          1,
-          null,
           0,
+          null,
+          1,
           null,
           null,
           null,
@@ -1918,7 +1920,7 @@
           null
         ]
       },
-      "/Users/sunny/Desktop/s-killer-api/spec/tests/unit/skill_spec.rb": {
+      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/spec/tests/unit/skill_spec.rb": {
         "lines": [
           null,
           null,
@@ -1985,6 +1987,6 @@
         ]
       }
     },
-    "timestamp": 1639143215
+    "timestamp": 1639155287
   }
 }
