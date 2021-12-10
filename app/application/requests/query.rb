@@ -19,7 +19,7 @@ module Skiller
         if QUERY_REGEX.match?(query)
           Success(query)
         else
-          Failure(Response::ApiResult.new(status: :cannot_process, message: "Validation fails: #{query}"))
+          Failure(Response::ApiResult.new(status: :cannot_process, message: "Invalid query: #{query}"))
         end
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to vallidate query: #{e}"))

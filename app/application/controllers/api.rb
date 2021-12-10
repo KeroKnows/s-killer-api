@@ -28,16 +28,11 @@ module Skiller
           router.get do
             # validate request
             query_request = Request::Query.new.call(router.params)
-            if query_request.failure?
-              failed = Representer::For.new(query_request)
-              routing.halt failed.http_status_code, failed.to_json
-            end
-
-            # call the service
             result = Service::AnalyzeSkills.new.call(query_request)
+
             if result.failure?
               failed = Representer::For.new(result)
-              routing.halt failed.http_status_code, failed.to_json
+              router.halt failed.http_status_code, failed.to_json
             end
 
             # response
