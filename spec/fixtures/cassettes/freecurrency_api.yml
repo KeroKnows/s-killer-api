@@ -1,0 +1,196 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://freecurrencyapi.net/api/v2/latest?apikey=<FREECURRENCY_API_KEY>&base_currency=TWD
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - freecurrencyapi.net
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 10 Dec 2021 12:39:32 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Charset:
+      - utf-8
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Remaining:
+      - '4499'
+      X-Ratelimit-Limit:
+      - '4500'
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=GWE2%2BiGQqNFGJOGTKHURNCMXWh1K7JeyHsD3G2%2BAl%2FUw%2FsvdUpI39RXzCqWexe5YeR9qw95l3VFKBXwDeRn9bZfCkWGNQuDYsGMhM0O4g3LQSoBLxwwDFVTE%2BGDXNCR8dJ4wPY5Z"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6bb68959cc574983-SIN
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"query":{"apikey":"<FREECURRENCY_API_KEY>","base_currency":"TWD","timestamp":1639139972},"data":{"USD":0.036092,"JPY":4.105921,"CNY":0.230162,"CHF":0.033354,"CAD":0.045841,"MXN":0.75694,"INR":2.731503,"BRL":0.201047,"RUB":2.6514,"KRW":42.484693,"IDR":518.655951,"TRY":0.50166,"SAR":0.135395,"SEK":0.32773,"NGN":14.788787,"PLN":0.147615,"ARS":3.664176,"NOK":0.324269,"TWD":1,"IRR":1515.900439,"AED":0.132558,"COP":140.747381,"THB":1.214896,"ZAR":0.577204,"DKK":0.238096,"MYR":0.151951,"SGD":0.049298,"ILS":0.11177,"HKD":0.281514,"EGP":0.565215,"PHP":1.816563,"CLP":30.704034,"PKR":6.402844,"IQD":52.659519,"DZD":5.010406,"KZT":15.723351,"QAR":0.131432,"CZK":0.81289,"PEN":0.147224,"RON":0.158379,"VND":829.232252,"BDT":3.091728,"HUF":11.701663,"UAH":0.974152,"AOA":20.757321,"MAD":0.334239,"OMR":0.013896,"CUC":0.866233,"BYR":0.108279,"AZN":0.061106,"LKR":7.254655,"SDG":15.746547,"SYP":90.594224,"MMK":63.939115,"DOP":2.045768,"UZS":388.867875,"KES":4.073108,"GTQ":0.27846,"URY":1.594603,"HRV":0.240677,"MOP":0.289969,"ETB":1.744142,"CRC":22.976701,"TZS":83.049561,"TMT":0.125965,"TND":0.104254,"PAB":0.036093,"LBP":54.344865,"RSD":3.760899,"LYD":0.165448,"GHS":0.216559,"YER":9.023252,"BOB":0.246515,"BHD":0.013607,"CDF":72.038628,"PYG":246.711523,"UGX":128.239058,"SVC":0.315806,"TTD":0.244215,"AFN":3.735609,"NPR":4.375191,"HNL":0.870571,"BIH":0.062539,"BND":0.049289,"ISK":4.726374,"KHR":146.809384,"GEL":0.110806,"MZN":2.281061,"BWP":0.424627,"PGK":0.126729,"JMD":5.539583,"XAF":21.000158,"NAD":0.577345,"ALL":3.858015,"SSP":14.32893,"MUR":1.548397,"MNT":102.143579,"NIO":1.270837,"LAK":396.808468,"MKD":1.965629,"AMD":17.829966,"MGA":142.712832,"XPF":3.809972,"TJS":0.407126,"HTG":3.602098,"BSD":0.036093,"MDL":0.637045,"RWF":36.916118,"KGS":3.049881,"GNF":335.69914,"SRD":0.774413,"SLL":403.521483,"XOF":21.090388,"MWK":29.018202,"FJD":0.076701,"ERN":0.541392,"SZL":0.57716,"GYD":7.506626,"BIF":71.688297,"KYD":0.029777,"MVR":0.556551,"LSL":0.576682,"LRD":5.09272,"CVE":3.529921,"DJF":6.406459,"SCR":0.478583,"SOS":20.753648,"GMD":1.898475,"KMF":15.725834,"STD":0.783586,"XRP":0.043312,"AUD":0.050501,"BGN":0.062603,"BTC":0.000747,"JOD":0.025554,"GBP":0.027344,"ETH":9.0e-6,"EUR":0.032022,"LTC":0.000361,"NZD":0.053252}}'
+  recorded_at: Fri, 10 Dec 2021 12:39:32 GMT
+- request:
+    method: get
+    uri: https://freecurrencyapi.net/api/v2/latest?apikey=INVALID%20API%20KEY&base_currency=TWD
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - freecurrencyapi.net
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 10 Dec 2021 12:39:33 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Charset:
+      - utf-8
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Remaining:
+      - "-6"
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=4d%2FiPxPyECzcZ61Y0QvCMr2HfZ%2B69c%2FKNgsEnylqsK2GCXwofQ%2Fu%2FEN0SICU%2B9DBqZ3mGghGlh5AnWFkNXFMDs5%2BgKTNINygu%2BI3njLzJp%2F1%2FJQ97OxGlJKjQOVcsocXPKM9GS5S"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6bb6895fdeb54c41-SIN
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"query":{"apikey":"INVALID API KEY","base_currency":"TWD","timestamp":1639139973},"data":{"USD":0.036092,"JPY":4.105921,"CNY":0.230162,"CHF":0.033354,"CAD":0.045841,"MXN":0.75694,"INR":2.731503,"BRL":0.201047,"RUB":2.6514,"KRW":42.484693,"IDR":518.655951,"TRY":0.50166,"SAR":0.135395,"SEK":0.32773,"NGN":14.788787,"PLN":0.147615,"ARS":3.664176,"NOK":0.324269,"TWD":1,"IRR":1515.900439,"AED":0.132558,"COP":140.747381,"THB":1.214896,"ZAR":0.577204,"DKK":0.238096,"MYR":0.151951,"SGD":0.049298,"ILS":0.11177,"HKD":0.281514,"EGP":0.565215,"PHP":1.816563,"CLP":30.704034,"PKR":6.402844,"IQD":52.659519,"DZD":5.010406,"KZT":15.723351,"QAR":0.131432,"CZK":0.81289,"PEN":0.147224,"RON":0.158379,"VND":829.232252,"BDT":3.091728,"HUF":11.701663,"UAH":0.974152,"AOA":20.757321,"MAD":0.334239,"OMR":0.013896,"CUC":0.866233,"BYR":0.108279,"AZN":0.061106,"LKR":7.254655,"SDG":15.746547,"SYP":90.594224,"MMK":63.939115,"DOP":2.045768,"UZS":388.867875,"KES":4.073108,"GTQ":0.27846,"URY":1.594603,"HRV":0.240677,"MOP":0.289969,"ETB":1.744142,"CRC":22.976701,"TZS":83.049561,"TMT":0.125965,"TND":0.104254,"PAB":0.036093,"LBP":54.344865,"RSD":3.760899,"LYD":0.165448,"GHS":0.216559,"YER":9.023252,"BOB":0.246515,"BHD":0.013607,"CDF":72.038628,"PYG":246.711523,"UGX":128.239058,"SVC":0.315806,"TTD":0.244215,"AFN":3.735609,"NPR":4.375191,"HNL":0.870571,"BIH":0.062539,"BND":0.049289,"ISK":4.726374,"KHR":146.809384,"GEL":0.110806,"MZN":2.281061,"BWP":0.424627,"PGK":0.126729,"JMD":5.539583,"XAF":21.000158,"NAD":0.577345,"ALL":3.858015,"SSP":14.32893,"MUR":1.548397,"MNT":102.143579,"NIO":1.270837,"LAK":396.808468,"MKD":1.965629,"AMD":17.829966,"MGA":142.712832,"XPF":3.809972,"TJS":0.407126,"HTG":3.602098,"BSD":0.036093,"MDL":0.637045,"RWF":36.916118,"KGS":3.049881,"GNF":335.69914,"SRD":0.774413,"SLL":403.521483,"XOF":21.090388,"MWK":29.018202,"FJD":0.076701,"ERN":0.541392,"SZL":0.57716,"GYD":7.506626,"BIF":71.688297,"KYD":0.029777,"MVR":0.556551,"LSL":0.576682,"LRD":5.09272,"CVE":3.529921,"DJF":6.406459,"SCR":0.478583,"SOS":20.753648,"GMD":1.898475,"KMF":15.725834,"STD":0.783586,"XRP":0.043312,"AUD":0.050501,"BGN":0.062603,"BTC":0.000747,"JOD":0.025554,"GBP":0.027344,"ETH":9.0e-6,"EUR":0.032022,"LTC":0.000361,"NZD":0.053252}}'
+  recorded_at: Fri, 10 Dec 2021 12:39:33 GMT
+- request:
+    method: get
+    uri: https://freecurrencyapi.net/api/v2/latest?apikey=<FREECURRENCY_API_KEY>&base_currency=INVALID%20CURRENCY
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - freecurrencyapi.net
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Fri, 10 Dec 2021 12:39:34 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache, private
+      Location:
+      - https://freecurrencyapi.net
+      X-Ratelimit-Limit:
+      - '4500'
+      X-Ratelimit-Remaining:
+      - '4498'
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lolVfMq1bF1lN%2FqI6mHE%2BHooe5ILpYZI7FpYhtXVtt3KR1QjkD3uF5ragQ9FBMTIWJXicyiOF7n4EUFuR47W5jVxL6WPi9HeTR0mKv6pKbFN%2FXXMGbgvvQUP%2Fgajqnur9d7uUGdn"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6bb689663cfc4dab-SIN
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="refresh" content="0;url='https://freecurrencyapi.net'" />
+
+                <title>Redirecting to https://freecurrencyapi.net</title>
+            </head>
+            <body>
+                Redirecting to <a href="https://freecurrencyapi.net">https://freecurrencyapi.net</a>.
+            </body>
+        </html>
+  recorded_at: Fri, 10 Dec 2021 12:39:34 GMT
+recorded_with: VCR 6.0.0
