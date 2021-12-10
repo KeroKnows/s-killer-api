@@ -18,8 +18,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
   describe 'Data validation' do
     it 'BAD: should fail empty query' do
       # GIVEN: an empty query
-      empty_query = ''
-      query_form = Skiller::Request::Query.new.call({ 'query' => empty_query })
+      query_form = Skiller::Request::Query.new.call({ 'query' => EMPTY_KEYWORD })
 
       # WHEN: the service is called
       jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
@@ -31,8 +30,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
 
     it 'SAD: should fail with invalid request' do
       # GIVEN: an invalid query
-      invalid_query = '  '
-      query_form = Skiller::Request::Query.new.call({ 'query' => invalid_query })
+      query_form = Skiller::Request::Query.new.call({ 'query' => INVALID_KEYWORD })
 
       # WHEN: the service is called
       jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
