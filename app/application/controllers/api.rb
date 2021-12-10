@@ -41,11 +41,6 @@ module Skiller
         end
 
         router.on 'details' do
-          router.is do
-            # health check
-            Representer::For.new('hello').status_and_body(response)
-          end
-
           router.on Integer do |job_id|
             # GET /details/{JOB_ID}
             job_info = Service::RequestDetail.new.call(job_id)
