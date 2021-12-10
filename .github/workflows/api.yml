@@ -41,6 +41,6 @@ jobs:
       - name: Run all specs
         env: # define secrets in Github project -> settings -> secrets
           DB_FILENAME: ${{ secrets.DB_FILENAME }}
-          FREECURRENCY_API_KEY: ${{ secrets.FRECURRENCY_API_KEY }}
+          FREECURRENCY_API_KEY: ${{ secrets.FREECURRENCY_API_KEY }}
           REED_TOKEN: ${{ secrets.REED_TOKEN }}
         run: RACK_ENV=test bundle exec rake spec
