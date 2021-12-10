@@ -12,6 +12,8 @@ module Skiller
 
       QUERY_REGEX = /^(?!\s)[a-zA-Z ]+/
 
+      # Validate the query format
+      # :reek:UncommunicativeVariableName for rescued error
       def call(params)
         query = params['query']
         if QUERY_REGEX.match?(query)

@@ -22,8 +22,9 @@ module Skiller
           @body_rep = @status_rep
         else
           value = result.value!
+          message = value.message
           @status_rep = Representer::HttpResponse.new(value)
-          @body_rep = REP_KLASS[value.message.class].new(value.message)
+          @body_rep = REP_KLASS[message.class].new(message)
         end
       end
 

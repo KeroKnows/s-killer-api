@@ -932,7 +932,7 @@
           null,
           null,
           1,
-          9,
+          8,
           null
         ]
       },
@@ -961,6 +961,7 @@
           0,
           0,
           null,
+          0,
           0,
           0,
           0,
@@ -1196,20 +1197,6 @@
           null
         ]
       },
-      "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/presentation/representers/openstruct_with_links.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
       "/Users/joaw/workspace/SOA2021/s-killer/s-killer-api/app/application/init.rb": {
         "lines": [
           null,
@@ -1307,6 +1294,8 @@
           1,
           null,
           1,
+          null,
+          null,
           null,
           1,
           7,
@@ -1436,6 +1425,7 @@
           null,
           null,
           null,
+          null,
           1,
           7,
           7,
@@ -1444,7 +1434,7 @@
           null,
           null,
           null,
-          null,
+          1,
           null,
           null,
           1,
@@ -1496,6 +1486,7 @@
           null,
           null,
           5,
+          null,
           null,
           null,
           null,
@@ -1987,6 +1978,6 @@
         ]
       }
     },
-    "timestamp": 1639155287
+    "timestamp": 1639156344
   }
 }
