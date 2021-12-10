@@ -39,6 +39,26 @@ module Skiller
             Representer::For.new(result).status_and_body(response)
           end
         end
+
+        router.on 'details' do
+          router.is do
+            # health check
+            Representer::For.new('hello').status_and_body(response)
+          end
+
+          router.on Integer do |job_id|
+            # GET /details/{JOB_ID}
+            job_info = Service::RequestDetail.new.call(job_id)
+
+            if job_info.failure?
+              failed = Representer::For.new(job_info)
+              router.halt failed.http_status_code, failed.to_json
+            end
+
+            # response
+            Representer::For.new(job_info).status_and_body(response)
+          end
+        end
       end
     end
   end

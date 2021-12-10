@@ -3,6 +3,7 @@
 require_relative '../responses/init'
 
 require_relative 'http_response_representer'
+require_relative 'detail_representer'
 require_relative 'result_representer'
 
 module Skiller
@@ -11,6 +12,7 @@ module Skiller
     class For
       REP_KLASS = {
         Response::Result => Result,
+        Response::Detail => Detail,
         String => HttpResponse
       }.freeze
 
