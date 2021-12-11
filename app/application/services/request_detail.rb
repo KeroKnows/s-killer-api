@@ -23,7 +23,7 @@ module Skiller
         if job
           Success(job)
         else
-          Failure(Response::ApiResult.new(status: :bad_request,
+          Failure(Response::ApiResult.new(status: :not_found,
                                           message: "Job##{job_id} not found. Please request it in advance"))
         end
       rescue StandardError => e
@@ -37,7 +37,7 @@ module Skiller
         if job.is_full
           Success(job)
         else
-          Failure(Response::ApiResult.new(status: :cannot_process, message: 'Lack of full information'))
+          Failure(Response::ApiResult.new(status: :cannot_process, message: 'Lack of full information.'))
         end
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :internal_error,
