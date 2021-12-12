@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# http://sequel.jeremyevans.net/rdoc-plugins/classes/Sequel/Plugins/Timestamps.html
-
 require 'sequel'
 
 module Skiller

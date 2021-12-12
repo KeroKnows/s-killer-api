@@ -88,4 +88,54 @@ describe 'Test API routes' do
       _(result['message'].downcase).must_include 'invalid'
     end
   end
+
+  describe 'Request Job Detail' do
+    it 'HAPPY: should respond the detail result' do
+      # GIVEN: ensure jobs exist in database and get a job id
+      get "#{JOB_ROUTE}?query=#{TEST_KEYWORD}"
+      vailid_job_id = Skiller::Database::JobOrm.select(:db_id).where(is_full: true).first.db_id
+
+      # WHEN: request for that job
+      get "#{DETAIL_ROUTE}/#{vailid_job_id}"
+
+      # THEN: the information should be properly returned
+      _(last_response.status).must_equal 200
+
+      result = JSON.parse last_response.body
+      _(result).must_include 'id'
+      _(result).must_include 'title'
+      _(result).must_include 'description'
+      _(result).must_include 'location'
+      _(result).must_include 'salary'
+      _(result).must_include 'url'
+    end
+
+    it 'BAD: should respond to a non-existing job id' do
+      # GIVEN: an already erased job id
+      first_job_id = Skiller::Database::JobOrm.select(:db_id).where(is_full: true).first.db_id
+      erased_job_id = first_job_id - 1
+
+      # WHEN: request for that job
+      get "#{DETAIL_ROUTE}/#{erased_job_id}"
+
+      # THEN: should tell user that the job doesn't exist
+      _(last_response.status).must_equal 404
+      result = JSON.parse last_response.body
+      _(result['message'].downcase).must_include 'not found'
+    end
+
+    it 'SAD: should respond to a job without full description' do
+      # GIVEN: a partial job
+      get "#{JOB_ROUTE}?query=#{TEST_KEYWORD}"
+      partial_job_id = Skiller::Database::JobOrm.select(:db_id).where(is_full: false).first.db_id
+
+      # WHEN: query for that job
+      get "#{DETAIL_ROUTE}/#{partial_job_id}"
+
+      # THEN: should tell user the job is not available
+      _(last_response.status).must_equal 422
+      result = JSON.parse last_response.body
+      _(result['message']).must_include 'full info'
+    end
+  end
 end
