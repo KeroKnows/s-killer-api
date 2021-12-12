@@ -7,18 +7,22 @@ require_relative 'salary_representer'
 
 module Skiller
   module Representer
-    # Job representer
-    class Job < Roar::Decorator
+    # Detail representer
+    class Detail < Roar::Decorator
       include Roar::JSON
+      include Roar::Hypermedia
+      include Roar::Decorator::HypermediaConsumer
 
-      property :job_id
-      property :db_id
+      property :id
       property :title
       property :description
       property :location
       property :salary, extend: Representer::Salary, class: OpenStruct
       property :url
-      property :is_full
+
+      link :self do
+        "#{App.config.API_HOST}/"
+      end
     end
   end
 end

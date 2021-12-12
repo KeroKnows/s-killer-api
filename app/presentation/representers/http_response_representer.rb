@@ -21,9 +21,9 @@ module Skiller
         created: 201,
         processing: 202,
 
+        bad_request: 400,
         forbidden: 403,
         not_found: 404,
-        bad_request: 400,
         conflict: 409,
         cannot_process: 422,
 

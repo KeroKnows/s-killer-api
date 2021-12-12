@@ -16,6 +16,7 @@ require 'http'
 
 require_relative '../init'
 
+# ENVIRONMENTAL
 Figaro.application = Figaro::Application.new(
   environment: ENV,
   path: File.expand_path('config/secrets.yml')
@@ -24,8 +25,11 @@ Figaro.load
 CONFIG = Figaro.env
 REED_TOKEN = CONFIG.REED_TOKEN
 CREDENTIALS = Base64.strict_encode64("#{REED_TOKEN}:")
-
 FREECURRENCY_API_KEY = CONFIG.FREECURRENCY_API_KEY
+
+# CONSTANTS
+JOB_ROUTE = '/api/v1/jobs'
+DETAIL_ROUTE = '/api/v1/details'
 
 # TESTING
 TEST_KEYWORD = 'backend'
