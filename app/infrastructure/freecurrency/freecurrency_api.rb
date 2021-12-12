@@ -35,29 +35,22 @@ module Skiller
 
       def initialize(api_key)
         @api_key = api_key
-        @cache = nil
+        @cache = Skiller::Cache::FileClient.new(CACHE_FILE)
       end
 
       # send request to freecurrency API
       def exchange_rates(currency)
-        check_cache
-        @cache ? @cache['data'] : request_rates(currency)
-      end
-
-      # check if the the cache is valid
-      def check_cache
-        return unless File.exist?(CACHE_FILE)
-
-        cache = YAML.safe_load(File.read(CACHE_FILE))
-        @cache = cache if Date.today - Date.parse(cache['date']) < EXPIRE_TIME
+        if !@cache.exist?(currency) || @cache.expire?(currency)
+          request_rates(currency)
+        end
+        @cache.get(currency)
       end
 
       # request current currency rate from API
       def request_rates(currency)
         response = HTTP.get(API_PATH, params: { apikey: @api_key, base_currency: currency })
         result = HttpResponse.new(response, HTTP_ERROR).parse
-        data = { 'date' => Date.today.to_s, 'data' => result }
-        File.write(CACHE_FILE, data.to_yaml, mode: 'w')
+        @cache.set(currency, result, EXPIRE_TIME)
         result
       end
     end

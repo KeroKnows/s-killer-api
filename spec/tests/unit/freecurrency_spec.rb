@@ -34,37 +34,6 @@ describe 'Test FreeCurrency library' do
     end
   end
 
-  describe 'Cache functionality of freecurrency API' do
-    it 'HAPPY: should generate cached result' do
-      Skiller::FreeCurrency::Api.new(FREECURRENCY_API_KEY).exchange_rates(TEST_SRC_CURRENCY)
-      _(File.exist?(Skiller::FreeCurrency::Api::CACHE_FILE)).must_equal true
-    end
-
-    it 'HAPPY: should be able to update expired cache' do
-      # generate expired cache
-      expired_cache = {
-        'date' => (Date.today - Skiller::FreeCurrency::Api::EXPIRE_TIME).to_s,
-        'data' => {}
-      }
-      File.write(Skiller::FreeCurrency::Api::CACHE_FILE, expired_cache.to_yaml, mode: 'w')
-
-      # request data
-      Skiller::FreeCurrency::Api.new(FREECURRENCY_API_KEY).exchange_rates(TEST_SRC_CURRENCY)
-
-      # check if updated
-      date = YAML.safe_load(File.read(Skiller::FreeCurrency::Api::CACHE_FILE))['date']
-      _(Date.parse(date).to_s).must_equal Date.today.to_s
-    end
-
-    it 'HAPPY: should request result from API if no cache presents' do
-      cached_file = Skiller::FreeCurrency::Api::CACHE_FILE
-      File.delete(cached_file) if File.exist? cached_file
-
-      Skiller::FreeCurrency::Api.new(FREECURRENCY_API_KEY).exchange_rates(TEST_SRC_CURRENCY)
-      _(File.exist?(Skiller::FreeCurrency::Api::CACHE_FILE)).must_equal true
-    end
-  end
-
   describe 'Exchange rate between two currencies' do
     it 'HAPPY: should fetch with correct exchange rate' do
       result = Skiller::FreeCurrency::ExchangeRateMapper.new(CONFIG).exchange_rate(TEST_SRC_CURRENCY, TEST_TGT_CURRENCY)
