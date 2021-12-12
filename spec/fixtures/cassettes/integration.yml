@@ -27036,4 +27036,126 @@ http_interactions:
         using technologies such as Java</p> <p>Participate in product breakdown and
         effort estimation</p> ","applicationCount":4}'
   recorded_at: Fri, 10 Dec 2021 17:44:02 GMT
+- request:
+    method: get
+    uri: https://freecurrencyapi.net/api/v2/latest?apikey=<FREECURRENCY_API_KEY>&base_currency
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - freecurrencyapi.net
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Dec 2021 02:33:40 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Charset:
+      - utf-8
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Remaining:
+      - '4495'
+      X-Ratelimit-Limit:
+      - '4500'
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YXwcMvMS2WWShnV09%2BZNpaYGlq34qVPP8%2F5gKESpkVuuXtM3AZ34254zTNVYQ9f3hRvhk5QUG%2FMBRHo7G5SZWH%2FVrntYKN%2FYYWwlLr7uOpZZfI1Cp3TH0MdjwUm2QjsDL2sfvn8d"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6bc38c982d5c2079-NRT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"query":{"apikey":"<FREECURRENCY_API_KEY>","base_currency":"USD","timestamp":1639276420},"data":{"JPY":113.38292,"CNY":6.37603,"CHF":0.92069,"CAD":1.27169,"MXN":20.87241,"INR":75.69277,"BRL":5.61281,"RUB":73.21086,"KRW":1176.728,"IDR":14370.14785,"TRY":13.88274,"SAR":3.75106,"SEK":9.04809,"NGN":409.7247,"PLN":4.07969,"ARS":101.44192,"NOK":8.93741,"TWD":27.6315,"IRR":42000.48444,"AED":3.67264,"COP":3896.70787,"THB":33.62046,"ZAR":15.98762,"DKK":6.57038,"MYR":4.21006,"SGD":1.36303,"ILS":3.09843,"HKD":7.79783,"EGP":15.66023,"PHP":50.34144,"CLP":843.02416,"PKR":177.50198,"IQD":1458.52521,"DZD":138.71154,"KZT":435.63781,"QAR":3.64009,"CZK":22.36055,"PEN":4.05607,"RON":4.37123,"VND":23025.66727,"BDT":85.50091,"HUF":322.928,"UAH":26.87076,"AOA":573.97681,"MAD":9.24516,"OMR":0.38501,"CUC":24.00037,"BYR":3.00007,"AZN":1.69305,"LKR":202.00537,"SDG":436.28765,"SYP":2511.04073,"MMK":1771.5464,"DOP":56.64069,"UZS":10802.14399,"KES":112.80209,"GTQ":7.72015,"URY":44.20081,"HRV":6.64759,"MOP":8.03322,"ETB":48.32493,"CRC":635.48496,"TZS":2298.03011,"TMT":3.49005,"TND":2.87143,"PAB":1.00002,"LBP":1505.72239,"RSD":103.80189,"LYD":4.58395,"GHS":6.01011,"YER":249.98339,"BOB":6.82012,"BHD":0.37701,"CDF":1994.93644,"PYG":6822.1897,"UGX":3551.10168,"SVC":8.74966,"TTD":6.76648,"AFN":103.50306,"NPR":121.22339,"HNL":24.14229,"BIH":1.72885,"BND":1.36412,"ISK":130.30371,"KHR":4062.07683,"GEL":3.07509,"MZN":63.20174,"BWP":11.76166,"PGK":3.52799,"JMD":153.59386,"XAF":577.01647,"NAD":15.99227,"ALL":106.84268,"SSP":397.00827,"MUR":43.50045,"MNT":2834.08273,"NIO":35.2104,"LAK":10987.15241,"MKD":54.36153,"AMD":494.01191,"MGA":3950.0698,"XPF":105.15225,"TJS":11.28031,"HTG":100.00184,"BSD":1.00002,"MDL":17.63249,"RWF":1022.82484,"KGS":84.78237,"GNF":9294.11301,"SRD":21.47556,"SLL":11130.13051,"XOF":577.50897,"MWK":810.45033,"FJD":2.13013,"ERN":15.00034,"SZL":15.99226,"GYD":207.88287,"BIF":1986.22391,"KYD":0.82502,"MVR":15.42037,"LSL":15.95793,"LRD":140.80271,"CVE":97.41158,"DJF":177.50317,"SCR":12.78476,"SOS":575.0095,"GMD":52.60155,"KMF":436.11082,"STD":21.66043,"XRP":1.20003,"AUD":1.39443,"BGN":1.73013,"BTC":0.0209,"JOD":0.70702,"GBP":0.75371,"ETH":0.00025,"EUR":0.88361,"LTC":0.01,"NZD":1.47103}}'
+  recorded_at: Sun, 12 Dec 2021 02:33:40 GMT
+- request:
+    method: get
+    uri: https://freecurrencyapi.net/api/v2/latest?apikey=<FREECURRENCY_API_KEY>&base_currency=EUR
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - freecurrencyapi.net
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Dec 2021 02:33:42 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Charset:
+      - utf-8
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Remaining:
+      - '4494'
+      X-Ratelimit-Limit:
+      - '4500'
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=j5u8hC4Ko8DJBKkjBpYNzDNv%2FIv3QnCkJIfi073lDlNwl12vFEQvr9pAtDY%2B5bx0buRs6CaVwFNbeuY1CjZJ1IQ8%2F5Mf6vym8OzxL0Zb6d5XptABk%2BPnXktiLVSJSH%2Bp3EeKvv8Y"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6bc38ca3dddcf8c3-NRT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"query":{"apikey":"<FREECURRENCY_API_KEY>","base_currency":"EUR","timestamp":1639276422},"data":{"USD":1.131721,"JPY":128.317833,"CNY":7.215887,"CHF":1.041964,"CAD":1.439198,"MXN":23.621745,"INR":85.663098,"BRL":6.352135,"RUB":82.854268,"KRW":1331.727798,"IDR":16262.998212,"TRY":15.711389,"SAR":4.245153,"SEK":10.239914,"NGN":463.694051,"PLN":4.617071,"ARS":114.803952,"NOK":10.114655,"TWD":31.271149,"IRR":47532.830593,"AED":4.156404,"COP":4409.986159,"THB":38.048981,"ZAR":18.093525,"DKK":7.435837,"MYR":4.764613,"SGD":1.54257,"ILS":3.506558,"HKD":8.824968,"EGP":17.723011,"PHP":56.972465,"CLP":954.068152,"PKR":200.88272,"IQD":1650.643621,"DZD":156.982764,"KZT":493.020462,"QAR":4.119566,"CZK":25.305904,"PEN":4.59034,"RON":4.947013,"VND":26058.631376,"BDT":96.763176,"HUF":365.464402,"UAH":30.410204,"AOA":649.581614,"MAD":10.462942,"OMR":0.435724,"CUC":27.161723,"BYR":3.395242,"AZN":1.91606,"LKR":228.613721,"SDG":493.755899,"SYP":2841.797546,"MMK":2004.896278,"DOP":64.101459,"UZS":12225.013286,"KES":127.660495,"GTQ":8.737056,"URY":50.022985,"HRV":7.523217,"MOP":9.091364,"ETB":54.690338,"CRC":719.19168,"TZS":2600.728953,"TMT":3.949763,"TND":3.249658,"PAB":1.131744,"LBP":1704.057661,"RSD":117.47478,"LYD":5.187753,"GHS":6.801768,"YER":282.911454,"BOB":7.718473,"BHD":0.42667,"CDF":2257.711479,"PYG":7720.815405,"UGX":4018.856373,"SVC":9.902174,"TTD":7.657768,"AFN":117.136587,"NPR":137.191057,"HNL":27.322337,"BIH":1.956576,"BND":1.543803,"ISK":147.467446,"KHR":4597.137685,"GEL":3.480144,"MZN":71.526737,"BWP":13.310918,"PGK":3.9927,"JMD":173.825398,"XAF":653.021661,"NAD":18.098788,"ALL":120.916106,"SSP":449.3026,"MUR":49.230373,"MNT":3207.390964,"NIO":39.848349,"LAK":12434.391202,"MKD":61.522086,"AMD":559.083657,"MGA":4470.376976,"XPF":119.00301,"TJS":12.766164,"HTG":113.174183,"BSD":1.131744,"MDL":19.955059,"RWF":1157.552359,"KGS":95.949989,"GNF":10518.342945,"SRD":24.304342,"SLL":12596.202521,"XOF":653.579034,"MWK":917.203665,"FJD":2.410713,"ERN":16.9762,"SZL":18.098777,"GYD":235.265411,"BIF":2247.851326,"KYD":0.933692,"MVR":17.451557,"LSL":18.059925,"LRD":159.349385,"CVE":110.242732,"DJF":200.884066,"SCR":14.468781,"SOS":650.750331,"GMD":59.530279,"KMF":493.555777,"STD":24.513564,"XRP":1.358099,"AUD":1.578106,"BGN":1.958024,"BTC":0.023653,"JOD":0.800149,"GBP":0.852989,"ETH":0.000283,"EUR":1,"LTC":0.011317,"NZD":1.664796}}'
+  recorded_at: Sun, 12 Dec 2021 02:33:42 GMT
 recorded_with: VCR 6.0.0

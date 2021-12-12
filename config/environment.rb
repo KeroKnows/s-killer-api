@@ -7,6 +7,7 @@ require 'yaml'
 require 'figaro'
 require 'sequel'
 require 'delegate'
+require 'rack/cache'
 
 module Skiller
   # Configuration for the App
@@ -28,6 +29,18 @@ module Skiller
 
       configure :development, :test do
         ENV['DATABASE_URL'] = "sqlite://#{config.DB_FILENAME}"
+      end
+
+      configure :development do
+        use Rack::Cache, verbose: true,
+                         metastore: 'file:_cache/rack/meta',
+                         entitystore: 'file:_cache/rack/body'
+      end
+
+      configure :production do
+        use Rack::Cache, verbose: true,
+                         metastore: "#{config.REDISCLOUD_URL}/0/metastore",
+                         entitystore: "#{config.REDISCLOUD_URL}/0/entitystore"
       end
 
       # Database Setup

@@ -6,6 +6,7 @@ module Skiller
   # Web Application for S-killer
   class App < Roda
     plugin :halt
+    plugin :caching
 
     route do |router|
       response['Content-Type'] = 'application/json'
@@ -26,6 +27,9 @@ module Skiller
         router.on 'jobs' do
           # GET /api/v1/jobs?query={JOB_TITLE}
           router.get do
+            # 86400 seconds a day
+            response.cache_control public: true, max_age: 86_400
+
             # validate request
             query_request = Request::Query.new.call(router.params)
             result = Service::AnalyzeSkills.new.call(query_request)
