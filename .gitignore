@@ -19,3 +19,4 @@ config/secrets.yml
 *.db
 
 venv/
+_cache/
