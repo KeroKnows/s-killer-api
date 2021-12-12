@@ -35,15 +35,13 @@ module Skiller
 
       def initialize(api_key, cache_class = Skiller::Cache::FileClient, cache_path = nil)
         @api_key = api_key
-        cache_path = cache_path || CACHE_FILE
+        cache_path ||= CACHE_FILE
         @cache = cache_class.new(cache_path)
       end
 
       # send request to freecurrency API
       def exchange_rates(currency)
-        if !@cache.exist?(currency) || @cache.expire?(currency)
-          request_rates(currency)
-        end
+        request_rates(currency) if !@cache.exist?(currency) || @cache.expire?(currency)
         @cache.get(currency)
       end
 

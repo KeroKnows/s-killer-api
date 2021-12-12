@@ -1,5 +1,6 @@
-require 'redis'
+# frozen_string_literal: true
 
+require 'redis'
 
 module Skiller
   module Cache
@@ -28,11 +29,11 @@ module Skiller
       end
 
       def expire?(key)
-        if !exist?(key)
-          false
-        else
+        if exist?(key)
           properties = JSON.parse(@redis.get(key))
           (Date.today - Date.parse(properties['date'])) >= properties['expire_time']
+        else
+          false
         end
       end
 

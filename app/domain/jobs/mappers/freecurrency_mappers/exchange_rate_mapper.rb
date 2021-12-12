@@ -9,11 +9,11 @@ module Skiller
       def initialize(config, gateway_class = FreeCurrency::Api)
         @config = config
         api_key = @config.FREECURRENCY_API_KEY
-        if config.RACK_ENV == 'production'
-          @gateway = gateway_class.new(api_key, Skiller::Cache::RedisClient, config.REDISCLOUD_URL)
-        else
-          @gateway = gateway_class.new(@config.FREECURRENCY_API_KEY)
-        end
+        @gateway = if config.RACK_ENV == 'production'
+                     gateway_class.new(api_key, Skiller::Cache::RedisClient, config.REDISCLOUD_URL)
+                   else
+                     gateway_class.new(api_key)
+                   end
       end
 
       def exchange_rate(src_currency, tgt_currency)

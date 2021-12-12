@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 require 'date'
-  
+
 describe 'Test Cache library' do
   describe 'Functionalities of file caching' do
     before do
-      if File.exist?(TEST_CACHE_FILE)
-        system("rm #{TEST_CACHE_FILE}")
-      end
+      system("rm #{TEST_CACHE_FILE}") if File.exist?(TEST_CACHE_FILE)
       @cache = Skiller::Cache::FileClient.new(TEST_CACHE_FILE)
     end
 
@@ -19,7 +17,7 @@ describe 'Test Cache library' do
       @cache.set(TEST_CACHE_KEY, TEST_CACHE_VALUE, TEST_EXPIRE_TIME)
       _(File.exist?(TEST_CACHE_FILE)).must_equal true
     end
-    
+
     it 'HAPPY: should be able to check if a key existed' do
       @cache.wipe
 
@@ -27,7 +25,7 @@ describe 'Test Cache library' do
       @cache.set(TEST_CACHE_KEY, TEST_CACHE_VALUE, TEST_EXPIRE_TIME)
       _(@cache.exist?(TEST_CACHE_KEY)).must_equal true
     end
-    
+
     it 'HAPPY: should be able to check if a key expired' do
       # generate expired cache
       @cache.set(TEST_CACHE_KEY, TEST_CACHE_VALUE, 0)
@@ -39,6 +37,5 @@ describe 'Test Cache library' do
       @cache.set(TEST_CACHE_KEY, TEST_CACHE_VALUE, TEST_EXPIRE_TIME)
       _(@cache.get(TEST_CACHE_KEY)).must_equal TEST_CACHE_VALUE
     end
-
   end
 end

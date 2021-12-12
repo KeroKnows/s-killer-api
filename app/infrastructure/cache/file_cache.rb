@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module Skiller
   module Cache
-    # Redis client utility
+    # File client utility
     class FileClient
       def initialize(file_path)
         @file_path = file_path
@@ -10,7 +12,7 @@ module Skiller
       # Open a file for caching if the passed file path not existed
       # the file **must** be an YAML file
       def load_cache
-        if !File.exist?(@file_path)
+        unless File.exist?(@file_path)
           # create a file containing an empty hash for file caching
           File.write(@file_path, {}.to_yaml, mode: 'w')
         end
@@ -32,11 +34,11 @@ module Skiller
       end
 
       def expire?(key)
-        if !exist?(key)
-          false
-        else
+        if exist?(key)
           properties = @cache[key]
           (Date.today - Date.parse(properties['date'])) >= properties['expire_time']
+        else
+          false
         end
       end
 
