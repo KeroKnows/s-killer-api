@@ -16,7 +16,7 @@ module Skiller
       property :title
       property :description
       property :location
-      property :salary, extend: Representer::Salary, class: Struct
+      property :salary, extend: Representer::Salary, class: OpenStruct
       property :url
       property :is_full
     end

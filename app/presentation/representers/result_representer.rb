@@ -16,9 +16,9 @@ module Skiller
       include Roar::Decorator::HypermediaConsumer
 
       property :query
-      collection :jobs, extend: Representer::Job, class: Struct
-      collection :skills, extend: Representer::Skill, class: Struct
-      property :salary_dist, extend: Representer::SalaryDistribution, class: Struct
+      collection :jobs, extend: Representer::Job, class: OpenStruct
+      collection :skills, extend: Representer::Skill, class: OpenStruct
+      property :salary_dist, extend: Representer::SalaryDistribution, class: OpenStruct
 
       link :self do
         # [ TODO ] add jobs' detail links
