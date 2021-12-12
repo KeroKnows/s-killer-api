@@ -24,7 +24,7 @@ module Skiller
     class Api
       API_PATH = 'https://freecurrencyapi.net/api/v2/latest'
       CACHE_FILE = File.join(File.dirname(__FILE__), 'rate.cache')
-      EXPIRE_TIME = 7 # expire after a week
+      EXPIRE_TIME = 1 # expire after a day
 
       HTTP_ERROR = {
         429 => FreeCurrency::Errors::InvalidApiKey,
@@ -33,31 +33,23 @@ module Skiller
         500 => FreeCurrency::Errors::InternalError
       }.freeze
 
-      def initialize(api_key)
+      def initialize(api_key, cache_class = Skiller::Cache::FileClient, cache_path = nil)
         @api_key = api_key
-        @cache = nil
+        cache_path ||= CACHE_FILE
+        @cache = cache_class.new(cache_path)
       end
 
       # send request to freecurrency API
       def exchange_rates(currency)
-        check_cache
-        @cache ? @cache['data'] : request_rates(currency)
-      end
-
-      # check if the the cache is valid
-      def check_cache
-        return unless File.exist?(CACHE_FILE)
-
-        cache = YAML.safe_load(File.read(CACHE_FILE))
-        @cache = cache if Date.today - Date.parse(cache['date']) < EXPIRE_TIME
+        request_rates(currency) if !@cache.exist?(currency) || @cache.expire?(currency)
+        @cache.get(currency)
       end
 
       # request current currency rate from API
       def request_rates(currency)
         response = HTTP.get(API_PATH, params: { apikey: @api_key, base_currency: currency })
         result = HttpResponse.new(response, HTTP_ERROR).parse
-        data = { 'date' => Date.today.to_s, 'data' => result }
-        File.write(CACHE_FILE, data.to_yaml, mode: 'w')
+        @cache.set(currency, result, EXPIRE_TIME)
         result
       end
     end

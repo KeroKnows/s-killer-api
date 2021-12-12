@@ -106,7 +106,11 @@ GEM
       minitest (~> 5.0)
     multi_json (1.15.0)
     nio4r (2.5.8)
+    nokogiri (1.12.5-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.12.5-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
     page-object (2.3.1)
       page_navigation (>= 0.10)
@@ -125,6 +129,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
+    rack-cache (1.13.0)
+      rack (>= 0.4)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rainbow (3.0.0)
@@ -134,6 +140,12 @@ GEM
       ffi (~> 1.0)
     rb-kqueue (0.2.7)
       ffi (>= 0.5.0)
+    redis (4.5.1)
+    redis-rack-cache (2.2.1)
+      rack-cache (>= 1.10, < 2)
+      redis-store (>= 1.6, < 2)
+    redis-store (1.9.0)
+      redis (>= 4, < 5)
     reek (6.0.6)
       kwalify (~> 0.7.0)
       parser (~> 3.0.0)
@@ -195,7 +207,10 @@ GEM
     yml_reader (0.7)
 
 PLATFORMS
+  arm64-darwin-20
   x86_64-darwin-19
+  x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   dry-struct (~> 1.4)
@@ -215,10 +230,13 @@ DEPENDENCIES
   pg
   pry (~> 0.13.1)
   puma (~> 5.5)
+  rack-cache (~> 1.13)
   rack-test
   rake
   rb-fsevent
   rb-kqueue
+  redis (~> 4.5)
+  redis-rack-cache (~> 2.2)
   reek
   rerun
   roar

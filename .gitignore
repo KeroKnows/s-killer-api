@@ -18,3 +18,5 @@ config/secrets.yml
 # big data
 *.db
 
+venv/
+_cache/

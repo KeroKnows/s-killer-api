@@ -9,10 +9,6 @@ def app
   Skiller::App
 end
 
-valid_request = 'frontend'
-no_result_request = 'asdf'
-invalid_request = '000'
-
 describe 'Test API routes' do
   include Rack::Test::Methods
 
@@ -20,7 +16,8 @@ describe 'Test API routes' do
 
   before do
     Skiller::VcrHelper.configure_integration
-    Skiller::DatabaseHelper.wipe_database
+    # Why should database be wiped?
+    # Skiller::DatabaseHelper.wipe_database
   end
 
   after do
@@ -40,11 +37,11 @@ describe 'Test API routes' do
 
   describe 'Analyze skills from job' do
     it 'should be able to return result' do
-      get "api/v1/jobs?query=#{valid_request}"
+      get "/api/v1/jobs?query=#{TEST_KEYWORD}"
       _(last_response.status).must_equal 200
 
       result = JSON.parse last_response.body
-      _(result['query']).must_equal valid_request
+      _(result['query']).must_equal TEST_KEYWORD
       _(result['jobs']).must_be_kind_of Array
       _(result['skills']).must_be_kind_of Array
       _(result['jobs'].length).must_equal 100
@@ -70,40 +67,75 @@ describe 'Test API routes' do
       _(skill.keys).must_include 'name'
       _(skill.keys).must_include 'salary'
 
-      salary = skill['salary']
-      _(salary.keys).must_include 'year_max'
-      _(salary.keys).must_include 'year_min'
-      _(salary.keys).must_include 'currency'
+      # not testing salary keys because it may be nil
     end
 
-    it 'should be able to respond to valid but no result query' do
-      get "api/v1/jobs?query=#{no_result_request}"
+    it 'should be able to respond to a valid but no result query' do
+      get "/api/v1/jobs?query=#{EMPTY_RESULT_KEYWORD}"
       _(last_response.status).must_equal 422
 
       result = JSON.parse last_response.body
       _(result['status']).must_equal 'cannot_process'
-      _(result['message']).must_include "No job found with query #{no_result_request}"
+      _(result['message'].downcase).must_include 'no job found'
     end
 
     it 'should be able to return invalid query' do
-      get "api/v1/jobs?query=#{invalid_request}"
+      get "/api/v1/jobs?query=#{INVALID_KEYWORD}"
       _(last_response.status).must_equal 422
 
       result = JSON.parse last_response.body
       _(result['status']).must_equal 'cannot_process'
-      _(result['message']).must_include 'Invalid query'
+      _(result['message'].downcase).must_include 'invalid'
+    end
+  end
+
+  describe 'Request Job Detail' do
+    it 'HAPPY: should respond the detail result' do
+      # GIVEN: ensure jobs exist in database and get a job id
+      get "#{JOB_ROUTE}?query=#{TEST_KEYWORD}"
+      vailid_job_id = Skiller::Database::JobOrm.select(:db_id).where(is_full: true).first.db_id
+
+      # WHEN: request for that job
+      get "#{DETAIL_ROUTE}/#{vailid_job_id}"
+
+      # THEN: the information should be properly returned
+      _(last_response.status).must_equal 200
+
+      result = JSON.parse last_response.body
+      _(result).must_include 'id'
+      _(result).must_include 'title'
+      _(result).must_include 'description'
+      _(result).must_include 'location'
+      _(result).must_include 'salary'
+      _(result).must_include 'url'
+    end
+
+    it 'BAD: should respond to a non-existing job id' do
+      # GIVEN: an already erased job id
+      first_job_id = Skiller::Database::JobOrm.select(:db_id).where(is_full: true).first.db_id
+      erased_job_id = first_job_id - 1
+
+      # WHEN: request for that job
+      get "#{DETAIL_ROUTE}/#{erased_job_id}"
+
+      # THEN: should tell user that the job doesn't exist
+      _(last_response.status).must_equal 404
+      result = JSON.parse last_response.body
+      _(result['message'].downcase).must_include 'not found'
+    end
+
+    it 'SAD: should respond to a job without full description' do
+      # GIVEN: a partial job
+      get "#{JOB_ROUTE}?query=#{TEST_KEYWORD}"
+      partial_job_id = Skiller::Database::JobOrm.select(:db_id).where(is_full: false).first.db_id
+
+      # WHEN: query for that job
+      get "#{DETAIL_ROUTE}/#{partial_job_id}"
+
+      # THEN: should tell user the job is not available
+      _(last_response.status).must_equal 422
+      result = JSON.parse last_response.body
+      _(result['message']).must_include 'full info'
     end
   end
 end
-
-# describe 'Test service objects' do
-#   it 'Test AnalyzeSkills' do
-#     params = {
-#       "query" => valid_request
-#     }
-#     query_request = Skiller::Request::Query.new(params).call
-#     result = Skiller::Service::AnalyzeSkills.new.call(query_request)
-
-#     _(result.success?).must_equal true
-#   end
-# end

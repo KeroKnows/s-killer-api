@@ -12,25 +12,17 @@ module Skiller
 
       QUERY_REGEX = /^(?!\s)[a-zA-Z ]+/
 
-      attr_reader :params
-
-      def initialize(params)
-        @params = params
-      end
-
-      def call
-        Success(
-          validate(@params['query'])
-        )
+      # Validate the query format
+      # :reek:UncommunicativeVariableName for rescued error
+      def call(params)
+        query = params['query']
+        if QUERY_REGEX.match?(query)
+          Success(query)
+        else
+          Failure(Response::ApiResult.new(status: :cannot_process, message: "Invalid query: #{query}"))
+        end
       rescue StandardError => e
-        Failure(Response::ApiResult.new(status: :cannot_process, message: "Validation fails: #{e}"))
-      end
-
-      # Validate input query
-      def validate(query)
-        return @params if QUERY_REGEX.match?(query)
-
-        raise('Validation Error')
+        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to vallidate query: #{e}"))
       end
     end
   end

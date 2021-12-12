@@ -9,18 +9,19 @@ require_relative 'salary_distribution_representer'
 
 module Skiller
   module Representer
-    # Job representer
+    # Result representer
     class Result < Roar::Decorator
       include Roar::JSON
       include Roar::Hypermedia
       include Roar::Decorator::HypermediaConsumer
 
       property :query
-      collection :jobs, extend: Representer::Job, class: Struct
-      collection :skills, extend: Representer::Skill, class: Struct
-      property :salary_dist, extend: Representer::SalaryDistribution, class: Struct
+      collection :jobs, extend: Representer::Job, class: OpenStruct
+      collection :skills, extend: Representer::Skill, class: OpenStruct
+      property :salary_dist, extend: Representer::SalaryDistribution, class: OpenStruct
 
       link :self do
+        # [ TODO ] add jobs' detail links
         "#{App.config.API_HOST}/"
       end
     end

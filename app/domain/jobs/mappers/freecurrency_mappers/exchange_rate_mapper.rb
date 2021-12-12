@@ -8,7 +8,12 @@ module Skiller
     class ExchangeRateMapper
       def initialize(config, gateway_class = FreeCurrency::Api)
         @config = config
-        @gateway = gateway_class.new(@config.FREECURRENCY_API_KEY)
+        api_key = @config.FREECURRENCY_API_KEY
+        @gateway = if config.RACK_ENV == 'production'
+                     gateway_class.new(api_key, Skiller::Cache::RedisClient, config.REDISCLOUD_URL)
+                   else
+                     gateway_class.new(api_key)
+                   end
       end
 
       def exchange_rate(src_currency, tgt_currency)

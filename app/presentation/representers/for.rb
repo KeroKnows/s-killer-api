@@ -3,6 +3,7 @@
 require_relative '../responses/init'
 
 require_relative 'http_response_representer'
+require_relative 'detail_representer'
 require_relative 'result_representer'
 
 module Skiller
@@ -11,6 +12,7 @@ module Skiller
     class For
       REP_KLASS = {
         Response::Result => Result,
+        Response::Detail => Detail,
         String => HttpResponse
       }.freeze
 
@@ -22,8 +24,9 @@ module Skiller
           @body_rep = @status_rep
         else
           value = result.value!
+          message = value.message
           @status_rep = Representer::HttpResponse.new(value)
-          @body_rep = REP_KLASS[value.message.class].new(value.message)
+          @body_rep = REP_KLASS[message.class].new(message)
         end
       end
 
