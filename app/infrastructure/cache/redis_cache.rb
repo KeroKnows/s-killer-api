@@ -5,9 +5,15 @@ require 'redis'
 module Skiller
   module Cache
     # Redis client utility
+    # :reek:ClassVariable
     class RedisClient
+      # rubocop:disable Style/ClassVars
+      @@redis = nil
+      attr_reader :redis
+
       def initialize(redis_url)
-        @redis = Redis.new(url: redis_url)
+        @@redis ||= Redis.new(url: redis_url)
+        @redis = @@redis
       end
 
       # Return nil if the key has been expired or not existed
@@ -48,6 +54,7 @@ module Skiller
       def wipe
         keys.each { |key| @redis.del(key) }
       end
+      # rubocop:enable Style/ClassVars
     end
   end
 end
