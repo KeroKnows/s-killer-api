@@ -33,9 +33,10 @@ module Skiller
         500 => FreeCurrency::Errors::InternalError
       }.freeze
 
-      def initialize(api_key)
+      def initialize(api_key, cache_class = Skiller::Cache::FileClient, cache_path = nil)
         @api_key = api_key
-        @cache = Skiller::Cache::FileClient.new(CACHE_FILE)
+        cache_path = cache_path || CACHE_FILE
+        @cache = cache_class.new(cache_path)
       end
 
       # send request to freecurrency API
