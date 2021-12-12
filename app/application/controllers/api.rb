@@ -46,6 +46,9 @@ module Skiller
 
         router.on 'details' do
           router.on Integer do |job_id|
+            # 86400 seconds a day
+            response.cache_control public: true, max_age: 86_400
+
             # GET /details/{JOB_ID}
             job_info = Service::RequestDetail.new.call(job_id)
 
