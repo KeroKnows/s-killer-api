@@ -24,7 +24,7 @@ module Skiller
     class Api
       API_PATH = 'https://freecurrencyapi.net/api/v2/latest'
       CACHE_FILE = File.join(File.dirname(__FILE__), 'rate.cache')
-      EXPIRE_TIME = 7 # expire after a week
+      EXPIRE_TIME = 1 # expire after a day
 
       HTTP_ERROR = {
         429 => FreeCurrency::Errors::InvalidApiKey,
