@@ -142,7 +142,7 @@ module Skiller
           end
         end
 
-        # request full job description from API and store into the database
+        # request partial job description from API and store into the database
         def self.request_jobs_and_update_database(query)
           job_mapper = Skiller::Reed::JobMapper.new(App.config)
           jobs = job_mapper.job_list(query)

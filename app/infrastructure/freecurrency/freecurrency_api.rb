@@ -39,13 +39,14 @@ module Skiller
         @cache = cache_class.new(cache_path)
       end
 
-      # send request to freecurrency API
+      # get exchange rates from the cache if it is possible
+      # or send a request to the freecurrency API
       def exchange_rates(currency)
         request_rates(currency) if !@cache.exist?(currency) || @cache.expire?(currency)
         @cache.get(currency)
       end
 
-      # request current currency rate from API
+      # request current currency rate from API and save the results to the cache
       def request_rates(currency)
         response = HTTP.get(API_PATH, params: { apikey: @api_key, base_currency: currency })
         result = HttpResponse.new(response, HTTP_ERROR).parse

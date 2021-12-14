@@ -16,6 +16,7 @@ module Skiller
                    end
       end
 
+      # Request the exchange rate of `src_currency` to `tgt_currency`
       def exchange_rate(src_currency, tgt_currency)
         return 1.0 if src_currency == tgt_currency
 
