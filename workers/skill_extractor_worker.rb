@@ -1,5 +1,6 @@
+# frozen_string_literal: true
+
 require_relative '../init'
-# require 'econfig'
 require 'shoryuken'
 
 # Worker to analyze skills in parallel

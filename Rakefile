@@ -122,7 +122,7 @@ namespace :queues do
   end
 
   desc 'Create SQS queue for worker'
-  task :create => :config do
+  task create: :config do
     puts "Environment: #{@api.environment}"
     @sqs.create_queue(queue_name: @api.config.CLONE_QUEUE)
 
@@ -136,7 +136,7 @@ namespace :queues do
   end
 
   desc 'Report status of queue for worker'
-  task :status => :config do
+  task status: :config do
     q_url = @sqs.get_queue_url(queue_name: @api.config.CLONE_QUEUE).queue_url
 
     puts "Environment: #{@api.environment}"
@@ -149,7 +149,7 @@ namespace :queues do
   end
 
   desc 'Purge messages in SQS queue for worker'
-  task :purge => :config do
+  task purge: :config do
     q_url = @sqs.get_queue_url(queue_name: @api.config.CLONE_QUEUE).queue_url
     @sqs.purge_queue(queue_url: q_url)
     puts "Queue #{@api.config.CLONE_QUEUE} purged"
@@ -161,18 +161,18 @@ end
 namespace :worker do
   namespace :run do
     desc 'Run the background cloning worker in development mode'
-    task :dev => :config do
-      sh 'RACK_ENV=development bundle exec shoryuken -r ./workers/git_clone_worker.rb -C ./workers/shoryuken_dev.yml'
+    task dev: :config do
+      sh 'RACK_ENV=development bundle exec shoryuken -r ./workers/skill_extractor_worker.rb -C ./workers/shoryuken_dev.yml'
     end
 
     desc 'Run the background cloning worker in testing mode'
-    task :test => :config do
-      sh 'RACK_ENV=test bundle exec shoryuken -r ./workers/git_clone_worker.rb -C ./workers/shoryuken_test.yml'
+    task test: :config do
+      sh 'RACK_ENV=test bundle exec shoryuken -r ./workers/skill_extractor_worker.rb -C ./workers/shoryuken_test.yml'
     end
 
     desc 'Run the background cloning worker in production mode'
-    task :production => :config do
-      sh 'RACK_ENV=production bundle exec shoryuken -r ./workers/git_clone_worker.rb -C ./workers/shoryuken.yml'
+    task production: :config do
+      sh 'RACK_ENV=production bundle exec shoryuken -r ./workers/skill_extractor_worker.rb -C ./workers/shoryuken.yml'
     end
   end
 end

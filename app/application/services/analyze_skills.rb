@@ -15,6 +15,7 @@ module Skiller
       step :parse_request
       step :collect_jobs
       step :process_jobs
+      # [ TODO ] Adjust :collect_skills to :request_skill_extractor_worker
       step :collect_skills
       step :calculate_salary_distribution
       step :store_query_to_db
