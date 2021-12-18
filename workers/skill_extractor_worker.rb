@@ -1,9 +1,9 @@
 require_relative '../init'
-require 'econfig'
+# require 'econfig'
 require 'shoryuken'
 
 # Worker to analyze skills in parallel
-class GitCloneWorker
+class SkillExtractorWorker
   # Environment variables setup
   Figaro.application = Figaro::Application.new(
     environment: ENV['RACK_ENV'] || 'development',
@@ -16,13 +16,16 @@ class GitCloneWorker
   include Shoryuken::Worker
   shoryuken_options queue: config.CLONE_QUEUE_URL, auto_delete: true
 
-  def perform(_sqs_msg, request)
-    project = Skiller::Representer::Project
-      .new(OpenStruct.new)
-      .from_json(request)
-  
-    CodePraise::GitRepo.new(project).clone!
-  rescue CodePraise::GitRepo::Errors::CannotOverwriteLocalGitRepo
-    puts 'Clone exists -- ignoring request'
+  # extract skill and store in database
+  def extract_and_store(_sqs_msg, jobs)
+    skill_list = jobs.map do |job|
+      if Repository::JobsSkills.job_exist?(job)
+        Repository::JobsSkills.find_skills_by_job_id(job.db_id)
+      else
+        skills = Skiller::Skill::SkillMapper.new(job).skills
+        Repository::JobsSkills.find_or_create(skills)
+      end
+    end
+    skill_list.reduce(:+)
   end
 end
