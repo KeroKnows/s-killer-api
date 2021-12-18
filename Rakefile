@@ -162,7 +162,9 @@ namespace :worker do
   namespace :run do
     desc 'Run the background cloning worker in development mode'
     task dev: :config do
+      # rubocop:disable Layout/LineLength
       sh 'RACK_ENV=development bundle exec shoryuken -r ./workers/skill_extractor_worker.rb -C ./workers/shoryuken_dev.yml'
+      # rubocop:enable Layout/LineLength
     end
 
     desc 'Run the background cloning worker in testing mode'
