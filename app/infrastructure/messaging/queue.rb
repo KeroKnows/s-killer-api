@@ -3,7 +3,7 @@ require 'aws-sdk-sqs'
 module Skiller
   module Messaging
     # Queue wrapper for AWS SQS
-    # Requires: AWS credentials loaded (ENV or config file)
+    # Requires: AWS credentials loaded (in config file)
     class Queue
       IDLE_TIMEOUT = 5 # sec
 
