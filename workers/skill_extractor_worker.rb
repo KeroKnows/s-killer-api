@@ -23,21 +23,18 @@ class SkillExtractorWorker
   SCRIPT = File.join(File.dirname(__FILE__), 'extract.py')
 
   # extract skill and store in database
-  def perform(_sqs_msg, jobs)
-    jobs = JSON.parse jobs
-    jobs.each do |job|
-      job = Skiller::Representer::Job.new(OpenStruct.new).from_json(job.to_json)
-      unless Skiller::Repository::JobsSkills.job_exist?(job)
-        result = extract_skill(job)
-        write_to_db(job, result)
-      end
-    end
+  def perform(_sqs_msg, job_json)
+    request = Request.new(job_json)
+    job = request.job
+    return if Skiller::Repository::JobsSkills.job_exist?(job)
+
+    result = extract_skill(job)
+    write_to_db(request, result)
   end
 
   # run the extractor script
   def extract_skill(job)
-    random_seed = rand(10_000)
-    tmp_file = File.join(File.dirname(__FILE__), ".extractor.#{random_seed}.tmp")
+    tmp_file = File.join(File.dirname(__FILE__), ".extractor.#{rand(10_000)}.tmp")
     File.write(tmp_file, job.description, mode: 'w')
     script_result = `#{PYTHON} #{SCRIPT} "#{tmp_file}"`
     File.delete(tmp_file)
@@ -45,27 +42,41 @@ class SkillExtractorWorker
   end
 
   # store the results to database
-  #  [ TODO ] should not use Entity here (sorry for the mess here)
-  def write_to_db(job, result)
-    salary = prepare_salary(job.salary)
+  #  [ TODO ] should not use Entity here
+  # :reek:UtilityFunction because it is a utility function
+  def write_to_db(request, result)
     skills = result.map do |skill|
       Skiller::Entity::Skill.new(
         id: nil,
         name: skill,
-        job_db_id: job.db_id,
-        salary: salary
+        job_db_id: request.job_id,
+        salary: request.salary
       )
     end
     Skiller::Repository::JobsSkills.find_or_create(skills)
   end
 
-  # Transform OpenStruct to hash
-  #  [ TODO ] should not use Value here
-  def prepare_salary(salary)
-    Skiller::Value::Salary.new(
-      year_min: salary.year_min,
-      year_max: salary.year_max,
-      currency: salary.currency
-    )
+  # An utility entity to process request data
+  class Request
+    def initialize(job)
+      @job = Skiller::Representer::Job.new(OpenStruct.new).from_json(job)
+      @salary = @job.salary
+    end
+
+    attr_reader :job
+
+    def job_id
+      @job.db_id
+    end
+
+    # Transform OpenStruct to hash
+    #  [ TODO ] should not use Value here
+    def salary
+      Skiller::Value::Salary.new(
+        year_min: @salary.year_min,
+        year_max: @salary.year_max,
+        currency: @salary.currency
+      )
+    end
   end
 end
