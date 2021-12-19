@@ -24,28 +24,29 @@ class SkillExtractorWorker
 
   # extract skill and store in database
   def perform(_sqs_msg, jobs)
-    random_seed = rand(10_000)
     jobs = JSON.parse jobs
     jobs.each do |job|
       job = Skiller::Representer::Job.new(OpenStruct.new).from_json(job.to_json)
-      tmp_file = File.join(File.dirname(__FILE__), ".extractor.#{random_seed}.tmp")
-      File.write(tmp_file, job.description, mode: 'w')
-      script_result = `#{PYTHON} #{SCRIPT} "#{tmp_file}"`
-      File.delete(tmp_file)
-      write_to_db(job, script_result)
+      result = extract_skill(job)
+      write_to_db(job, result)
     end
   end
 
+  # run the extractor script
+  def extract_skill(job)
+    random_seed = rand(10_000)
+    tmp_file = File.join(File.dirname(__FILE__), ".extractor.#{random_seed}.tmp")
+    File.write(tmp_file, job.description, mode: 'w')
+    script_result = `#{PYTHON} #{SCRIPT} "#{tmp_file}"`
+    File.delete(tmp_file)
+    YAML.safe_load script_result
+  end
+
   # store the results to database
-  #  [ TODO ] improve the structure (sorry for the mess here)
+  #  [ TODO ] should not use Entity here (sorry for the mess here)
   def write_to_db(job, result)
-    skills = YAML.safe_load(result)
-    salary = Skiller::Value::Salary.new({
-      year_min: job.salary.year_min,
-      year_max: job.salary.year_max,
-      currency: job.salary.currency
-    })
-    skills = skills.map do |skill|
+    salary = prepare_salary(job.salary)
+    skills = result.map do |skill|
       Skiller::Entity::Skill.new(
         id: nil,
         name: skill,
@@ -54,5 +55,15 @@ class SkillExtractorWorker
       )
     end
     Skiller::Repository::JobsSkills.find_or_create(skills)
+  end
+
+  # Transform OpenStruct to hash
+  #  [ TODO ] should not use Value here
+  def prepare_salary(salary)
+    Skiller::Value::Salary.new(
+      year_min: salary.year_min,
+      year_max: salary.year_max,
+      currency: salary.currency
+    )
   end
 end
