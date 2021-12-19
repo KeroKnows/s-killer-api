@@ -11,12 +11,8 @@ module Skiller
 
       def initialize(queue_url, config)
         @queue_url = queue_url
-        sqs = Aws::SQS::Client.new(
-          access_key_id: config.AWS_ACCESS_KEY_ID,
-          secret_access_key: config.AWS_SECRET_ACCESS_KEY,
-          region: config.AWS_REGION
-        )
-        @queue = Aws::SQS::Queue.new(url: queue_url, client: sqs)
+        @config = config
+        @queue = prepare_queue
       end
 
       def send(message)
@@ -28,6 +24,17 @@ module Skiller
         poller.poll(idle_timeout: IDLE_TIMEOUT) do |msg|
           yield msg.body if block_given?
         end
+      end
+
+      private
+
+      def prepare_queue
+        sqs = Aws::SQS::Client.new(
+          access_key_id: @config.AWS_ACCESS_KEY_ID,
+          secret_access_key: @config.AWS_SECRET_ACCESS_KEY,
+          region: @config.AWS_REGION
+        )
+        Aws::SQS::Queue.new(url: @queue_url, client: sqs)
       end
     end
   end

@@ -123,7 +123,6 @@ module Skiller
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to map to response object: #{e}"))
       end
-
     end
   end
 end
