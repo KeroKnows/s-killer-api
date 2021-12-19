@@ -10,7 +10,8 @@ end
 
 desc 'start the app with file chages watched'
 task :dev do
-  sh "rerun -c 'bundle exec rackup -p 4001' --ignore 'coverage/*' --ignore 'spec/*' --ignore '*.slim'"
+  sh "rerun -c 'bundle exec rackup -p 4001' " \
+     "--ignore 'workers/*' --ignore 'coverage/*' --ignore 'spec/*' --ignore '*.slim'"
 end
 
 desc 'run all quality checks'
