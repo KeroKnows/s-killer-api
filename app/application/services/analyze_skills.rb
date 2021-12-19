@@ -15,7 +15,8 @@ module Skiller
 
       step :parse_request
       step :collect_jobs
-      step :concurrent_process_jobs_and_collect_skills
+      step :concurrent_process_jobs
+      step :collect_skills
       step :validate_skills_length
       step :calculate_salary_distribution
       step :to_response_object
@@ -24,6 +25,9 @@ module Skiller
 
       EXTRACT_ERR = 'Could not extract skills'
       PROCESSING_MSG = 'Processing the extraction request'
+
+      CONFIG = Skiller::App.config
+      SQS = Skiller::Messaging::Queue.new(CONFIG.EXTRACTOR_QUEUE_URL, CONFIG)
 
       # Check if the previous validation passes
       def parse_request(input)
@@ -52,24 +56,25 @@ module Skiller
       end
 
       # :reek:TooManyStatements
-      def concurrent_process_jobs_and_collect_skills(input)
+      # :reek:UncommunicativeVariableName for rescued error
+      def concurrent_process_jobs(input)
         analyzed_jobs = input[:jobs][..ANALYZE_LEN]
         if Utility.jobs_have_skills(analyzed_jobs)
-          input[:jobs][..ANALYZE_LEN] = analyzed_jobs
-          input[:skills] = Utility.find_skills_by_jobs(analyzed_jobs)
+          input[:analyzed_jobs] = analyzed_jobs
           return Success(input)
         end
-        sqs = Skiller::Messaging::Queue.new(Skiller::App.config.EXTRACTOR_QUEUE_URL ,Skiller::App.config)
-        analyzed_jobs.map do |job|
-          Concurrent::Promise.new { Utility.request_and_update_full_job(job) }
-                             .then { |full_job| sqs.send([Skiller::Representer::Job.new(full_job)].to_json) }
-                             .rescue { -1 }
-                             .execute
-        end
+        Utility.extract_skills_with_worker(analyzed_jobs)
         Failure(Response::ApiResult.new(status: :processing, message: PROCESSING_MSG))
-      rescue StandardError => error
-        puts [error.inspect, error.backtrace].flatten.join("\n")
-        Failure(Response::ApiResult.new(status: :internal_error, message: CLONE_ERR))
+      rescue StandardError => e
+        puts [e.inspect, e.backtrace].flatten.join("\n")
+        Failure(Response::ApiResult.new(status: :internal_error, message: EXTRACT_ERR))
+      end
+
+      def collect_skills(input)
+        analyzed_jobs = input[:analyzed_jobs]
+        input[:jobs][..ANALYZE_LEN] = analyzed_jobs
+        input[:skills] = Utility.find_skills_by_jobs(analyzed_jobs)
+        Success(input)
       end
 
       # Collect skills from database if the query has been searched;
@@ -128,7 +133,7 @@ module Skiller
           else
             jobs = request_jobs_and_update_database(query)
             store_query_to_db(query, jobs)
-            return jobs
+            jobs
           end
         end
 
@@ -176,9 +181,13 @@ module Skiller
           end
         end
 
-        def self.extract_skills_and_pack_result(full_job)
-          skills = extract_skills_and_update_database(full_job)
-          { 'job' => full_job, 'skills' => skills }
+        def self.extract_skills_with_worker(jobs)
+          jobs.map do |job|
+            Concurrent::Promise.new { request_and_update_full_job(job) }
+                               .then { |full_job| SQS.send([Skiller::Representer::Job.new(full_job)].to_json) }
+                               .rescue { -1 }
+                               .execute
+          end
         end
 
         # analyze the jobs' required skills from mapper and store into the database
