@@ -4,6 +4,10 @@ module Skiller
   module Service
     # An utility class that handle job processing in the service
     class Utility
+      ANALYZE_LEN = 10
+      CONFIG = Skiller::App.config
+      SQS = Skiller::Messaging::Queue.new(CONFIG.EXTRACTOR_QUEUE_URL, CONFIG)
+
       # search corresponding jobs in database first,
       # or request it through JobMapper
       def self.search_jobs(input)
@@ -46,7 +50,7 @@ module Skiller
         if Repository::QueriesJobs.query_exist?(query)
           Repository::QueriesJobs.find_skills_by_query(query)
         else
-          jobs = input[:jobs][..ANALYZE_LEN]
+          jobs = input[:jobs][...ANALYZE_LEN]
           jobs.map(&method(:extract_skills_and_update_database))
               .reduce(:+)
         end
@@ -65,7 +69,7 @@ module Skiller
         jobs.map do |job|
           Concurrent::Promise.new { request_and_update_full_job(job) }
                              .then { |full_job| SQS.send(Skiller::Representer::Job.new(full_job).to_json) }
-                             .rescue { -1 }
+                             .rescue { |err| puts err }
                              .execute
         end
       end

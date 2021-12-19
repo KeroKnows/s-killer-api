@@ -28,9 +28,6 @@ module Skiller
       EXTRACT_ERR = 'Could not extract skills'
       PROCESSING_MSG = 'Processing the extraction request'
 
-      CONFIG = Skiller::App.config
-      SQS = Skiller::Messaging::Queue.new(CONFIG.EXTRACTOR_QUEUE_URL, CONFIG)
-
       # Check if the previous validation passes
       def parse_request(input)
         if input.success?
@@ -60,7 +57,7 @@ module Skiller
       # :reek:TooManyStatements
       # :reek:UncommunicativeVariableName for rescued error
       def concurrent_process_jobs(input)
-        analyzed_jobs = input[:jobs][..ANALYZE_LEN]
+        analyzed_jobs = input[:jobs][...ANALYZE_LEN]
         if Utility.jobs_have_skills(analyzed_jobs)
           input[:analyzed_jobs] = analyzed_jobs
           return Success(input)
@@ -74,7 +71,7 @@ module Skiller
 
       def collect_skills(input)
         analyzed_jobs = input[:analyzed_jobs]
-        input[:jobs][..ANALYZE_LEN] = analyzed_jobs
+        input[:jobs][...ANALYZE_LEN] = analyzed_jobs
         input[:skills] = Utility.find_skills_by_jobs(analyzed_jobs)
         Success(input)
       end
