@@ -15,7 +15,8 @@ module Skiller
 
       step :parse_request
       step :collect_jobs
-      step :process_jobs_and_collect_skills
+      step :concurrent_process_jobs_and_collect_skills
+      step :unpack_promise_value
       step :validate_skills_length
       step :calculate_salary_distribution
       step :store_query_to_db
@@ -49,25 +50,35 @@ module Skiller
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to collect jobs: #{e}"))
       end
 
-
-      def process_jobs_and_collect_skills(input)
+      # :reek:TooManyStatements
+      def concurrent_process_jobs_and_collect_skills(input)
         jobs = input[:jobs]
         results = jobs[..ANALYZE_LEN].map do |job|
           Concurrent::Promise.new { Utility.request_and_update_full_job(job) }
-                             .then { |full_job|  {'job' => full_job, 'skills' => Utility.extract_skills_and_update_database(full_job)}}
+                             .then { |full_job| Utility.extract_skills_and_pack_result(full_job) }
                              .rescue { -1 }
                              .execute
         end.map(&:value)
-        if results.include?(-1)
-          return Failure(
-             Response::ApiResult.new(status: :internal_error, message: "Fail to process jobs and collect skills from #{input[:query]}")
+        input[:promise_value] = results
+        Success(input)
+      end
+
+      # rubocop:disable Metrics/MethodLength
+      # :reek:DuplicateMethodCall
+      def unpack_promise_value(input)
+        value = input[:promise_value]
+        if value.include?(-1)
+          Failure(
+            Response::ApiResult.new(status: :internal_error,
+                                    message: "Fail to process jobs and collect skills from #{input[:query]}")
           )
         else
-          jobs[..ANALYZE_LEN] = results.map { |res| res['job'] }
-          input[:skills] = results.map { |res| res['skills'] }.reduce(:+)
+          input[:jobs][..ANALYZE_LEN] = value.map { |val| val['job'] }
+          input[:skills] = value.map { |val| val['skills'] }.reduce(:+)
           Success(input)
         end
       end
+      # rubocop:enable Metrics/MethodLength
 
       # Collect skills from database if the query has been searched;
       # otherwise, the entities will be created by mappers and stored into the database
@@ -130,7 +141,7 @@ module Skiller
         # request full job description and update the information in database
         def self.request_and_update_full_job(job)
           return job if job.is_full
-          
+
           full_job = Skiller::Reed::JobMapper.new(App.config).job(job.job_id, job)
           Repository::Jobs.update(full_job)
           Repository::Jobs.find(full_job)
@@ -156,6 +167,11 @@ module Skiller
           jobs.map do |job|
             Repository::Jobs.find_or_create(job)
           end
+        end
+
+        def self.extract_skills_and_pack_result(full_job)
+          skills = extract_skills_and_update_database(full_job)
+          { 'job' => full_job, 'skills' => skills }
         end
 
         # analyze the jobs' required skills from mapper and store into the database
