@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/simon/s-killer-api/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/init.rb": {
         "lines": [
           null,
           null,
@@ -10,14 +10,14 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/config/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/config/init.rb": {
         "lines": [
           null,
           null,
           1
         ]
       },
-      "/Users/simon/s-killer-api/config/environment.rb": {
+      "/Users/sunny/Desktop/s-killer-api/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -77,7 +77,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/init.rb": {
         "lines": [
           null,
           null,
@@ -87,36 +87,36 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/init.rb": {
         "lines": [
           null,
           null,
           1,
+          1,
+          6,
+          null
+        ]
+      },
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/database/init.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/database/orm/init.rb": {
+        "lines": [
+          null,
+          null,
           1,
           5,
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/database/init.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/simon/s-killer-api/app/infrastructure/database/orm/init.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          5,
-          null
-        ]
-      },
-      "/Users/simon/s-killer-api/app/infrastructure/database/orm/job_orm.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/database/orm/job_orm.rb": {
         "lines": [
           null,
           null,
@@ -152,7 +152,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/database/orm/job_skill_orm.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/database/orm/job_skill_orm.rb": {
         "lines": [
           null,
           null,
@@ -178,7 +178,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/database/orm/query_job_orm.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/database/orm/query_job_orm.rb": {
         "lines": [
           null,
           null,
@@ -200,7 +200,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/database/orm/skill_orm.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/database/orm/skill_orm.rb": {
         "lines": [
           null,
           null,
@@ -222,7 +222,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/skill_extractor/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/skill_extractor/init.rb": {
         "lines": [
           null,
           null,
@@ -231,7 +231,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/skill_extractor/extractor.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/skill_extractor/extractor.rb": {
         "lines": [
           null,
           null,
@@ -269,7 +269,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/reed/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/reed/init.rb": {
         "lines": [
           null,
           null,
@@ -278,7 +278,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/reed/reed_api.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/reed/reed_api.rb": {
         "lines": [
           null,
           null,
@@ -335,7 +335,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/http_response.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/http_response.rb": {
         "lines": [
           null,
           null,
@@ -358,7 +358,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/freecurrency/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/freecurrency/init.rb": {
         "lines": [
           null,
           null,
@@ -367,7 +367,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/freecurrency/freecurrency_api.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/freecurrency/freecurrency_api.rb": {
         "lines": [
           null,
           null,
@@ -408,6 +408,7 @@
           717,
           717,
           717,
+          null,
           null,
           null,
           null,
@@ -429,7 +430,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/cache/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/cache/init.rb": {
         "lines": [
           null,
           null,
@@ -438,7 +439,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/cache/file_cache.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/cache/file_cache.rb": {
         "lines": [
           null,
           null,
@@ -501,7 +502,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/infrastructure/cache/redis_cache.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/cache/redis_cache.rb": {
         "lines": [
           null,
           null,
@@ -565,7 +566,54 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/messaging/init.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          2,
+          null
+        ]
+      },
+      "/Users/sunny/Desktop/s-killer-api/app/infrastructure/messaging/queue.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/sunny/Desktop/s-killer-api/app/domain/init.rb": {
         "lines": [
           null,
           null,
@@ -575,7 +623,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/jobs/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/init.rb": {
         "lines": [
           null,
           null,
@@ -587,7 +635,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/jobs/entities/job.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/entities/job.rb": {
         "lines": [
           null,
           null,
@@ -612,7 +660,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/jobs/values/salary.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/values/salary.rb": {
         "lines": [
           null,
           null,
@@ -648,7 +696,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/jobs/entities/salary_distribution.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/entities/salary_distribution.rb": {
         "lines": [
           null,
           null,
@@ -689,7 +737,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/jobs/repositories/for.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -715,7 +763,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/jobs/repositories/jobs.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/repositories/jobs.rb": {
         "lines": [
           null,
           null,
@@ -792,7 +840,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/jobs/repositories/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/repositories/init.rb": {
         "lines": [
           null,
           null,
@@ -800,7 +848,7 @@
           1
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/jobs/repositories/queries_jobs.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/repositories/queries_jobs.rb": {
         "lines": [
           null,
           null,
@@ -824,11 +872,13 @@
           null,
           null,
           null,
+          null,
           1,
           7,
           2,
           null,
           5,
+          null,
           null,
           null,
           null,
@@ -843,7 +893,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/jobs/mappers/freecurrency_mappers/exchange_rate_mapper.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/mappers/freecurrency_mappers/exchange_rate_mapper.rb": {
         "lines": [
           null,
           null,
@@ -877,7 +927,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/jobs/mappers/reed_mappers/job_mapper.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/jobs/mappers/reed_mappers/job_mapper.rb": {
         "lines": [
           null,
           null,
@@ -934,7 +984,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/skills/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/skills/init.rb": {
         "lines": [
           null,
           null,
@@ -946,7 +996,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/skills/entities/skill.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/skills/entities/skill.rb": {
         "lines": [
           null,
           null,
@@ -967,7 +1017,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/skills/repositories/jobs_skills.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/skills/repositories/jobs_skills.rb": {
         "lines": [
           null,
           null,
@@ -996,6 +1046,8 @@
           null,
           null,
           null,
+          null,
+          null,
           1,
           79,
           null,
@@ -1012,7 +1064,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/skills/repositories/skills.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/skills/repositories/skills.rb": {
         "lines": [
           null,
           null,
@@ -1040,7 +1092,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/domain/skills/mappers/skill_mapper.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/domain/skills/mappers/skill_mapper.rb": {
         "lines": [
           null,
           null,
@@ -1083,7 +1135,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/init.rb": {
         "lines": [
           null,
           null,
@@ -1093,7 +1145,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/representers/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/init.rb": {
         "lines": [
           null,
           null,
@@ -1102,7 +1154,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/representers/detail_representer.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/detail_representer.rb": {
         "lines": [
           null,
           null,
@@ -1134,7 +1186,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/representers/salary_representer.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/salary_representer.rb": {
         "lines": [
           null,
           null,
@@ -1155,7 +1207,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/representers/for.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/for.rb": {
         "lines": [
           null,
           null,
@@ -1206,7 +1258,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/responses/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/responses/init.rb": {
         "lines": [
           null,
           null,
@@ -1215,7 +1267,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/responses/api_result.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/responses/api_result.rb": {
         "lines": [
           null,
           null,
@@ -1243,7 +1295,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/responses/detail_response.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/responses/detail_response.rb": {
         "lines": [
           null,
           null,
@@ -1255,7 +1307,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/responses/result_response.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/responses/result_response.rb": {
         "lines": [
           null,
           null,
@@ -1267,7 +1319,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/representers/http_response_representer.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/http_response_representer.rb": {
         "lines": [
           null,
           null,
@@ -1309,7 +1361,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/representers/result_representer.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/result_representer.rb": {
         "lines": [
           null,
           null,
@@ -1342,7 +1394,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/representers/job_representer.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/job_representer.rb": {
         "lines": [
           null,
           null,
@@ -1370,7 +1422,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/representers/skill_representer.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/skill_representer.rb": {
         "lines": [
           null,
           null,
@@ -1390,7 +1442,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/presentation/representers/salary_distribution_representer.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/presentation/representers/salary_distribution_representer.rb": {
         "lines": [
           null,
           null,
@@ -1411,7 +1463,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/application/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/application/init.rb": {
         "lines": [
           null,
           null,
@@ -1421,7 +1473,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/application/controllers/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/application/controllers/init.rb": {
         "lines": [
           null,
           null,
@@ -1430,7 +1482,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/application/controllers/api.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/application/controllers/api.rb": {
         "lines": [
           null,
           null,
@@ -1501,7 +1553,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/application/requests/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/application/requests/init.rb": {
         "lines": [
           null,
           null,
@@ -1510,7 +1562,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/application/requests/query.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/application/requests/query.rb": {
         "lines": [
           null,
           null,
@@ -1543,7 +1595,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/application/services/init.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/application/services/init.rb": {
         "lines": [
           null,
           null,
@@ -1552,7 +1604,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/application/services/analyze_skills.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/application/services/analyze_skills.rb": {
         "lines": [
           null,
           null,
@@ -1572,6 +1624,7 @@
           1,
           1,
           1,
+          null,
           1,
           1,
           1,
@@ -1745,7 +1798,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/app/application/services/request_detail.rb": {
+      "/Users/sunny/Desktop/s-killer-api/app/application/services/request_detail.rb": {
         "lines": [
           null,
           null,
@@ -1812,7 +1865,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/spec/helpers/database_helper.rb": {
+      "/Users/sunny/Desktop/s-killer-api/spec/helpers/database_helper.rb": {
         "lines": [
           null,
           null,
@@ -1830,7 +1883,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/spec/tests/integration/services/analyze_skills_spec.rb": {
+      "/Users/sunny/Desktop/s-killer-api/spec/tests/integration/services/analyze_skills_spec.rb": {
         "lines": [
           null,
           null,
@@ -2012,7 +2065,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/spec/tests/integration/services/request_detail_spec.rb": {
+      "/Users/sunny/Desktop/s-killer-api/spec/tests/integration/services/request_detail_spec.rb": {
         "lines": [
           null,
           null,
@@ -2090,7 +2143,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/spec/tests/unit/cache_spec.rb": {
+      "/Users/sunny/Desktop/s-killer-api/spec/tests/unit/cache_spec.rb": {
         "lines": [
           null,
           null,
@@ -2135,7 +2188,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/spec/tests/unit/freecurrency_spec.rb": {
+      "/Users/sunny/Desktop/s-killer-api/spec/tests/unit/freecurrency_spec.rb": {
         "lines": [
           null,
           null,
@@ -2187,7 +2240,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/spec/tests/unit/reed_spec.rb": {
+      "/Users/sunny/Desktop/s-killer-api/spec/tests/unit/reed_spec.rb": {
         "lines": [
           null,
           null,
@@ -2314,7 +2367,7 @@
           null
         ]
       },
-      "/Users/simon/s-killer-api/spec/tests/unit/skill_spec.rb": {
+      "/Users/sunny/Desktop/s-killer-api/spec/tests/unit/skill_spec.rb": {
         "lines": [
           null,
           null,

@@ -17,11 +17,15 @@ describe 'Test Skill Analyzer library' do
     end
 
     it 'HAPPY: should be able to run the python script' do
+      skip 'move to worker'
+
       extractor = Skiller::Skill::Extractor.new(@job)
       _(proc { extractor.analyze_skills }).must_be_silent
     end
 
     it 'HAPPY: should return the results as an array' do
+      skip 'move to worker'
+
       extractor = Skiller::Skill::Extractor.new(@job)
       _(extractor.skills).must_be_instance_of Array
     end
