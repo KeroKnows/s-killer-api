@@ -16,13 +16,14 @@ module Skiller
       step :parse_request
       step :collect_jobs
       step :concurrent_process_jobs_and_collect_skills
-      step :unpack_promise_value
       step :validate_skills_length
       step :calculate_salary_distribution
-      step :store_query_to_db
       step :to_response_object
 
       private
+
+      EXTRACT_ERR = 'Could not extract skills'
+      PROCESSING_MSG = 'Processing the extraction request'
 
       # Check if the previous validation passes
       def parse_request(input)
@@ -52,33 +53,24 @@ module Skiller
 
       # :reek:TooManyStatements
       def concurrent_process_jobs_and_collect_skills(input)
-        jobs = input[:jobs]
-        results = jobs[..ANALYZE_LEN].map do |job|
+        analyzed_jobs = input[:jobs][..ANALYZE_LEN]
+        if Utility.jobs_have_skills(analyzed_jobs)
+          input[:jobs][..ANALYZE_LEN] = analyzed_jobs
+          input[:skills] = Utility.find_skills_by_jobs(analyzed_jobs)
+          return Success(input)
+        end
+        sqs = Skiller::Messaging::Queue.new(Skiller::App.config.EXTRACTOR_QUEUE_URL ,Skiller::App.config)
+        analyzed_jobs.map do |job|
           Concurrent::Promise.new { Utility.request_and_update_full_job(job) }
-                             .then { |full_job| Utility.extract_skills_and_pack_result(full_job) }
+                             .then { |full_job| sqs.send([Skiller::Representer::Job.new(full_job)].to_json) }
                              .rescue { -1 }
                              .execute
-        end.map(&:value)
-        input[:promise_value] = results
-        Success(input)
-      end
-
-      # rubocop:disable Metrics/MethodLength
-      # :reek:DuplicateMethodCall
-      def unpack_promise_value(input)
-        value = input[:promise_value]
-        if value.include?(-1)
-          Failure(
-            Response::ApiResult.new(status: :internal_error,
-                                    message: "Fail to process jobs and collect skills from #{input[:query]}")
-          )
-        else
-          input[:jobs][..ANALYZE_LEN] = value.map { |val| val['job'] }
-          input[:skills] = value.map { |val| val['skills'] }.reduce(:+)
-          Success(input)
         end
+        Failure(Response::ApiResult.new(status: :processing, message: PROCESSING_MSG))
+      rescue StandardError => error
+        puts [error.inspect, error.backtrace].flatten.join("\n")
+        Failure(Response::ApiResult.new(status: :internal_error, message: CLONE_ERR))
       end
-      # rubocop:enable Metrics/MethodLength
 
       # Collect skills from database if the query has been searched;
       # otherwise, the entities will be created by mappers and stored into the database
@@ -134,8 +126,23 @@ module Skiller
           if Repository::QueriesJobs.query_exist?(query)
             Repository::QueriesJobs.find_jobs_by_query(query)
           else
-            request_jobs_and_update_database(query)
+            jobs = request_jobs_and_update_database(query)
+            store_query_to_db(query, jobs)
+            return jobs
           end
+        end
+
+        def self.store_query_to_db(query, jobs)
+          Repository::QueriesJobs.find_or_create(query, jobs.map(&:db_id))
+        end
+
+        def self.jobs_have_skills(jobs)
+          jobs.all? { |job| Skiller::Repository::JobsSkills.job_exist?(job) }
+        end
+
+        def self.find_skills_by_jobs(jobs)
+          jobs.map { |job| Skiller::Repository::JobsSkills.find_skills_by_job_id(job.db_id) }
+              .reduce(&:+)
         end
 
         # request full job description and update the information in database

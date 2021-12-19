@@ -27,8 +27,10 @@ class SkillExtractorWorker
     jobs = JSON.parse jobs
     jobs.each do |job|
       job = Skiller::Representer::Job.new(OpenStruct.new).from_json(job.to_json)
-      result = extract_skill(job)
-      write_to_db(job, result)
+      if !Skiller::Repository::JobsSkills.job_exist?(job)
+        result = extract_skill(job)
+        write_to_db(job, result)
+      end
     end
   end
 
