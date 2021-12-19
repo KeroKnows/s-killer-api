@@ -17,7 +17,7 @@ class SkillExtractorWorker
   def self.config() = Figaro.env
 
   include Shoryuken::Worker
-  shoryuken_options queue: config.CLONE_QUEUE_URL, auto_delete: true
+  shoryuken_options queue: config.EXTRACTOR_QUEUE_URL, auto_delete: true
 
   PYTHON = 'python3' # may need to change this to `python`, depending on your system
   SCRIPT = File.join(File.dirname(__FILE__), 'extract.py')
