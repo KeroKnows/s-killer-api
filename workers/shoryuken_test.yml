@@ -1,2 +1,2 @@
 queues:
-  - https://sqs.ap-northeast-1.amazonaws.com/319568439174/soa_queue
+  - https://sqs.us-east-1.amazonaws.com/983076274486/skiller-queue-dev

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# https://github.com/laserlemon/figaro
-
 require 'roda'
 require 'yaml'
 require 'figaro'
