@@ -58,7 +58,7 @@ module Skiller
       # :reek:UncommunicativeVariableName for rescued error
       def concurrent_process_jobs(input)
         analyzed_jobs = input[:jobs][...ANALYZE_LEN]
-        if analyzed_jobs.all? { |job| job.is_analyzed }
+        if analyzed_jobs.all?(&:is_analyzed)
           input[:analyzed_jobs] = analyzed_jobs
           return Success(input)
         end

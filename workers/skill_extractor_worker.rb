@@ -23,6 +23,7 @@ class SkillExtractorWorker
   SCRIPT = File.join(File.dirname(__FILE__), 'extract.py')
 
   # extract skill and store in database
+  # :reek:TooManyStatements
   def perform(_sqs_msg, job_json)
     request = Request.new(job_json)
     job = request.job
@@ -57,6 +58,7 @@ class SkillExtractorWorker
     Skiller::Repository::JobsSkills.find_or_create(skills)
   end
 
+  # :reek:UtilityFunction because it is a utility function
   def update_job(job)
     job.is_analyzed = true
     Skiller::Repository::Jobs.update(job)

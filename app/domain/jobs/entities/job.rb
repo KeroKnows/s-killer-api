@@ -18,6 +18,7 @@ module Skiller
       attribute :is_full, Strict::Bool
       attribute :is_analyzed, Strict::Bool
 
+      # rubocop:disable Metrics/MethodLength
       def analyzed
         Job.new(
           db_id: db_id,
@@ -31,6 +32,7 @@ module Skiller
           is_analyzed: true
         )
       end
+      # rubocop:enable Metrics/MethodLength
     end
   end
 end

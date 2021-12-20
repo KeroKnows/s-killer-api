@@ -14,7 +14,7 @@ describe 'Test Skill Analyzer library' do
                                       salary: salary,
                                       url: 'URL',
                                       is_full: true,
-                                     is_analyzed: false)
+                                      is_analyzed: false)
     end
 
     it 'HAPPY: should be able to run the python script' do
