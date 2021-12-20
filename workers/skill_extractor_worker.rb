@@ -26,10 +26,11 @@ class SkillExtractorWorker
   def perform(_sqs_msg, job_json)
     request = Request.new(job_json)
     job = request.job
-    return if Skiller::Repository::JobsSkills.job_exist?(job)
+    return if job.is_analyzed
 
     result = extract_skill(job)
-    write_to_db(request, result)
+    write_skills_to_db(request, result)
+    update_job(job)
   end
 
   # run the extractor script
@@ -44,7 +45,7 @@ class SkillExtractorWorker
   # store the results to database
   #  [ TODO ] should not use Entity here
   # :reek:UtilityFunction because it is a utility function
-  def write_to_db(request, result)
+  def write_skills_to_db(request, result)
     skills = result.map do |skill|
       Skiller::Entity::Skill.new(
         id: nil,
@@ -54,6 +55,11 @@ class SkillExtractorWorker
       )
     end
     Skiller::Repository::JobsSkills.find_or_create(skills)
+  end
+
+  def update_job(job)
+    job.is_analyzed = true
+    Skiller::Repository::Jobs.update(job)
   end
 
   # An utility entity to process request data

@@ -13,7 +13,8 @@ describe 'Test Skill Analyzer library' do
                                       location: 'LOCATION',
                                       salary: salary,
                                       url: 'URL',
-                                      is_full: true)
+                                      is_full: true,
+                                     is_analyzed: false)
     end
 
     it 'HAPPY: should be able to run the python script' do
@@ -41,7 +42,8 @@ describe 'Test Skill Analyzer library' do
                                      location: 'LOCATION',
                                      salary: salary,
                                      url: 'URL',
-                                     is_full: false)
+                                     is_full: false,
+                                     is_analyzed: false)
       _(proc do
         Skiller::Skill::SkillMapper.new(job)
       end).must_raise ArgumentError
@@ -56,7 +58,8 @@ describe 'Test Skill Analyzer library' do
                                      location: 'LOCATION',
                                      salary: salary,
                                      url: 'URL',
-                                     is_full: true)
+                                     is_full: true,
+                                     is_analyzed: false)
       skill_mapper = Skiller::Skill::SkillMapper.new(job)
       skill_mapper.skills.map do |skill|
         _(skill).must_be_instance_of Skiller::Entity::Skill

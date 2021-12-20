@@ -25,10 +25,6 @@ module Skiller
         Repository::QueriesJobs.find_or_create(query, jobs.map(&:db_id))
       end
 
-      def self.jobs_have_skills(jobs)
-        jobs.all? { |job| Skiller::Repository::JobsSkills.job_exist?(job) }
-      end
-
       def self.find_skills_by_jobs(jobs)
         jobs.map { |job| Skiller::Repository::JobsSkills.find_skills_by_job_id(job.db_id) }
             .reduce(&:+)

@@ -24,7 +24,8 @@ module Skiller
           max_year_salary: salary.year_max,
           currency: salary.currency,
           url: job.url,
-          is_full: job.is_full
+          is_full: job.is_full,
+          is_analyzed: job.is_analyzed
         )
       end
     end

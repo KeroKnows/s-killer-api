@@ -44,7 +44,8 @@ module Skiller
               currency: @data['currency']
             },
             url: @data['jobUrl'],
-            is_full: @is_full
+            is_full: @is_full,
+            is_analyzed: false
           )
         end
       end

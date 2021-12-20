@@ -45,7 +45,8 @@ module Skiller
           max_year_salary: salary.year_max,
           currency: salary.currency,
           url: entity.url,
-          is_full: entity.is_full
+          is_full: entity.is_full,
+          is_analyzed: entity.is_analyzed
         )
       end
 
@@ -65,7 +66,8 @@ module Skiller
             currency: db_job.currency
           },
           url: db_job.url,
-          is_full: db_job.is_full
+          is_full: db_job.is_full,
+          is_analyzed: db_job.is_analyzed
         )
       end
     end

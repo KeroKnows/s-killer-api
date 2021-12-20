@@ -16,6 +16,21 @@ module Skiller
       attribute :salary, Skiller::Value::Salary
       attribute :url, String.optional
       attribute :is_full, Strict::Bool
+      attribute :is_analyzed, Strict::Bool
+
+      def analyzed
+        Job.new(
+          db_id: db_id,
+          job_id: job_id,
+          title: title,
+          description: description,
+          location: location,
+          salary: salary,
+          url: url,
+          is_full: is_full,
+          is_analyzed: true
+        )
+      end
     end
   end
 end
