@@ -74,3 +74,10 @@ gem 'rubocop'
 gem 'rack-cache', '~> 1.13'
 gem 'redis', '~> 4.5'
 gem 'redis-rack-cache', '~> 2.2'
+
+# Concurrency
+gem 'concurrent-ruby', '~> 1.0', '>= 1.0.5'
+
+# Parallel
+gem 'aws-sdk-sqs', '~> 1'
+gem 'shoryuken', '~> 5'

@@ -13,15 +13,20 @@ describe 'Test Skill Analyzer library' do
                                       location: 'LOCATION',
                                       salary: salary,
                                       url: 'URL',
-                                      is_full: true)
+                                      is_full: true,
+                                      is_analyzed: false)
     end
 
     it 'HAPPY: should be able to run the python script' do
+      skip 'move to worker'
+
       extractor = Skiller::Skill::Extractor.new(@job)
       _(proc { extractor.analyze_skills }).must_be_silent
     end
 
     it 'HAPPY: should return the results as an array' do
+      skip 'move to worker'
+
       extractor = Skiller::Skill::Extractor.new(@job)
       _(extractor.skills).must_be_instance_of Array
     end
@@ -37,7 +42,8 @@ describe 'Test Skill Analyzer library' do
                                      location: 'LOCATION',
                                      salary: salary,
                                      url: 'URL',
-                                     is_full: false)
+                                     is_full: false,
+                                     is_analyzed: false)
       _(proc do
         Skiller::Skill::SkillMapper.new(job)
       end).must_raise ArgumentError
@@ -52,7 +58,8 @@ describe 'Test Skill Analyzer library' do
                                      location: 'LOCATION',
                                      salary: salary,
                                      url: 'URL',
-                                     is_full: true)
+                                     is_full: true,
+                                     is_analyzed: false)
       skill_mapper = Skiller::Skill::SkillMapper.new(job)
       skill_mapper.skills.map do |skill|
         _(skill).must_be_instance_of Skiller::Entity::Skill

@@ -119,7 +119,8 @@ describe 'Integration Tests of Reed API and Database' do
                                              location: 'TEST LOCATION',
                                              salary: new_salary,
                                              url: 'EMPTY URL',
-                                             is_full: false)
+                                             is_full: false,
+                                             is_analyzed: false)
       _(Skiller::Repository::JobsSkills.job_exist?(invalid_job)).must_equal false
     end
   end

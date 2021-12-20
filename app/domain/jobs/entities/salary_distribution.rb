@@ -6,6 +6,9 @@ module Skiller
     class SalaryDistribution
       attr_reader :maximum, :minimum, :currency
 
+      # The argument `currency` is the currency to which the `salaries` (an array of `Salary`) need to be exchanged
+      # For example, `sd = SalaryDistribution.new(salaries, 'TWD')`
+      # means the `salaries` would be exchanged to TWD so that the `salaries`` could be compared fairly
       def initialize(salaries, currency = 'TWD')
         @currency = currency
         @salaries = salaries.map do |salary|
@@ -25,6 +28,7 @@ module Skiller
         salaries.min_by(&:year_min)&.year_min
       end
 
+      # Select the salaries which `prop` is not nils
       def filter_salary(prop)
         @salaries.filter(&prop)
       end

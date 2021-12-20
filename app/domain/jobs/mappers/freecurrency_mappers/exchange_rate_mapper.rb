@@ -16,10 +16,14 @@ module Skiller
                    end
       end
 
+      # Request the exchange rate of `src_currency` to `tgt_currency`
+      # :reek:FeatureEnvy
       def exchange_rate(src_currency, tgt_currency)
         return 1.0 if src_currency == tgt_currency
 
         exchange_rates = @gateway.exchange_rates(src_currency)['data']
+        return nil if exchange_rates.length.zero?
+
         raise 'Invalid target currency' unless exchange_rates.key?(tgt_currency)
 
         exchange_rates[tgt_currency]

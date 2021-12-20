@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 require 'dry/transaction'
+require 'concurrent'
+
+require_relative 'utils/analyze_skills_util'
 
 module Skiller
   module Service
@@ -14,13 +17,16 @@ module Skiller
 
       step :parse_request
       step :collect_jobs
-      step :process_jobs
+      step :concurrent_process_jobs
       step :collect_skills
+      step :validate_skills_length
       step :calculate_salary_distribution
-      step :store_query_to_db
       step :to_response_object
 
       private
+
+      EXTRACT_ERR = 'Could not extract skills'
+      PROCESSING_MSG = 'Processing the extraction request'
 
       # Check if the previous validation passes
       def parse_request(input)
@@ -48,24 +54,32 @@ module Skiller
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to collect jobs: #{e}"))
       end
 
-      # Request full job description for future analysis
+      # :reek:TooManyStatements
       # :reek:UncommunicativeVariableName for rescued error
-      def process_jobs(input)
-        jobs = input[:jobs]
-        jobs[..ANALYZE_LEN] = jobs[..ANALYZE_LEN].map do |job|
-          Utility.request_and_update_full_job(job)
+      def concurrent_process_jobs(input)
+        analyzed_jobs = input[:jobs][...ANALYZE_LEN]
+        if analyzed_jobs.all?(&:is_analyzed)
+          input[:analyzed_jobs] = analyzed_jobs
+          return Success(input)
         end
-        Success(input)
+        Utility.extract_skills_with_worker(analyzed_jobs)
+        Failure(Response::ApiResult.new(status: :processing, message: PROCESSING_MSG))
       rescue StandardError => e
-        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to process jobs: #{e}"))
+        puts [e.inspect, e.backtrace].flatten.join("\n")
+        Failure(Response::ApiResult.new(status: :internal_error, message: EXTRACT_ERR))
+      end
+
+      def collect_skills(input)
+        analyzed_jobs = input[:analyzed_jobs]
+        input[:jobs][...ANALYZE_LEN] = analyzed_jobs
+        input[:skills] = Utility.find_skills_by_jobs(analyzed_jobs)
+        Success(input)
       end
 
       # Collect skills from database if the query has been searched;
       # otherwise, the entities will be created by mappers and stored into the database
       # :reek:UncommunicativeVariableName for rescued error
-      def collect_skills(input)
-        input[:skills] = Utility.search_skills(input)
-
+      def validate_skills_length(input)
         if input[:skills].length.zero?
           Failure(
             Response::ApiResult.new(status: :internal_error, message: "No skills are extracted from #{input[:query]}")
@@ -73,8 +87,6 @@ module Skiller
         else
           Success(input)
         end
-      rescue StandardError => e
-        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to extract skills: #{e}"))
       end
 
       # Analyze the salary distribution from all related jobs
@@ -107,62 +119,6 @@ module Skiller
         Success(Response::ApiResult.new(status: :ok, message: result_response))
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to map to response object: #{e}"))
-      end
-
-      # An utility class that handle job processing in the service
-      class Utility
-        # search corresponding jobs in database first,
-        # or request it through JobMapper
-        def self.search_jobs(input)
-          query = input[:query]
-          if Repository::QueriesJobs.query_exist?(query)
-            Repository::QueriesJobs.find_jobs_by_query(query)
-          else
-            request_jobs_and_update_database(query)
-          end
-        end
-
-        # request full job description and update the information in database
-        def self.request_and_update_full_job(job)
-          return job if job.is_full
-
-          full_job = Skiller::Reed::JobMapper.new(App.config).job(job.job_id, job)
-          Repository::Jobs.update(full_job)
-          Repository::Jobs.find(full_job)
-        end
-
-        # search corresponding skills in database first,
-        # or extract it through SkillMapper
-        def self.search_skills(input)
-          query = input[:query]
-          if Repository::QueriesJobs.query_exist?(query)
-            Repository::QueriesJobs.find_skills_by_query(query)
-          else
-            extract_skills_and_update_database(input[:jobs][..ANALYZE_LEN])
-          end
-        end
-
-        # request full job description from API and store into the database
-        def self.request_jobs_and_update_database(query)
-          job_mapper = Skiller::Reed::JobMapper.new(App.config)
-          jobs = job_mapper.job_list(query)
-          jobs.map do |job|
-            Repository::Jobs.find_or_create(job)
-          end
-        end
-
-        # analyze the jobs' required skills from mapper and store into the database
-        def self.extract_skills_and_update_database(jobs)
-          skill_list = jobs.map do |job|
-            if Repository::JobsSkills.job_exist?(job)
-              Repository::JobsSkills.find_skills_by_job_id(job.db_id)
-            else
-              skills = Skiller::Skill::SkillMapper.new(job).skills
-              Repository::JobsSkills.find_or_create(skills)
-            end
-          end
-          skill_list.reduce(:+)
-        end
       end
     end
   end

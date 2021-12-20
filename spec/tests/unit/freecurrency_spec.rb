@@ -21,12 +21,6 @@ describe 'Test FreeCurrency library' do
       _(result).wont_be_empty
     end
 
-    it 'SAD: should raise exception on invalid api key' do
-      _(proc do
-        Skiller::FreeCurrency::Api.new('INVALID API KEY').request_rates(TEST_SRC_CURRENCY)
-      end).must_raise Skiller::FreeCurrency::Errors::InvalidApiKey
-    end
-
     it 'SAD: should raise exception on invalid currency' do
       _(proc do
         Skiller::FreeCurrency::Api.new(FREECURRENCY_API_KEY).request_rates('INVALID CURRENCY')

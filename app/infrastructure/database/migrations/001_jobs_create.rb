@@ -17,6 +17,7 @@ Sequel.migration do
       String      :currency
       String      :url, null: true
       Bool        :is_full
+      Bool        :is_analyzed
 
       DateTime    :created_at
       DateTime    :updated_at

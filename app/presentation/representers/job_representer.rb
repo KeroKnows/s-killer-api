@@ -19,6 +19,7 @@ module Skiller
       property :salary, extend: Representer::Salary, class: OpenStruct
       property :url
       property :is_full
+      property :is_analyzed
     end
   end
 end

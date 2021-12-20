@@ -12,19 +12,26 @@ module Skiller
         find_db_id(entity.db_id)
       end
 
+      # Find a job by a given db_id and return a rebuilted `Job` entity
       def self.find_db_id(db_id)
         rebuild_entity Database::JobOrm.first(db_id: db_id)
       end
 
+      # Find a job by a given job_id and return a rebuilted `Job` entity
       def self.find_job_id(job_id)
         db_job = Database::JobOrm.first(job_id: job_id)
         rebuild_entity(db_job)
       end
 
+      # Create a record in the table with a given `Job` entity
+      # if the Job entity not stored to the table yet.
+      # Then return a rebuilted `Job` entity
       def self.find_or_create(entity)
         rebuild_entity(Database::JobOrm.find_or_create(entity))
       end
 
+      # Update the record of a given `Job` entity according to its db_id
+      # Note: the entity should have a db_id
       def self.update(entity) # rubocop:disable Metrics/MethodLength
         db_id = entity.db_id
         salary = entity.salary
@@ -38,10 +45,12 @@ module Skiller
           max_year_salary: salary.year_max,
           currency: salary.currency,
           url: entity.url,
-          is_full: entity.is_full
+          is_full: entity.is_full,
+          is_analyzed: entity.is_analyzed
         )
       end
 
+      # Rebuild a `Job` entity from a given table record
       def self.rebuild_entity(db_job) # rubocop:disable Metrics/MethodLength
         return nil unless db_job
 
@@ -57,7 +66,8 @@ module Skiller
             currency: db_job.currency
           },
           url: db_job.url,
-          is_full: db_job.is_full
+          is_full: db_job.is_full,
+          is_analyzed: db_job.is_analyzed
         )
       end
     end
