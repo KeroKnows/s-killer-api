@@ -4,6 +4,11 @@ require_relative '../../../helpers/vcr_helper'
 require_relative '../../../helpers/database_helper'
 require_relative '../../../spec_helper'
 
+def cannot_process?(result)
+  result.failure? and result.failure.status == :cannot_process
+end
+
+
 describe 'Integration Test for AnalyzeSkills Service' do
   Skiller::VcrHelper.setup_vcr
 
@@ -17,8 +22,6 @@ describe 'Integration Test for AnalyzeSkills Service' do
 
   describe 'Data validation' do
     it 'BAD: should fail empty query' do
-      skip 'next week'
-
       # GIVEN: an empty query
       query_form = Skiller::Request::Query.new.call({ 'query' => EMPTY_KEYWORD })
 
@@ -26,13 +29,11 @@ describe 'Integration Test for AnalyzeSkills Service' do
       jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
 
       # THEN: the service should fail
-      _(jobskill.failure?).must_equal true
+      _(cannot_process?(jobskill)).must_equal true
       _(jobskill.failure[:message].downcase).must_include 'invalid'
     end
 
     it 'SAD: should fail with invalid request' do
-      skip 'next week'
-
       # GIVEN: an invalid query
       query_form = Skiller::Request::Query.new.call({ 'query' => INVALID_KEYWORD })
 
@@ -40,7 +41,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
       jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
 
       # THEN: the service should fail
-      _(jobskill.failure?).must_equal true
+      _(cannot_process?(jobskill)).must_equal true
       _(jobskill.failure[:message].downcase).must_include 'invalid'
     end
   end
