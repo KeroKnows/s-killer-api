@@ -8,6 +8,21 @@ def cannot_process?(result)
   result.failure? and result.failure.status == :cannot_process
 end
 
+def wait_for_processing(query_form)
+  result = Skiller::Service::AnalyzeSkills.new.call(query_form)
+  sleeping_time = 0
+  while processing?(result) and sleeping_time < 30
+    sleep 10
+    sleeping_time += 10
+    result = Skiller::Service::AnalyzeSkills.new.call(query_form)
+  end
+  result
+end
+
+def processing?(result)
+  result.failure? and result.failure.status == :processing
+end
+
 
 describe 'Integration Test for AnalyzeSkills Service' do
   Skiller::VcrHelper.setup_vcr
@@ -52,13 +67,14 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should search query and generate corresponding entities' do
-      skip 'next week'
-
       # GIVEN: a keyword that hasn't been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
 
       # WHEN: the service is called with the form object
       jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
+      _(processing?(jobskill)).must_equal true
+
+      jobskill = wait_for_processing(query_form)
 
       # THEN: the service should succeed...
       _(jobskill.success?).must_equal true
@@ -78,11 +94,11 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should collect jobs from database' do
-      skip 'next week'
-
       # GIVEN: a keyword that has been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
-      db_jobs = Skiller::Service::AnalyzeSkills.new.call(query_form).value!.message[:jobs]
+      result = wait_for_processing(query_form)
+      _(result.success?).must_equal true
+      db_jobs = result.value!.message[:jobs]
 
       # WHEN: the service is called with the form object
       jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
@@ -103,13 +119,11 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should calculate salary distribution from a job list' do
-      skip 'next week'
-
       # GIVEN: a keyword
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
 
       # WHEN: the service is called
-      jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
+      jobskill = wait_for_processing(query_form)
 
       # THEN: the service should succeed...
       _(jobskill.success?).must_equal true
@@ -138,13 +152,11 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should analyze skills and store result into database' do
-      skip 'next week'
-
       # GIVEN: a keyword that has not been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
 
       # WHEN: the service is called
-      jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
+      jobskill = wait_for_processing(query_form)
 
       # THEN: the service whould succeed...
       _(jobskill.success?).must_equal true
@@ -153,7 +165,8 @@ describe 'Integration Test for AnalyzeSkills Service' do
       # ...with correct skills extracted
       ## get correct skills
       job_mapper = Skiller::Reed::JobMapper.new(CONFIG)
-      jobs = jobskill[:jobs][..Skiller::Service::AnalyzeSkills::ANALYZE_LEN].map { |job| job_mapper.job(job.job_id) }
+      # jobs = jobskill[:jobs][..Skiller::Service::AnalyzeSkills::ANALYZE_LEN].map { |job| job_mapper.job(job.job_id) }
+      jobs = jobskill[:jobs][...Skiller::Service::AnalyzeSkills::ANALYZE_LEN].map { |job| job_mapper.job(job.job_id) }
       skills_list = jobs.map { |job| Skiller::Skill::SkillMapper.new(job).skills }
       ori_skills = skills_list.reduce(:+).sort_by(&:name)
 
@@ -168,11 +181,11 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should collect skills from database' do
-      skip 'next week'
-
       # GIVEN: a keyword that has been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
-      db_skills = Skiller::Service::AnalyzeSkills.new.call(query_form).value!.message[:skills]
+      result = wait_for_processing(query_form)
+      _(result.success?).must_equal true
+      db_skills = result.value!.message[:skills]
       db_skills = db_skills.sort_by(&:name)
 
       # WHEN: the service is called
