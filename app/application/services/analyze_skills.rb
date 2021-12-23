@@ -62,7 +62,7 @@ module Skiller
           input[:analyzed_jobs] = analyzed_jobs
           return Success(input)
         end
-        Utility.extract_skills_with_worker(analyzed_jobs)
+        Utility.extract_skills_with_worker(analyzed_jobs, input[:request_id])
         # Failure(Response::ApiResult.new(status: :processing, message: PROCESSING_MSG))
         Failure(Response::ApiResult.new(status: :processing, message: {
           message: PROCESSING_MSG,
