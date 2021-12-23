@@ -30,9 +30,15 @@ module Skiller
             # 86400 seconds a day
             response.cache_control public: true, max_age: 86_400
 
+            # Create a request ID (channel number)
+            request_id = [request.env, request.path, Time.now.to_f].hash
+
             # validate request
             query_request = Request::Query.new.call(router.params)
-            result = Service::AnalyzeSkills.new.call(query_request)
+            # result = Service::AnalyzeSkills.new.call(query_request)
+            result = Service::AnalyzeSkills.new.call(
+              query_request: query_request, request_id: request_id
+            )
 
             if result.failure?
               failed = Representer::For.new(result)

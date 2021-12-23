@@ -30,9 +30,9 @@ module Skiller
 
       # Check if the previous validation passes
       def parse_request(input)
-        if input.success?
-          query = input.value!
-          Success(query: query)
+        if input[:query_request].success?
+          query = input[:query_request].value!
+          Success(query: query, request_id: input[:request_id])
         else
           failure = input.failure
           Failure(Response::ApiResult.new(status: failure.status, message: failure.message))
@@ -63,7 +63,11 @@ module Skiller
           return Success(input)
         end
         Utility.extract_skills_with_worker(analyzed_jobs)
-        Failure(Response::ApiResult.new(status: :processing, message: PROCESSING_MSG))
+        # Failure(Response::ApiResult.new(status: :processing, message: PROCESSING_MSG))
+        Failure(Response::ApiResult.new(status: :processing, message: {
+          message: PROCESSING_MSG,
+          request_id: input[:request_id]
+        }))
       rescue StandardError => e
         puts [e.inspect, e.backtrace].flatten.join("\n")
         Failure(Response::ApiResult.new(status: :internal_error, message: EXTRACT_ERR))
