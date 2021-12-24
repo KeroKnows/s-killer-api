@@ -12,15 +12,14 @@ module SkillExtractor
 
     def publish(message)
       print "Progress: #{message} "
-      # print "[post: #{@config.APP_HOST}/faye] "
       print "[post: http://0.0.0.0:9090/faye] "
       response = HTTP.headers(content_type: 'application/json')
         .post(
-          # "#{@config.APP_HOST}/faye",
           "http://0.0.0.0:9090/faye",
           body: message_body(message)
         )
       puts "(#{response.status})"
+      puts message_body(message)
     rescue HTTP::ConnectionError
       puts '(Faye server not found - progress not sent)'
     end
@@ -28,8 +27,12 @@ module SkillExtractor
     private
 
     def message_body(message)
-      { channel: "/#{@channel_id}",
-        data: message }.to_json
+      { 
+        channel: "/#{@channel_id}",
+        data: {
+          progress: message
+        }
+      }.to_json
     end
   end
 end

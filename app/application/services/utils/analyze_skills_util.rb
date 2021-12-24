@@ -70,7 +70,6 @@ module Skiller
       def self.extract_skills_with_worker(jobs, request_id)
         jobs.map do |job|
           Concurrent::Promise.new { request_and_update_full_job(job) }
-                            #  .then { |full_job| SQS.send(Skiller::Representer::Job.new(full_job).to_json) }
                              .then { |full_job| SQS.send(job_json(full_job, request_id)) }
                              .rescue { |err| puts err }
                              .execute

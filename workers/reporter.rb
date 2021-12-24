@@ -8,19 +8,12 @@ module SkillExtractor
     attr_accessor :job
 
     def initialize(request_json, config)
-      # clone_request = CodePraise::Representer::CloneRequest
-      #   .new(OpenStruct.new)
-      #   .from_json(request_json)
-
-      # job = Skiller::Representer::Job.new(OpenStruct.new).from_json(request_json)
       extract_request = Skiller::Representer::ExtractRequest
         .new(OpenStruct.new)
         .from_json(request_json)
 
       @job = extract_request.job
       @publisher = ProgressPublisher.new(config, extract_request.id) # this is channel id
-      # @project = clone_request.project
-      # @publisher = ProgressPublisher.new(config, clone_request.id)
     end
 
     def report(msg)

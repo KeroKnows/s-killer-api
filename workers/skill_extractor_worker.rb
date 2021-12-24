@@ -31,14 +31,12 @@ module SkillExtractor
     def perform(_sqs_msg, job_json)
       job = SkillExtractor::JobReporter.new(job_json, SkillExtractor::Worker.config)
 
-      # First time reporting progress
-      starting_percent = SkillExtractor::ExtractMonitor.starting_percent
-      job.report(starting_percent)
+      # Reporting progress
+      job.report(10)
+      # channel ID is not responding correctly
+      # channel ID is not in SQS?
 
-      # Keep reporting progress
 
-
-      # Last time reporting progress
 
       # ======
       # request = Request.new(job_json)
