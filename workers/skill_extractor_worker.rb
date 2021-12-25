@@ -26,6 +26,8 @@ class SkillExtractorWorker
   # :reek:TooManyStatements
   def perform(_sqs_msg, job_json)
     request = Request.new(job_json)
+    return unless request.job
+
     job = request.job
     return if job.is_analyzed
 
