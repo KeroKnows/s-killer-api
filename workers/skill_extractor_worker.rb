@@ -6,7 +6,6 @@ require 'yaml'
 require_relative '../init'
 
 require_relative 'reporter'
-require_relative 'extract_monitor'
 
 module SkillExtractor
   # Worker to analyze skills in parallel
@@ -29,27 +28,22 @@ module SkillExtractor
     # extract skill and store in database
     # :reek:TooManyStatements
     def perform(_sqs_msg, job_json)
-      job = SkillExtractor::JobReporter.new(job_json, SkillExtractor::Worker.config)
+      # job = SkillExtractor::JobReporter.new(job_json, SkillExtractor::Worker.config)
 
-      # Reporting progress
-      job.report(10)
+      # Reporting progress, testing for channel ID
+      # job.report(10)
       # channel ID is not responding correctly
       # channel ID is not in SQS?
 
-
-
       # ======
-      # request = Request.new(job_json)
-      # job = request.job
-      # return if job.is_analyzed # Move this to reporter
+      request = Request.new(job_json)
+      job = request.job
+      return if job.is_analyzed # Move this to reporter
 
-      # result = extract_skill(job)
+      result = extract_skill(job)
 
-      # result = extract_skill(job.extract_request)
-      # write_skills_to_db(job, result)
-      # update_job(job.extract_request)
-
-      
+      write_skills_to_db(request, result)
+      update_job(job)
     end
 
     # run the extractor script
