@@ -15,7 +15,7 @@ module Skiller
     end
 
     def self.cannot_process?(result)
-      result.failure? and result.failure.status == :cannot_process
+      result.failure? && result.failure.status == :cannot_process
     end
 
     def self.call_and_processing?(query_form)
@@ -23,7 +23,7 @@ module Skiller
     end
 
     def self.processing?(result)
-      result.failure? and result.failure.status == :processing
+      result.failure? && result.failure.status == :processing
     end
   end
 end

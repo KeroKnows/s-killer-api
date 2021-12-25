@@ -50,8 +50,6 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should search query and generate corresponding entities' do
-      Skiller::QueueHelper.wipe_queue
-
       # GIVEN: a keyword that hasn't been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
 
@@ -79,8 +77,6 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should collect jobs from database' do
-      Skiller::QueueHelper.wipe_queue
-
       # GIVEN: a keyword that has been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
       result = Skiller::ServiceSpecUtility.wait_for_processing(query_form)
@@ -106,8 +102,6 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should calculate salary distribution from a job list' do
-      Skiller::QueueHelper.wipe_queue
-
       # GIVEN: a keyword
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
 
@@ -142,8 +136,6 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should analyze skills and store result into database' do
-      Skiller::QueueHelper.wipe_queue
-
       # GIVEN: a keyword that has not been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
 
@@ -157,7 +149,6 @@ describe 'Integration Test for AnalyzeSkills Service' do
       # ...with correct skills extracted
       ## get correct skills
       job_mapper = Skiller::Reed::JobMapper.new(CONFIG)
-      # jobs = jobskill[:jobs][..Skiller::Service::AnalyzeSkills::ANALYZE_LEN].map { |job| job_mapper.job(job.job_id) }
       jobs = jobskill[:jobs][...Skiller::Service::AnalyzeSkills::ANALYZE_LEN].map { |job| job_mapper.job(job.job_id) }
       skills_list = jobs.map { |job| Skiller::Skill::SkillMapper.new(job).skills }
       ori_skills = skills_list.reduce(:+).sort_by(&:name)
@@ -173,8 +164,6 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should collect skills from database' do
-      Skiller::QueueHelper.wipe_queue
-
       # GIVEN: a keyword that has been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
       result = Skiller::ServiceSpecUtility.wait_for_processing(query_form)
