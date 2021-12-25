@@ -26,6 +26,18 @@ module Skiller
         end
       end
 
+      def receive
+        @queue.receive_messages(max_number_of_messages: 10)
+      end
+
+      def wipe
+        messages = receive
+        while !messages.length.zero?
+          @queue.delete_messages(entries: messages.map { |msg| {id: msg.message_id, receipt_handle: msg.receipt_handle} })
+          messages = receive
+        end
+      end
+
       private
 
       def prepare_queue

@@ -2,6 +2,7 @@
 
 require_relative '../../../helpers/vcr_helper'
 require_relative '../../../helpers/database_helper'
+require_relative '../../../helpers/queue_helper'
 require_relative '../../../spec_helper'
 
 def cannot_process?(result)
@@ -67,6 +68,8 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should search query and generate corresponding entities' do
+      Skiller::QueueHelper.wipe_queue
+
       # GIVEN: a keyword that hasn't been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
 
@@ -94,6 +97,8 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should collect jobs from database' do
+      Skiller::QueueHelper.wipe_queue
+
       # GIVEN: a keyword that has been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
       result = wait_for_processing(query_form)
@@ -119,6 +124,8 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should calculate salary distribution from a job list' do
+      Skiller::QueueHelper.wipe_queue
+
       # GIVEN: a keyword
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
 
@@ -152,6 +159,8 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should analyze skills and store result into database' do
+      Skiller::QueueHelper.wipe_queue
+
       # GIVEN: a keyword that has not been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
 
@@ -181,6 +190,8 @@ describe 'Integration Test for AnalyzeSkills Service' do
     end
 
     it 'HAPPY: should collect skills from database' do
+      Skiller::QueueHelper.wipe_queue
+
       # GIVEN: a keyword that has been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
       result = wait_for_processing(query_form)

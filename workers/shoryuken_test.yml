@@ -1,2 +1,2 @@
 queues:
-  - https://sqs.us-east-1.amazonaws.com/983076274486/skiller-queue-dev
+  - https://sqs.us-east-1.amazonaws.com/983076274486/skiller-queue-test
