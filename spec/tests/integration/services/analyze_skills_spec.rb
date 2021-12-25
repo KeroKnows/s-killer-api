@@ -46,6 +46,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
   describe 'Retrieve and store jobs' do
     before do
       Skiller::DatabaseHelper.wipe_database
+      Skiller::QueueHelper.wipe_queue
     end
 
     it 'HAPPY: should search query and generate corresponding entities' do
@@ -137,6 +138,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
   describe 'Extract and store skills' do
     before do
       Skiller::DatabaseHelper.wipe_database
+      Skiller::QueueHelper.wipe_queue
     end
 
     it 'HAPPY: should analyze skills and store result into database' do
