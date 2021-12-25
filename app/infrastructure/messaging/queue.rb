@@ -32,8 +32,10 @@ module Skiller
 
       def wipe
         messages = receive
-        while !messages.length.zero?
-          @queue.delete_messages(entries: messages.map { |msg| {id: msg.message_id, receipt_handle: msg.receipt_handle} })
+        until messages.length.zero?
+          @queue.delete_messages(entries: messages.map do |msg|
+                                            { id: msg.message_id, receipt_handle: msg.receipt_handle }
+                                          end)
           messages = receive
         end
       end

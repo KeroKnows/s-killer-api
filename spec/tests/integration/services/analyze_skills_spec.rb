@@ -4,26 +4,7 @@ require_relative '../../../helpers/vcr_helper'
 require_relative '../../../helpers/database_helper'
 require_relative '../../../helpers/queue_helper'
 require_relative '../../../spec_helper'
-
-def cannot_process?(result)
-  result.failure? and result.failure.status == :cannot_process
-end
-
-def wait_for_processing(query_form)
-  result = Skiller::Service::AnalyzeSkills.new.call(query_form)
-  sleeping_time = 0
-  while processing?(result) and sleeping_time < 30
-    sleep 10
-    sleeping_time += 10
-    result = Skiller::Service::AnalyzeSkills.new.call(query_form)
-  end
-  result
-end
-
-def processing?(result)
-  result.failure? and result.failure.status == :processing
-end
-
+require_relative '../../../utils/analyze_skills_spec_util'
 
 describe 'Integration Test for AnalyzeSkills Service' do
   Skiller::VcrHelper.setup_vcr
@@ -45,7 +26,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
       jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
 
       # THEN: the service should fail
-      _(cannot_process?(jobskill)).must_equal true
+      _(Skiller::ServiceSpecUtility.cannot_process?(jobskill)).must_equal true
       _(jobskill.failure[:message].downcase).must_include 'invalid'
     end
 
@@ -57,7 +38,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
       jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
 
       # THEN: the service should fail
-      _(cannot_process?(jobskill)).must_equal true
+      _(Skiller::ServiceSpecUtility.cannot_process?(jobskill)).must_equal true
       _(jobskill.failure[:message].downcase).must_include 'invalid'
     end
   end
@@ -75,9 +56,9 @@ describe 'Integration Test for AnalyzeSkills Service' do
 
       # WHEN: the service is called with the form object
       jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
-      _(processing?(jobskill)).must_equal true
+      _(Skiller::ServiceSpecUtility.processing?(jobskill)).must_equal true
 
-      jobskill = wait_for_processing(query_form)
+      jobskill = Skiller::ServiceSpecUtility.wait_for_processing(query_form)
 
       # THEN: the service should succeed...
       _(jobskill.success?).must_equal true
@@ -101,7 +82,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
 
       # GIVEN: a keyword that has been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
-      result = wait_for_processing(query_form)
+      result = Skiller::ServiceSpecUtility.wait_for_processing(query_form)
       _(result.success?).must_equal true
       db_jobs = result.value!.message[:jobs]
 
@@ -130,7 +111,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
 
       # WHEN: the service is called
-      jobskill = wait_for_processing(query_form)
+      jobskill = Skiller::ServiceSpecUtility.wait_for_processing(query_form)
 
       # THEN: the service should succeed...
       _(jobskill.success?).must_equal true
@@ -165,7 +146,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
 
       # WHEN: the service is called
-      jobskill = wait_for_processing(query_form)
+      jobskill = Skiller::ServiceSpecUtility.wait_for_processing(query_form)
 
       # THEN: the service whould succeed...
       _(jobskill.success?).must_equal true
@@ -194,7 +175,7 @@ describe 'Integration Test for AnalyzeSkills Service' do
 
       # GIVEN: a keyword that has been searched
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
-      result = wait_for_processing(query_form)
+      result = Skiller::ServiceSpecUtility.wait_for_processing(query_form)
       _(result.success?).must_equal true
       db_skills = result.value!.message[:skills]
       db_skills = db_skills.sort_by(&:name)
