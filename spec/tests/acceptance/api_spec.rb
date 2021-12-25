@@ -12,18 +12,6 @@ end
 describe 'Test API routes' do
   include Rack::Test::Methods
 
-  Skiller::VcrHelper.setup_vcr
-
-  before do
-    Skiller::VcrHelper.configure_integration
-    # Why should database be wiped?
-    # Skiller::DatabaseHelper.wipe_database
-  end
-
-  after do
-    Skiller::VcrHelper.eject_vcr
-  end
-
   describe 'Root route' do
     it 'should successfully return root information' do
       get '/'
@@ -36,8 +24,28 @@ describe 'Test API routes' do
   end
 
   describe 'Analyze skills from job' do
+    it 'should be able to ask users wait for result' do
+      # GIVEN: db is wiped so the keyword must not exist
+      Skiller::DatabaseHelper.wipe_database
+
+      # WHEN: ask for this keyword
+      get "#{JOB_ROUTE}?query=#{TEST_KEYWORD}"
+
+      # THEN: ask user to wait
+      _(last_response.status).must_equal 202
+    end
+
     it 'should be able to return result' do
-      get "/api/v1/jobs?query=#{TEST_KEYWORD}"
+      # GIVEN: call the API to ensure data exists
+      get "#{JOB_ROUTE}?query=#{TEST_KEYWORD}"
+      if last_response.status == 202
+        sleep 30 # wait for workers to process
+      end
+
+      # WHEN: ask for this keyword
+      get "#{JOB_ROUTE}?query=#{TEST_KEYWORD}"
+
+      # THEN: must return the result
       _(last_response.status).must_equal 200
 
       result = JSON.parse last_response.body
@@ -58,10 +66,6 @@ describe 'Test API routes' do
       _(job.keys).must_include 'salary'
       _(job.keys).must_include 'url'
       _(job.keys).must_include 'is_full'
-
-      ten_jobs = result['jobs'][0..10]
-      selected = ten_jobs.reject { |a_job| a_job['is_full'] == true }
-      _(selected).must_be_empty
 
       skill = result['skills'].first
       _(skill.keys).must_include 'name'
@@ -93,6 +97,10 @@ describe 'Test API routes' do
     it 'HAPPY: should respond the detail result' do
       # GIVEN: ensure jobs exist in database and get a job id
       get "#{JOB_ROUTE}?query=#{TEST_KEYWORD}"
+      if last_response.status == 202
+        sleep 30 # wait for workers to process
+      end
+
       vailid_job_id = Skiller::Database::JobOrm.select(:db_id).where(is_full: true).first.db_id
 
       # WHEN: request for that job
