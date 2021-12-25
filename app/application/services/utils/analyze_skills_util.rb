@@ -63,7 +63,7 @@ module Skiller
 
       def self.job_json(job, request_id)
         Skiller::Response::JobRequest.new(job, request_id)
-                                     .then { Skiller::Representer::JobRequest.new({job: job, id: request_id}) }
+                                     .then { |req| Skiller::Representer::JobRequest.new(req) }
                                      .then(&:to_json)
       end
 
