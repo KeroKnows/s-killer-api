@@ -28,17 +28,14 @@ module SkillExtractor
     # :reek:TooManyStatements
     def perform(_sqs_msg, job_json)
       work = SkillExtractor::JobReporter.new(job_json, SkillExtractor::Worker.config)
-
       extract_request = Skiller::Representer::ExtractRequest.new(OpenStruct.new).from_json(job_json)
       job = extract_request.job
-
-      work.report(job.title) # channel ID is not responding exactly?
-
+      return unless Skiller::Repository::Jobs.find(job) # ignore unrelated requests
       return if job.is_analyzed
 
-      salary = get_salary_value(job.salary)
-
+      work.report(job.title) # channel ID is not responding exactly?
       result = extract_skill(job)
+      salary = get_salary_value(job.salary)
       write_skills_to_db(result, job.db_id, salary)
       update_job(job)
     end
@@ -53,9 +50,7 @@ module SkillExtractor
     end
 
     # store the results to database
-    #  [ TODO ] should not use Entity here
     # :reek:UtilityFunction because it is a utility function
-    # def write_skills_to_db(request, result)
     def write_skills_to_db(result, job_id, salary)
       skills = result.map do |skill|
         Skiller::Entity::Skill.new(
@@ -68,6 +63,7 @@ module SkillExtractor
       Skiller::Repository::JobsSkills.find_or_create(skills)
     end
 
+    # update the job information to database
     # :reek:UtilityFunction because it is a utility function
     def update_job(job)
       job.is_analyzed = true
@@ -75,6 +71,7 @@ module SkillExtractor
     end
 
     # get salary value for database
+    # :reek:UtilityFunction because it is a utility function
     def get_salary_value(salary)
       Skiller::Value::Salary.new(
         year_min: salary.year_min,

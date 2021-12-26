@@ -8,15 +8,16 @@ module SkillExtractor
     def initialize(config, channel_id)
       @config = config
       @channel_id = channel_id
+      @app_host = "#{@config.APP_HOST}/faye".freeze
     end
 
     # Post a progress to Faye endpoint
     def publish(message)
-      print "Progress: #{message}"
-      print "[post: #{@config.APP_HOST}/faye]"
+      print "Progress: #{message} "
+      print "[post: #{@app_host}] "
       response = HTTP.headers(content_type: 'application/json')
                      .post(
-                       "#{@config.APP_HOST}/faye",
+                       @app_host,
                        body: message_body(message)
                      )
       puts "(#{response.status})"

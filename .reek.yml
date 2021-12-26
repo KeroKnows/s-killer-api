@@ -9,3 +9,5 @@ directories:
       enabled: false
     FeatureEnvy:
       enabled: false
+    TooManyStatements: # for Success/Failure and rescued statements
+      max_statements: 7

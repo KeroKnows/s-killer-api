@@ -5,7 +5,7 @@ require_relative 'progress_publisher'
 module SkillExtractor
   # Reports job progress to client
   class JobReporter
-    attr_accessor :job
+    attr_reader :job
 
     def initialize(request_json, config)
       extract_request = Skiller::Representer::ExtractRequest
