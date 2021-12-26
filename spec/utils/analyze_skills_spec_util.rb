@@ -6,8 +6,9 @@ module Skiller
     SERVICE = Skiller::Service::AnalyzeSkills.new
 
     def self.wait_for_processing(query_form)
+      request = { query_request: query_form, request_id: 0 }
       sleeping_time = 0
-      while processing?(result = SERVICE.call(query_form)) && (sleeping_time < 30)
+      while processing?(result = SERVICE.call(request)) && (sleeping_time < 30)
         sleep 10
         sleeping_time += 10
       end

@@ -12,11 +12,11 @@ module SkillExtractor
 
     # Post a progress to Faye endpoint
     def publish(message)
-      print "Progress: #{message} "
-      print '[post: http://0.0.0.0:9090/faye] ' # Move to config?
+      print "Progress: #{message}"
+      print "[post: #{@config.APP_HOST}/faye]"
       response = HTTP.headers(content_type: 'application/json')
                      .post(
-                       'http://0.0.0.0:9090/faye', # Move to config?
+                       "#{@config.APP_HOST}/faye",
                        body: message_body(message)
                      )
       puts "(#{response.status})"

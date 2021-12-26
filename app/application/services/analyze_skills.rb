@@ -31,7 +31,7 @@ module Skiller
           query = input[:query_request].value!
           Success(query: query, request_id: input[:request_id])
         else
-          failure = input.failure
+          failure = input[:query_request].failure
           Failure(Response::ApiResult.new(status: failure.status, message: failure.message))
         end
       end
@@ -57,10 +57,11 @@ module Skiller
         jobs = input[:jobs][...ANALYZE_LEN]
         return Success(input) if Utility.all_jobs_analyzed?(jobs)
 
-        Utility.extract_skills_with_worker(jobs)
+        request_id = input[:request_id]
+        Utility.extract_skills_with_worker(jobs, request_id)
         Failure(Response::ApiResult.new(status: :processing, 
                                         message: { message: 'Processing the extraction request',
-                                                   request_id: input[:request_id] }))
+                                                   request_id: request_id }))
       rescue StandardError => e
         puts [e.inspect, e.backtrace].flatten.join("\n")
         Failure(Response::ApiResult.new(status: :internal_error, message: 'Fail to process the jobs'))
