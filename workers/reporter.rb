@@ -16,15 +16,9 @@ module SkillExtractor
       @publisher = ProgressPublisher.new(config, extract_request.id) # this is channel id
     end
 
+    # Report progress using publisher
     def report(msg)
       @publisher.publish(msg)
     end
-
-    # def report_each_second(seconds, &operation)
-    #   seconds.times do
-    #     sleep(1)
-    #     report(operation.call)
-    #   end
-    # end
   end
 end

@@ -38,12 +38,6 @@ module SkillExtractor
       return if job.is_analyzed
 
       salary = get_salary_value(job.salary)
-      # db_id = job.db_id # to database
-      # salary = Skiller::Value::Salary.new( # to database
-      #   year_min: job.salary.year_min,
-      #   year_max: job.salary.year_max,
-      #   currency: job.salary.currency
-      # )
 
       result = extract_skill(job)
       write_skills_to_db(result, job.db_id, salary)
@@ -68,8 +62,6 @@ module SkillExtractor
         Skiller::Entity::Skill.new(
           id: nil,
           name: skill,
-          # job_db_id: request.job_id,
-          # salary: request.salary
           job_db_id: job_id,
           salary: salary
         )
@@ -83,37 +75,13 @@ module SkillExtractor
       Skiller::Repository::Jobs.update(job)
     end
 
+    # get salary value for database
     def get_salary_value(salary)
       Skiller::Value::Salary.new(
         year_min: salary.year_min,
         year_max: salary.year_max,
         currency: salary.currency
       )
-      # salary_value
     end
-
-    # An utility entity to process request data
-    # class Request
-    #   def initialize(job)
-    #     @job = Skiller::Representer::Job.new(OpenStruct.new).from_json(job)
-    #     @salary = @job.salary
-    #   end
-
-    #   attr_reader :job
-
-    #   def job_id
-    #     @job.db_id
-    #   end
-
-    #   # Transform OpenStruct to hash
-    #   #  [ TODO ] should not use Value here
-    #   def salary
-    #     Skiller::Value::Salary.new(
-    #       year_min: @salary.year_min,
-    #       year_max: @salary.year_max,
-    #       currency: @salary.currency
-    #     )
-    #   end
-    # end
   end
 end

@@ -3,19 +3,20 @@
 require 'http'
 
 module SkillExtractor
-  # Publishes progress as percent to Faye endpoint
+  # Publishes current processing job_title to Faye endpoint
   class ProgressPublisher
     def initialize(config, channel_id)
       @config = config
       @channel_id = channel_id
     end
 
+    # Post a progress to Faye endpoint
     def publish(message)
       print "Progress: #{message} "
-      print '[post: http://0.0.0.0:9090/faye] '
+      print '[post: http://0.0.0.0:9090/faye] ' # Move to config?
       response = HTTP.headers(content_type: 'application/json')
                      .post(
-                       'http://0.0.0.0:9090/faye',
+                       'http://0.0.0.0:9090/faye', # Move to config?
                        body: message_body(message)
                      )
       puts "(#{response.status})"
@@ -25,11 +26,12 @@ module SkillExtractor
 
     private
 
+    # Schema of message to be published
     def message_body(message)
       {
         channel: "/#{@channel_id}",
         data: {
-          progress: message
+          processing: message
         }
       }.to_json
     end
