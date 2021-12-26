@@ -20,11 +20,11 @@ module SkillExtractor
       @publisher.publish(msg)
     end
 
-    def report_each_second(seconds, &operation)
-      seconds.times do
-        sleep(1)
-        report(operation.call)
-      end
-    end
+    # def report_each_second(seconds, &operation)
+    #   seconds.times do
+    #     sleep(1)
+    #     report(operation.call)
+    #   end
+    # end
   end
 end

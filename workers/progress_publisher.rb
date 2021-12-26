@@ -30,9 +30,7 @@ module SkillExtractor
       { 
         channel: "/#{@channel_id}",
         data: {
-          progress: message,
-          currently_analyzed: message,
-          total_to_analyze: 10,
+          progress: message
         }
       }.to_json
     end

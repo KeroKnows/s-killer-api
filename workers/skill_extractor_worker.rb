@@ -30,13 +30,12 @@ module SkillExtractor
     def perform(_sqs_msg, job_json)
       work = SkillExtractor::JobReporter.new(job_json, SkillExtractor::Worker.config)
 
-      # Reporting progress, testing for channel ID
-      work.report(10)  # channel ID is not responding exactly?
-
       extract_request = Skiller::Representer::ExtractRequest.new(OpenStruct.new).from_json(job_json)
-
       job = extract_request.job
-      return if job.is_analyzed # Move this to reporter
+
+      work.report(job.title)  # channel ID is not responding exactly?
+
+      return if job.is_analyzed
 
       db_id = job.db_id  # to database
       salary = Skiller::Value::Salary.new(  # to database
@@ -48,8 +47,7 @@ module SkillExtractor
       result = extract_skill(job)
       write_skills_to_db(result, db_id, salary)
       update_job(job)
-
-      work.report(100)
+      
     end
 
     # run the extractor script
