@@ -16,6 +16,7 @@ module Skiller
         config.cassette_library_dir = CASSETTES_FOLDER
         config.hook_into :webmock
         config.ignore_localhost = true # for acceptance tests
+        config.ignore_hosts 'sqs.us-east-1.amazonaws.com' # aws service
       end
     end
 

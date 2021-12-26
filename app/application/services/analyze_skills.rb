@@ -25,9 +25,6 @@ module Skiller
 
       private
 
-      EXTRACT_ERR = 'Could not extract skills'
-      PROCESSING_MSG = 'Processing the extraction request'
-
       # Check if the previous validation passes
       def parse_request(input)
         if input[:query_request].success?
@@ -54,29 +51,23 @@ module Skiller
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to collect jobs: #{e}"))
       end
 
-      # :reek:TooManyStatements
+      # Check if all jobs are analyzed before
       # :reek:UncommunicativeVariableName for rescued error
       def concurrent_process_jobs(input)
-        analyzed_jobs = input[:jobs][...ANALYZE_LEN]
-        if analyzed_jobs.all?(&:is_analyzed)
-          input[:analyzed_jobs] = analyzed_jobs
-          return Success(input)
-        end
+        jobs = input[:jobs][...ANALYZE_LEN]
+        return Success(input) if Utility.all_jobs_analyzed?(jobs)
 
-        Utility.extract_skills_with_worker(analyzed_jobs, input[:request_id])
-        Failure(Response::ApiResult.new(status: :processing, message: {
-                                          message: PROCESSING_MSG,
-                                          request_id: input[:request_id]
-                                        }))
+        Utility.extract_skills_with_worker(jobs)
+        Failure(Response::ApiResult.new(status: :processing, 
+                                        message: { message: 'Processing the extraction request',
+                                                   request_id: input[:request_id] }))
       rescue StandardError => e
         puts [e.inspect, e.backtrace].flatten.join("\n")
-        Failure(Response::ApiResult.new(status: :internal_error, message: EXTRACT_ERR))
+        Failure(Response::ApiResult.new(status: :internal_error, message: 'Fail to process the jobs'))
       end
 
       def collect_skills(input)
-        analyzed_jobs = input[:analyzed_jobs]
-        input[:jobs][...ANALYZE_LEN] = analyzed_jobs
-        input[:skills] = Utility.find_skills_by_jobs(analyzed_jobs)
+        input[:skills] = Utility.find_skills_by_jobs(input[:jobs])
         Success(input)
       end
 

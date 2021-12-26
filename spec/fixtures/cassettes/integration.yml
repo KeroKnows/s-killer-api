@@ -12032,4 +12032,1180 @@ http_interactions:
       encoding: UTF-8
       string: '{"results":[],"ambiguousLocations":[],"totalResults":0}'
   recorded_at: Sun, 19 Dec 2021 14:26:28 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44521237
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Dec 2021 13:45:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '3315'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=l6aewzETCe482ArdNfBWLAACB7GA6iQS2-LxHksEv50PsuKZgPAq0_p_O0ixXscIGm9JqzRp_YfIGYkLiSgLecupydfdMCUW1lPF_GNVRrarPgynE57G_JtbaStkyD5qvsWQmA2;
+        expires=Sat, 25-Dec-2021 15:15:06 GMT; path=/; HttpOnly"
+      - __cf_bm=aXFP28qlt5PuKNri4U3Rw9hnprJHTG1BGbTxIIPXLkY-1640439907-0-ARZqyuQCv3eLUF8Gp4OixcyHqH106N5SKffoN76oWJIhZDc09ZgIuNPVblUKz/6PXPY8OwHzo3Y8XlInxM4x4nU=;
+        path=/; expires=Sat, 25-Dec-21 14:15:07 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=a46fc61e8e2d4ce76b225ce56595026250e6b795-1640439907; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com *.rlcdn.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c3282045c884105-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":7337,"employerName":"Ashdown Group","jobId":44521237,"jobTitle":"Senior
+        Backend Developer","locationName":"Wandsworth","minimumSalary":60000.0000,"maximumSalary":75000.0000,"yearlyMinimumSalary":60000.0000,"yearlyMaximumSalary":75000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£60,000 - £75,000 per annum","datePosted":"29/10/2021","expirationDate":"04/01/2022","externalUrl":"https://jobs.ashdowngroup.com/job/senior-backend-developer-19270/apply.aspx?atsimode=customdirectapply&provider=firefish","jobUrl":"https://www.reed.co.uk/jobs/senior-backend-developer/44521237","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p>A market-leading software company based in South West London&nbsp;is seeking
+        a Senior Backend Developer to be a senior part of a team responsible for the
+        development of the company’s software products. </p> <p>&nbsp;This is a great
+        opportunity to join a growing company boasting some of the world''s biggest
+        tech companies as customers, and to work in a truly collaborative Development
+        team. The role is predominantly office based (Wandsworth/East Putney) but
+        the&nbsp;company  offers flexible working and some remote working will be
+        available. </p> <p>Essential Skills: </p> <ul> <li>Experience developing and
+        maintaining C#/.NET REST APIs, and writing enterprise-scale Web 2.0 applications.
+        </li><li>Good in-depth knowledge of Client/Server and Web architectures on
+        Windows, using SQL Server and tools such as nHibernate, EntityFramework, WebAPI
+        in VisualStudio. </li><li>Enjoys learning new skills and working with a team,
+        finding innovative solutions to problems, and contributing to the constant
+        evolution of a mature set of products. </li><li>Strong diagnostic/debug skills
+        and a methodical approach to problem solving. </li><li>Experience with source
+        control and build processes: branching, merging, one-push-build processes,
+        configuration management. </li><li>Must be a strong verbal and written communicator,
+        able to articulate complex technical. detail to colleagues in a clear and
+        unemotional manner. Must be prepared to code to specifications/designs/use-cases,
+        and use dialogue to resolve inconsistencies, but  also contribute ideas and
+        prototype innovations towards ongoing improvements in the product. </li><li>Agile,
+        self-motivated attitude, keen to add value wherever possible. </li><li>Able
+        to work quickly, accurately, and flexibly towards defined deadlines. </li></ul>
+        <p>Beneficial Skills: </p> <ul> <li>Experience implementing OData services.
+        </li><li>Experience implementing data accessing code using ORMs (EF, NHibernate,
+        …). </li><li>Experience of build and installer scripting both in JS-tools
+        (node/r.js) and .NET based ones (nant/WiX/Windows Installer) </li><li>Experience
+        of Database Design, SQL Server, and T-SQL, SQL profiling and performance tuning.
+        </li><li>Experience of shipping shrink wrapped software. </li></ul> <p>Essential
+        Experience: </p> <ul> <li>Educated to Degree level or equivalent; or possess
+        highly relevant experience. </li><li>Must have 5&#43; years’ experience in
+        development in a professional technical role. </li><li>Must have practical
+        experience of working as a senior part of a structured professional software
+        development environment. </li></ul> ","applicationCount":8}'
+  recorded_at: Sat, 25 Dec 2021 13:45:07 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/45035505
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Dec 2021 13:45:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '3416'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=5npMDtMI5LFEvcr2ygqt5qBpswY5gQAD0qmGi97mfRAap7xgxkYlGnok_Kqmqu7UzljCkclle77qKlpFenmxNoJwbgv3ByGFfg3xS4ybdjp9IHfd17cY1Yr_Z450WG4X7Il7uw2;
+        expires=Sat, 25-Dec-2021 15:15:08 GMT; path=/; HttpOnly"
+      - __cf_bm=ncHjwtD6D0RDdSKjO1gpb7AvKwHhM7F38ia5GPxSJA8-1640439908-0-AcDstInAo0YtjYQGHSlgeLnEW0TnLhIMVRkhmpsxGzON+d/mueY9/+iU3b+KG/vIdMVJ6PMV2eagKZQ1mBvhJ+E=;
+        path=/; expires=Sat, 25-Dec-21 14:15:08 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=414655f1d245c91e619d8f95cb9a6b3cc2b670f9-1640439908; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com *.rlcdn.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c32820bc9d60728-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":504253,"employerName":"Rebel Recruiters","jobId":45035505,"jobTitle":"Green
+        Tech Backend Developer Hybrid Remote","locationName":"Edinburgh","minimumSalary":35000.0000,"maximumSalary":50000.0000,"yearlyMinimumSalary":35000.0000,"yearlyMaximumSalary":50000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£35,000 - £50,000 per annum","datePosted":"14/12/2021","expirationDate":"25/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/green-tech-backend-developer-hybrid-remote/45035505","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p><strong>Green-Energy Backend Developer - saving the planet!</strong><br
+        /><strong>Location: Edinburgh / hybrid remote.</strong><strong><br /><strong>Salary:
+        &#163;35,000 - &#163;50,000 &#43; equity<br /><br /></strong></strong></p>
+        <p>Transitioning to renewable energy is one of the best things countries can
+        do to lower carbon emissions.</p> <p>But what about all the countries who
+        don’t have big, centralised grid networks supplying energy to every building
+        and appliance?</p> <p>How do we cut the use of 100 million diesel generators
+        in Nigeria, or enable rural Indian or Congolese people to stop burning charcoal,
+        diesel or wood for heating their food?</p> <p>Developing countries are suffering
+        the direct impacts of extreme climate events already and know they need to
+        decarbonise, but don’t always have the systems to do so, especially not at
+        the scale needed.</p> <p>The solution isn’t one company becoming big enough
+        to solve all these problems. The solution is empowering lots of companies
+        to drive the transition from within communities, creating jobs and investment
+        while also increasing resilience.</p> <p>That’s where this platform comes
+        in; systems to facilitate the installation, management, monitoring and data
+        analysis, along with payment systems to allow local companies to implement.</p>
+        <p>Tech wise, Internet of Things, Python and Django are the holy grail here.
+        But, given the rarity of holy grails, if you can complete a Python tech task
+        you’ll be considered. You don’t need to be an expert, they’ve hired people
+        in the past with very limited  Python experience who are still there.</p>
+        <p>Exposure to DevOps, CI/CD pipelines, provisioning, testing, automation
+        scripting and all those goodies will stand out, but soft skills and a passion
+        for saving our planet are important too.</p> <p>You’ll join a team of four.
+        Two mid-level Devs, a senior and recently hired Lead, and plans are to expand
+        the team to about 7 or 8 in the first quarter of 2022.</p> <p>They’ll consider
+        folks who’ve been using Java, PHP, Ruby, .Net, NodeJs or similar, so long
+        as you’ve tinkered with Python - even if only for data science, scripting
+        or algorithms.</p> <p>They’ve struggled to find people who truly care about
+        our planet and can demonstrate that, so that’s something they’ll be keen to
+        explore with you at interview.</p> <p>We can’t afford to push the developing
+        world into making the same mistakes the global north made when it comes to
+        fossil fuel dependency, extraction and exploitation.</p> <p>The role is mostly
+        remote, ideally seeing folks in their Edinburgh office once per week, but
+        there’s room to negotiate.</p> <p>If making a difference matters to you, and
+        you’d like to turn your skills to delivering real impact, please apply.</p>
+        ","applicationCount":2}'
+  recorded_at: Sat, 25 Dec 2021 13:45:08 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/44941661
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Dec 2021 13:45:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '5801'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=63Gi7JDDkd4xVemMpZJaQZLzdVYgY0Nx8PYtmNyj6dty1dS3uxnmgGKlzIVlTGQmpLt6aHHI4xY1fiwIc6bmK7JB0sB82JbOgyLFRrJg9IceSbfg8MAyPKr0KOp58GDxRJqYYQ2;
+        expires=Sat, 25-Dec-2021 15:15:09 GMT; path=/; HttpOnly"
+      - __cf_bm=upVEH2fZmWb2hcusLNvFlflM6XV0jhbzm1KFmHiCiFc-1640439909-0-ATp546OfRctK14EVFEJvjo+WNlVh3Y0Zfq+s0pPJmG+k0ThPq3uHdfxZ5lA4tK+X96K1rT5bS2UsrkgEIciBCWI=;
+        path=/; expires=Sat, 25-Dec-21 14:15:09 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=19c202b2e637fea393574de7c585be2324d85d54-1640439909; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com *.rlcdn.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c3282133d6d073c-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":333937,"employerName":"WilsonHCG-EMEA","jobId":44941661,"jobTitle":"Backend
+        Software Architect","locationName":"Madrid","minimumSalary":null,"maximumSalary":null,"yearlyMinimumSalary":null,"yearlyMaximumSalary":null,"currency":null,"salaryType":"per
+        annum","salary":null,"datePosted":"06/12/2021","expirationDate":"17/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/backend-software-architect/44941661","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p><strong>Backend Software Architect</strong></p> <p>Location: Madrid</p>
+        <p><strong>Why US?</strong></p> <p>We are a part of one of the world’s leading
+        airline groups, with 598 aircraft flying to over 270 destinations, carrying
+        more than 118 million passengers each year.</p> <p>We provide world-class
+        IT solutions to our operating companies.</p> <p><strong>You will make an impact
+        in this role, you will be able to:</strong></p> <ul> <li>Participate in planning,
+        definition, and high-level design of the solution and exploration of solution
+        alternatives.</li><li>Enable the Continuous Delivery Pipeline through appropriate
+        design guidelines and investment advocacy.</li><li>Actively participate in
+        the Continuous Exploration process as part of the Continuous Delivery Pipeline,
+        especially with enabler Epics.</li><li>Define subsystems and their interfaces,
+        allocate responsibilities to subsystems, understand solution deployment, and
+        communicate requirements for interactions with solution context.</li><li>Work
+        with customers, stakeholders, and suppliers to establish high-level solution
+        intent, and the solution intent information models and documentation requirements.</li><li>Establish
+        critical NFRs for the solution and participate in the definition of others.</li><li>Operate
+        within an economic framework when analysing the impact of design decisions.</li><li>Work
+        with portfolio stakeholders, notably the Enterprise Architect, to develop,
+        analyse, split, and realize the implementation of enabler epics.</li><li>Participate
+        in Program Increment (PI) Planning and Pre- and Post-PI Planning, System and
+        Solution Demos, and Inspect and Adapt(I&amp;A) events.</li><li>Define, explore,
+        and support the implementation of enablers to evolve solution intent, working
+        directly with Agile teams to implement them.</li><li>Plan and develop the
+        Architectural Runway in support of new business Features and Capabilities.</li><li>Work
+        with Product and Solution Management to determine the capacity allocation
+        for enablement work.</li><li>Support technology/engineering aspects of program
+        and solution Kanbans.</li><li>Provide oversight and foster Built-In Quality
+        and Team and Technical Agility.</li></ul> <p><strong>To achieve in this role,
+        you are likely to have:</strong></p> <ul> <li>Ability to partner with internal
+        or external software engineers and quality analysts to identify course of
+        resolutions.</li><li>Excellent analytical and problem-solving skills. Good
+        communication skills.</li><li>Hands-on experience working on Java technologies
+        and distributed application environments (&#43;4 years minimum), delivering
+        and implementing large solutions at scale.</li></ul> <ul> <li>Excellence on
+        Java:</li></ul> <p>- Java language syntax and fundamentals</p> <p>- Java collections</p>
+        <p>- Working with Streams in Java</p> <p>- Collections</p> <p>- Lambda expressions</p>
+        <p>- Object oriented programming</p> <p>- Exception handling</p> <p>- Java
+        IO</p> <p>- Java Database Connectivity (JDBC)</p> <p>- Java''s HttpClient</p>
+        <ul> <li>Excellence on Spring Framework:</li></ul> <p>- Core Spring</p> <p>-
+        Spring Integration</p> <p>- Securing Spring Applications</p> <p>- Data Access
+        with Spring</p> <p>- Web Applications and Services</p> <ul> <li>Architecture
+        patterns: The technical basis for many architectural decisions</li><li>Components:
+        Identification, coupling, cohesion, partitioning, and granularity</li><li>Soft
+        skills: Effective team management, meetings, negotiation, presentations, and
+        more</li><li>Modernity: Engineering practices and operational approaches that
+        have changed radically in the past few years</li><li>Architecture as an engineering
+        discipline: Repeatable results, metrics, and concrete valuations that add
+        rigor to software architecture</li></ul> <ul> <li>Architecture Styles</li></ul>
+        <p>- Monolithic Versus Distributed Architectures</p> <p>- Layered Architecture
+        Style</p> <p>- Pipeline Architecture Style</p> <p>- Microkernel Architecture
+        Style</p> <p>- Service-Based Architecture Style</p> <p>- Event-Driven Architecture
+        Style</p> <p>- Space-Based Architecture Style</p> <p>- Orchestration-Driven
+        Service-Oriented Architecture</p> <p>- Microservices Architecture</p> <p>•
+        Basic CyberSecurity knowledge and skills: Attack types, vulnerabilities, techniques,
+        risk and controls.</p> <p>• Knowledge of Secure SDLC Frameworks (like Microsoft
+        S-SDLC Framework or simi</p> <p>• General knowledge of any information security
+        industry standards and regulations : PCI DSS, GDPR, NIST CSF, ISO 27001..etc.</p>
+        <p><strong>What we offer?is</strong></p> <ul> <li>The chance to enjoy a challenging
+        career in an exciting, fast-moving environment in a dynamic industry.</li><li>The
+        opportunity to work in a multi-cultural environment with great offices in
+        many locations.?We aim to provide all our people with a work/life balance,
+        as well as the many benefits offered by a global organisation, including health
+        insurance, pension,  and performance bonuses.?</li><li>We are an equal opportunities
+        employer, and all qualified applicants will receive consideration for employment
+        without regard to race, colour, religion, sex, national origin, disability
+        status, protected veteran status, or any other characteristic protected  by
+        law.</li></ul> ","applicationCount":1}'
+  recorded_at: Sat, 25 Dec 2021 13:45:09 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/45035297
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Dec 2021 13:45:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2457'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=XSMWqgrpEch-1ODDMpMRqeNCnLrAQW09yKnZZeFsSDqYcmCwWTmT-1qrtLH9dlxdI9r0O2XiEl-XsJ6siSi_UeVKEIruljIrLnbx7oFI0LDCCluMyVjdbEi6eds0A2ZzvCUQVA2;
+        expires=Sat, 25-Dec-2021 15:15:10 GMT; path=/; HttpOnly"
+      - __cf_bm=0vw4A30U.VCYPMLqXmIMbIZRk9DheOA24q6QrSYcoPg-1640439910-0-AVYW2EKebrAvVrTlGOoLgSo2rp9pai2NfWKBLWwmQaMcTqpqHfKZgSIuG00mqe62VyBm1+JPnekX6asBTI9HkMU=;
+        path=/; expires=Sat, 25-Dec-21 14:15:10 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=a6a1730ab0b7f098375dd4cb76370d47d2e9589d-1640439910; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com *.rlcdn.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c32821b5ba86b74-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":570622,"employerName":"Technet IT Recruitment Limited","jobId":45035297,"jobTitle":"Senior
+        Backend Engineer (Node.js)","locationName":"Kings Cross","minimumSalary":80000.0000,"maximumSalary":120000.0000,"yearlyMinimumSalary":80000.0000,"yearlyMaximumSalary":120000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£80,000 - £120,000 per annum","datePosted":"14/12/2021","expirationDate":"25/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/senior-backend-engineer-nodejs/45035297","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p><strong>Senior Backend Engineer (Node.js)<br />Contract/ Permanent <br
+        />Up to &#163;500 per day (DOE) or &#163;150K per annum <br />Remote (office
+        based in London)<br /><br /></strong>A start-up supported by some of the country’s
+        leading for-profit and non-profit foundations is on a mission to nudge capitalism
+        in a positive direction. Their technology platform offers the private markets
+        intuitive, data collection and reporting which  enables both general partners
+        and private companies to collect and report relevant ESG data.</p> <p>My client
+        is dedicated to the principles of responsible investing and believes the private
+        markets have a responsibility to better manage and track ESG performance to
+        generate strong investment returns and make a positive impact on society and
+        its future.</p> <p>To join them on this quest my client is searching for a
+        senior backend software engineer and database architect who will lead the
+        development of the Node.js back end of their web app. The senior backend engineer
+        will have extensive experience in creating  the back end of large-scale web
+        applications which will include underlying data architecture. <br /><br /><strong>Core
+        Senior Backend Engineer role responsibilities: </strong></p> <p>- Lead the
+        overall back-end application architecture including data storage and relational
+        database design.</p> <p>- Support the wider engineering team by surfacing
+        and steering key decisions.</p> <p>- Build and maintain the back-end aspects
+        of our CI/CD pipeline.</p> <p>- Design and implement the automated back-end
+        testing framework.<br /><br /><strong>Requirements and skills necessary:</strong></p>
+        <p>- 6&#43; years of JavaScript development experience.</p> <p>- Node.js experience.</p>
+        <p>- Strong exposure to data architecture.</p> <p>- Start-up experience would
+        be a bonus.</p> ","applicationCount":0}'
+  recorded_at: Sat, 25 Dec 2021 13:45:10 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/45015991
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Dec 2021 13:45:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '3525'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=1ZcLtlafsz_fG-7xZX8jDlfz1pp0EMv9iF8wrzskreU3qTuv8Vlcwk4Z_21n7Umx0FC8OdyzJO-RQ8-K492Y6XhLg8IBa1IjihFPZ-aUQ7msbvKs589fsc2C1c01WBD9jBUD5Q2;
+        expires=Sat, 25-Dec-2021 15:15:11 GMT; path=/; HttpOnly"
+      - __cf_bm=26J50zDw1iUr8O0S16HPCM63_82wCnYf0iDxcCBv2CQ-1640439911-0-ASMxHoJstupkLNLf9+ILFkMczLEh/M2MtWjO07RjYW+WPGTG9qo/ATq4tNOlLqJ7GLRL/cjkxUSfmjCbEXoxRWQ=;
+        path=/; expires=Sat, 25-Dec-21 14:15:11 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=df9fd101fae9f54b36c8bd82d508c45e29c296b7-1640439911; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com *.rlcdn.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c32822309e16b7a-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":415711,"employerName":"Explore Group","jobId":45015991,"jobTitle":"Backend
+        Engineer","locationName":"London","minimumSalary":55000.0000,"maximumSalary":65000.0000,"yearlyMinimumSalary":55000.0000,"yearlyMaximumSalary":65000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£55,000 - £65,000 per annum","datePosted":"10/12/2021","expirationDate":"21/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/backend-engineer/45015991","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p>Backend Engineer (Java/Kotlin/C&#43;&#43;/.Net/Rust/Ruby) - <strong>&#163;55,000
+        - &#163;65,000</strong> - <strong>(Fully Remote)</strong></p> <p><strong>NO
+        SPONSORSHIP</strong></p> <p><strong>Backend Engineer</strong> for a <strong>Fintech</strong>
+        and <strong>Retail scale-up</strong> based in <strong>London</strong></p>
+        <p>Salary - <strong>&#163;55,000 - &#163;65,000</strong> per annum &#43; <strong>Shares
+        </strong> &#43; <strong>benefits</strong></p> <p>Job title: <strong>Backend
+        Engineer</strong></p> <p>Job type: <strong>Permanent</strong></p> <p>Location:
+        <strong>Central London</strong></p> <p>WFH: <strong>Remote </strong>(Can work
+        in office if you want)</p> <p>Start: <strong>ASAP</strong></p> <p>Join a <strong>Fintech
+        </strong>company operating with clients in the <strong> retail market</strong>
+        who <strong>provide insights </strong>to <strong>produce solutions</strong>
+        to their pressing business issues. Through your work you will help the end
+        client with <strong>decision making</strong> in <strong>engagement</strong>,
+        <strong>retention</strong>, <strong>returns</strong>, and <strong>future revenue
+        streams.</strong></p> <p>You will be <strong>integrating systems</strong>,
+        <strong>building core product improvements</strong>, <strong>owning projects</strong>
+        and constantly developing as you <strong>upskill </strong>in a company with
+        a <strong>clear career pathway for growth.</strong></p> <p>Must Haves:</p>
+        <ul> <li><strong>2&#43; years'' commercial experience</strong> with a programming
+        language, ideally <strong>Kotlin</strong> (<strong>J</strong><strong>ava,
+        Go, Rust, Ruby, .Net, C/C&#43;&#43; </strong>are substitutes)</li><li><strong>1&#43;
+        years''</strong> working with <strong>cloud environments</strong></li><li>Strong
+        experience working on <strong>integration and API projects</strong></li><li>Expert
+        working with <strong>databases</strong></li><li>Understanding of entire <strong>system
+        infrastructure</strong> and has experience <strong>building from scratch</strong></li></ul>
+        <p>Nice to have:</p> <ul> <li>Knowledge of <strong>JavaScript</strong> or
+        <strong>React</strong></li><li>Experience in <strong>Terraform</strong></li></ul>
+        <p>Benefits:</p> <ul> <li><strong>Equity - share options</strong></li><li><strong>Personal
+        Development Fund</strong> of up to <strong>&#163;1,200/yr</strong> to <strong>upskill
+        </strong>yourself</li><li>Set-up including <strong>Macbook Pro</strong></li><li><strong>&#163;1,200/yr
+        budget with clients</strong></li><li><strong>36</strong> days Holiday</li><li><strong>Mental
+        Health support</strong> from partner</li><li><strong>Personal days</strong>
+        for mental health</li><li><strong>Fully remote</strong> (dog friendly office
+        environment)</li></ul> <p><strong>Apply Now</strong>! This is the <strong>opportunity
+        </strong>to <strong> grow </strong>with the business in a <strong>forever
+        churning market!</strong></p> <p><strong>Email for more information about
+        the role</strong></p> ","applicationCount":0}'
+  recorded_at: Sat, 25 Dec 2021 13:45:11 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/45035180
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Dec 2021 13:45:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1602'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=S8iuuhPxKki6ZAKsMpwDyLaOQspjmMVoZSzNDPhacLsvoG0Rx0Kqfa16V_7ju_56WG3w9_jZ4B1McDzXD8lQs_ZVs0V6Cglf-yKICtx6GjCqYEhSyE-LY8loz1Jav7Q3chkyBw2;
+        expires=Sat, 25-Dec-2021 15:15:12 GMT; path=/; HttpOnly"
+      - __cf_bm=LBK220DDaq_VXsMNs3pQHHcoCRfrPuLIMeoeQRkuFqE-1640439912-0-AYNO6DOGXlRn/0inV+YZBP2/iecEfE1+JCCtq1xSze5drMUrw2g1qbJNy/tTRt8Jl8+xqWdTJ2AEd0jwrStFvhw=;
+        path=/; expires=Sat, 25-Dec-21 14:15:12 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=0a65c7960e843593f95fb5604b116ee49b3ae714-1640439912; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com *.rlcdn.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c32822539536b74-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":570622,"employerName":"Technet IT Recruitment Limited","jobId":45035180,"jobTitle":"Python
+        Backend Developer","locationName":"London","minimumSalary":70000.0000,"maximumSalary":85000.0000,"yearlyMinimumSalary":70000.0000,"yearlyMaximumSalary":85000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£70,000 - £85,000 per annum","datePosted":"14/12/2021","expirationDate":"25/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/python-backend-developer/45035180","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p><strong>Python Backend Developer<br />Permanent<br />&#163;70 - &#163;85K
+        <br />London (Hybrid working) &#43; 2x travel to the office a week. <br /><br
+        /></strong>Are you a Python engineer looking for your next dream opportunity?
+        Look no further because my client is a multi-million funded start-up who are
+        committed to innovation and dedicated on reimagining the pet insurance market.
+        They are passionate about  using technology to make the world a better place.<strong><br
+        /><br />Core responsibilities: </strong></p> <p>- Define architecture and
+        technology stack alongside the CTO.</p> <p>- Define end-to-end experience
+        for customers and internal-facing products.</p> <p>- Build APIs to support
+        frontend consumers.</p> <p><strong><br />Your skills, experience, and interests:
+        </strong></p> <p>- 5&#43; years of python development experience.</p> <p>-
+        Experience building REST API’s.</p> <p>- Passion for greenfield projects.</p>
+        <p>- Cloud knowledge - AWS, GCP, or similar cloud provider.</p> ","applicationCount":3}'
+  recorded_at: Sat, 25 Dec 2021 13:45:12 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/45015733
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Dec 2021 13:45:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2589'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=Ba87Ow78tIBh9eqU8nfQJ8cKEnP0PY0Ci9pBV-M9C1FFas1Yp-e-gJg4QlJj0LPtBKvjQTwdT21hjJenXh_3PQByMhe2R2fqU5S7QdmBhKB_GlMwduuZAvEVsKWxnJfCWqbfkg2;
+        expires=Sat, 25-Dec-2021 15:15:13 GMT; path=/; HttpOnly"
+      - __cf_bm=y3DDLLQ7DFE.sjevhGrGpGpYea.xOTvsX2F7..BthAE-1640439913-0-AcghW4qN2vVbP3XRTNYXyErk6VPxBmZa+HF0DNcWOa4E3zkF7aK61Ti7YjOHHY9jPLSwrWkcaHxnkbPkM6/nVLU=;
+        path=/; expires=Sat, 25-Dec-21 14:15:13 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=eb19b06122fe24cd2c4a463a290251f537932d63-1640439913; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com *.rlcdn.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c32822caa880730-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":331522,"employerName":"Harnham","jobId":45015733,"jobTitle":"Backend
+        Engineer","locationName":"London","minimumSalary":50000.0000,"maximumSalary":60000.0000,"yearlyMinimumSalary":50000.0000,"yearlyMaximumSalary":60000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£50,000 - £60,000 per annum","datePosted":"10/12/2021","expirationDate":"21/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/backend-engineer/45015733","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p><strong>BACKEND ENGINEER/PYTHON, AWS</strong></p> <p><strong>LONDON/HYBRID</strong></p>
+        <p><strong>&#163;50,000-&#163;60,000</strong></p> <p><strong>OVERVIEW:</strong></p>
+        <p>Harnham is working with a social media gaming company based in London.
+        This candidate will build Software in AWS and will build fast and ambitious
+        APIs. You''ll be working primarily in Python but experience in other languages
+        will be beneficial. </p> <p><strong>THE COMPANY:</strong></p> <p>Our client
+        has ambitious plans to grow and is currently working on exciting new developments.
+        Our client is looking to shake up the norm and break the current boundaries
+        within the gaming industry through the use of augmented reality and computer
+        vision.  They currently work as a Hybrid system, consisting of remote and
+        office working. </p> <p><strong>THE ROLE: </strong></p> <p>As a Backend Engineer,
+        you will assist in: </p> <ul> <li>Building and owning the AWS Lambdas </li><li>Build
+        fast and ambitious APIs </li><li>Collaborate with the data team to develop
+        the analytics pipene </li><li>Find news methods to connect with the frontend
+        ecosystems through AWS </li><li>Using Python for development</li></ul> <p><strong>YOUR
+        SKILLS AND EXPERTISE:</strong></p> <p>As a Backend Engineer, you will need:</p>
+        <ul> <li>Extensive experience using Python </li><li>Knowledge and experience
+        with AWS </li><li>Strong experience with NO SQL databases </li><li>Strong
+        knowledge of building serverless architecture </li><li>Experience with deployment
+        of JSON APIs/ Rest APIs</li></ul> <p><strong>THE BENEFITS:</strong></p> <ul>
+        <li>A salary between &#163;50,000-&#163;60,000</li><li>Flexible working</li><li>Unlimited
+        holiday, plus the usual bank holidays</li><li>Equipment</li><li>Weekly lunches
+        </li><li>Pension </li></ul> <p><strong>HOW TO APPLY:</strong></p> <p>To be
+        considered for this exciting opportunity, please submit your details using
+        the Apply button on this page. Or for more information regarding other roles
+        please contact Joshua Wichman at Harnham.</p> ","applicationCount":0}'
+  recorded_at: Sat, 25 Dec 2021 13:45:13 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/45015710
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Dec 2021 13:45:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '3399'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=54whQmdGFivYtPdyA4nEpXlylxJMpYcCThlPDWbjUNJ2pCN8S-sXXrYQ1trdyZuAw23NF84pe0ce7VGj7PaCbGkQrD32CobiiBus-2o8QPq0_W_oLe8Z1EfWH2AFgNFivpzwag2;
+        expires=Sat, 25-Dec-2021 15:15:14 GMT; path=/; HttpOnly"
+      - __cf_bm=_LfrxPBypGslYzeycVb7IidykmMnGeD7a9R43oEw8yc-1640439914-0-AVJ2mUmmZBegv6YaXt6NWjBWb2Xw+2jLEJgH9Sn/QSzmP/amFN4hDl06UV05S2EljE1E6v87IFzwSs9W/WU4NTE=;
+        path=/; expires=Sat, 25-Dec-21 14:15:14 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=ee9ac3d34708f3efc51d6d41c4c67d5877336def-1640439914; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com *.rlcdn.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c3282348d8e3138-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":415711,"employerName":"Explore Group","jobId":45015710,"jobTitle":"Senior
+        Backend Engineer","locationName":"London","minimumSalary":65000.0000,"maximumSalary":85000.0000,"yearlyMinimumSalary":65000.0000,"yearlyMaximumSalary":85000.0000,"currency":"GBP","salaryType":"per
+        annum","salary":"£65,000 - £85,000 per annum","datePosted":"10/12/2021","expirationDate":"21/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/senior-backend-engineer/45015710","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"
+        <p>Backend Engineer (Java/Kotlin) - <strong>&#163;75,000 - &#163;85,000</strong>
+        - <strong> (Fully Remote)</strong></p> <p><strong>NO SPONSORSHIP</strong></p>
+        <p><strong>Backend Engineer</strong> for a <strong>Fintech</strong> and <strong>Retail
+        scale-up</strong> based in <strong>London</strong></p> <p>Salary - <strong>&#163;65,000
+        - &#163;85,000</strong> per annum &#43; <strong>benefits</strong></p> <p>Job
+        title: <strong>Senior Backend Engineer</strong></p> <p>Job type: <strong>Permanent</strong></p>
+        <p>Location: <strong>Central London</strong></p> <p>WFH: <strong>Remote </strong>(Can
+        work in office if you want)</p> <p>Start: <strong>ASAP</strong></p> <p>Join
+        a <strong>Fintech </strong>company operating with clients in the <strong>
+        retail market</strong> who <strong>provide insights </strong>to <strong>produce
+        solutions</strong> to their pressing business issues. Through your work you
+        will help the end client with <strong>decision making</strong> in <strong>engagement</strong>,
+        <strong>retention</strong>, <strong>returns</strong>, and <strong>future revenue
+        streams.</strong></p> <p>You will be <strong>integrating systems</strong>,
+        <strong>building core product improvements</strong>, <strong>owning projects</strong>
+        and constantly developing as you <strong>upskill </strong>in a company with
+        a <strong>clear career pathway for growth. </strong></p> <p>Must Haves:</p>
+        <ul> <li><strong>4&#43; years'' commercial experience</strong> with a ideally
+        <strong>Kotlin</strong> (<strong>JVM</strong>, or <strong>Java </strong>are
+        strong substitutes)</li><li><strong>2&#43; years''</strong> working with <strong>cloud
+        environments</strong></li><li>Strong experience working on <strong>integration
+        and API projects</strong></li><li>Expert working with <strong>databases</strong></li><li>Understanding
+        of entire <strong>system infrastructure</strong> and has experience <strong>building
+        from scratch</strong></li></ul> <p>Nice to have:</p> <ul> <li>Knowledge of
+        <strong>JavaScript</strong> or <strong>React</strong></li><li>Experience in
+        <strong>Terraform</strong></li></ul> <p>Benefits:</p> <ul> <li><strong>Personal
+        Development Fund</strong> of up to <strong>&#163;1,200/yr</strong> to <strong>upskill
+        </strong>yourself</li><li>Set-up including <strong>Macbook Pro</strong></li><li><strong>&#163;1,200/yr
+        budget with clients</strong></li><li><strong>36</strong> days Holiday</li><li><strong>Mental
+        Health support</strong> from partner</li><li><strong>Personal days</strong>
+        for mental health</li><li><strong>Fully remote</strong> (dog friendly office
+        environment)</li></ul> <p><strong>Apply Now</strong>! This is the <strong>opportunity
+        </strong>to <strong> grow </strong>with the business in a <strong>forever
+        churning market! </strong></p> <p><strong>Email for more information about
+        the role</strong></p> ","applicationCount":0}'
+  recorded_at: Sat, 25 Dec 2021 13:45:14 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/45015469
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Dec 2021 13:45:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1478'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=Jf_fWFA1aJ_1ba-gxshYtBpDzmvASK1iW5QYzOmqGiSgtEfkqC2CSO8pi888qPIt2Xrkrhn2mCvMd4dawBjZ9lZaUMmeU-vFXhMF_vp5jzICkg_WdIIwZ3fw4PnHAV_n_V_16Q2;
+        expires=Sat, 25-Dec-2021 15:15:15 GMT; path=/; HttpOnly"
+      - __cf_bm=w675it8w3Wmd9DU1oVA8OUkMs.6LlGLgiD6UJ9xH_G8-1640439915-0-AalC4LAsrK++JRUPOVGP+/5XHRCriVZhaY8qMzh3AWRvbi8Il8OoSDeY/aRiA2AT1XtyhdxvVEBMkSMqstVc/P0=;
+        path=/; expires=Sat, 25-Dec-21 14:15:15 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=f8fdf5715027f6159b8525cc7300d0f3f80c96bc-1640439915; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com *.rlcdn.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c32823c1df14105-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":496791,"employerName":"Colossus Associates","jobId":45015469,"jobTitle":"Backend
+        Developer","locationName":"Birmingham","minimumSalary":null,"maximumSalary":null,"yearlyMinimumSalary":null,"yearlyMaximumSalary":null,"currency":null,"salaryType":"per
+        annum","salary":null,"datePosted":"10/12/2021","expirationDate":"31/12/2021","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/backend-developer/45015469","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"Part-Remote
+        Role!<br /><br />One of the hidden e-commerce gems are looking for a Backend
+        Developer to join their Birmingham team. <br /><br />Requirements:<br /><br
+        />2&#43; years commercial experience working on backend using either PHP,
+        NodeJS or Go.<br />Experience using APIs<br />Test-Driven Development Approach<br
+        /><br />Responsibilities: <br /><br />Working collaboratively on various projects
+        <br />Exploring new cutting edge technologies<br />Achieving top standard
+        in scalability, reliability and performance<br /><br />Benefits:<br /><br
+        />Free gym<br />Private healthcare and pension schemes<br />Flexible working<br
+        />Laptop<br /><br />When submitting your application to Colossus Associates,
+        please ensure you have your correct phone number and email address so we can
+        contact you asap regarding your application. For confidentiality purposes,
+        please remove any reference contact phone number''s  and email address details
+        from your CV.","applicationCount":3}'
+  recorded_at: Sat, 25 Dec 2021 13:45:15 GMT
+- request:
+    method: get
+    uri: https://www.reed.co.uk/api/1.0/jobs/45034680
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Basic <REED_TOKEN>
+      Connection:
+      - close
+      Host:
+      - www.reed.co.uk
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Dec 2021 13:45:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1905'
+      Connection:
+      - close
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Set-Cookie:
+      - ".ASPXANONYMOUS=B4YkmAOgBaWcX2ZUJ_3ls2As806tWbmWVSBICSlp4uafcyZGZ-ejUzTmQgCzFv-n0aHJcwn66oYfbr2R2iD0eNQzZ2WI0VWe48sDsAmTjql-H_zfXFNeF0jOSkwJ602CAdnRrw2;
+        expires=Sat, 25-Dec-2021 15:15:16 GMT; path=/; HttpOnly"
+      - __cf_bm=Jp6QptcdqY.hoByVx.GHUPXd0e52rmfSpHx67DIv7F4-1640439916-0-AUgmKrszNouzsQGKC/eZZaotExZgzbcYVhqQ45oGCN3X4infeL3nMlXuZ+vXfFXg8gDb6WZoSdNLGRyXGz6Jtws=;
+        path=/; expires=Sat, 25-Dec-21 14:15:16 GMT; domain=.reed.co.uk; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=d1b0538434073b575766efce83f6ec55d5130417-1640439916; path=/; domain=.reed.co.uk;
+        HttpOnly; Secure; SameSite=None
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Security-Policy:
+      - frame-src 'self' 'unsafe-eval' 'unsafe-inline' player.vimeo.com *.vimeo.com
+        googletagmanager.com *.googletagmanager.com youtube.com *.youtube.com facebook.com
+        *.facebook.com google.com *.google.com *.googlesyndication.com ff.doubleclick.net
+        *.doubleclick.net *.criteo.com *.hotjar.com *.rlcdn.com;
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c32823e6a096a80-TPE
+    body:
+      encoding: UTF-8
+      string: '{"employerId":149525,"employerName":"Certus Recruitment Group","jobId":45034680,"jobTitle":"Backend
+        Staff Engineer","locationName":"Germany","minimumSalary":null,"maximumSalary":null,"yearlyMinimumSalary":null,"yearlyMaximumSalary":null,"currency":null,"salaryType":"per
+        annum","salary":null,"datePosted":"14/12/2021","expirationDate":"12/01/2022","externalUrl":null,"jobUrl":"https://www.reed.co.uk/jobs/backend-staff-engineer/45034680","partTime":false,"fullTime":true,"contractType":"Permanent","jobDescription":"Backend
+        Staff Engineer<br />Germany - Remote<br />80-100k &#43; Great Benefits<br
+        /><br />Our information technology and services company designs and delivers
+        intuitive tools to the business community. To build upon their enviable position,
+        they have an immediate opening for a Backend Staff Engineer to be based in
+        Germany.<br /><br />As a Backend Staff Engineer, you will: <br /><br />* Lead
+        backend architecture<br />* Oversee ongoing projects and integrations<br />*
+        Align and unify the backend stack<br />* Lead research and experiments with
+        new technologies<br />* Improve engineering standards<br />* Mentor team members<br
+        />* Deliver automated frontend QA<br />* Report directly to a Head of Engineering<br
+        /><br />To be successful in this Backend Staff Engineer role, you will possess
+        the following skills and traits: <br /><br />* Strong backend architecture
+        experience<br />* Kotlin<br />* Node.JS<br />* Python, Java, PHP and Golang
+        would be advantageous<br />* CI/CD, AWS<br />* Technical leadership (external
+        teams)<br />* DNS/Domains<br />* Accountability and urgency<br />* Technically
+        curious<br />* EU Citizenship<br /><br />The Certus Recruitment Group is an
+        established and experienced specialist consultancy providing sales, marketing
+        and IT recruitment services to the business community throughout Europe, the
+        UK, North America and Australia.","applicationCount":0}'
+  recorded_at: Sat, 25 Dec 2021 13:45:16 GMT
+- request:
+    method: get
+    uri: https://freecurrencyapi.net/api/v2/latest?apikey=<FREECURRENCY_API_KEY>&base_currency
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - freecurrencyapi.net
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Dec 2021 16:15:38 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Charset:
+      - utf-8
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Remaining:
+      - '4499'
+      X-Ratelimit-Limit:
+      - '4500'
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NSWDIT0DJIEBtWZOxvQLFhPBih8OYYoMQBUcdFYsFdO4QZjtMJi43mt7GSV7wNVqSJ4elDIFMiMG7d%2F0Z5Kfs5js40Epbg4QQmFVwjnqxteyt7z8jHqezWAcVC4IZgulNLoW4qT4"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c335e82c88d34ed-NRT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"query":{"apikey":"<FREECURRENCY_API_KEY>","base_currency":"USD","timestamp":1640448938},"data":{"JPY":114.38193,"CNY":6.37229,"CHF":0.91952,"CAD":1.28069,"MXN":20.60119,"INR":74.97629,"BRL":5.67513,"RUB":73.61393,"KRW":1182.91674,"IDR":14220.35817,"TRY":10.60029,"SAR":3.75508,"SEK":9.08487,"NGN":410.94081,"PLN":4.06932,"ARS":102.25254,"NOK":8.82918,"TWD":27.70469,"IRR":42000.81974,"AED":3.67245,"COP":3987.64437,"THB":33.43092,"ZAR":15.53377,"DKK":6.56359,"MYR":4.19307,"SGD":1.35908,"ILS":3.14893,"HKD":7.79864,"EGP":15.66021,"PHP":50.02075,"CLP":864.16092,"PKR":178.25425,"IQD":1458.03569,"DZD":138.54286,"KZT":433.09093,"QAR":3.64161,"CZK":21.98962,"PEN":4.00005,"RON":4.36988,"VND":22840.27233,"BDT":85.57121,"HUF":325.09798,"UAH":27.25041,"AOA":565.00826,"MAD":9.25848,"OMR":0.38491,"CUC":24.00035,"BYR":3.00004,"AZN":1.69303,"LKR":202.00291,"SDG":436.2839,"SYP":2510.05444,"MMK":1769.54351,"DOP":57.00072,"UZS":10750.27588,"KES":113.00184,"GTQ":7.70515,"URY":44.38067,"HRV":6.63978,"MOP":8.03413,"ETB":48.90369,"CRC":639.35694,"TZS":2301.04277,"TMT":3.49009,"TND":2.87025,"PAB":1.00002,"LBP":1507.04086,"RSD":103.77106,"LYD":4.59395,"GHS":6.03007,"YER":250.0063,"BOB":6.83013,"BHD":0.377,"CDF":1994.91997,"PYG":6788.31718,"UGX":3535.05964,"SVC":8.74989,"TTD":6.7549,"AFN":103.07141,"NPR":120.03281,"HNL":24.25369,"BIH":1.72914,"BND":1.35923,"ISK":129.88281,"KHR":4060.05905,"GEL":3.05008,"MZN":63.2009,"BWP":11.61457,"PGK":3.51195,"JMD":152.56216,"XAF":579.37385,"NAD":15.51025,"ALL":106.04203,"SSP":417.87935,"MUR":43.55065,"MNT":2830.05301,"NIO":35.31084,"LAK":11135.2266,"MKD":54.32129,"AMD":491.50762,"MGA":3940.06474,"XPF":105.13128,"TJS":11.29022,"HTG":100.00256,"BSD":1.00002,"MDL":17.78026,"RWF":1024.02472,"KGS":84.50234,"GNF":9220.21285,"SRD":21.24431,"SLL":11222.32683,"XOF":575.01055,"MWK":803.31749,"FJD":2.11884,"ERN":15.00034,"SZL":15.52721,"GYD":207.98499,"BIF":1988.33834,"KYD":0.82502,"MVR":15.42026,"LSL":15.59268,"LRD":142.40171,"CVE":97.40262,"DJF":177.50377,"SCR":13.2998,"SOS":575.01088,"GMD":52.70152,"KMF":434.51039,"STD":21.66046,"XRP":1.08001,"AUD":1.38404,"BGN":1.72753,"BTC":0.0196,"JOD":0.70702,"GBP":0.74602,"ETH":0.00025,"EUR":0.88362,"LTC":0.01,"NZD":1.46713}}'
+  recorded_at: Sat, 25 Dec 2021 16:15:38 GMT
+- request:
+    method: get
+    uri: https://freecurrencyapi.net/api/v2/latest?apikey=<FREECURRENCY_API_KEY>&base_currency=EUR
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - freecurrencyapi.net
+      User-Agent:
+      - http.rb/5.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 25 Dec 2021 16:15:40 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Charset:
+      - utf-8
+      Cache-Control:
+      - no-cache, private
+      X-Ratelimit-Remaining:
+      - '4498'
+      X-Ratelimit-Limit:
+      - '4500'
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9bTRcpRBncHkfjwQ5I0NnKYEffvqcQXor7octTg%2BVzQLOaqrOPyJ8nJ1UQvIUDOyjWtLX0xBAXyGiQO%2BOWudvgPLdJ3eejJRSyslRyWv%2BfnHA4RuwbcvANq93QmTEQmpXr%2FrdMC1"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c335e8cb8593521-NRT
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"query":{"apikey":"<FREECURRENCY_API_KEY>","base_currency":"EUR","timestamp":1640448940},"data":{"USD":1.131708,"JPY":129.446968,"CNY":7.211573,"CHF":1.040628,"CAD":1.449367,"MXN":23.314536,"INR":84.851282,"BRL":6.422591,"RUB":83.309488,"KRW":1338.716575,"IDR":16093.295953,"TRY":11.996435,"SAR":4.249655,"SEK":10.281422,"NGN":465.065085,"PLN":4.605283,"ARS":115.720038,"NOK":9.992055,"TWD":31.353625,"IRR":47532.672122,"AED":4.156142,"COP":4512.849834,"THB":37.834046,"ZAR":17.579695,"DKK":7.428069,"MYR":4.745332,"SGD":1.538082,"ILS":3.56367,"HKD":8.825785,"EGP":17.722788,"PHP":56.608893,"CLP":977.978,"PKR":201.731796,"IQD":1650.070947,"DZD":156.790091,"KZT":490.132557,"QAR":4.12124,"CZK":24.885833,"PEN":4.526889,"RON":4.945429,"VND":25848.523494,"BDT":96.84164,"HUF":367.91605,"UAH":30.839512,"AOA":639.424481,"MAD":10.477898,"OMR":0.435606,"CUC":27.161393,"BYR":3.39517,"AZN":1.916016,"LKR":228.60835,"SDG":493.746067,"SYP":2840.649193,"MMK":2002.606901,"DOP":64.508182,"UZS":12166.17537,"KES":127.885109,"GTQ":8.719981,"URY":50.225968,"HRV":7.514293,"MOP":9.092291,"ETB":55.344707,"CRC":723.565492,"TZS":2604.108972,"TMT":3.949763,"TND":3.248285,"PAB":1.131731,"LBP":1705.5305,"RSD":117.43856,"LYD":5.199011,"GHS":6.82428,"YER":282.93418,"BOB":7.729714,"BHD":0.426654,"CDF":2257.667289,"PYG":7682.394219,"UGX":4000.655983,"SVC":9.902322,"TTD":7.644576,"AFN":116.64676,"NPR":135.842115,"HNL":27.4481,"BIH":1.956882,"BND":1.538252,"ISK":146.989441,"KHR":4594.802121,"GEL":3.451801,"MZN":71.524977,"BWP":13.144304,"PGK":3.974503,"JMD":172.655848,"XAF":655.682137,"NAD":17.553077,"ALL":120.008635,"SSP":472.917487,"MUR":49.286628,"MNT":3202.794199,"NIO":39.961567,"LAK":12601.827256,"MKD":61.475849,"AMD":556.243204,"MGA":4459.003576,"XPF":118.977932,"TJS":12.777235,"HTG":113.173717,"BSD":1.131731,"MDL":20.122066,"RWF":1158.897173,"KGS":95.631991,"GNF":10434.590491,"SRD":24.04236,"SLL":12700.399301,"XOF":650.744155,"MWK":909.120991,"FJD":2.397909,"ERN":16.976008,"SZL":17.572271,"GYD":235.378319,"BIF":2250.218804,"KYD":0.933682,"MVR":17.451235,"LSL":17.646364,"LRD":161.157183,"CVE":110.231344,"DJF":200.882472,"SCR":15.051493,"SOS":650.744528,"GMD":59.642742,"KMF":491.738972,"STD":24.51332,"XRP":1.222256,"AUD":1.566329,"BGN":1.95506,"BTC":0.022181,"JOD":0.80014,"GBP":0.844277,"ETH":0.000283,"EUR":1,"LTC":0.011317,"NZD":1.660363}}'
+  recorded_at: Sat, 25 Dec 2021 16:15:40 GMT
 recorded_with: VCR 6.0.0

@@ -21,6 +21,10 @@ module Skiller
         end
       end
 
+      def self.all_jobs_analyzed?(jobs)
+        jobs[...ANALYZE_LEN].all?(&:is_analyzed)
+      end
+
       def self.store_query_to_db(query, jobs)
         Repository::QueriesJobs.find_or_create(query, jobs.map(&:db_id))
       end

@@ -4,7 +4,6 @@ require 'shoryuken'
 require 'yaml'
 
 require_relative '../init'
-
 require_relative 'reporter'
 
 module SkillExtractor
