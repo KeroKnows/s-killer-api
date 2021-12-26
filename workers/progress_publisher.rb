@@ -8,15 +8,15 @@ module SkillExtractor
     def initialize(config, channel_id)
       @config = config
       @channel_id = channel_id
-      @api_host = "#{@config.APP_HOST}/faye".freeze
+      @faye_host = "#{@config.API_HOST}/faye".freeze
     end
 
     # Post a progress to Faye endpoint
     def publish(message)
-      puts " [ POST #{@api_host} ] Progress: #{message}"
+      puts " [ POST #{@faye_host} ] Progress: #{message}"
       HTTP.headers(content_type: 'application/json')
           .post(
-            @api_host,
+            @faye_host,
             body: message_body(message)
           )
     rescue HTTP::ConnectionError
