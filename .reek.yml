@@ -10,4 +10,4 @@ directories:
     FeatureEnvy:
       enabled: false
     TooManyStatements: # for Success/Failure and rescued statements
-      max_statements: 7
+      max_statements: 8

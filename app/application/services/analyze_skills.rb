@@ -54,13 +54,14 @@ module Skiller
       # :reek:UncommunicativeVariableName for rescued error
       def concurrent_process_jobs(input)
         jobs = input[:jobs][...ANALYZE_LEN]
-        return Success(input) if Utility.all_jobs_analyzed?(jobs)
+        task_count = Utility.not_analyzed_jobs(jobs)
+        return Success(input) if task_count.zero?
 
         request_id = input[:request_id]
         Utility.extract_skills_with_worker(jobs, request_id)
         Failure(Response::ApiResult.new(status: :processing,
                                         message: { message: 'Processing the extraction request',
-                                                   request_id: request_id }))
+                                                   task_count: task_count, request_id: request_id }))
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to process the jobs: #{e}"))
       end

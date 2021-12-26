@@ -13,16 +13,14 @@ module SkillExtractor
 
     # Post a progress to Faye endpoint
     def publish(message)
-      print "Progress: #{message} "
-      print "[post: #{@api_host}] "
-      response = HTTP.headers(content_type: 'application/json')
-                     .post(
-                       @api_host,
-                       body: message_body(message)
-                     )
-      puts "(#{response.status})"
+      puts " [ POST #{@api_host} ] Progress: #{message}"
+      HTTP.headers(content_type: 'application/json')
+          .post(
+            @api_host,
+            body: message_body(message)
+          )
     rescue HTTP::ConnectionError
-      puts '(Faye server not found - progress not sent)'
+      puts ' [ WARN ] Faye server not found - progress not sent'
     end
 
     private
@@ -31,9 +29,7 @@ module SkillExtractor
     def message_body(message)
       {
         channel: "/#{@channel_id}",
-        data: {
-          processing: message
-        }
+        data: message
       }.to_json
     end
   end
