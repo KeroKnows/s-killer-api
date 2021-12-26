@@ -33,21 +33,21 @@ module SkillExtractor
       extract_request = Skiller::Representer::ExtractRequest.new(OpenStruct.new).from_json(job_json)
       job = extract_request.job
 
-      work.report(job.title)  # channel ID is not responding exactly?
+      work.report(job.title) # channel ID is not responding exactly?
 
       return if job.is_analyzed
 
-      db_id = job.db_id  # to database
-      salary = Skiller::Value::Salary.new(  # to database
-        year_min: job.salary.year_min,
-        year_max: job.salary.year_max,
-        currency: job.salary.currency
-      )
-      
+      salary = get_salary_value(job.salary)
+      # db_id = job.db_id # to database
+      # salary = Skiller::Value::Salary.new( # to database
+      #   year_min: job.salary.year_min,
+      #   year_max: job.salary.year_max,
+      #   currency: job.salary.currency
+      # )
+
       result = extract_skill(job)
-      write_skills_to_db(result, db_id, salary)
+      write_skills_to_db(result, job.db_id, salary)
       update_job(job)
-      
     end
 
     # run the extractor script
@@ -81,6 +81,15 @@ module SkillExtractor
     def update_job(job)
       job.is_analyzed = true
       Skiller::Repository::Jobs.update(job)
+    end
+
+    def get_salary_value(salary)
+      Skiller::Value::Salary.new(
+        year_min: salary.year_min,
+        year_max: salary.year_max,
+        currency: salary.currency
+      )
+      # salary_value
     end
 
     # An utility entity to process request data

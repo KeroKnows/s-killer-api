@@ -62,12 +62,12 @@ module Skiller
           input[:analyzed_jobs] = analyzed_jobs
           return Success(input)
         end
+
         Utility.extract_skills_with_worker(analyzed_jobs, input[:request_id])
-        # Failure(Response::ApiResult.new(status: :processing, message: PROCESSING_MSG))
         Failure(Response::ApiResult.new(status: :processing, message: {
-          message: PROCESSING_MSG,
-          request_id: input[:request_id]
-        }))
+                                                                        message: PROCESSING_MSG,
+                                                                        request_id: input[:request_id]
+                                                                      }))
       rescue StandardError => e
         puts [e.inspect, e.backtrace].flatten.join("\n")
         Failure(Response::ApiResult.new(status: :internal_error, message: EXTRACT_ERR))

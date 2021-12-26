@@ -80,5 +80,5 @@ gem 'concurrent-ruby', '~> 1.0', '>= 1.0.5'
 
 # Parallel
 gem 'aws-sdk-sqs', '~> 1'
-gem 'shoryuken', '~> 5'
 gem 'faye', '~> 1'
+gem 'shoryuken', '~> 5'

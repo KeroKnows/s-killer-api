@@ -9,8 +9,8 @@ module SkillExtractor
 
     def initialize(request_json, config)
       extract_request = Skiller::Representer::ExtractRequest
-        .new(OpenStruct.new)
-        .from_json(request_json)
+                        .new(OpenStruct.new)
+                        .from_json(request_json)
 
       @job = extract_request.job
       @publisher = ProgressPublisher.new(config, extract_request.id) # this is channel id
