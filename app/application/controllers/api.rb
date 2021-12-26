@@ -35,7 +35,6 @@ module Skiller
 
             # validate request
             query_request = Request::Query.new.call(router.params)
-            # result = Service::AnalyzeSkills.new.call(query_request)
             result = Service::AnalyzeSkills.new.call(
               query_request: query_request, request_id: request_id
             )
