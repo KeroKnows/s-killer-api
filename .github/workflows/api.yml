@@ -61,4 +61,4 @@ jobs:
         run: rake worker:run:test & RACK_ENV=test bundle exec rake spec
 
       - name: Clear remaining jobs on SQS
-        run: RACK_ENV=test rake queues:purge
+        run: RACK_ENV=test bundle exec rake queues:purge
