@@ -52,6 +52,7 @@ module SkillExtractor
     # store the results to database
     # :reek:UtilityFunction because it is a utility function
     def write_skills_to_db(result, job_id, salary)
+      puts 'write_skills_to_db'
       skills = result.map do |skill|
         Skiller::Entity::Skill.new(
           id: nil,
