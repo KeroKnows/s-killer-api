@@ -23,7 +23,8 @@ describe 'Integration Test for AnalyzeSkills Service' do
       query_form = Skiller::Request::Query.new.call({ 'query' => EMPTY_KEYWORD })
 
       # WHEN: the service is called
-      jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
+      jobskill = Skiller::Service::AnalyzeSkills.new.call({ query_request: query_form,
+                                                            request_id: 0 })
 
       # THEN: the service should fail
       _(Skiller::ServiceSpecUtility.cannot_process?(jobskill)).must_equal true
@@ -35,7 +36,8 @@ describe 'Integration Test for AnalyzeSkills Service' do
       query_form = Skiller::Request::Query.new.call({ 'query' => INVALID_KEYWORD })
 
       # WHEN: the service is called
-      jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
+      jobskill = Skiller::Service::AnalyzeSkills.new.call({ query_request: query_form,
+                                                            request_id: 0 })
 
       # THEN: the service should fail
       _(Skiller::ServiceSpecUtility.cannot_process?(jobskill)).must_equal true
@@ -54,7 +56,8 @@ describe 'Integration Test for AnalyzeSkills Service' do
       query_form = Skiller::Request::Query.new.call({ 'query' => TEST_KEYWORD })
 
       # WHEN: the service is called with the form object
-      jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
+      jobskill = Skiller::Service::AnalyzeSkills.new.call({ query_request: query_form,
+                                                            request_id: 0 })
       _(Skiller::ServiceSpecUtility.processing?(jobskill)).must_equal true
 
       jobskill = Skiller::ServiceSpecUtility.wait_for_processing(query_form)
@@ -84,7 +87,8 @@ describe 'Integration Test for AnalyzeSkills Service' do
       db_jobs = result.value!.message[:jobs]
 
       # WHEN: the service is called with the form object
-      jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
+      jobskill = Skiller::Service::AnalyzeSkills.new.call({ query_request: query_form,
+                                                            request_id: 0 })
 
       # THEN: the service should succeed...
       _(jobskill.success?).must_equal true
@@ -172,7 +176,8 @@ describe 'Integration Test for AnalyzeSkills Service' do
       db_skills = db_skills.sort_by(&:name)
 
       # WHEN: the service is called
-      jobskill = Skiller::Service::AnalyzeSkills.new.call(query_form)
+      jobskill = Skiller::Service::AnalyzeSkills.new.call({ query_request: query_form,
+                                                            request_id: 0 })
 
       # THEN: the service whould succeed...
       _(jobskill.success?).must_equal true

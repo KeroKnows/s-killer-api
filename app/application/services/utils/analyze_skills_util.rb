@@ -25,6 +25,10 @@ module Skiller
         jobs[...ANALYZE_LEN].all?(&:is_analyzed)
       end
 
+      def self.not_analyzed_jobs(jobs)
+        ANALYZE_LEN - jobs[...ANALYZE_LEN].count(&:is_analyzed)
+      end
+
       def self.store_query_to_db(query, jobs)
         Repository::QueriesJobs.find_or_create(query, jobs.map(&:db_id))
       end
@@ -65,10 +69,16 @@ module Skiller
         end
       end
 
-      def self.extract_skills_with_worker(jobs)
+      def self.job_json(job, request_id)
+        Skiller::Response::JobRequest.new(job, request_id)
+                                     .then { |req| Skiller::Representer::ExtractRequest.new(req) }
+                                     .then(&:to_json)
+      end
+
+      def self.extract_skills_with_worker(jobs, request_id)
         jobs.map do |job|
           Concurrent::Promise.new { request_and_update_full_job(job) }
-                             .then { |full_job| SQS.send(Skiller::Representer::Job.new(full_job).to_json) }
+                             .then { |full_job| SQS.send(job_json(full_job, request_id)) }
                              .rescue { |err| puts err }
                              .execute
         end
