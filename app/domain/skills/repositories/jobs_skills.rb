@@ -12,6 +12,15 @@ module Skiller
         end
       end
 
+      def self.find_skills_by_name(skill_name)
+        skill = Skills.find_name(skill_name)
+        return [] unless skill
+        Database::JobSkillOrm.where(skill_id: skill.id).all.map do |job_skill|
+          rebuild_skill_entity(job_skill)
+        end
+      end
+
+
       def self.rebuild_skill_entity(job_skill)
         return nil unless job_skill
 
