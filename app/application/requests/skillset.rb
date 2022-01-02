@@ -26,10 +26,12 @@ module Skiller
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to validate skillset: #{e}"))
       end
 
+      # :reek:UtilityFunction because it is a utility function
       def valid?(param_string)
         SKILLSET_REGEX.match(param_string)[0]&.length == param_string.length
       end
 
+      # :reek:UtilityFunction because it is a utility function
       def parse_param_string(param_string)
         param_string.split('&').map { |param| param.split('=')[1] }
       end

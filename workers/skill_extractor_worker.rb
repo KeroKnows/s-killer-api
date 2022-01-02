@@ -38,8 +38,6 @@ module SkillExtractor
       salary = get_salary_value(job.salary)
       write_skills_to_db(result, job.db_id, salary)
       update_job(job)
-    rescue StandardError => e
-      puts e
     end
 
     # run the extractor script
@@ -54,7 +52,6 @@ module SkillExtractor
     # store the results to database
     # :reek:UtilityFunction because it is a utility function
     def write_skills_to_db(result, job_id, salary)
-      puts 'write_skills_to_db'
       skills = result.map do |skill|
         Skiller::Entity::Skill.new(
           id: nil,

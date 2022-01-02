@@ -33,12 +33,13 @@ module Skiller
       end
 
       def collect_skills(input)
-        input[:skills] = Utility.find_skills_by_skillset(input[:skillset])
-        Success(input)
+        skillset = input[:skillset]
+        input[:skills] = Utility.find_skills_by_skillset(skillset)
 
         if input[:skills].length.zero?
           Failure(
-            Response::ApiResult.new(status: :internal_error, message: "No skills are extracted from #{input[:skillset]}")
+            Response::ApiResult.new(status: :internal_error,
+                                    message: "No skills are extracted from #{skillset}")
           )
         else
           Success(input)
@@ -53,7 +54,8 @@ module Skiller
         input[:jobs] = Utility.find_jobs_by_skills(skills)
 
         if input[:jobs].length.zero?
-          Failure(Response::ApiResult.new(status: :cannot_process, message: "No job found with skillset #{input[:skillset]}"))
+          Failure(Response::ApiResult.new(status: :cannot_process,
+                                          message: "No job found with skillset #{input[:skillset]}"))
         else
           Success(input)
         end
