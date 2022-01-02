@@ -93,6 +93,15 @@ module Skiller
           Repository::JobsSkills.find_or_create(skills)
         end
       end
+
+      def self.find_skills_by_skillset(skillset)
+        skillset.map { |name| Repository::JobsSkills.find_skills_by_name(name) }
+                .reduce(&:+)
+      end
+
+      def self.find_jobs_by_skills(skills)
+        skills.map(&:job_db_id).uniq.map { |job_db_id| Skiller::Repository::Jobs.find_db_id(job_db_id) }
+      end
     end
   end
 end
