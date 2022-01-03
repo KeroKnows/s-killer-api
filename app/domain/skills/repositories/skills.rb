@@ -9,6 +9,11 @@ module Skiller
         rebuild_entity(db_skill, nil, nil)
       end
 
+      def self.find_name(skill_name)
+        db_skill = Database::SkillOrm.find(name: skill_name)
+        rebuild_entity(db_skill, nil, nil)
+      end
+
       def self.rebuild_entity(db_skill, job_db_id, salary)
         return nil unless db_skill
 
