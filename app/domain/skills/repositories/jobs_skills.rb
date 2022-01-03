@@ -31,7 +31,9 @@ module Skiller
 
       def self.find_or_create(skills)
         skills.map do |skill|
+          puts 'write skills'
           db_skill = Database::SkillOrm.find_or_create(skill.name)
+          puts 'write jobs_skills'
           job_skill = Database::JobSkillOrm.find_or_create(skill.job_db_id, db_skill.id)
           rebuild_skill_entity(job_skill)
         end

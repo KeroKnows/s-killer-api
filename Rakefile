@@ -10,7 +10,7 @@ end
 
 desc 'start the app with file chages watched'
 task :dev do
-  sh "rerun -c 'bundle exec rackup -p 4001' " \
+  sh "rerun -c 'bundle exec puma config.ru -p 4001' " \
      "--ignore 'workers/*' --ignore 'coverage/*' --ignore 'spec/*' --ignore '*.slim'"
 end
 
@@ -22,20 +22,25 @@ task :console do
   sh 'pry -r ./init.rb'
 end
 
+desc 'Run all spec at once'
+task :spec do
+  sh 'RACK_ENV=test bundle exec rake spec_all'
+end
+
+desc 'Run acceptance spec'
+task :spec_accept do
+  sh 'RACK_ENV=test buncle exec rake spec_accept_all'
+end
+
 desc 'Run all tests at once'
-Rake::TestTask.new(:spec) do |t|
+Rake::TestTask.new(:spec_all) do |t|
   t.pattern = 'spec/tests/{integration,unit}/**/*_spec.rb'
   t.warning = false
 end
 
 desc 'Run all acceptance tests at once'
-Rake::TestTask.new(:spec_acceptance) do |t|
+Rake::TestTask.new(:spec_accept_all) do |t|
   t.pattern = 'spec/tests/acceptance/*_spec.rb'
-  t.warning = false
-end
-
-Rake::TestTask.new(:test_acceptance) do |t|
-  t.pattern = 'spec/tests/acceptance/**/*_spec.rb'
   t.warning = false
 end
 

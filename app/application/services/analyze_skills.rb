@@ -8,7 +8,6 @@ require_relative 'utils/analyze_skills_util'
 module Skiller
   module Service
     # request the jobs related to given query, and analyze the skillset from it
-    # :reek:TooManyStatements { max_statements: 7 } for Success/Failure and rescued statements
     class AnalyzeSkills
       include Dry::Transaction
 
@@ -19,22 +18,19 @@ module Skiller
       step :collect_jobs
       step :concurrent_process_jobs
       step :collect_skills
-      step :validate_skills_length
       step :calculate_salary_distribution
       step :to_response_object
 
       private
 
-      EXTRACT_ERR = 'Could not extract skills'
-      PROCESSING_MSG = 'Processing the extraction request'
-
       # Check if the previous validation passes
       def parse_request(input)
-        if input.success?
-          query = input.value!
-          Success(query: query)
+        request = input[:query_request]
+        if request.success?
+          query = request.value!
+          Success(query: query, request_id: input[:request_id])
         else
-          failure = input.failure
+          failure = request.failure
           Failure(Response::ApiResult.new(status: failure.status, message: failure.message))
         end
       end
@@ -54,36 +50,30 @@ module Skiller
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to collect jobs: #{e}"))
       end
 
-      # :reek:TooManyStatements
+      # Check if all jobs are analyzed before
       # :reek:UncommunicativeVariableName for rescued error
       def concurrent_process_jobs(input)
-        analyzed_jobs = input[:jobs][...ANALYZE_LEN]
-        if analyzed_jobs.all?(&:is_analyzed)
-          input[:analyzed_jobs] = analyzed_jobs
-          return Success(input)
-        end
-        Utility.extract_skills_with_worker(analyzed_jobs)
-        Failure(Response::ApiResult.new(status: :processing, message: PROCESSING_MSG))
-      rescue StandardError => e
-        puts [e.inspect, e.backtrace].flatten.join("\n")
-        Failure(Response::ApiResult.new(status: :internal_error, message: EXTRACT_ERR))
-      end
+        jobs = input[:jobs][...ANALYZE_LEN]
+        task_count = Utility.not_analyzed_jobs(jobs)
+        return Success(input) if task_count.zero?
 
-      def collect_skills(input)
-        analyzed_jobs = input[:analyzed_jobs]
-        input[:jobs][...ANALYZE_LEN] = analyzed_jobs
-        input[:skills] = Utility.find_skills_by_jobs(analyzed_jobs)
-        Success(input)
+        request_id = input[:request_id]
+        Utility.extract_skills_with_worker(jobs, request_id)
+        Failure(Response::ApiResult.new(status: :processing,
+                                        message: { message: 'Processing the extraction request',
+                                                   task_count: task_count, request_id: request_id }))
+      rescue StandardError => e
+        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to process the jobs: #{e}"))
       end
 
       # Collect skills from database if the query has been searched;
-      # otherwise, the entities will be created by mappers and stored into the database
+      #   otherwise, the entities will be created by mappers and stored into the database
       # :reek:UncommunicativeVariableName for rescued error
-      def validate_skills_length(input)
+      def collect_skills(input)
+        input[:skills] = Utility.find_skills_by_jobs(input[:jobs])
         if input[:skills].length.zero?
-          Failure(
-            Response::ApiResult.new(status: :internal_error, message: "No skills are extracted from #{input[:query]}")
-          )
+          Failure(Response::ApiResult.new(status: :internal_error,
+                                          message: "No skills are extracted from #{input[:query]}"))
         else
           Success(input)
         end
@@ -97,19 +87,6 @@ module Skiller
         Success(input)
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to analyze salary distribution: #{e}"))
-      end
-
-      # Store the query-job
-      # Note that this MUST be executed as the last step,
-      #   when the jobs and skills are all correctly extracted,
-      #   or the skills of new jobs will not be analyzed forever
-      # :reek:UncommunicativeVariableName for rescued error
-      def store_query_to_db(input)
-        Repository::QueriesJobs.find_or_create(input[:query],
-                                               input[:jobs].map(&:db_id))
-        Success(input)
-      rescue StandardError => e
-        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to store query result: #{e}"))
       end
 
       # Pass to response object
