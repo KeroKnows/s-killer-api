@@ -4,6 +4,7 @@ require 'rake/testtask'
 
 ## ------ CONFIGURATION ------ ##
 CASSETTE_FOLDER = 'spec/fixtures/cassettes'
+CACHE_FOLDER = '_cache/rack'
 CODE = 'config/ app/'
 HOST = '127.0.0.1'
 DEV_PORT = '4001'
@@ -225,6 +226,22 @@ namespace :vcr do
     sh "rm #{CASSETTE_FOLDER}/*.yml" do |ok, _|
       puts(ok ? 'All cassettes deleted' : 'No cassette is found')
     end
+  end
+end
+
+## ------ CACHE ------ ##
+namespace :cache do
+  desc 'list current cache'
+  task :list do
+    sh "find #{CACHE_FOLDER}/meta -print"
+  end
+
+  desc 'wipe all cache'
+  task :wipe do
+    sh "rm -rf #{CACHE_FOLDER}"
+    sh "mkdir #{CACHE_FOLDER}"
+    sh "mkdir #{CACHE_FOLDER}/body"
+    sh "mkdir #{CACHE_FOLDER}/meta"
   end
 end
 
