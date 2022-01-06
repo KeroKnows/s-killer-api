@@ -2,6 +2,8 @@
 
 require 'date'
 
+require_relative '../../spec_helper'
+
 describe 'Test Cache library' do
   describe 'Functionalities of file caching' do
     before do
