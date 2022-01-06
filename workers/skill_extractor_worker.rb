@@ -37,7 +37,8 @@ module SkillExtractor
       result = extract_skill(job)
       salary = get_salary_value(job.salary)
       write_skills_to_db(result["skillset"], job.db_id, salary)
-      update_job(job)
+      # write_job_level_to_db(result["job_level"], job)
+      update_job(job, result["job_level"])
     end
 
     # run the extractor script
@@ -65,8 +66,9 @@ module SkillExtractor
 
     # update the job information to database
     # :reek:UtilityFunction because it is a utility function
-    def update_job(job)
+    def update_job(job, job_level)
       job.is_analyzed = true
+      job.job_level = job_level
       Skiller::Repository::Jobs.update(job)
     end
 
