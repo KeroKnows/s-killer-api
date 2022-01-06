@@ -33,7 +33,7 @@ module Skiller
 
       # :reek:UtilityFunction because it is a utility function
       def parse_param_string(param_string)
-        param_string.split('&').map { |param| param.split('=')[1] }
+        param_string.split('&').map { |param| param.split('=')[1].downcase }
       end
     end
   end
