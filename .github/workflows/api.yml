@@ -45,7 +45,7 @@ jobs:
       - name: Setup test database
         env:
           DB_FILENAME: ${{ secrets.DB_FILENAME }}
-        run: RACK_ENV=test bundle exec rake db:migrate
+        run: bundle exec rake db:migrate:test
 
       - name: Run all specs
         env: # define secrets in Github project -> settings -> secrets
@@ -58,7 +58,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           API_HOST: ${{ secrets.API_HOST }}
           APP_HOST: ${{ secrets.APP_HOST }}
-        run: bundle exec rake worker:run:test & RACK_ENV=test bundle exec rake spec
+        run: bundle exec rake worker:run:test & bundle exec rake spec
 
       - name: Clear remaining jobs on SQS
         env: # define secrets in Github project -> settings -> secrets
@@ -67,4 +67,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           EXTRACTOR_QUEUE_URL: ${{ secrets.EXTRACTOR_QUEUE_URL }}
           EXTRACTOR_QUEUE: ${{ secrets.EXTRACTOR_QUEUE }}
-        run: RACK_ENV=test bundle exec rake queues:purge
+        run: bundle exec rake queues:purge:test
