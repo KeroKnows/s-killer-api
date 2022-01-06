@@ -44,7 +44,7 @@ module SkillExtractor
     # run the extractor script
     def extract_skill(job)
       tmp_file = File.join(File.dirname(__FILE__), ".extractor.#{rand(10_000)}.tmp")
-      File.write(tmp_file, job.description, mode: 'w')
+      File.write(tmp_file, job.description + job.title, mode: 'w')
       script_result = `#{PYTHON} #{SCRIPT} "#{tmp_file}"`
       File.delete(tmp_file)
       YAML.safe_load script_result
