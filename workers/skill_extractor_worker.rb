@@ -36,7 +36,7 @@ module SkillExtractor
       work.report(job.title) # channel ID is not responding exactly?
       result = extract_skill(job)
       salary = get_salary_value(job.salary)
-      write_skills_to_db(result, job.db_id, salary)
+      write_skills_to_db(result["skillset"], job.db_id, salary)
       update_job(job)
     end
 
