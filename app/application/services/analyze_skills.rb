@@ -80,10 +80,10 @@ module Skiller
         end
       end
 
+      # :reek:UncommunicativeVariableName for rescued error
       def filter_jobs_by_location(input)
         location = input[:location]
-        return Success(input) unless location != 'all'
-        input[:jobs] = input[:jobs].select { | job | job.location.downcase == location.downcase }
+        input[:jobs] = input[:jobs].select { |job| job.location.downcase == location.downcase } if location != 'all'
         Success(input)
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to filter jobs by location: #{e}"))
