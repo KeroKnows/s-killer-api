@@ -35,10 +35,8 @@ module SkillExtractor
 
       work.report(job.title) # channel ID is not responding exactly?
       result = extract_skill(job)
-      salary = get_salary_value(job.salary)
-      write_skills_to_db(result['skillset'], job.db_id, salary)
-      # write_job_level_to_db(result["job_level"], job)
-      update_job(job, result['job_level'])
+      write_skills_to_db(result, job.db_id, job.salary)
+      update_job(job, result)
     end
 
     # run the extractor script
@@ -53,7 +51,8 @@ module SkillExtractor
     # store the results to database
     # :reek:UtilityFunction because it is a utility function
     def write_skills_to_db(result, job_id, salary)
-      skills = result.map do |skill|
+      salary = get_salary_value(salary)
+      skills = result['skillset'].map do |skill|
         Skiller::Entity::Skill.new(
           id: nil,
           name: skill,
@@ -66,9 +65,9 @@ module SkillExtractor
 
     # update the job information to database
     # :reek:UtilityFunction because it is a utility function
-    def update_job(job, job_level)
+    def update_job(job, result)
       job.is_analyzed = true
-      job.job_level = job_level
+      job.job_level = result['job_level']
       Skiller::Repository::Jobs.update(job)
     end
 
