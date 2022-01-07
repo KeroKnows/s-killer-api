@@ -17,7 +17,8 @@ module Skiller
       def call(params)
         query = params['query']
         if QUERY_REGEX.match?(query)
-          Success({ 'query' => query, 'location' => params.fetch('location', 'all'), 'job_level' => params.fetch('job_level', 'all') })
+          Success({ 'query' => query, 'location' => params.fetch('location', 'all'),
+                    'job_level' => params.fetch('job_level', 'all') })
         else
           Failure(Response::ApiResult.new(status: :cannot_process, message: "Invalid query: #{query}"))
         end

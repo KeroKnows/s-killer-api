@@ -30,7 +30,8 @@ module Skiller
         request = input[:query_request]
         if request.success?
           params = request.value!
-          Success(query: params['query'], request_id: input[:request_id], location: params['location'], job_level: params['job_level'])
+          Success(query: params['query'], request_id: input[:request_id], location: params['location'],
+                  job_level: params['job_level'])
         else
           failure = request.failure
           Failure(Response::ApiResult.new(status: failure.status, message: failure.message))
