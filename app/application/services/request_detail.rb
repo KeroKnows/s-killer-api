@@ -52,7 +52,8 @@ module Skiller
                                                job.description,
                                                job.location,
                                                job.salary,
-                                               job.url)
+                                               job.url,
+                                               job.job_level)
         Success(Response::ApiResult.new(status: :ok, message: result_response))
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :internal_error,
