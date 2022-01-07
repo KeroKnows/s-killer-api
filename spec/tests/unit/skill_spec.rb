@@ -13,6 +13,7 @@ describe 'Test Skill Analyzer library' do
                                       location: 'LOCATION',
                                       salary: salary,
                                       url: 'URL',
+                                      job_level: nil,
                                       is_full: true,
                                       is_analyzed: false)
     end
@@ -42,6 +43,7 @@ describe 'Test Skill Analyzer library' do
                                      location: 'LOCATION',
                                      salary: salary,
                                      url: 'URL',
+                                     job_level: nil,
                                      is_full: false,
                                      is_analyzed: false)
       _(proc do
@@ -58,6 +60,7 @@ describe 'Test Skill Analyzer library' do
                                      location: 'LOCATION',
                                      salary: salary,
                                      url: 'URL',
+                                     job_level: nil,
                                      is_full: true,
                                      is_analyzed: false)
       skill_mapper = Skiller::Skill::SkillMapper.new(job)
