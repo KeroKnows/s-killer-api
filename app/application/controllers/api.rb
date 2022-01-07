@@ -86,6 +86,22 @@ module Skiller
             Representer::For.new(result).status_and_body(response)
           end
         end
+
+        router.on 'locations' do
+          # GET /api/v1/jobs?query={JOB_TITLE}
+          router.get do
+            # validate request
+            result = Service::RetrieveLocations.new.call
+
+            if result.failure?
+              failed = Representer::For.new(result)
+              router.halt failed.http_status_code, failed.to_json
+            end
+
+            # response
+            Representer::For.new(result).status_and_body(response)
+          end
+        end
       end
     end
   end

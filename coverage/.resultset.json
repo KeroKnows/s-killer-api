@@ -1202,7 +1202,7 @@
           null,
           null,
           1,
-          10,
+          11,
           null
         ]
       },
@@ -1320,13 +1320,15 @@
           1,
           1,
           1,
-          null,
-          1,
           1,
           null,
           1,
+          1,
           null,
           1,
+          null,
+          1,
+          null,
           null,
           null,
           null,
@@ -1367,7 +1369,7 @@
           null,
           null,
           1,
-          5,
+          6,
           null
         ]
       },
@@ -1412,6 +1414,18 @@
         ]
       },
       "/Users/simon/s-killer-api/app/presentation/responses/job_request.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/simon/s-killer-api/app/presentation/responses/locations_response.rb": {
         "lines": [
           null,
           null,
@@ -1551,6 +1565,33 @@
           null
         ]
       },
+      "/Users/simon/s-killer-api/app/presentation/representers/locations_representer.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/simon/s-killer-api/app/application/init.rb": {
         "lines": [
           null,
@@ -1649,6 +1690,22 @@
           null,
           null,
           0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
           0,
           null,
           0,
@@ -1765,7 +1822,7 @@
           null,
           null,
           1,
-          4,
+          5,
           null
         ]
       },
@@ -2155,6 +2212,42 @@
           null,
           1,
           null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/simon/s-killer-api/app/application/services/retrieve_locations.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
           0,
           null,
           null,
@@ -2813,6 +2906,6 @@
         ]
       }
     },
-    "timestamp": 1641565907
+    "timestamp": 1641567735
   }
 }
