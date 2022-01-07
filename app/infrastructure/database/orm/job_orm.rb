@@ -23,6 +23,7 @@ module Skiller
           min_year_salary: salary.year_min,
           max_year_salary: salary.year_max,
           currency: salary.currency,
+          job_level: job.job_level,
           url: job.url,
           is_full: job.is_full,
           is_analyzed: job.is_analyzed
