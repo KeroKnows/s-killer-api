@@ -26,6 +26,7 @@ module SkillExtractor
 
     # extract skill and store in database
     # :reek:TooManyStatements
+    # :reek:FeatureEnvy
     def perform(_sqs_msg, job_json)
       work = SkillExtractor::JobReporter.new(job_json, SkillExtractor::Worker.config)
       extract_request = Skiller::Representer::ExtractRequest.new(OpenStruct.new).from_json(job_json)
@@ -34,16 +35,17 @@ module SkillExtractor
       return if job.is_analyzed
 
       work.report(job.title) # channel ID is not responding exactly?
-      result = extract_skill(job)
-      salary = get_salary_value(job.salary)
-      write_skills_to_db(result, job.db_id, salary)
-      update_job(job)
+
+      result = extract_skill_and_job_level(job)
+      write_skills_to_db(result, job.db_id, job.salary)
+      update_job(job, result)
     end
 
-    # run the extractor script
-    def extract_skill(job)
+    # run the python extractor script to get skillset and job_level
+    # :reek:FeatureEnvy
+    def extract_skill_and_job_level(job)
       tmp_file = File.join(File.dirname(__FILE__), ".extractor.#{rand(10_000)}.tmp")
-      File.write(tmp_file, job.description, mode: 'w')
+      File.write(tmp_file, job.description + job.title, mode: 'w')
       script_result = `#{PYTHON} #{SCRIPT} "#{tmp_file}"`
       File.delete(tmp_file)
       YAML.safe_load script_result
@@ -52,7 +54,8 @@ module SkillExtractor
     # store the results to database
     # :reek:UtilityFunction because it is a utility function
     def write_skills_to_db(result, job_id, salary)
-      skills = result.map do |skill|
+      salary = get_salary_value(salary)
+      skills = result['skillset'].map do |skill|
         Skiller::Entity::Skill.new(
           id: nil,
           name: skill,
@@ -65,8 +68,9 @@ module SkillExtractor
 
     # update the job information to database
     # :reek:UtilityFunction because it is a utility function
-    def update_job(job)
+    def update_job(job, result)
       job.is_analyzed = true
+      job.job_level = result['job_level']
       Skiller::Repository::Jobs.update(job)
     end
 

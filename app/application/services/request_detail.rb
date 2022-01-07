@@ -46,18 +46,21 @@ module Skiller
 
       # Pass to response object
       # :reek:UncommunicativeVariableName for rescued error
+      # rubocop:disable Metrics/MethodLength for response generation
       def to_response_object(job)
         result_response = Response::Detail.new(job.db_id,
                                                job.title,
                                                job.description,
                                                job.location,
                                                job.salary,
-                                               job.url)
+                                               job.url,
+                                               job.job_level)
         Success(Response::ApiResult.new(status: :ok, message: result_response))
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :internal_error,
                                         message: "Fail to map to detail object: #{e}"))
       end
+      # rubocop:enable Metrics/MethodLength for response generation
     end
   end
 end

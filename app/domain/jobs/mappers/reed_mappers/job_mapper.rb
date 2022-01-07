@@ -43,6 +43,7 @@ module Skiller
               year_max: @data['yearlyMaximumSalary'],
               currency: @data['currency']
             },
+            job_level: nil,
             url: @data['jobUrl'],
             is_full: @is_full,
             is_analyzed: false
