@@ -18,8 +18,7 @@ module Skiller
       def call(param_string)
         params = parse_param_string(param_string)
         if valid?(params)
-          puts params
-          Success({'skillset' => params['name'], 'location' => params.fetch('location', ['all']).first})
+          Success({ 'skillset' => params['name'], 'location' => params.fetch('location', ['all']).first })
         else
           Failure(Response::ApiResult.new(status: :cannot_process, message: "Invalid skillset: #{param_string}"))
         end
@@ -33,6 +32,8 @@ module Skiller
       end
 
       # :reek:UtilityFunction because it is a utility function
+      # :reek:DuplicateMethodCall
+      # :reek:TooManyStatements
       def parse_param_string(param_string)
         params = {}
         param_string.split('&').each do |param|

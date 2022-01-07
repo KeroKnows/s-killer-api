@@ -26,7 +26,7 @@ module Skiller
         if input.success?
           # skillset is an array of skill names
           params = input.value!
-          Success(skillset: params['skillset'].map(&:downcase), location: params['location'])
+          Success(skillset: params['skillset'], location: params['location'])
         else
           failure = input.failure
           Failure(Response::ApiResult.new(status: failure.status, message: failure.message))
