@@ -15,6 +15,7 @@ module Skiller
       step :parse_request
       step :collect_skills
       step :collect_jobs
+      step :filter_jobs_by_location
       step :calculate_salary_distribution
       step :to_response_object
 
@@ -24,8 +25,8 @@ module Skiller
       def parse_request(input)
         if input.success?
           # skillset is an array of skill names
-          skillset = input.value!
-          Success(skillset: skillset)
+          params = input.value!
+          Success(skillset: params['skillset'].map(&:downcase), location: params['location'])
         else
           failure = input.failure
           Failure(Response::ApiResult.new(status: failure.status, message: failure.message))
@@ -61,6 +62,15 @@ module Skiller
         end
       rescue StandardError => e
         Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to collect jobs: #{e}"))
+      end
+
+      # :reek:UncommunicativeVariableName for rescued error
+      def filter_jobs_by_location(input)
+        location = input[:location]
+        input[:jobs] = input[:jobs].select { |job| job.location.downcase == location.downcase } if location != 'all'
+        Success(input)
+      rescue StandardError => e
+        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to filter jobs by location: #{e}"))
       end
 
       # Analyze the salary distribution from all related jobs

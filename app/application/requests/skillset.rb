@@ -16,9 +16,10 @@ module Skiller
       # Validate the skillset format
       # :reek:UncommunicativeVariableName for rescued error
       def call(param_string)
-        if valid?(param_string)
-          skillset = parse_param_string(param_string)
-          Success(skillset)
+        params = parse_param_string(param_string)
+        if valid?(params)
+          puts params
+          Success({'skillset' => params['name'], 'location' => params.fetch('location', ['all']).first})
         else
           Failure(Response::ApiResult.new(status: :cannot_process, message: "Invalid skillset: #{param_string}"))
         end
@@ -27,13 +28,19 @@ module Skiller
       end
 
       # :reek:UtilityFunction because it is a utility function
-      def valid?(param_string)
-        SKILLSET_REGEX.match(param_string)[0]&.length == param_string.length
+      def valid?(params)
+        params.key?('name')
       end
 
       # :reek:UtilityFunction because it is a utility function
       def parse_param_string(param_string)
-        param_string.split('&').map { |param| param.split('=')[1].downcase }
+        params = {}
+        param_string.split('&').each do |param|
+          key, val = param.split('=')
+          params[key] ||= []
+          params[key] << val
+        end
+        params
       end
     end
   end
