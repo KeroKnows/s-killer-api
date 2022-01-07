@@ -18,6 +18,7 @@ module Skiller
       step :collect_jobs
       step :concurrent_process_jobs
       step :collect_skills
+      step :filter_jobs_by_location
       step :calculate_salary_distribution
       step :to_response_object
 
@@ -27,8 +28,8 @@ module Skiller
       def parse_request(input)
         request = input[:query_request]
         if request.success?
-          query = request.value!
-          Success(query: query, request_id: input[:request_id])
+          params = request.value!
+          Success(query: params['query'], request_id: input[:request_id], location: params['location'])
         else
           failure = request.failure
           Failure(Response::ApiResult.new(status: failure.status, message: failure.message))
@@ -77,6 +78,15 @@ module Skiller
         else
           Success(input)
         end
+      end
+
+      def filter_jobs_by_location(input)
+        location = input[:location]
+        return Success(input) unless location != 'all'
+        input[:jobs] = input[:jobs].select { | job | job.location.downcase == location.downcase }
+        Success(input)
+      rescue StandardError => e
+        Failure(Response::ApiResult.new(status: :internal_error, message: "Fail to filter jobs by location: #{e}"))
       end
 
       # Analyze the salary distribution from all related jobs
