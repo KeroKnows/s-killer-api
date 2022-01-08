@@ -19,6 +19,7 @@ module Skiller
       property :location
       property :salary, extend: Representer::Salary, class: OpenStruct
       property :url
+      property :job_level
 
       link :self do
         "#{App.config.API_HOST}/"

@@ -3,6 +3,6 @@
 module Skiller
   module Response
     # Result of a query
-    Detail = Struct.new(:id, :title, :description, :location, :salary, :url)
+    Detail = Struct.new(:id, :title, :description, :location, :salary, :url, :job_level)
   end
 end

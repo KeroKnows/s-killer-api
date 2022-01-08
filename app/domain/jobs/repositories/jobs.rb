@@ -44,6 +44,7 @@ module Skiller
           min_year_salary: salary.year_min,
           max_year_salary: salary.year_max,
           currency: salary.currency,
+          job_level: entity.job_level,
           url: entity.url,
           is_full: entity.is_full,
           is_analyzed: entity.is_analyzed
@@ -65,6 +66,7 @@ module Skiller
             year_max: db_job.max_year_salary,
             currency: db_job.currency
           },
+          job_level: db_job.job_level,
           url: db_job.url,
           is_full: db_job.is_full,
           is_analyzed: db_job.is_analyzed

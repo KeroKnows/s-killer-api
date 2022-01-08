@@ -11,6 +11,11 @@ module Skiller
 
       property :maximum
       property :minimum
+      property :quantile_third
+      property :quantile_first
+      property :median
+      property :mean
+      property :std
       property :currency
     end
   end

@@ -1,4 +1,5 @@
 import re
+import yaml
 from bs4 import BeautifulSoup as bs
 import spacy
 nlp = spacy.load('en_core_web_sm')
@@ -15,6 +16,15 @@ def extract_skillset(description_html):
         for list_item in html_list.select('li'):
             skillset.update(extract_skills_from_list_item(list_item.text))
     return list(skillset)
+
+
+def extract_job_level(description_html):
+    if 'senior' in description_html:
+        return 'senior'
+    elif 'Senior' in description_html:
+        return 'senior'
+    else:
+        return 'junior'
 
 
 KEYWORD = ['Python', 'C', 'C\+\+', 'C#', '.Net', 'Go', 'PHP', 'HTML', 'CSS', 'Java', 'Scala', 'Ruby',
@@ -102,4 +112,13 @@ if __name__ == '__main__':
     with open(sys.argv[1], 'r') as f:
         description = f.read().strip()
     skillset = extract_skillset(description)
-    print(skillset)
+    skillset = list(set(map(str.lower, skillset)))
+    job_level = extract_job_level(description)
+    
+    extracted = {
+        "skillset": skillset,
+        "job_level": job_level,
+    }
+    
+    extracted = yaml.dump(extracted)
+    print(extracted)

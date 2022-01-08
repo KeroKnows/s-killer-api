@@ -4,6 +4,7 @@ require 'roda'
 
 module Skiller
   # Web Application for S-killer
+  # :reek:RepeatedConditional
   class App < Roda
     plugin :halt
     plugin :caching
@@ -64,6 +65,42 @@ module Skiller
 
             # response
             Representer::For.new(job_info).status_and_body(response)
+          end
+        end
+
+        router.on 'skills' do
+          # GET /api/v1/skills?name=[skill1]&name=[skill2]&...
+          router.get do
+            # 86400 seconds a day
+            response.cache_control public: true, max_age: 86_400
+
+            # validate request
+            skillset_request = Request::Skillset.new.call(router.query_string)
+            result = Service::AnalyzeJobs.new.call(skillset_request)
+
+            if result.failure?
+              failed = Representer::For.new(result)
+              router.halt failed.http_status_code, failed.to_json
+            end
+
+            # response
+            Representer::For.new(result).status_and_body(response)
+          end
+        end
+
+        router.on 'locations' do
+          # GET /api/v1/jobs?query={JOB_TITLE}
+          router.get do
+            # validate request
+            result = Service::RetrieveLocations.new.call
+
+            if result.failure?
+              failed = Representer::For.new(result)
+              router.halt failed.http_status_code, failed.to_json
+            end
+
+            # response
+            Representer::For.new(result).status_and_body(response)
           end
         end
       end

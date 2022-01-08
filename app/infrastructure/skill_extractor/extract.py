@@ -102,4 +102,5 @@ if __name__ == '__main__':
     with open(sys.argv[1], 'r') as f:
         description = f.read().strip()
     skillset = extract_skillset(description)
+    skillset = list(set(map(str.lower, skillset)))
     print(skillset)

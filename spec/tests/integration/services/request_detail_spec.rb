@@ -39,6 +39,7 @@ describe 'Integration Test for RequestDetail Service' do
                                    location: 'LOCATION',
                                    salary: salary,
                                    url: nil,
+                                   job_level: nil,
                                    is_full: false,
                                    is_analyzed: false)
     db_job = Skiller::Repository::Jobs.find_or_create(job)
@@ -63,6 +64,7 @@ describe 'Integration Test for RequestDetail Service' do
                                    location: 'LOCATION',
                                    salary: salary,
                                    url: nil,
+                                   job_level: nil,
                                    is_full: true,
                                    is_analyzed: false)
     db_job = Skiller::Repository::Jobs.find_or_create(job)
