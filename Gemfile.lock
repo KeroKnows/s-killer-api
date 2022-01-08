@@ -26,6 +26,7 @@ GEM
       faker (>= 1.1.2)
       yml_reader (>= 0.6)
     declarative (0.0.20)
+    descriptive_statistics (2.5.1)
     docile (1.4.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
@@ -257,6 +258,7 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk-sqs (~> 1)
   concurrent-ruby (~> 1.0, >= 1.0.5)
+  descriptive_statistics (~> 2.5)
   dry-struct (~> 1.4)
   dry-transaction (~> 0.13)
   dry-types (~> 1.5)
