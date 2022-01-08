@@ -4,12 +4,14 @@ require 'descriptive_statistics'
 module Skiller
   module Entity
     # An entity object to estimate the statistical distribution of given salaries
+    # :reek:TooManyInstanceVariables
     class SalaryDistribution
-      attr_reader :maximum, :minimum, :currency, :quantile_75, :quantile_25, :median, :mean, :std
+      attr_reader :maximum, :minimum, :currency, :quantile_third, :quantile_first, :median, :mean, :std
 
       # The argument `currency` is the currency to which the `salaries` (an array of `Salary`) need to be exchanged
       # For example, `sd = SalaryDistribution.new(salaries, 'TWD')`
       # means the `salaries` would be exchanged to TWD so that the `salaries`` could be compared fairly
+      # rubocop:disable Metrics/MethodLength
       def initialize(salaries, currency = 'TWD')
         @currency = currency
         @salaries = salaries.map do |salary|
@@ -17,29 +19,30 @@ module Skiller
         end
         @salary_midpoints = calculate_salary_midpoints
         @maximum = calculate_maximum
-        @quantile_75 = calculate_quantile_75
+        @quantile_third = calculate_quantile_third
         @median = calculate_median
-        @quantile_25 = calculate_quantile_25
+        @quantile_first = calculate_quantile_first
         @minimum = calculate_minimum
         @mean = calculate_mean
         @std = calculate_std
       end
 
+      # :reek:FeatureEnvy
+      # :reek:TooManyStatements
       def calculate_salary_midpoints
         salary_midpoints = []
         @salaries.each do |salary|
           year_min = salary.year_min
           year_max = salary.year_max
-          if year_min && !year_max
-            salary_midpoints << salary.year_min
-          elsif !year_min && year_max
-            salary_midpoints << year_max
-          elsif year_min && year_max
-            salary_midpoints << (year_min + year_max) / 2
+          if year_min && year_max
+            salary_midpoints << ((year_min + year_max) / 2)
+          elsif year_min || year_max
+            salary_midpoints << (year_min || year_max)
           end
         end
         salary_midpoints
       end
+      # rubocop:enable Metrics/MethodLength
 
       def calculate_maximum
         salaries = filter_salary(:year_max)
@@ -51,7 +54,7 @@ module Skiller
         salaries.min_by(&:year_min)&.year_min
       end
 
-      def calculate_quantile_75
+      def calculate_quantile_third
         @salary_midpoints.percentile(75)
       end
 
@@ -59,7 +62,7 @@ module Skiller
         @salary_midpoints.median
       end
 
-      def calculate_quantile_25
+      def calculate_quantile_first
         @salary_midpoints.percentile(25)
       end
 
@@ -70,7 +73,6 @@ module Skiller
       def calculate_std
         @salary_midpoints.standard_deviation
       end
-
 
       # Select the salaries which `prop` is not nils
       def filter_salary(prop)

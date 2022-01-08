@@ -4,7 +4,7 @@ require 'roda'
 
 module Skiller
   # Web Application for S-killer
-  # :reek:RepeatedCondition
+  # :reek:RepeatedConditional
   class App < Roda
     plugin :halt
     plugin :caching

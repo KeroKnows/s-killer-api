@@ -83,4 +83,4 @@ gem 'aws-sdk-sqs', '~> 1'
 gem 'faye', '~> 1'
 gem 'shoryuken', '~> 5'
 
-gem "descriptive_statistics", "~> 2.5"
+gem 'descriptive_statistics', '~> 2.5'
