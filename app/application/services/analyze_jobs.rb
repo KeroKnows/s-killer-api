@@ -13,6 +13,7 @@ module Skiller
       include Dry::Transaction
 
       step :parse_request
+      step :downcase_skillset
       step :collect_skills
       step :collect_jobs
       step :filter_jobs_by_location
@@ -32,6 +33,11 @@ module Skiller
           failure = input.failure
           Failure(Response::ApiResult.new(status: failure.status, message: failure.message))
         end
+      end
+
+      def downcase_skillset(input)
+        input[:skillset] = input[:skillset].map(&:downcase)
+        Success(input)
       end
 
       def collect_skills(input)
