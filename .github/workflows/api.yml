@@ -24,7 +24,7 @@ jobs:
       # maximum number of jobs that can run simultaneously
       max-parallel: 1
       matrix:
-        os: [ubuntu, macos]
+        os: [ubuntu]
     runs-on: ${{ matrix.os }}-latest  # Runs on latest builds of matrix OSes
 
     # Steps represent a sequence of tasks that will be executed as part of the job
