@@ -18,7 +18,8 @@ module Skiller
       def call(param_string)
         params = parse_param_string(param_string)
         if valid?(params)
-          Success({ 'skillset' => params['name'], 'location' => params.fetch('location', ['all']).first })
+          Success({ 'skillset' => params['name'], 'location' => params.fetch('location', ['all']).first,
+                    'job_level' => params.fetch('job_level', ['all']).first })
         else
           Failure(Response::ApiResult.new(status: :cannot_process, message: "Invalid skillset: #{param_string}"))
         end
